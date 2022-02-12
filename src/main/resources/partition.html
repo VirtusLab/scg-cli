@@ -1,0 +1,219 @@
+<html>
+<style>
+    .wrapper {
+        display:flex;
+        flex-direction: row;
+    }
+    .first {
+        width: 500px;
+        margin-right: 100px;
+    }
+    .second {
+        width: 500px;
+    }
+
+    .styled-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .styled-table thead tr {
+        background-color: #009879;
+        color: #ffffff;
+        text-align: left;
+    }
+
+    .align-right {
+        text-align: right;
+    }
+    .styled-table th,
+    .styled-table td {
+        padding: 12px 15px;
+        border-right: 1px solid #c8c7cb;
+    }
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+
+    .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
+    }
+    .styled-table tbody tr.active-row {
+        font-weight: bold;
+        color: #009879;
+    }
+    .styled-table tbody tr.color-0 {
+        background-color: #fd7f6f;
+    }
+    .styled-table tbody tr.color-1 {
+        background-color: #7eb0d5;
+    }
+    .styled-table tbody tr.color-2 {
+        background-color: #b2e061;
+    }
+    .styled-table tbody tr.color-3 {
+        background-color: #bd7ebe;
+    }
+    .styled-table tbody tr.color-4 {
+        background-color: #ffb55a;
+    }
+    .styled-table tbody tr.color-5 {
+        background-color: #ffee65;
+    }
+    .styled-table tbody tr.color-6 {
+        background-color: #beb9db;
+    }
+    .styled-table tbody tr.color-7 {
+        background-color: #fdcce5;
+    }
+    .styled-table tbody tr.color-8 {
+        background-color: #8bd3c7;
+    }
+
+</style>
+<body>
+<h2 id="title">Title</h2>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="partition.js"></script>
+<script>
+    document.getElementById("title").innerText = "Partition "
+
+    function addAllignRightCell(row, index, text){
+        const cell = row.insertCell(index);
+        cell.classList.add("align-right");
+        cell.innerText = text;
+    }
+
+    function addCell(row, index, text){
+        const cell = row.insertCell(index);
+        cell.innerText = text;
+        return cell;
+    }
+
+    const summaryTable = document.createElement("table")
+    summaryTable.classList.add("styled-table")
+    const header = summaryTable.createTHead()
+    const headerRow = header.insertRow()
+    addCell(headerRow, 0, "Method");
+    addAllignRightCell(headerRow, 1, "NPart");
+    addAllignRightCell(headerRow, 2, "Modularity")
+    addAllignRightCell(headerRow, 3, "Coefficient")
+    addAllignRightCell(headerRow, 4, "File Weighted")
+    addAllignRightCell(headerRow, 5, "File Average")
+    addAllignRightCell(headerRow, 6, "Package Weighted")
+    addAllignRightCell(headerRow, 7, "Package Average")
+    addAllignRightCell(headerRow, 8, "Variance")
+    addCell(headerRow, 9, "Distribution")
+    const tBody = summaryTable.createTBody()
+
+    partition.summary.map(summary => {
+        const row = tBody.insertRow()
+        const cell = row.insertCell(0);
+        cell.innerHTML = "<a href=\"#" + summary.method + "-" + summary.npart +"\">" + summary.method + "</a>";
+        //addCell(row, 0, summary.method);
+        addAllignRightCell(row, 1, summary.npart);
+        addAllignRightCell(row, 2, summary.modularity.toFixed(3));
+        addAllignRightCell(row, 3, summary.coefficient.toFixed(3));
+        addAllignRightCell(row, 4, summary.file.weighted + "%");
+        addAllignRightCell(row, 5, summary.file.standard + "%");
+        addAllignRightCell(row, 6, summary.package.weighted + "%");
+        addAllignRightCell(row, 7, summary.package.standard + "%");
+        addAllignRightCell(row, 8, summary.variance.toFixed(3));
+        addCell(row, 9, summary.distribution)
+    })
+    document.body.appendChild(summaryTable);
+
+    partition.results.map(x => {
+        const description = document.createElement("h2")
+        description.innerText = "NPart: " + x.nparts + "; method: " + x.byPackage[0].method + "; by package";
+        description.id = x.byPackage[0].method + "-" + x.nparts;
+        document.body.appendChild(description);
+
+        const table = document.createElement("table")
+        table.classList.add("styled-table")
+        const header = table.createTHead()
+        const headerRow = header.insertRow()
+        headerRow.insertCell(0).innerText = "Method"
+        const partCell = headerRow.insertCell(1)
+        partCell.classList.add("align-right")
+        partCell.innerText = "Part"
+        const accuracyCell = headerRow.insertCell(2)
+        accuracyCell.classList.add("align-right")
+        accuracyCell.innerText = "Accuracy"
+        headerRow.insertCell(3).innerText = "Package"
+        headerRow.insertCell(4).innerText = "Distribution"
+
+        const tBody = table.createTBody()
+        x.byPackage.map(n => {
+            const row = tBody.insertRow()
+            row.classList.add("color-" + n.part);
+
+            row.insertCell(0).innerText = n.method;
+
+            const partCell = row.insertCell(1);
+            partCell.classList.add("align-right");
+            partCell.innerText = n.part;
+
+            const accuracyCell = row.insertCell(2);
+            accuracyCell.classList.add("align-right");
+            accuracyCell.innerText = n.accuracy + "%";
+
+            row.insertCell(3).innerText = n.package;
+            row.insertCell(4).innerText = n.distribution;
+        });
+        document.body.appendChild(table);
+        console.log(x.nparts);
+    })
+    partition.results.map(x => {
+        const description = document.createElement("h2")
+        description.innerText = "NPart: " + x.nparts + "; method: " + x.byPackage[0].method + "; by file";
+        document.body.appendChild(description);
+
+        const table = document.createElement("table")
+        table.classList.add("styled-table")
+        const header = table.createTHead()
+        const headerRow = header.insertRow()
+        headerRow.insertCell(0).innerText = "Method"
+        const partCell = headerRow.insertCell(1)
+        partCell.classList.add("align-right")
+        partCell.innerText = "Part"
+        const accuracyCell = headerRow.insertCell(2)
+        accuracyCell.classList.add("align-right")
+        accuracyCell.innerText = "Accuracy"
+        headerRow.insertCell(3).innerText = "File"
+        headerRow.insertCell(4).innerText = "Distribution"
+
+        const tBody = table.createTBody()
+        x.byFile.map(n => {
+            const row = tBody.insertRow()
+            row.classList.add("color-" + n.part);
+
+            row.insertCell(0).innerText = n.method;
+
+            const partCell = row.insertCell(1);
+            partCell.classList.add("align-right");
+            partCell.innerText = n.part;
+
+            const accuracyCell = row.insertCell(2);
+            accuracyCell.classList.add("align-right");
+            accuracyCell.innerText = n.accuracy + "%";
+
+            row.insertCell(3).innerText = n.file;
+            row.insertCell(4).innerText = n.distribution;
+        });
+        document.body.appendChild(table);
+        console.log(x.nparts);
+    })
+</script>
+</body>
+</html>

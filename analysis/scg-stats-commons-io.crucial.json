@@ -1,0 +1,702 @@
+{
+  "projectName" : "commons-io",
+  "workspace" : "data/commons-io",
+  "stats" : [
+    {
+      "id" : "loc",
+      "description" : "Top by node LOC size",
+      "nodes" : [
+        {
+          "id" : "org.apache.commons.io.IOUtils",
+          "label" : "IOUtils",
+          "score" : 3608.0
+        },
+        {
+          "id" : "org.apache.commons.io.FileUtils",
+          "label" : "FileUtils",
+          "score" : 3434.0
+        },
+        {
+          "id" : "org.apache.commons.io.file.PathUtils",
+          "label" : "PathUtils",
+          "score" : 1682.0
+        },
+        {
+          "id" : "org.apache.commons.io.FilenameUtils",
+          "label" : "FilenameUtils",
+          "score" : 1585.0
+        },
+        {
+          "id" : "org.apache.commons.io.input.Tailer",
+          "label" : "Tailer",
+          "score" : 829.0
+        },
+        {
+          "id" : "org.apache.commons.io.input.XmlStreamReader",
+          "label" : "XmlStreamReader",
+          "score" : 788.0
+        },
+        {
+          "id" : "org.apache.commons.io.filefilter.FileFilterUtils",
+          "label" : "FileFilterUtils",
+          "score" : 700.0
+        },
+        {
+          "id" : "org.apache.commons.io.file.FilesUncheck",
+          "label" : "FilesUncheck",
+          "score" : 699.0
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOStream",
+          "label" : "IOStream",
+          "score" : 545.0
+        },
+        {
+          "id" : "org.apache.commons.io.FileSystemUtils",
+          "label" : "FileSystemUtils",
+          "score" : 505.0
+        }
+      ]
+    },
+    {
+      "id" : "out-degree",
+      "description" : "Top by node degree outgoing",
+      "nodes" : [
+        {
+          "id" : "org.apache.commons.io.FileUtils",
+          "label" : "FileUtils",
+          "score" : 176.0
+        },
+        {
+          "id" : "org.apache.commons.io.IOUtils",
+          "label" : "IOUtils",
+          "score" : 171.0
+        },
+        {
+          "id" : "org.apache.commons.io.file.PathUtils",
+          "label" : "PathUtils",
+          "score" : 106.0
+        },
+        {
+          "id" : "org.apache.commons.io.FilenameUtils",
+          "label" : "FilenameUtils",
+          "score" : 64.0
+        },
+        {
+          "id" : "org.apache.commons.io.file.FilesUncheck",
+          "label" : "FilesUncheck",
+          "score" : 56.0
+        },
+        {
+          "id" : "org.apache.commons.io.CloseableURLConnection",
+          "label" : "CloseableURLConnection",
+          "score" : 49.0
+        },
+        {
+          "id" : "org.apache.commons.io.input.XmlStreamReader",
+          "label" : "XmlStreamReader",
+          "score" : 45.0
+        },
+        {
+          "id" : "org.apache.commons.io.input.XmlStreamReader.calculateHttpEncoding(java.lang.String, java.lang.String, java.lang.String, java.lang.String, boolean)",
+          "label" : "calculateHttpEncoding",
+          "score" : 45.0
+        },
+        {
+          "id" : "org.apache.commons.io.filefilter.FileFilterUtils",
+          "label" : "FileFilterUtils",
+          "score" : 45.0
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOStream",
+          "label" : "IOStream",
+          "score" : 43.0
+        }
+      ]
+    },
+    {
+      "id" : "in-degree",
+      "description" : "Top by node degree incoming",
+      "nodes" : [
+        {
+          "id" : "org.apache.commons.io.filefilter.IOFileFilter",
+          "label" : "IOFileFilter",
+          "score" : 131.0
+        },
+        {
+          "id" : "org.apache.commons.io.CloseableURLConnection?urlConnection@42.32:42.45",
+          "label" : "urlConnection",
+          "score" : 47.0
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOBaseStream.unwrap()",
+          "label" : "unwrap",
+          "score" : 46.0
+        },
+        {
+          "id" : "org.apache.commons.io.IOCase",
+          "label" : "IOCase",
+          "score" : 40.0
+        },
+        {
+          "id" : "org.apache.commons.io.function.Uncheck.apply(org.apache.commons.io.function.IOFunction<T, R>, T)",
+          "label" : "apply",
+          "score" : 36.0
+        },
+        {
+          "id" : "org.apache.commons.io.file.Counters.PathCounters",
+          "label" : "PathCounters",
+          "score" : 36.0
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOConsumer",
+          "label" : "IOConsumer",
+          "score" : 35.0
+        },
+        {
+          "id" : "org.apache.commons.io.file.PathFilter.accept(java.nio.file.Path, java.nio.file.attribute.BasicFileAttributes)",
+          "label" : "accept",
+          "score" : 33.0
+        },
+        {
+          "id" : "org.apache.commons.io.filefilter.IOFileFilter.accept(java.io.File)",
+          "label" : "accept",
+          "score" : 32.0
+        },
+        {
+          "id" : "org.apache.commons.io.filefilter.IOFileFilter.accept(java.nio.file.Path, java.nio.file.attribute.BasicFileAttributes)",
+          "label" : "accept",
+          "score" : 31.0
+        }
+      ]
+    },
+    {
+      "id" : "pagerank",
+      "description" : "PageRank - how influential the node is",
+      "nodes" : [
+        {
+          "id" : "org.apache.commons.io.filefilter.IOFileFilter",
+          "label" : "IOFileFilter",
+          "score" : 0.013048613073348878
+        },
+        {
+          "id" : "org.apache.commons.io.output.NullPrintStream",
+          "label" : "NullPrintStream",
+          "score" : 0.010755976924327632
+        },
+        {
+          "id" : "org.apache.commons.io.output.NullPrintStream.NullPrintStream()",
+          "label" : "NullPrintStream",
+          "score" : 0.0062896909687671166
+        },
+        {
+          "id" : "org.apache.commons.io.output.NullPrintStream?INSTANCE@36.40:36.48",
+          "label" : "INSTANCE",
+          "score" : 0.005404113678227866
+        },
+        {
+          "id" : "org.apache.commons.io.IOCase",
+          "label" : "IOCase",
+          "score" : 0.005283474375601257
+        },
+        {
+          "id" : "org.apache.commons.io.file.PathFilter.accept(java.nio.file.Path, java.nio.file.attribute.BasicFileAttributes)",
+          "label" : "accept",
+          "score" : 0.004554794975115668
+        },
+        {
+          "id" : "org.apache.commons.io.file.Counters.Counter",
+          "label" : "Counter",
+          "score" : 0.004290703221289978
+        },
+        {
+          "id" : "org.apache.commons.io.file.PathFilter",
+          "label" : "PathFilter",
+          "score" : 0.003795576280884317
+        },
+        {
+          "id" : "org.apache.commons.io.output.NullPrintStream?NULL_PRINT_STREAM@44.40:44.57",
+          "label" : "NULL_PRINT_STREAM",
+          "score" : 0.0036149020501316893
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOConsumer",
+          "label" : "IOConsumer",
+          "score" : 0.003228211798203649
+        }
+      ]
+    },
+    {
+      "id" : "eigenvector",
+      "description" : "eigenvector Centrality",
+      "nodes" : [
+        {
+          "id" : "org.apache.commons.io.function.IOBaseStream.unwrap()",
+          "label" : "unwrap",
+          "score" : 0.3071612381124439
+        },
+        {
+          "id" : "org.apache.commons.io.input.Tailer",
+          "label" : "Tailer",
+          "score" : 0.27183104355502674
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOStream.T",
+          "label" : "T",
+          "score" : 0.2011869914994931
+        },
+        {
+          "id" : "org.apache.commons.io.input.TailerListener",
+          "label" : "TailerListener",
+          "score" : 0.16855369043185203
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOStream",
+          "label" : "IOStream",
+          "score" : 0.16104826583923784
+        },
+        {
+          "id" : "org.apache.commons.io.input.Tailer.Builder",
+          "label" : "Builder",
+          "score" : 0.1496250314754385
+        },
+        {
+          "id" : "org.apache.commons.io.input.Tailer.Tailable",
+          "label" : "Tailable",
+          "score" : 0.1442301382535384
+        },
+        {
+          "id" : "org.apache.commons.io.input.Tailer?tailable@610.27:610.35",
+          "label" : "tailable",
+          "score" : 0.1415497760599662
+        },
+        {
+          "id" : "org.apache.commons.io.input.Tailer.Builder.build()",
+          "label" : "build",
+          "score" : 0.13246853197771863
+        },
+        {
+          "id" : "org.apache.commons.io.input.Tailer.Builder.Builder(java.io.File, org.apache.commons.io.input.TailerListener)",
+          "label" : "Builder",
+          "score" : 0.13246853197771863
+        }
+      ]
+    },
+    {
+      "id" : "Katz",
+      "description" : "Katz Centrality - how influential the node is",
+      "nodes" : [
+        {
+          "id" : "org.apache.commons.io.filefilter.IOFileFilter",
+          "label" : "IOFileFilter",
+          "score" : 2.34015915
+        },
+        {
+          "id" : "org.apache.commons.io.CloseableURLConnection?urlConnection@42.32:42.45",
+          "label" : "urlConnection",
+          "score" : 1.4758620500000004
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOBaseStream.unwrap()",
+          "label" : "unwrap",
+          "score" : 1.4669298400000006
+        },
+        {
+          "id" : "org.apache.commons.io.IOCase",
+          "label" : "IOCase",
+          "score" : 1.41221478
+        },
+        {
+          "id" : "org.apache.commons.io.file.Counters.PathCounters",
+          "label" : "PathCounters",
+          "score" : 1.37015651
+        },
+        {
+          "id" : "org.apache.commons.io.function.Uncheck.apply(org.apache.commons.io.function.IOFunction<T, R>, T)",
+          "label" : "apply",
+          "score" : 1.3644883
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOConsumer",
+          "label" : "IOConsumer",
+          "score" : 1.35788636
+        },
+        {
+          "id" : "org.apache.commons.io.filefilter.IOFileFilter.accept(java.io.File)",
+          "label" : "accept",
+          "score" : 1.34273137
+        },
+        {
+          "id" : "org.apache.commons.io.file.PathFilter.accept(java.nio.file.Path, java.nio.file.attribute.BasicFileAttributes)",
+          "label" : "accept",
+          "score" : 1.34059273
+        },
+        {
+          "id" : "org.apache.commons.io.filefilter.IOFileFilter.accept(java.nio.file.Path, java.nio.file.attribute.BasicFileAttributes)",
+          "label" : "accept",
+          "score" : 1.3268493600000002
+        }
+      ]
+    },
+    {
+      "id" : "betweenness",
+      "description" : "Betweenness Centrality",
+      "nodes" : [
+        {
+          "id" : "org.apache.commons.io.function.IOStreams.forAll(java.util.stream.Stream<T>, org.apache.commons.io.function.IOConsumer<T>, java.util.function.BiFunction<java.lang.Integer, java.io.IOException, java.io.IOException>)",
+          "label" : "forAll",
+          "score" : 301648.75457875454
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOConsumer",
+          "label" : "IOConsumer",
+          "score" : 299069.82878588943
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOStream.adapt(java.util.stream.Stream<T>)",
+          "label" : "adapt",
+          "score" : 272351.6666666687
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOConsumer.forAll(org.apache.commons.io.function.IOConsumer<T>, java.util.stream.Stream<T>)",
+          "label" : "forAll",
+          "score" : 270584.0
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOStream",
+          "label" : "IOStream",
+          "score" : 268242.12781542185
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOFunction",
+          "label" : "IOFunction",
+          "score" : 197294.1615563431
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOFunction.andThen(org.apache.commons.io.function.IOConsumer<? super R>)",
+          "label" : "andThen",
+          "score" : 87074.23071895425
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOFunction.andThen(java.util.function.Consumer<? super R>)",
+          "label" : "andThen",
+          "score" : 86405.23071895425
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOBiFunction",
+          "label" : "IOBiFunction",
+          "score" : 83350.57803234502
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOBaseStream",
+          "label" : "IOBaseStream",
+          "score" : 82107.11805644503
+        }
+      ]
+    },
+    {
+      "id" : "harmonic",
+      "description" : "Top harmonic centrality",
+      "nodes" : [
+        {
+          "id" : "org.apache.commons.io.FileUtils",
+          "label" : "FileUtils",
+          "score" : 0.09242874446123746
+        },
+        {
+          "id" : "org.apache.commons.io.IOUtils",
+          "label" : "IOUtils",
+          "score" : 0.07038211140948088
+        },
+        {
+          "id" : "org.apache.commons.io.FileUtils.FileUtils()",
+          "label" : "FileUtils",
+          "score" : 0.06354085295705843
+        },
+        {
+          "id" : "org.apache.commons.io.file.PathUtils",
+          "label" : "PathUtils",
+          "score" : 0.055773789092416974
+        },
+        {
+          "id" : "org.apache.commons.io.IOUtils.IOUtils()",
+          "label" : "IOUtils",
+          "score" : 0.04657527542791078
+        },
+        {
+          "id" : "org.apache.commons.io.file.PathUtils.PathUtils()",
+          "label" : "PathUtils",
+          "score" : 0.03865186362103218
+        },
+        {
+          "id" : "org.apache.commons.io.filefilter.FileFilterUtils",
+          "label" : "FileFilterUtils",
+          "score" : 0.03062140292834894
+        },
+        {
+          "id" : "org.apache.commons.io.file.FilesUncheck",
+          "label" : "FilesUncheck",
+          "score" : 0.0268873144816922
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOStream",
+          "label" : "IOStream",
+          "score" : 0.026130928304987828
+        },
+        {
+          "id" : "org.apache.commons.io.input.XmlStreamReader",
+          "label" : "XmlStreamReader",
+          "score" : 0.025948706178246364
+        }
+      ]
+    },
+    {
+      "id" : "combined",
+      "description" : "Crucial code elements, combined",
+      "nodes" : [
+        {
+          "id" : "org.apache.commons.io.function.IOStream",
+          "label" : "IOStream",
+          "score" : 5.0
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOConsumer",
+          "label" : "IOConsumer",
+          "score" : 4.0
+        },
+        {
+          "id" : "org.apache.commons.io.IOCase",
+          "label" : "IOCase",
+          "score" : 3.0
+        },
+        {
+          "id" : "org.apache.commons.io.filefilter.IOFileFilter",
+          "label" : "IOFileFilter",
+          "score" : 3.0
+        },
+        {
+          "id" : "org.apache.commons.io.file.PathFilter.accept(java.nio.file.Path, java.nio.file.attribute.BasicFileAttributes)",
+          "label" : "accept",
+          "score" : 3.0
+        },
+        {
+          "id" : "org.apache.commons.io.IOUtils",
+          "label" : "IOUtils",
+          "score" : 3.0
+        },
+        {
+          "id" : "org.apache.commons.io.FileUtils",
+          "label" : "FileUtils",
+          "score" : 3.0
+        },
+        {
+          "id" : "org.apache.commons.io.file.FilesUncheck",
+          "label" : "FilesUncheck",
+          "score" : 3.0
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOBaseStream.unwrap()",
+          "label" : "unwrap",
+          "score" : 3.0
+        },
+        {
+          "id" : "org.apache.commons.io.file.PathUtils",
+          "label" : "PathUtils",
+          "score" : 3.0
+        },
+        {
+          "id" : "org.apache.commons.io.filefilter.FileFilterUtils",
+          "label" : "FileFilterUtils",
+          "score" : 3.0
+        },
+        {
+          "id" : "org.apache.commons.io.input.XmlStreamReader",
+          "label" : "XmlStreamReader",
+          "score" : 3.0
+        },
+        {
+          "id" : "org.apache.commons.io.function.Uncheck.apply(org.apache.commons.io.function.IOFunction<T, R>, T)",
+          "label" : "apply",
+          "score" : 2.0
+        },
+        {
+          "id" : "org.apache.commons.io.input.Tailer",
+          "label" : "Tailer",
+          "score" : 2.0
+        },
+        {
+          "id" : "org.apache.commons.io.filefilter.IOFileFilter.accept(java.nio.file.Path, java.nio.file.attribute.BasicFileAttributes)",
+          "label" : "accept",
+          "score" : 2.0
+        },
+        {
+          "id" : "org.apache.commons.io.file.Counters.PathCounters",
+          "label" : "PathCounters",
+          "score" : 2.0
+        },
+        {
+          "id" : "org.apache.commons.io.filefilter.IOFileFilter.accept(java.io.File)",
+          "label" : "accept",
+          "score" : 2.0
+        },
+        {
+          "id" : "org.apache.commons.io.CloseableURLConnection?urlConnection@42.32:42.45",
+          "label" : "urlConnection",
+          "score" : 2.0
+        },
+        {
+          "id" : "org.apache.commons.io.FilenameUtils",
+          "label" : "FilenameUtils",
+          "score" : 2.0
+        },
+        {
+          "id" : "org.apache.commons.io.IOUtils.IOUtils()",
+          "label" : "IOUtils",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.file.Counters.Counter",
+          "label" : "Counter",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.FileSystemUtils",
+          "label" : "FileSystemUtils",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.input.Tailer.Builder.build()",
+          "label" : "build",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.output.NullPrintStream?NULL_PRINT_STREAM@44.40:44.57",
+          "label" : "NULL_PRINT_STREAM",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOFunction",
+          "label" : "IOFunction",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.input.TailerListener",
+          "label" : "TailerListener",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.output.NullPrintStream",
+          "label" : "NullPrintStream",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.FileUtils.FileUtils()",
+          "label" : "FileUtils",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.CloseableURLConnection",
+          "label" : "CloseableURLConnection",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOConsumer.forAll(org.apache.commons.io.function.IOConsumer<T>, java.util.stream.Stream<T>)",
+          "label" : "forAll",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.input.Tailer.Builder.Builder(java.io.File, org.apache.commons.io.input.TailerListener)",
+          "label" : "Builder",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOFunction.andThen(org.apache.commons.io.function.IOConsumer<? super R>)",
+          "label" : "andThen",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOBiFunction",
+          "label" : "IOBiFunction",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOStream.T",
+          "label" : "T",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOBaseStream",
+          "label" : "IOBaseStream",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.input.XmlStreamReader.calculateHttpEncoding(java.lang.String, java.lang.String, java.lang.String, java.lang.String, boolean)",
+          "label" : "calculateHttpEncoding",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOFunction.andThen(java.util.function.Consumer<? super R>)",
+          "label" : "andThen",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.file.PathUtils.PathUtils()",
+          "label" : "PathUtils",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.file.PathFilter",
+          "label" : "PathFilter",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.output.NullPrintStream.NullPrintStream()",
+          "label" : "NullPrintStream",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOStreams.forAll(java.util.stream.Stream<T>, org.apache.commons.io.function.IOConsumer<T>, java.util.function.BiFunction<java.lang.Integer, java.io.IOException, java.io.IOException>)",
+          "label" : "forAll",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.input.Tailer.Builder",
+          "label" : "Builder",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.function.IOStream.adapt(java.util.stream.Stream<T>)",
+          "label" : "adapt",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.input.Tailer.Tailable",
+          "label" : "Tailable",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.output.NullPrintStream?INSTANCE@36.40:36.48",
+          "label" : "INSTANCE",
+          "score" : 1.0
+        },
+        {
+          "id" : "org.apache.commons.io.input.Tailer?tailable@610.27:610.35",
+          "label" : "tailable",
+          "score" : 1.0
+        }
+      ]
+    }
+  ],
+  "graphStats" : [
+    {
+      "id" : "average_node_degree",
+      "label" : "Average Graph Degree",
+      "score" : 4.671609598274467
+    },
+    {
+      "id" : "clustering_coefficient",
+      "label" : "Average Clustering Coefficient",
+      "score" : 0.24214221184417245
+    }
+  ]
+}

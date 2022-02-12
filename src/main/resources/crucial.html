@@ -1,0 +1,89 @@
+<html>
+<style>
+    .wrapper {
+        display:flex;
+        flex-direction: row;
+    }
+    .first {
+        width: 500px;
+        margin-right: 100px;
+    }
+    .second {
+        width: 500px;
+    }
+
+    .styled-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .styled-table thead tr {
+        background-color: #009879;
+        color: #ffffff;
+        text-align: left;
+    }
+
+    .align-right {
+        text-align: right;
+    }
+    .styled-table th,
+    .styled-table td {
+        padding: 12px 15px;
+    }
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+
+    .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
+    }
+    .styled-table tbody tr.active-row {
+        font-weight: bold;
+        color: #009879;
+    }
+</style>
+<body>
+<h2 id="title">Title</h2>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="partition.js"></script>
+<script>
+    document.getElementById("title").innerText = "Crucial nodes for " + crucial.projectName
+    crucial.stats.map(x => {
+        const table = document.createElement("table")
+        table.classList.add("styled-table")
+        const header = table.createTHead()
+        const cell = header.insertRow().insertCell()
+        cell.textContent = x.id.toUpperCase();
+        cell.colSpan = 3
+        const headerRow = header.insertRow()
+        headerRow.insertCell(0).innerText = "ID"
+        headerRow.insertCell(1).innerText = "Label"
+        const scoreCell = headerRow.insertCell(2)
+        scoreCell.classList.add("align-right")
+        scoreCell.innerText = "Score"
+
+        const tBody = table.createTBody()
+        x.nodes.map(n => {
+            const row = tBody.insertRow()
+            row.insertCell(0).innerText = n.id;
+            row.insertCell(1).innerText = n.label;
+            const scoreCell = row.insertCell(2)
+            scoreCell.classList.add("align-right")
+            scoreCell.innerText = n.score;
+        });
+        document.body.appendChild(table);
+        console.log(x.id);
+    })
+</script>
+</body>
+</html>

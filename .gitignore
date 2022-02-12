@@ -1,0 +1,14 @@
+.bloop
+.bsp
+.idea
+.metals
+.vscode
+target
+.semanticgraphs
+*.json
+.scala-build
+.java-version
+.DS_Store
+__pycache__
+trash
+docker/jupyter/test*

@@ -1,0 +1,1 @@
+docker build -t liosedhel/scg-cli:0.0.1 .

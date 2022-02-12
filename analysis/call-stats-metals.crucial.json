@@ -1,0 +1,737 @@
+{
+  "projectName" : "metals",
+  "workspace" : "data/metals",
+  "stats" : [
+    {
+      "id" : "loc",
+      "description" : "Top by node LOC size",
+      "nodes" : [
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#updateWorkspaceDirectory().",
+          "label" : "updateWorkspaceDirectory",
+          "score" : 419.0
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.parseAtSymbol().",
+          "label" : "parseAtSymbol",
+          "score" : 319.0
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.WikiParser#table().",
+          "label" : "table",
+          "score" : 271.0
+        },
+        {
+          "id" : "scala/meta/internal/mtags/ScalaMtags#apply().",
+          "label" : "apply",
+          "score" : 263.0
+        },
+        {
+          "id" : "local313:mtags/src/main/scala-2/scala/meta/internal/docstrings/ScaladocParser.scala",
+          "label" : "parse0",
+          "score" : 259.0
+        },
+        {
+          "id" : "scala/meta/internal/parsing/DocumentSymbolProvider#SymbolTraverser#apply().",
+          "label" : "apply",
+          "score" : 244.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#executeCommand().",
+          "label" : "executeCommand",
+          "score" : 238.0
+        },
+        {
+          "id" : "scala/meta/internal/pc/CompletionProvider#completions().",
+          "label" : "completions",
+          "score" : 197.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/UserConfiguration.fromJson().",
+          "label" : "fromJson",
+          "score" : 186.0
+        },
+        {
+          "id" : "scala/meta/internal/pc/MetalsGlobal#shortType().",
+          "label" : "shortType",
+          "score" : 182.0
+        }
+      ]
+    },
+    {
+      "id" : "out-degree",
+      "description" : "Top by node degree outgoing",
+      "nodes" : [
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#executeCommand().",
+          "label" : "executeCommand",
+          "score" : 47.0
+        },
+        {
+          "id" : "scala/meta/internal/pc/CompletionProvider#completions().",
+          "label" : "completions",
+          "score" : 33.0
+        },
+        {
+          "id" : "scala/meta/internal/rename/RenameProvider#rename().",
+          "label" : "rename",
+          "score" : 31.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#updateWorkspaceDirectory().",
+          "label" : "updateWorkspaceDirectory",
+          "score" : 30.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#indexWorkspace().",
+          "label" : "indexWorkspace",
+          "score" : 25.0
+        },
+        {
+          "id" : "scala/meta/internal/mtags/ScalaToplevelMtags#loop().",
+          "label" : "loop",
+          "score" : 22.0
+        },
+        {
+          "id" : "scala/meta/internal/mtags/ScalaMtags#apply().",
+          "label" : "apply",
+          "score" : 22.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#didChangeConfiguration().",
+          "label" : "didChangeConfiguration",
+          "score" : 20.0
+        },
+        {
+          "id" : "scala/meta/internal/tvp/ClasspathTreeView#children().",
+          "label" : "children",
+          "score" : 17.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/Warnings#noSemanticdb().",
+          "label" : "noSemanticdb",
+          "score" : 17.0
+        }
+      ]
+    },
+    {
+      "id" : "in-degree",
+      "description" : "Top by node degree incoming",
+      "nodes" : [
+        {
+          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionJavaFuture#asScala().",
+          "label" : "asScala",
+          "score" : 53.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionString#toAbsolutePath().",
+          "label" : "toAbsolutePath",
+          "score" : 46.0
+        },
+        {
+          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionAbsolutePath#filename().",
+          "label" : "filename",
+          "score" : 25.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/BuildTargets#inverseSources().",
+          "label" : "inverseSources",
+          "score" : 23.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionScalaFuture#asJava().",
+          "label" : "asJava",
+          "score" : 20.0
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#char().",
+          "label" : "char",
+          "score" : 19.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionScalaFuture#ignoreValue().",
+          "label" : "ignoreValue",
+          "score" : 18.0
+        },
+        {
+          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionAbsolutePath#toInput().",
+          "label" : "toInput",
+          "score" : 18.0
+        },
+        {
+          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionAbsolutePath#isAmmoniteScript().",
+          "label" : "isAmmoniteScript",
+          "score" : 17.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/ScalaVersions.isScala3Version().",
+          "label" : "isScala3Version",
+          "score" : 16.0
+        }
+      ]
+    },
+    {
+      "id" : "pagerank",
+      "description" : "PageRank - how influential the node is",
+      "nodes" : [
+        {
+          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionPathMetals#filename().",
+          "label" : "filename",
+          "score" : 0.005880610641024404
+        },
+        {
+          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionAbsolutePath#exists().",
+          "label" : "exists",
+          "score" : 0.005198252406453795
+        },
+        {
+          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionAbsolutePath#filename().",
+          "label" : "filename",
+          "score" : 0.004453877975432308
+        },
+        {
+          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionAbsolutePath#dealias().",
+          "label" : "dealias",
+          "score" : 0.0040717849555303234
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#char().",
+          "label" : "char",
+          "score" : 0.0032551740542419334
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionJavaFuture#asScala().",
+          "label" : "asScala",
+          "score" : 0.0030608989052206305
+        },
+        {
+          "id" : "scala/meta/internal/metals/Time#nanos().",
+          "label" : "nanos",
+          "score" : 0.0029441261015695757
+        },
+        {
+          "id" : "scala/meta/internal/mtags/MtagsIndexer#addSignature().",
+          "label" : "addSignature",
+          "score" : 0.0028831849755027493
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#nextChar().",
+          "label" : "nextChar",
+          "score" : 0.0028614761991479897
+        },
+        {
+          "id" : "scala/meta/internal/metals/Timer#elapsedNanos().",
+          "label" : "elapsedNanos",
+          "score" : 0.0028339849359848954
+        }
+      ]
+    },
+    {
+      "id" : "eigenvector",
+      "description" : "eigenvector Centrality",
+      "nodes" : [
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#char().",
+          "label" : "char",
+          "score" : 0.5095690299538406
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#jump(+1).",
+          "label" : "jump",
+          "score" : 0.46688841181027047
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#check().",
+          "label" : "check",
+          "score" : 0.43438149815850513
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#nextChar().",
+          "label" : "nextChar",
+          "score" : 0.4128735422568112
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.WikiParser#inline().",
+          "label" : "inline",
+          "score" : 0.28944515182412206
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#readUntil(+2).",
+          "label" : "readUntil",
+          "score" : 0.1449363463343831
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#withRead().",
+          "label" : "withRead",
+          "score" : 0.07253611570451876
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#jump().",
+          "label" : "jump",
+          "score" : 0.06443769668213038
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#checkSkipInitWhitespace(+1).",
+          "label" : "checkSkipInitWhitespace",
+          "score" : 0.05633927765974203
+        },
+        {
+          "id" : "local655:mtags/src/main/scala-2/scala/meta/internal/docstrings/ScaladocParser.scala",
+          "label" : "inline0",
+          "score" : 0.048590514134330146
+        }
+      ]
+    },
+    {
+      "id" : "Katz",
+      "description" : "Katz Centrality - how influential the node is",
+      "nodes" : [
+        {
+          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionJavaFuture#asScala().",
+          "label" : "asScala",
+          "score" : 1.5361570000000002
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionString#toAbsolutePath().",
+          "label" : "toAbsolutePath",
+          "score" : 1.4650600000000003
+        },
+        {
+          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionAbsolutePath#filename().",
+          "label" : "filename",
+          "score" : 1.255191
+        },
+        {
+          "id" : "scala/meta/internal/metals/BuildTargets#inverseSources().",
+          "label" : "inverseSources",
+          "score" : 1.2327460000000001
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionScalaFuture#asJava().",
+          "label" : "asJava",
+          "score" : 1.200606
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#char().",
+          "label" : "char",
+          "score" : 1.195698
+        },
+        {
+          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionAbsolutePath#toInput().",
+          "label" : "toInput",
+          "score" : 1.182031
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionScalaFuture#ignoreValue().",
+          "label" : "ignoreValue",
+          "score" : 1.181822
+        },
+        {
+          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionAbsolutePath#isAmmoniteScript().",
+          "label" : "isAmmoniteScript",
+          "score" : 1.172033
+        },
+        {
+          "id" : "scala/meta/internal/metals/ScalaVersions.isScala3Version().",
+          "label" : "isScala3Version",
+          "score" : 1.163142
+        }
+      ]
+    },
+    {
+      "id" : "betweenness",
+      "description" : "Betweenness Centrality",
+      "nodes" : [
+        {
+          "id" : "scala/meta/internal/metals/BuildTargets#inverseSources().",
+          "label" : "inverseSources",
+          "score" : 5.372701845735192E-4
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#profiledIndexWorkspace().",
+          "label" : "profiledIndexWorkspace",
+          "score" : 4.2760228108638265E-4
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#autoConnectToBuildServer().",
+          "label" : "autoConnectToBuildServer",
+          "score" : 4.261561687172165E-4
+        },
+        {
+          "id" : "scala/meta/internal/metals/BuildTargets#inferBuildTarget().",
+          "label" : "inferBuildTarget",
+          "score" : 4.2355942667942346E-4
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#indexWorkspace().",
+          "label" : "indexWorkspace",
+          "score" : 3.958992410000976E-4
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#connectToNewBuildServer().",
+          "label" : "connectToNewBuildServer",
+          "score" : 3.184351957357539E-4
+        },
+        {
+          "id" : "scala/meta/internal/metals/Compilers#withPCAndAdjustLsp().",
+          "label" : "withPCAndAdjustLsp",
+          "score" : 2.564814881590566E-4
+        },
+        {
+          "id" : "scala/meta/internal/metals/BuildTargets#unsafeInferBuildTarget().",
+          "label" : "unsafeInferBuildTarget",
+          "score" : 2.480176616520749E-4
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#indexSourceFile().",
+          "label" : "indexSourceFile",
+          "score" : 2.3419508108445957E-4
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#quickConnectToBuildServer().",
+          "label" : "quickConnectToBuildServer",
+          "score" : 2.2967269331179417E-4
+        }
+      ]
+    },
+    {
+      "id" : "harmonic",
+      "description" : "Top harmonic centrality",
+      "nodes" : [
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#executeCommand().",
+          "label" : "executeCommand",
+          "score" : 0.0832914824282319
+        },
+        {
+          "id" : "local15:metals/src/main/scala/scala/meta/internal/metals/MetalsHttpServer.scala",
+          "label" : "handleRequest",
+          "score" : 0.061707483466869315
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#updateWorkspaceDirectory().",
+          "label" : "updateWorkspaceDirectory",
+          "score" : 0.05205011410136096
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#didChangeConfiguration().",
+          "label" : "didChangeConfiguration",
+          "score" : 0.04212014272989875
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#initialize().",
+          "label" : "initialize",
+          "score" : 0.04155178657096985
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#initialized().",
+          "label" : "initialized",
+          "score" : 0.040464253553456085
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#connectToNewBuildServer().",
+          "label" : "connectToNewBuildServer",
+          "score" : 0.03963620953207147
+        },
+        {
+          "id" : "scala/meta/internal/rename/RenameProvider#rename().",
+          "label" : "rename",
+          "score" : 0.03902942236047192
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#autoConnectToBuildServer().",
+          "label" : "autoConnectToBuildServer",
+          "score" : 0.036296382281583744
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#slowConnectToBuildServer().",
+          "label" : "slowConnectToBuildServer",
+          "score" : 0.033826093671256795
+        }
+      ]
+    },
+    {
+      "id" : "combined",
+      "description" : "Crucial code elements, combined",
+      "nodes" : [
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#char().",
+          "label" : "char",
+          "score" : 4.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/BuildTargets#inverseSources().",
+          "label" : "inverseSources",
+          "score" : 3.0
+        },
+        {
+          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionAbsolutePath#filename().",
+          "label" : "filename",
+          "score" : 3.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionJavaFuture#asScala().",
+          "label" : "asScala",
+          "score" : 3.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#executeCommand().",
+          "label" : "executeCommand",
+          "score" : 3.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#updateWorkspaceDirectory().",
+          "label" : "updateWorkspaceDirectory",
+          "score" : 3.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionString#toAbsolutePath().",
+          "label" : "toAbsolutePath",
+          "score" : 2.0
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#nextChar().",
+          "label" : "nextChar",
+          "score" : 2.0
+        },
+        {
+          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionAbsolutePath#isAmmoniteScript().",
+          "label" : "isAmmoniteScript",
+          "score" : 2.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionScalaFuture#ignoreValue().",
+          "label" : "ignoreValue",
+          "score" : 2.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/ScalaVersions.isScala3Version().",
+          "label" : "isScala3Version",
+          "score" : 2.0
+        },
+        {
+          "id" : "scala/meta/internal/rename/RenameProvider#rename().",
+          "label" : "rename",
+          "score" : 2.0
+        },
+        {
+          "id" : "scala/meta/internal/mtags/ScalaMtags#apply().",
+          "label" : "apply",
+          "score" : 2.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#indexWorkspace().",
+          "label" : "indexWorkspace",
+          "score" : 2.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#autoConnectToBuildServer().",
+          "label" : "autoConnectToBuildServer",
+          "score" : 2.0
+        },
+        {
+          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionAbsolutePath#toInput().",
+          "label" : "toInput",
+          "score" : 2.0
+        },
+        {
+          "id" : "scala/meta/internal/pc/CompletionProvider#completions().",
+          "label" : "completions",
+          "score" : 2.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionScalaFuture#asJava().",
+          "label" : "asJava",
+          "score" : 2.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#connectToNewBuildServer().",
+          "label" : "connectToNewBuildServer",
+          "score" : 2.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#didChangeConfiguration().",
+          "label" : "didChangeConfiguration",
+          "score" : 2.0
+        },
+        {
+          "id" : "local655:mtags/src/main/scala-2/scala/meta/internal/docstrings/ScaladocParser.scala",
+          "label" : "inline0",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.WikiParser#inline().",
+          "label" : "inline",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#initialize().",
+          "label" : "initialize",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/pc/MetalsGlobal#shortType().",
+          "label" : "shortType",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/tvp/ClasspathTreeView#children().",
+          "label" : "children",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/UserConfiguration.fromJson().",
+          "label" : "fromJson",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/BuildTargets#inferBuildTarget().",
+          "label" : "inferBuildTarget",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/Timer#elapsedNanos().",
+          "label" : "elapsedNanos",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/Compilers#withPCAndAdjustLsp().",
+          "label" : "withPCAndAdjustLsp",
+          "score" : 1.0
+        },
+        {
+          "id" : "local313:mtags/src/main/scala-2/scala/meta/internal/docstrings/ScaladocParser.scala",
+          "label" : "parse0",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/mtags/ScalaToplevelMtags#loop().",
+          "label" : "loop",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/Time#nanos().",
+          "label" : "nanos",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/BuildTargets#unsafeInferBuildTarget().",
+          "label" : "unsafeInferBuildTarget",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.parseAtSymbol().",
+          "label" : "parseAtSymbol",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionAbsolutePath#exists().",
+          "label" : "exists",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionAbsolutePath#dealias().",
+          "label" : "dealias",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/mtags/MtagsIndexer#addSignature().",
+          "label" : "addSignature",
+          "score" : 1.0
+        },
+        {
+          "id" : "local15:metals/src/main/scala/scala/meta/internal/metals/MetalsHttpServer.scala",
+          "label" : "handleRequest",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#indexSourceFile().",
+          "label" : "indexSourceFile",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/Warnings#noSemanticdb().",
+          "label" : "noSemanticdb",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#checkSkipInitWhitespace(+1).",
+          "label" : "checkSkipInitWhitespace",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#jump().",
+          "label" : "jump",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#profiledIndexWorkspace().",
+          "label" : "profiledIndexWorkspace",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#withRead().",
+          "label" : "withRead",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#jump(+1).",
+          "label" : "jump",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#initialized().",
+          "label" : "initialized",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/parsing/DocumentSymbolProvider#SymbolTraverser#apply().",
+          "label" : "apply",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#quickConnectToBuildServer().",
+          "label" : "quickConnectToBuildServer",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionPathMetals#filename().",
+          "label" : "filename",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.WikiParser#table().",
+          "label" : "table",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/metals/MetalsLanguageServer#slowConnectToBuildServer().",
+          "label" : "slowConnectToBuildServer",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#check().",
+          "label" : "check",
+          "score" : 1.0
+        },
+        {
+          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#readUntil(+2).",
+          "label" : "readUntil",
+          "score" : 1.0
+        }
+      ]
+    }
+  ],
+  "graphStats" : [
+    {
+      "id" : "average_node_degree",
+      "label" : "Average Graph Degree",
+      "score" : 3.073557387444515
+    },
+    {
+      "id" : "clustering_coefficient",
+      "label" : "Average Clustering Coefficient",
+      "score" : 0.0450004272207373
+    }
+  ]
+}
