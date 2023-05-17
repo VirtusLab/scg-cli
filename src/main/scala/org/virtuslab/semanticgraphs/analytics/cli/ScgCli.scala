@@ -31,7 +31,7 @@ class ScgCli:
 
   @Command(name = "version", description = Array("Show scg-cli version"))
   def version() = {
-    println("scg-cli 0.1.3-SNAPSHOT")
+    println("scg-cli 0.1.3")
   }
 
   @Command(name = "generate", description = Array("Generate SCG metadata"))
