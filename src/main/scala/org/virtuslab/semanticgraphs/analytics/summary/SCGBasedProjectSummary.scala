@@ -138,7 +138,7 @@ object ComputeProjectSummary extends App:
   def analyze(projects: List[SemanticCodeGraph], filePrefix: String): Future[List[CrucialNodesSummary]] =
     Future.sequence(projects.map { project =>
       Future {
-        CrucialNodes.analyze(project, filePrefix)
+        CrucialNodes.analyze(project, filePrefix, 10)
       }.recover { case e =>
         println(s"Exception for ${project.projectName} ${e.getMessage}")
         CrucialNodesSummary(project.projectName, project.projectAndVersion.workspace, Nil)

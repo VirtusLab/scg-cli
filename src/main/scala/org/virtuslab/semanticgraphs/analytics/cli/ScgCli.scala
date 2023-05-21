@@ -31,7 +31,7 @@ class ScgCli:
 
   @Command(name = "version", description = Array("Show scg-cli version"))
   def version() = {
-    println("scg-cli 0.1.3")
+    println("scg-cli 0.1.4-SNAPSHOT")
   }
 
   @Command(name = "generate", description = Array("Generate SCG metadata"))
@@ -100,10 +100,17 @@ class ScgCli:
       arity = "0..1",
       defaultValue = "quick"
     )
-    mode: String
+    mode: String,
+    @Option(
+      names = Array("-n", "--number"),
+      description = Array("How many top nodes should be returned"),
+      arity = "0..1",
+      defaultValue = "10"
+    )
+    n: Int,
   ): Unit =
     val scg = SemanticCodeGraph.read(ProjectAndVersion(workspace, workspace.split("/").last, ""))
-    val summary = CrucialNodes.analyze(scg, mode == "quick")
+    val summary = CrucialNodes.analyze(scg, mode == "quick", n)
     output match {
       case "html" =>
         CrucialNodes.exportHtmlSummary(summary)
@@ -112,8 +119,29 @@ class ScgCli:
         JsonUtils.dumpJsonFile(outputFile, write(summary))
         println(s"Results exported to: $outputFile")
       case "txt" =>
-        println(write(summary, 2))
+        println(summary.projectName)
+        println(summary.workspace)
+        summary.stats.foreach{ stat =>
+          println(s"${stat.id}, ${stat.description}")
+          stat.nodes.foreach{node =>
+            println(s"${node.id}, ${formatScore(node.score)}")
+          }
+        }
+      case "tex" =>
+        println(summary.projectName)
+        println(summary.workspace)
+        summary.stats.foreach { stat =>
+          println(s"\\hline")
+          println(s"${stat.description} & Score \\\\")
+          println(s"\\hline")
+          stat.nodes.foreach { node =>
+            println(s"${node.id} & ${formatScore(node.score)} \\\\")
+          }
+        }
     }
+
+  private def formatScore(value: Double): String =
+    if value == value.toInt then value.toInt.toString else f"$value%.3f"
 
   case class PartitionResult(results: List[PartitionResults])
   object PartitionResult:

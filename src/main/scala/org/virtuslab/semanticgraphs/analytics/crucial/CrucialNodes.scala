@@ -39,21 +39,23 @@ case class CrucialNodesSummary(
 
 object CrucialNodes:
 
-  def analyze(semanticCodeGraph: SemanticCodeGraph, quick: Boolean): CrucialNodesSummary =
+  def analyze(semanticCodeGraph: SemanticCodeGraph, quick: Boolean, n: Int): CrucialNodesSummary =
     val jGraphTExporter = new JGraphTAnalyzer(semanticCodeGraph)
     jGraphTExporter.computeStatistics(
       semanticCodeGraph.projectName,
       semanticCodeGraph.projectAndVersion.workspace,
-      quick
+      quick,
+      n
     )
 
-  def analyze(semanticCodeGraph: SemanticCodeGraph, filePrefix: String): CrucialNodesSummary =
+  def analyze(semanticCodeGraph: SemanticCodeGraph, filePrefix: String, n: Int): CrucialNodesSummary =
     val jGraphTExporter = new JGraphTAnalyzer(semanticCodeGraph)
     val stats =
       jGraphTExporter.computeStatistics(
         semanticCodeGraph.projectName,
         semanticCodeGraph.projectAndVersion.workspace,
-        false
+        false,
+        n
       )
     val outputFile = s"$filePrefix-stats-${semanticCodeGraph.projectName}.crucial.json"
     JsonUtils.dumpJsonFile(outputFile, write(stats))
@@ -83,12 +85,12 @@ object CrucialNodesApp extends App:
   val workspace = args(0)
   val projectName = workspace.split("/").last
   val scg = SemanticCodeGraph.read(ProjectAndVersion(workspace, workspace.split("/").last, ""))
-  CrucialNodes.analyze(scg, projectName)
+  CrucialNodes.analyze(scg, projectName, 10)
 
 object CrucialNodesAnalyzeAll extends App:
   def analyzeAll() =
     SemanticCodeGraph.readAllProjects().foreach { scg =>
-      CrucialNodes.analyze(scg, "all"); println(); Thread.sleep(100)
+      CrucialNodes.analyze(scg, "all", 10); println(); Thread.sleep(100)
     }
 
   analyzeAll()
@@ -96,7 +98,7 @@ object CrucialNodesAnalyzeAll extends App:
 object CrucialNodesAnalyzeAllZipped extends App:
   def analyzeAll() =
     SemanticCodeGraph.readAllProjects().foreach { scg =>
-      CrucialNodes.analyze(scg, "all"); println(); Thread.sleep(100)
+      CrucialNodes.analyze(scg, "all", 10); println(); Thread.sleep(100)
     }
 
   analyzeAll()
@@ -136,59 +138,61 @@ class JGraphTAnalyzer(semanticCodeGraph: SemanticCodeGraph):
       }
     )
 
-  def computeStatistics(projectName: String, workspace: String, quick: Boolean): CrucialNodesSummary =
-    println(
-      s"Nodes size: ${graph.vertexSet().size()}, Edges ${graph.edgeSet().size()}"
-    )
-
+  def computeStatistics(projectName: String, workspace: String, quick: Boolean, n: Int): CrucialNodesSummary =
     val statistics = List(
       computeStats(
         id = Statistic.loc,
-        desc = "Top by node LOC size",
+        desc = "Lines of code",
         nodes.values
           .map(node =>
             (
               node.id,
               node.properties.get("LOC").map(_.toInt).getOrElse(0).toDouble
             )
-          )
+          ),
+        take = n
       ),
       computeStats(
         id = Statistic.outDegree,
-        desc = "Top by node degree outgoing",
+        desc = "Node out-degree",
         graph
           .vertexSet()
           .asScala
           .toList
-          .map(v => (v, graph.outDegreeOf(v).toDouble))
+          .map(v => (v, graph.outDegreeOf(v).toDouble)),
+        take = n
       ),
       computeStats(
         id = Statistic.inDegree,
-        desc = "Top by node degree incoming",
+        desc = "Node in-degree",
         graph
           .vertexSet()
           .asScala
           .toList
-          .map(v => (v, graph.inDegreeOf(v).toDouble))
+          .map(v => (v, graph.inDegreeOf(v).toDouble)),
+        take = n
       ),
       computeStats(
         id = Statistic.pageRank,
-        desc = "PageRank - how influential the node is",
-        new PageRank(graph, 0.99, 1000, 0.000001).getScores.asScala
+        desc = "PageRank",
+        new PageRank(graph, 0.99, 1000, 0.000001).getScores.asScala,
+        take = n
       ),
       computeStats(
         id = Statistic.eigenvector,
-        desc = "eigenvector Centrality",
+        desc = "Eigenvector centrality",
         new EigenvectorCentrality(
           graph,
           EigenvectorCentrality.MAX_ITERATIONS_DEFAULT,
           EigenvectorCentrality.TOLERANCE_DEFAULT
-        ).getScores.asScala
+        ).getScores.asScala,
+        take = n
       ),
       computeStats(
         id = Statistic.katz,
-        desc = "Katz Centrality - how influential the node is",
-        new KatzCentrality(graph).getScores.asScala
+        desc = "Katz centrality",
+        new KatzCentrality(graph).getScores.asScala,
+        take = n
       )
 //      computeStats(
 //        id = "codesmell",
@@ -210,13 +214,15 @@ class JGraphTAnalyzer(semanticCodeGraph: SemanticCodeGraph):
         List(
           computeStats(
             id = Statistic.betweenness,
-            desc = "Betweenness Centrality",
-            JGraphTMetrics.betweennessCentrality(graph).asScala
+            desc = "Betweenness centrality",
+            JGraphTMetrics.betweennessCentrality(graph).asScala,
+            take = n
           ),
           computeStats(
             id = Statistic.harmonic,
-            desc = "Top harmonic centrality",
-            new HarmonicCentrality[String, LabeledEdge](graph).getScores.asScala
+            desc = "Harmonic centrality",
+            new HarmonicCentrality[String, LabeledEdge](graph).getScores.asScala,
+            take = n
           )
         )
       else Nil
@@ -225,16 +231,16 @@ class JGraphTAnalyzer(semanticCodeGraph: SemanticCodeGraph):
     CrucialNodesSummary(
       projectName,
       workspace,
-      allStatistics :+ computeCombinedMetrics(allStatistics)
+      allStatistics :+ computeCombinedMetrics(allStatistics, n)
     )
 
-  def computeCombinedMetrics(stats: List[Statistic]): Statistic =
+  private def computeCombinedMetrics(stats: List[Statistic], n: Int): Statistic =
     val list = stats.flatMap(_.nodes)
     val a = list.groupBy(node => (node.id, node.label)).mapValues(_.size)
     Statistic(
       id = Statistic.combined.id,
-      description = "Crucial code elements, combined",
+      description = "Combined importance",
       a.toList.sortBy { case (_, size) => -size }.map { case ((id, label), score) =>
         NodeScore(id, label, score)
-      }
+      }.take(n)
     )
