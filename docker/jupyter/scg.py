@@ -67,7 +67,7 @@ def create_graph(scgs, remove_local=False):
     G = nx.DiGraph()
     for scg_file in scgs:
         for node in scg_file.nodes:
-            G.add_node(node.id, scg_node=node)
+            G.add_node(node.id, scg_node=node, kind=node.kind, display_name = node.displayName)
             for edge in node.edges:
                 G.add_edge(node.id, edge.to, type=edge.type)
 

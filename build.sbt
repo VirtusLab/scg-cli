@@ -57,6 +57,7 @@ lazy val commons = project.in(file("commons")).settings(
     scalapb.gen() -> (Compile / sourceManaged).value
   ),
   libraryDependencies += "org.jgrapht" % "jgrapht-core" % "1.5.1",
+  libraryDependencies += "org.jgrapht" % "jgrapht-io" % "1.5.1",
   libraryDependencies += "com.thesamet.scalapb" %% "scalapb-runtime" % "0.11.12",
   libraryDependencies += "com.lihaoyi" %% "upickle" % "3.1.0",
   libraryDependencies += "org.apache.commons" % "commons-compress" % "1.23.0"

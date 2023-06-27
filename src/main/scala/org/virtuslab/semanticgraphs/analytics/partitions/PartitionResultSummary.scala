@@ -2,6 +2,8 @@ package org.virtuslab.semanticgraphs.analytics.partitions
 
 import org.virtuslab.semanticgraphs.analytics.crucial.CrucialNodes.getClass
 import org.virtuslab.semanticgraphs.analytics.crucial.CrucialNodesSummary
+import org.virtuslab.semanticgraphs.analytics.exporters.ExportToGml
+import org.virtuslab.semanticgraphs.analytics.scg.{ProjectAndVersion, SemanticCodeGraph}
 import upickle.default.*
 
 import java.nio.file.{Files, Path, StandardCopyOption}
@@ -19,8 +21,10 @@ case class ShortSummary(
   distribution: String
 ) derives ReadWriter
 
-case class PartitionPackageSummary(method: String, part: Int, accuracy: Int, `package`: String, distribution: String) derives ReadWriter
-case class PartitionFileSummary(method: String, part: Int, accuracy: Int, file: String, distribution: String) derives ReadWriter
+case class PartitionPackageSummary(method: String, part: Int, accuracy: Int, `package`: String, distribution: String)
+  derives ReadWriter
+case class PartitionFileSummary(method: String, part: Int, accuracy: Int, file: String, distribution: String)
+  derives ReadWriter
 
 case class PartitionResultsSummary(
   nparts: Int,
@@ -28,7 +32,8 @@ case class PartitionResultsSummary(
   byFile: List[PartitionFileSummary]
 ) derives ReadWriter
 
-case class PartitionResultsWrapper(results: List[PartitionResultsSummary], summary: List[ShortSummary]) derives ReadWriter
+case class PartitionResultsWrapper(results: List[PartitionResultsSummary], summary: List[ShortSummary])
+  derives ReadWriter
 
 object PartitionResultsSummary:
 

@@ -4,7 +4,7 @@ import scala.jdk.CollectionConverters.*
 import org.virtuslab.semanticgraphs.analytics.crucial.{CrucialNodes, CrucialNodesSummary}
 import org.virtuslab.semanticgraphs.analytics.metrics.JGraphTMetrics
 import org.virtuslab.semanticgraphs.analytics.scg.{ProjectAndVersion, SemanticCodeGraph}
-import org.virtuslab.semanticgraphs.analytics.utils.JsonUtils
+import org.virtuslab.semanticgraphs.analytics.utils.FileUtils
 
 import java.nio.file.{Files, Path, StandardCopyOption}
 import scala.concurrent.duration.Duration
@@ -103,7 +103,7 @@ object SCGBasedProjectSummary extends App:
 
   def exportSummary(): Unit =
     val summary = projects.map(SCGProjectSummary.summary)
-    JsonUtils.dumpJsonFile("summary.json", write(summary))
+    FileUtils.dumpFile("summary.json", write(summary))
 
   def printSummaryLatexTable() =
     println()

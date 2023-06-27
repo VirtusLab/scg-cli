@@ -6,7 +6,7 @@ import org.virtuslab.semanticgraphs.analytics.scg.ScgJGraphT.LabeledEdge
 import org.virtuslab.semanticgraphs.analytics.scg.{ProjectAndVersion, SemanticCodeGraph}
 import org.virtuslab.semanticgraphs.analytics.summary.SCGProjectSummary
 import org.virtuslab.semanticgraphs.analytics.summary.SCGProjectSummary.getClass
-import org.virtuslab.semanticgraphs.analytics.utils.JsonUtils
+import org.virtuslab.semanticgraphs.analytics.utils.FileUtils
 
 import upickle.default.*
 
@@ -58,7 +58,7 @@ object CrucialNodes:
         n
       )
     val outputFile = s"$filePrefix-stats-${semanticCodeGraph.projectName}.crucial.json"
-    JsonUtils.dumpJsonFile(outputFile, write(stats))
+    FileUtils.dumpFile(outputFile, write(stats))
     println(s"Results exported to: $outputFile")
     stats
 

@@ -23,7 +23,7 @@ object ExportToGdf:
     semanticCodeGraph.nodes.foreach { node =>
       import node._
       printer.println(
-        s"${id.replace(" ", "_")}, $displayName, $kind, ${location
+        s"${cleanId(id)}, $displayName, $kind, ${location
             .map(_.uri)
             .getOrElse("")}, ${properties.get("LOC").map(_.toInt).getOrElse(0)}"
       )
@@ -35,9 +35,12 @@ object ExportToGdf:
       node.edges.filter(_.location.isDefined).foreach { edge =>
         import edge._
         printer.println(
-          s"${node.id.replace(" ", "_")}, $to, ${`type`}, true, ${location.map(_.uri).getOrElse("")}, ${`type`}"
+          s"${cleanId(node.id)}, ${cleanId(to)}, ${`type`}, true, ${location.map(_.uri).getOrElse("")}, ${`type`}"
         )
       }
     }
+
+    def cleanId(id: String): String =
+      id.replace(" ", "_").replace(",", "-")
 
     printer.close()

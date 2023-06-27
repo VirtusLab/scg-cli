@@ -2,9 +2,11 @@ package org.virtuslab.semanticgraphs.analytics.partitions
 
 import com.virtuslab.semanticgraphs.proto.model.graphnode
 import com.virtuslab.semanticgraphs.proto.model.graphnode.{GraphNode, Location}
+import org.jgrapht.nio.{AttributeType, DefaultAttribute}
 import org.virtuslab.semanticgraphs.analytics.dto.GraphNodeDTO
+import org.virtuslab.semanticgraphs.analytics.exporters.ExportToGml
 import org.virtuslab.semanticgraphs.analytics.metrics.JGraphTMetrics
-import org.virtuslab.semanticgraphs.analytics.scg.ScgJGraphT
+import org.virtuslab.semanticgraphs.analytics.scg.{ScgJGraphT, SemanticCodeGraph}
 import org.virtuslab.semanticgraphs.analytics.utils.MultiPrinter
 
 case class DistributionResults(
@@ -156,7 +158,22 @@ object PartitionResults:
           f"${file.weightedAverageAccuracy}%7d%%|${file.arithmeticAverageAccuracy}%7d%%|${_package.weightedAverageAccuracy}%7d%%|${_package.arithmeticAverageAccuracy}%7d%%|" +
           f"${result.distributionVariance}%8.3f|[${result.globalNodesDistribution.map(i => i * 100 / nodesSize).mkString(",")}]%%"
       )
-  
+  end print
+
+  def exportGML(scg: SemanticCodeGraph, results: List[PartitionResults]): Unit = {
+    val attributes = scg.nodes.map { node =>
+      val attributes: Map[String, DefaultAttribute[Int]] = results.map{ r =>
+        s"npart-${r.nparts}-${r.method}" -> new DefaultAttribute(r.nodeToPart.getOrElse(node.id, -1), AttributeType.INT)
+      }.toMap
+      node.id -> attributes
+    }.toMap
+
+    ExportToGml.exportToGML(
+      outputFileName = s"partition-${scg.projectAndVersion.projectName}.gml",
+      semanticCodeGraph = scg,
+      nodeAttributes = attributes
+    )
+  }
   
 
 case class GroupPartitionStats(partitionName: String, distribution: List[Int]) extends Comparable[GroupPartitionStats]:

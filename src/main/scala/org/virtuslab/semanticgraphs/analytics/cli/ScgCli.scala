@@ -5,11 +5,11 @@ import com.virtuslab.semanticgraphs.javaparser.JavaParserMain
 import com.virtuslab.semanticgraphs.parsercommon.logger.LoggerFactory
 import org.virtuslab.semanticgraphs.analytics.partitions.comparison.PartitioningComparisonApp
 import org.virtuslab.semanticgraphs.analytics.scg.{ProjectAndVersion, SemanticCodeGraph}
-import org.virtuslab.semanticgraphs.analytics.utils.{JsonUtils, MultiPrinter}
+import org.virtuslab.semanticgraphs.analytics.utils.{FileUtils, MultiPrinter}
 import org.virtuslab.semanticgraphs.analytics.summary.SCGProjectSummary
 import org.virtuslab.semanticgraphs.analytics.crucial.CrucialNodes
 import org.virtuslab.semanticgraphs.analytics.dto.{EdgeDTO, GraphNodeDTO, LocationDTO}
-import org.virtuslab.semanticgraphs.analytics.exporters.{ExportToGdf, JupyterNotebook}
+import org.virtuslab.semanticgraphs.analytics.exporters.{ExportToGdf, ExportToGml, JupyterNotebook}
 import org.virtuslab.semanticgraphs.analytics.partitions.{PartitionResults, PartitionResultsSummary}
 import picocli.CommandLine
 import picocli.CommandLine.{Command, HelpCommand, Option, Parameters}
@@ -29,12 +29,12 @@ import java.nio.file.{Files, Path}
 )
 class ScgCli:
 
-  @Command(name = "version", description = Array("Show scg-cli version"))
+  @Command(name = "version", description = Array("Show scg-cli version."))
   def version() = {
     println("scg-cli 0.1.4-SNAPSHOT")
   }
 
-  @Command(name = "generate", description = Array("Generate SCG metadata"))
+  @Command(name = "generate", description = Array("Generate SCG metadata."))
   def generate(
     @Parameters(
       paramLabel = "<workspace>",
@@ -53,7 +53,7 @@ class ScgCli:
     JavaParserMain.generateSemanticGraphFiles(workspace)
     println(s"SCG was generated to $workspace/.semanticgraphs")
 
-  @Command(name = "summary", description = Array("Summarize the project"))
+  @Command(name = "summary", description = Array("Summarize the project."))
   def summary(
     @Parameters(
       paramLabel = "<workspace>",
@@ -80,11 +80,11 @@ class ScgCli:
     }
 
 
-  @Command(name = "crucial", description = Array("Find crucial code entities"))
+  @Command(name = "crucial", description = Array("Find crucial code entities."))
   def crucial(
     @Parameters(
       paramLabel = "<workspace>",
-      description = Array("Workspace where SCG proto files are located in .semanticgraphs directory or zipped archive")
+      description = Array("Workspace where SCG proto files are located in .semanticgraphs directory or zipped archive.")
     )
     workspace: String,
     @Option(
@@ -116,7 +116,7 @@ class ScgCli:
         CrucialNodes.exportHtmlSummary(summary)
       case "json" =>
         val outputFile = s"${scg.projectName}.crucial.json"
-        JsonUtils.dumpJsonFile(outputFile, write(summary))
+        FileUtils.dumpFile(outputFile, write(summary))
         println(s"Results exported to: $outputFile")
       case "txt" =>
         println(summary.projectName)
@@ -162,7 +162,7 @@ class ScgCli:
     nparts: Int,
     @Option(
       names = Array("-o", "--output"),
-      description = Array("Output format: html, json, txt, default: ${DEFAULT-VALUE}"),
+      description = Array("Output format: html, json, txt, csv default: ${DEFAULT-VALUE}"),
       arity = "0..1",
       defaultValue = "html"
     )
@@ -176,7 +176,7 @@ class ScgCli:
     useDocker: Boolean
   ): Unit =
     val projectAndVersion = ProjectAndVersion(workspace, workspace.split("/").last, "")
-    val results = PartitioningComparisonApp.runPartitionComparison(
+    val (scg, results) = PartitioningComparisonApp.runPartitionComparison(
       projectAndVersion,
       nparts,
       useDocker
@@ -186,8 +186,10 @@ class ScgCli:
         PartitionResultsSummary.exportHtmlSummary(PartitionResultsSummary(results))
       case "json" =>
         val outputFile = s"${projectAndVersion.projectName}.partition.json"
-        JsonUtils.dumpJsonFile(outputFile, write(PartitionResult(results)))
+        FileUtils.dumpFile(outputFile, write(PartitionResult(results)))
         println(s"Results exported to: $outputFile")
+      case "gml" =>
+        PartitionResults.exportGML(scg, results)
       case "txt" =>
         PartitionResults.print(
           new MultiPrinter(
@@ -198,6 +200,12 @@ class ScgCli:
         )
       case "tex" =>
         println(PartitionResultsSummary.exportTex(PartitionResultsSummary(results)))
+      case "csv" =>
+        results.foreach{ result =>
+          val fileName = s"${projectAndVersion.projectName}-npart-${result.nparts}-${result.method}.csv"
+          val csvContent = "id,npart\n" + result.nodeToPart.map{case (key, value) => s"\"$key\", $value"}.mkString("\n")
+          FileUtils.dumpFile(fileName, csvContent)
+        }
     }
 
   @Command(name = "export", description = Array("Export SCG metadata for further analysis"))
@@ -220,6 +228,8 @@ class ScgCli:
     output match {
       case "jupyter" =>
         JupyterNotebook.runJupyterNotebook(projectAndVersion.workspace)
+      case "gml" =>
+        ExportToGml.exportToGML(s"$projectName.gml", SemanticCodeGraph.read(projectAndVersion))
       case "gdf" =>
         ExportToGdf.exportToGdf(s"$projectName.gdf", SemanticCodeGraph.read(projectAndVersion))
         println(s"Exported to `$projectName.gdf` file.")
@@ -227,6 +237,7 @@ class ScgCli:
 
 
 object ScgCli:
+
   def main(args: Array[String]): Unit =
     val exitCode = new CommandLine(new ScgCli).execute(args: _*)
     System.exit(exitCode)

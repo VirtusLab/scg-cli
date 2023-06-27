@@ -2,12 +2,13 @@ package org.virtuslab.semanticgraphs.analytics.utils
 
 import java.io.File
 
-object JsonUtils:
-  def dumpJsonFile(
+object FileUtils:
+
+  def dumpFile(
     outputFileName: String,
-    json: String
+    content: String
   ): Unit =
     val f = new File(outputFileName)
     val printer = new java.io.PrintWriter(f)
-    printer.write(json)
+    printer.write(content)
     printer.close()
