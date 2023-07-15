@@ -1,11 +1,12 @@
 package com.virtuslab.semanticgraphs.javaparser
 
 import com.github.javaparser.StaticJavaParser
+import com.virtuslab.semanticgraphs.parsercommon.logger.GraphBuddyLogging
 
 import java.io.File
 import scala.util.Try
 
-object JavaParserMain:
+object JavaParserMain extends GraphBuddyLogging:
 
   // val path = "/Users/kborowski/phd/java-scala-interop"
   // val path = "/Users/kborowski/phd/java-scala-interop/examples"
@@ -48,7 +49,8 @@ object JavaParserMain:
       case Right(parsedResult) =>
         println(s"Success ${parsedResult.get.filePath}")
         FileManager.dumpFile(parsedResult.get)
-      case Left((e, path)) => println(s"Failure $path; ${e.getMessage()}")
+      case Left((e, path)) =>
+        println(s"Failure $path; ${e.getMessage()}")
     }
 
     val failed = results.count(_.isLeft)

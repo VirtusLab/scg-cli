@@ -7,12 +7,17 @@ import com.virtuslab.semanticgraphs.proto.model.graphnode.SemanticGraphFile
 import java.io.{File, FileOutputStream}
 import java.nio.file.{Path, Paths}
 import scala.jdk.CollectionConverters.IteratorHasAsScala
+import scala.util.{Failure, Success, Try}
 
 object FileManager:
   case class FileToBeSaved(projectPath: String, semanticGraphFile: SemanticGraphFile, filePath: String)
 
-  def dumpFile(dumpableFile: FileToBeSaved): Unit =
-    dumpFile(dumpableFile.projectPath, dumpableFile.semanticGraphFile, dumpableFile.filePath)
+  def dumpFile(dumpableFile: FileToBeSaved): Unit = {
+    dumpFile(dumpableFile.projectPath, dumpableFile.semanticGraphFile, dumpableFile.filePath) match
+      case Failure(exception) =>
+        println(s"Failure when dumping file ${dumpableFile.filePath}")
+      case _ =>
+  }
 
   /**
     * Save `SemanticGraphFile` to file under path: `projectPath`/.semanticgraphs/package/filename.semanticsgraphdb
@@ -25,7 +30,7 @@ object FileManager:
     *   path in project of file, which is described by `semanticGraphFile`, like
     *   `src/main/scala/com/virtuslab/Option.scala`
     */
-  def dumpFile(projectPath: String, semanticGraphFile: SemanticGraphFile, filePath: String): Unit = {
+  def dumpFile(projectPath: String, semanticGraphFile: SemanticGraphFile, filePath: String): Try[Unit] = Try {
     val packageLevelRelativeFilePath = projectPath.toPath.relativize(filePath.toPath).relativizeToPackageLevel.toString
     val fileUri =
       projectPath.toPath.resolve(".semanticgraphs").resolve(s"$packageLevelRelativeFilePath.semanticgraphdb")

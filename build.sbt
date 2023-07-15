@@ -1,4 +1,4 @@
-val scala3Version = "3.2.1"
+val scala3Version = "3.3.0"
 
 maintainer := "kborowski@virtuslab.com"
 
@@ -41,7 +41,7 @@ lazy val parsercommons = project.in(file("parsercommons")).settings(
   libraryDependencies += "com.typesafe.scala-logging" % "scala-logging_3" % "3.9.4",
   libraryDependencies += "com.typesafe" % "config" % "1.4.2",
   libraryDependencies += "org.eclipse.jgit" % "org.eclipse.jgit" % "6.0.0.202111291000-r",
-  libraryDependencies += "com.lihaoyi" %% "upickle" % "3.1.0"
+  libraryDependencies += "com.lihaoyi" %% "upickle" % "3.1.2"
 )
 
 lazy val spark = project.in(file("spark")).settings(
@@ -59,6 +59,6 @@ lazy val commons = project.in(file("commons")).settings(
   libraryDependencies += "org.jgrapht" % "jgrapht-core" % "1.5.1",
   libraryDependencies += "org.jgrapht" % "jgrapht-io" % "1.5.1",
   libraryDependencies += "com.thesamet.scalapb" %% "scalapb-runtime" % "0.11.12",
-  libraryDependencies += "com.lihaoyi" %% "upickle" % "3.1.0",
+  libraryDependencies += "com.lihaoyi" %% "upickle" % "3.1.2",
   libraryDependencies += "org.apache.commons" % "commons-compress" % "1.23.0"
 )
