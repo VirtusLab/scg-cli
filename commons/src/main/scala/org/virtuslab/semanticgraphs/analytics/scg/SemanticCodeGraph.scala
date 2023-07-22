@@ -49,16 +49,24 @@ object SemanticCodeGraph:
   val akka = ProjectAndVersion("data/akka.zip", "akka", "2.7.0")
   val spark = ProjectAndVersion("data/spark.zip", "spark", "3.3.0")
 
-  val allProjects = List(commonsIO, metals, springBoot, akka, spark)
+  val rxJava = ProjectAndVersion("data/RxJava.zip", "RxJava", "3.1.6")
+  val retrofit = ProjectAndVersion("data/retrofit.zip", "retrofit", "2.9.0")
+  val glide = ProjectAndVersion("data/glide.zip", "glide", "4.5.11")
+  val dubbo = ProjectAndVersion("data/dubbo.zip", "dubbo", "3.2.4")
+  val play = ProjectAndVersion("data/playframework.zip", "playframework", "2.8.19")
+  val vertx = ProjectAndVersion("data/vert.x.zip", "vertx", "4.4.4")
+
+
+  val allProjects = List(retrofit, commonsIO, play, metals, glide, vertx, rxJava, dubbo, springBoot, akka, spark)
 
   def readAllProjects(): List[SemanticCodeGraph] =
-    List(commonsIO, metals, springBoot, akka, spark).map(SemanticCodeGraph.fromZip(_))
+    allProjects.map(SemanticCodeGraph.read(_))
 
   def readAllProjectsCallGraph(): List[SemanticCodeGraph] =
-    List(commonsIO, metals, springBoot, akka, spark).map(fetchCallGraph)
+    allProjects.map(fetchCallGraph)
 
   def readAllProjectsFullCallGraph(): List[SemanticCodeGraph] =
-    List(commonsIO, metals, springBoot, akka, spark).map(fetchFullCallGraph)
+    allProjects.map(fetchFullCallGraph)
 
   def isNodeDefinedInProject(node: GraphNode): Boolean =
     node.kind.nonEmpty && node.location.isDefined && !node.kind.contains("FILE") && node.kind != "PACKAGE_OBJECT"

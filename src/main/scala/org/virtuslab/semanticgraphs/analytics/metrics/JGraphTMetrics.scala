@@ -81,7 +81,7 @@ object JGraphTMetrics:
     )
 
   def betweennessCentrality(graph: Graph[String, LabeledEdge]) =
-    new BetweennessCentrality(graph, true).getScores
+    new BetweennessCentrality(graph, false).getScores
 
   def density(graph: Graph[String, LabeledEdge]): Double =
     val E = graph.edgeSet().size().toDouble

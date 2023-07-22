@@ -40,7 +40,7 @@ object LatexPrinter:
   def tableHeader(headers: List[String]): String =
     headers.mkString("Name & ", " & \\# & ", " & \\# \\\\")
 
-object LatexScoresPrinterApp extends App:
+object LatexCrucialNodesPrinterApp extends App:
 
   def readScores(filePrefix: String): List[CrucialNodesSummary] =
     Files
@@ -77,9 +77,9 @@ object LatexScoresPrinterApp extends App:
     println()
 
   println(Path.of("analysis").toAbsolutePath.toString)
-  val scgScores = readScores("scg-v2")
+  val scgScores = readScores("scg")
   val callScores = readScores("call")
-  val fullCallScores = readScores("full-v4-call")
+  val fullCallScores = readScores("full-call")
 
   val general = List(Statistic.loc, Statistic.outDegree, Statistic.inDegree)
   printWholeTable(scgScores, callScores, fullCallScores, general)
@@ -90,7 +90,7 @@ object LatexScoresPrinterApp extends App:
   val distanceBased = List(Statistic.betweenness, Statistic.harmonic, Statistic.combined)
   printWholeTable(scgScores, callScores, fullCallScores, distanceBased)
 
-object LatexCombinedPrinterApp extends App:
+object LatexCrucialNodesCombinedPrinterApp extends App:
 
   def readScores(filePrefix: String): List[CrucialNodesSummary] =
     Files
