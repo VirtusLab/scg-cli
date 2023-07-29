@@ -89,7 +89,7 @@ class ScgCli:
     workspace: String,
     @Option(
       names = Array("-o", "--output"),
-      description = Array("Output format: html, json, txt"),
+      description = Array("Output format: html, json, txt, tex"),
       arity = "0..1",
       defaultValue = "html"
     )
@@ -162,7 +162,7 @@ class ScgCli:
     nparts: Int,
     @Option(
       names = Array("-o", "--output"),
-      description = Array("Output format: html, json, txt, csv default: ${DEFAULT-VALUE}"),
+      description = Array("Output format: html, json, txt, csv, gml default: ${DEFAULT-VALUE}"),
       arity = "0..1",
       defaultValue = "html"
     )
@@ -217,7 +217,7 @@ class ScgCli:
     workspace: String,
     @Option(
       names = Array("-o", "--output"),
-      description = Array("Output format: jupyter, gdf, default: ${DEFAULT-VALUE}"),
+      description = Array("Output format: jupyter, gdf, gml default: ${DEFAULT-VALUE}"),
       arity = "0..1",
       defaultValue = "jupyter"
     )

@@ -55,63 +55,63 @@
 <table id="stats-table" class="styled-table">
     <thead>
         <tr>
-            <td>Param</td>
+            <td>Parameter</td>
             <td>Value</td>
-            <td>Explanation</td>
+            <td>Description</td>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>Nodes</td>
             <td id="nodes" class="align-right"></td>
-            <td>Number of nodes in the project (like classes, methods, variables, etc..).</td>
+            <td>Number of nodes in the graph (such as classes, methods, variables, etc.).</td>
         </tr>
         <tr>
             <td>Edges</td>
             <td id="edges" class="align-right"></td>
-            <td>Number of edges in the project. Presented in details on chart below.</td>
+            <td>Number of edges in the graph. See the chart below for distribution.</td>
         </tr>
         <tr>
             <td>Total LOC</td>
             <td id="totalLoc" class="align-right"></td>
-            <td>Total number lines of code.</td>
+            <td>Total number of lines of code.</td>
         </tr>
         <tr>
             <td>Density</td>
             <td id="density" class="align-right"></td>
-            <td>Density of the graph -- measure of how closely connected the graph is. High SCG density can indicate higher code dependency complexity (values between 0 and 1).</td>
+            <td>Density of the graph -- a value between 0 (low density) and 1 (high density). High SCG density can indicate higher code dependency complexity.</td>
         </tr>
         <tr>
             <td>Average Input Degree</td>
             <td id="averageInDegree" class="align-right"></td>
-            <td>High average degree of nodes, especially combined with high density, suggests high project coupling; on the contrary, high node degree with low density implies a significant number of hubs.</td>
+            <td>Average number of edges coming to a node. High average input degree of nodes, especially when combined with high density, suggests high project coupling.</td>
         </tr>
         <tr>
             <td>Average Output Degree</td>
             <td id="averageOutDegree" class="align-right"></td>
-            <td></td>
+            <td>Average number of edges going from a node. High average node output degree with low density implies a significant number of hubs.</td>
         </tr>
 
         <tr>
             <td>Global Clustering Coefficient</td>
             <td id="globalClusteringCoefficient" class="align-right"></td>
-            <td>High value indicates that graph tends to create interconnected clusters, low value indicates the network being sparse or fragmented. For SCG high GCC value can indicate well-modularized software with high module cohesion and low coupling.</td>
+            <td>High value indicates that graph tends to create interconnected clusters, low value indicates the network being sparse or fragmented. For SCG, high GCC value can indicate well-modularized software with high module cohesion and low coupling.</td>
         </tr>
         <tr>
             <td>Degree Assortativity Coefficient</td>
             <td id="assortativityCoefficient" class="align-right"></td>
-            <td>Positive value indicates that nodes with the same degree tends to be connected, negative value suggest mostly connections between nodes of different degree, value close to zero suggest random network. For SCG low DAC can suggest additional tendency of the graph towards clustering and establishing hubs (connection between nodes with different degree).</td>
+            <td>Positive value indicates that nodes with the same degree tends to be connected, negative value suggest mostly connections between nodes of different degree, value close to zero suggest random network. For SCG, low DAC can suggest tendency of the graph towards clustering and establishing hubs (connections between nodes with different degrees).</td>
         </tr>
     </tbody>
 </table>
 
 <div class="wrapper">
     <div class="first">
-        <h2>Nodes distribution</h2>
+        <h2>Node distribution</h2>
         <canvas id="nodesDistribution"></canvas>
     </div>
     <div class="second">
-        <h2>Edges distribution</h2>
+        <h2>Edge distribution</h2>
         <canvas id="edgesDistribution"></canvas>
     </div>
 </div>
