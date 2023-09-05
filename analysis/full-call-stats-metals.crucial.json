@@ -1,757 +1,510 @@
 {
-  "projectName" : "metals",
-  "workspace" : "data/metals",
-  "stats" : [
+  "projectName": "metals",
+  "workspace": "data/metals.zip",
+  "stats": [
     {
-      "id" : "loc",
-      "description" : "Top by node LOC size",
-      "nodes" : [
+      "id": "loc",
+      "description": "Lines of code",
+      "nodes": [
         {
-          "id" : "scala/meta/internal/metals/MetalsLanguageServer#updateWorkspaceDirectory().",
-          "label" : "updateWorkspaceDirectory",
-          "score" : 419.0
+          "id": "scala/meta/internal/metals/MetalsLanguageServer#updateWorkspaceDirectory().",
+          "label": "updateWorkspaceDirectory",
+          "score": 419
         },
         {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.parseAtSymbol().",
-          "label" : "parseAtSymbol",
-          "score" : 319.0
+          "id": "scala/meta/internal/docstrings/ScaladocParser.parseAtSymbol().",
+          "label": "parseAtSymbol",
+          "score": 319
         },
         {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.WikiParser#table().",
-          "label" : "table",
-          "score" : 271.0
+          "id": "scala/meta/internal/docstrings/ScaladocParser.WikiParser#table().",
+          "label": "table",
+          "score": 271
         },
         {
-          "id" : "scala/meta/internal/mtags/ScalaMtags#apply().",
-          "label" : "apply",
-          "score" : 263.0
+          "id": "scala/meta/internal/mtags/ScalaMtags#apply().",
+          "label": "apply",
+          "score": 263
         },
         {
-          "id" : "local313:mtags/src/main/scala-2/scala/meta/internal/docstrings/ScaladocParser.scala",
-          "label" : "parse0",
-          "score" : 259.0
+          "id": "local313:mtags/src/main/scala-2/scala/meta/internal/docstrings/ScaladocParser.scala",
+          "label": "parse0",
+          "score": 259
         },
         {
-          "id" : "scala/meta/internal/parsing/DocumentSymbolProvider#SymbolTraverser#apply().",
-          "label" : "apply",
-          "score" : 244.0
+          "id": "scala/meta/internal/parsing/DocumentSymbolProvider#SymbolTraverser#apply().",
+          "label": "apply",
+          "score": 244
         },
         {
-          "id" : "scala/meta/internal/metals/MetalsLanguageServer#executeCommand().",
-          "label" : "executeCommand",
-          "score" : 238.0
+          "id": "scala/meta/internal/metals/MetalsLanguageServer#executeCommand().",
+          "label": "executeCommand",
+          "score": 238
         },
         {
-          "id" : "scala/meta/internal/pc/CompletionProvider#completions().",
-          "label" : "completions",
-          "score" : 197.0
+          "id": "scala/meta/internal/pc/CompletionProvider#completions().",
+          "label": "completions",
+          "score": 197
         },
         {
-          "id" : "scala/meta/internal/metals/UserConfiguration.fromJson().",
-          "label" : "fromJson",
-          "score" : 186.0
+          "id": "scala/meta/internal/metals/UserConfiguration.fromJson().",
+          "label": "fromJson",
+          "score": 186
         },
         {
-          "id" : "scala/meta/internal/pc/MetalsGlobal#shortType().",
-          "label" : "shortType",
-          "score" : 182.0
+          "id": "scala/meta/internal/pc/MetalsGlobal#shortType().",
+          "label": "shortType",
+          "score": 182
         }
       ]
     },
     {
-      "id" : "out-degree",
-      "description" : "Top by node degree outgoing",
-      "nodes" : [
+      "id": "out-degree",
+      "description": "Node out-degree",
+      "nodes": [
         {
-          "id" : "scala/meta/internal/metals/MetalsLanguageServer#updateWorkspaceDirectory().",
-          "label" : "updateWorkspaceDirectory",
-          "score" : 185.0
+          "id": "scala/meta/internal/metals/MetalsLanguageServer#updateWorkspaceDirectory().",
+          "label": "updateWorkspaceDirectory",
+          "score": 431
         },
         {
-          "id" : "scala/meta/internal/metals/MetalsLanguageServer#executeCommand().",
-          "label" : "executeCommand",
-          "score" : 167.0
+          "id": "scala/meta/internal/metals/MetalsLanguageServer#executeCommand().",
+          "label": "executeCommand",
+          "score": 227
         },
         {
-          "id" : "scala/meta/internal/pc/CompletionProvider#completions().",
-          "label" : "completions",
-          "score" : 105.0
+          "id": "scala/meta/internal/pc/CompletionProvider#completions().",
+          "label": "completions",
+          "score": 200
         },
         {
-          "id" : "local313:mtags/src/main/scala-2/scala/meta/internal/docstrings/ScaladocParser.scala",
-          "label" : "parse0",
-          "score" : 97.0
+          "id": "scala/meta/internal/mtags/ScalaMtags#apply().",
+          "label": "apply",
+          "score": 156
         },
         {
-          "id" : "scala/meta/internal/rename/RenameProvider#rename().",
-          "label" : "rename",
-          "score" : 77.0
+          "id": "scala/meta/internal/parsing/DocumentSymbolProvider#SymbolTraverser#apply().",
+          "label": "apply",
+          "score": 146
         },
         {
-          "id" : "local17:mtags/src/main/scala-2/scala/meta/internal/pc/MetalsGlobal.scala",
-          "label" : "loop",
-          "score" : 73.0
+          "id": "local313:mtags/src/main/scala-2/scala/meta/internal/docstrings/ScaladocParser.scala",
+          "label": "parse0",
+          "score": 129
         },
         {
-          "id" : "scala/meta/internal/mtags/ScalaMtags#apply().",
-          "label" : "apply",
-          "score" : 68.0
+          "id": "local17:mtags/src/main/scala-2/scala/meta/internal/pc/MetalsGlobal.scala",
+          "label": "loop",
+          "score": 120
         },
         {
-          "id" : "scala/meta/internal/pc/completions/Completions#completionPositionUnsafe().",
-          "label" : "completionPositionUnsafe",
-          "score" : 65.0
+          "id": "scala/meta/internal/rename/RenameProvider#rename().",
+          "label": "rename",
+          "score": 101
         },
         {
-          "id" : "scala/meta/internal/pc/InferredTypeProvider#inferredTypeEdits().",
-          "label" : "inferredTypeEdits",
-          "score" : 62.0
+          "id": "scala/meta/internal/metals/MetalsLanguageServer#indexWorkspace().",
+          "label": "indexWorkspace",
+          "score": 94
         },
         {
-          "id" : "scala/meta/internal/metals/MetalsLanguageServer#indexWorkspace().",
-          "label" : "indexWorkspace",
-          "score" : 58.0
+          "id": "scala/meta/internal/pc/completions/Completions#completionPositionUnsafe().",
+          "label": "completionPositionUnsafe",
+          "score": 90
         }
       ]
     },
     {
-      "id" : "in-degree",
-      "description" : "Top by node degree incoming",
-      "nodes" : [
+      "id": "in-degree",
+      "description": "Node in-degree",
+      "nodes": [
         {
-          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionJavaFuture#asScala().",
-          "label" : "asScala",
-          "score" : 88.0
+          "id": "scala/meta/internal/metals/MetalsEnrichments.XtensionJavaFuture#asScala().",
+          "label": "asScala",
+          "score": 101
         },
         {
-          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionString#toAbsolutePath().",
-          "label" : "toAbsolutePath",
-          "score" : 50.0
+          "id": "scala/meta/internal/tvp/ScalacpCopyPaste#XtensionGSymbolSSymbolInformation#sym.",
+          "label": "sym",
+          "score": 55
         },
         {
-          "id" : "tests/TestingServer#server.",
-          "label" : "server",
-          "score" : 46.0
+          "id": "tests/TestingServer#server.",
+          "label": "server",
+          "score": 55
         },
         {
-          "id" : "scala/meta/internal/metals/DelegatingLanguageClient#underlying().",
-          "label" : "underlying",
-          "score" : 33.0
+          "id": "scala/meta/internal/metals/MetalsLanguageServer#languageClient.",
+          "label": "languageClient",
+          "score": 54
         },
         {
-          "id" : "scala/meta/internal/mtags/Symbol#value.",
-          "label" : "value",
-          "score" : 29.0
+          "id": "scala/meta/internal/metals/MetalsEnrichments.XtensionString#toAbsolutePath().",
+          "label": "toAbsolutePath",
+          "score": 53
         },
         {
-          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionAbsolutePathBuffers#toInputFromBuffers().",
-          "label" : "toInputFromBuffers",
-          "score" : 27.0
+          "id": "scala/meta/internal/metals/MetalsLanguageServer#clientConfig.",
+          "label": "clientConfig",
+          "score": 52
         },
         {
-          "id" : "scala/meta/internal/metals/Command#id.",
-          "label" : "id",
-          "score" : 25.0
+          "id": "scala/meta/internal/pc/MetalsGlobal#XtensionSymbolMetals#sym.",
+          "label": "sym",
+          "score": 51
         },
         {
-          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionAbsolutePath#filename().",
-          "label" : "filename",
-          "score" : 25.0
+          "id": "scala/meta/internal/metals/MetalsLanguageServer#buildTargets.",
+          "label": "buildTargets",
+          "score": 49
         },
         {
-          "id" : "scala/meta/internal/tvp/ScalacpCopyPaste#XtensionSymbol#sym.",
-          "label" : "sym",
-          "score" : 24.0
+          "id": "tests/BaseLspSuite#server().",
+          "label": "server",
+          "score": 49
         },
         {
-          "id" : "tests/BaseLspSuite#server().",
-          "label" : "server",
-          "score" : 24.0
+          "id": "scala/meta/internal/tvp/ScalacpCopyPaste#XtensionSymbol#sym.",
+          "label": "sym",
+          "score": 43
         }
       ]
     },
     {
-      "id" : "pagerank",
-      "description" : "PageRank - how influential the node is",
-      "nodes" : [
+      "id": "pagerank",
+      "description": "PageRank",
+      "nodes": [
         {
-          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionAbsolutePath#path.",
-          "label" : "path",
-          "score" : 0.0016421526892778106
+          "id": "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionAbsolutePath#path.",
+          "label": "path",
+          "score": 0.0028459541113518842
         },
         {
-          "id" : "scala/meta/internal/tvp/ScalacpCopyPaste#XtensionSymbol#sym.",
-          "label" : "sym",
-          "score" : 0.0012930809552023086
+          "id": "scala/meta/internal/mtags/Symbol#value.",
+          "label": "value",
+          "score": 0.001868014608202989
         },
         {
-          "id" : "scala/meta/internal/mtags/Symbol#value.",
-          "label" : "value",
-          "score" : 0.0012396268164435124
+          "id": "scala/meta/internal/tvp/ScalacpCopyPaste#XtensionSymbol#sym.",
+          "label": "sym",
+          "score": 0.0016074315200501107
         },
         {
-          "id" : "scala/meta/internal/pc/MetalsGlobal#XtensionSymbolMetals#sym.",
-          "label" : "sym",
-          "score" : 7.796486635861327E-4
+          "id": "scala/meta/internal/pc/MetalsGlobal#XtensionSymbolMetals#sym.",
+          "label": "sym",
+          "score": 0.0012526272134336727
         },
         {
-          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionScalaFuture#future.",
-          "label" : "future",
-          "score" : 6.9060570492163E-4
+          "id": "scala/meta/internal/metals/MetalsEnrichments.XtensionJavaFuture#future.",
+          "label": "future",
+          "score": 0.0011285136516911989
         },
         {
-          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionAbsolutePath#filename().",
-          "label" : "filename",
-          "score" : 5.960308165205352E-4
+          "id": "scala/meta/internal/metals/MetalsEnrichments.XtensionScalaFuture#future.",
+          "label": "future",
+          "score": 0.001105732526022859
         },
         {
-          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionJavaFuture#future.",
-          "label" : "future",
-          "score" : 5.93648850907185E-4
+          "id": "scala/meta/internal/metals/MetalsEnrichments.XtensionJavaFuture#asScala().",
+          "label": "asScala",
+          "score": 0.0010804099118566486
         },
         {
-          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionPathMetals#file.",
-          "label" : "file",
-          "score" : 5.801846275672345E-4
+          "id": "scala/meta/internal/metals/DelegatingLanguageClient#underlying().",
+          "label": "underlying",
+          "score": 0.001078587511704955
         },
         {
-          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionJavaFuture#asScala().",
-          "label" : "asScala",
-          "score" : 5.5449081243956E-4
+          "id": "scala/meta/internal/metals/HtmlBuilder#sb.",
+          "label": "sb",
+          "score": 9.832100859595177E-4
         },
         {
-          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionStringDoc#doc.",
-          "label" : "doc",
-          "score" : 5.1770658504545E-4
+          "id": "scala/meta/internal/metals/MetalsEnrichments.XtensionAbsolutePathBuffers#path.",
+          "label": "path",
+          "score": 9.474099990152717E-4
         }
       ]
     },
     {
-      "id" : "eigenvector",
-      "description" : "eigenvector Centrality",
-      "nodes" : [
+      "id": "eigenvector",
+      "description": "Eigenvector centrality",
+      "nodes": [
         {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.endOfText.",
-          "label" : "endOfText",
-          "score" : 0.4627855997795984
+          "id": "scala/meta/internal/decorations/SemanticdbTreePrinter#printSymbol.",
+          "label": "printSymbol",
+          "score": 0.44492597460124267
         },
         {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#offset().",
-          "label" : "offset",
-          "score" : 0.35694832484640066
+          "id": "local13:metals/src/main/scala/scala/meta/internal/decorations/SemanticdbTreePrinter.scala",
+          "label": "symbol",
+          "score": 0.35594077968099413
         },
         {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#char().",
-          "label" : "char",
-          "score" : 0.3287709934897633
+          "id": "scala/meta/internal/decorations/SemanticdbTreePrinter#symtab.",
+          "label": "symtab",
+          "score": 0.26695558476074566
         },
         {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#jump(+1).",
-          "label" : "jump",
-          "score" : 0.30158051864714963
+          "id": "scala/meta/internal/decorations/SemanticdbTreePrinter#isHover.",
+          "label": "isHover",
+          "score": 0.26695558476074566
         },
         {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#`offset_=`().",
-          "label" : "offset_=",
-          "score" : 0.2986682389933653
+          "id": "scala/meta/internal/decorations/SemanticdbTreePrinter#printPrefix().",
+          "label": "printPrefix",
+          "score": 0.26695558476074566
         },
         {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#check().",
-          "label" : "check",
-          "score" : 0.2855217707594513
+          "id": "local106:metals/src/main/scala/scala/meta/internal/decorations/SemanticdbTreePrinter.scala",
+          "label": "matchEnd15",
+          "score": 0.25674967092538714
         },
         {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#nextChar().",
-          "label" : "nextChar",
-          "score" : 0.26521242345686047
+          "id": "local15:metals/src/main/scala/scala/meta/internal/decorations/SemanticdbTreePrinter.scala",
+          "label": "isTuple",
+          "score": 0.17797038984049707
         },
         {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#buffer.",
-          "label" : "buffer",
-          "score" : 0.23499057810814472
+          "id": "local26:metals/src/main/scala/scala/meta/internal/decorations/SemanticdbTreePrinter.scala",
+          "label": "sym",
+          "score": 0.17797038984049707
         },
         {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.WikiParser#inline().",
-          "label" : "inline",
-          "score" : 0.19025417205132725
+          "id": "local63:metals/src/main/scala/scala/meta/internal/decorations/SemanticdbTreePrinter.scala",
+          "label": "x1",
+          "score": 0.17797038984049707
         },
         {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.endOfLine.",
-          "label" : "endOfLine",
-          "score" : 0.09549742952982276
+          "id": "local16:metals/src/main/scala/scala/meta/internal/decorations/SemanticdbTreePrinter.scala",
+          "label": "isFunction",
+          "score": 0.17797038984049707
         }
       ]
     },
     {
-      "id" : "Katz",
-      "description" : "Katz Centrality - how influential the node is",
-      "nodes" : [
+      "id": "Katz",
+      "description": "Katz centrality",
+      "nodes": [
         {
-          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionJavaFuture#asScala().",
-          "label" : "asScala",
-          "score" : 1.89151135
+          "id": "scala/meta/internal/metals/MetalsEnrichments.XtensionJavaFuture#asScala().",
+          "label": "asScala",
+          "score": 2.0247367700000005
         },
         {
-          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionString#toAbsolutePath().",
-          "label" : "toAbsolutePath",
-          "score" : 1.50618818
+          "id": "scala/meta/internal/tvp/ScalacpCopyPaste#XtensionGSymbolSSymbolInformation#sym.",
+          "label": "sym",
+          "score": 1.5572659900000005
         },
         {
-          "id" : "tests/TestingServer#server.",
-          "label" : "server",
-          "score" : 1.4649432300000003
+          "id": "tests/TestingServer#server.",
+          "label": "server",
+          "score": 1.5566543400000004
         },
         {
-          "id" : "scala/meta/internal/metals/DelegatingLanguageClient#underlying().",
-          "label" : "underlying",
-          "score" : 1.3318255200000002
+          "id": "scala/meta/internal/metals/MetalsLanguageServer#languageClient.",
+          "label": "languageClient",
+          "score": 1.54744417
         },
         {
-          "id" : "scala/meta/internal/mtags/Symbol#value.",
-          "label" : "value",
-          "score" : 1.29403346
+          "id": "scala/meta/internal/metals/MetalsEnrichments.XtensionString#toAbsolutePath().",
+          "label": "toAbsolutePath",
+          "score": 1.5374044199999999
         },
         {
-          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionAbsolutePathBuffers#toInputFromBuffers().",
-          "label" : "toInputFromBuffers",
-          "score" : 1.27535792
+          "id": "scala/meta/internal/metals/MetalsLanguageServer#clientConfig.",
+          "label": "clientConfig",
+          "score": 1.52652307
         },
         {
-          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionAbsolutePath#filename().",
-          "label" : "filename",
-          "score" : 1.2549946699999999
+          "id": "scala/meta/internal/pc/MetalsGlobal#XtensionSymbolMetals#sym.",
+          "label": "sym",
+          "score": 1.5229988700000001
         },
         {
-          "id" : "scala/meta/internal/metals/Command#id.",
-          "label" : "id",
-          "score" : 1.2528314
+          "id": "scala/meta/internal/metals/MetalsLanguageServer#buildTargets.",
+          "label": "buildTargets",
+          "score": 1.4957117100000001
         },
         {
-          "id" : "scala/meta/internal/tvp/ScalacpCopyPaste#XtensionSymbol#sym.",
-          "label" : "sym",
-          "score" : 1.24486386
+          "id": "tests/BaseLspSuite#server().",
+          "label": "server",
+          "score": 1.493521
         },
         {
-          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionScalaFuture#asJava().",
-          "label" : "asJava",
-          "score" : 1.24345448
+          "id": "scala/meta/internal/tvp/ScalacpCopyPaste#XtensionSymbol#sym.",
+          "label": "sym",
+          "score": 1.4380710700000001
         }
       ]
     },
     {
-      "id" : "betweenness",
-      "description" : "Betweenness Centrality",
-      "nodes" : [
+      "id": "betweenness",
+      "description": "Betweenness centrality",
+      "nodes": [
         {
-          "id" : "scala/meta/internal/metals/MetalsLanguageServer#executeCommand().",
-          "label" : "executeCommand",
-          "score" : 51073.95
+          "id": "scala/meta/internal/metals/MetalsLanguageServer#executeCommand().",
+          "label": "executeCommand",
+          "score": 35691.78079877641
         },
         {
-          "id" : "tests/TestingServer#executeCommand().",
-          "label" : "executeCommand",
-          "score" : 42875.95
+          "id": "tests/TestingServer#executeCommand().",
+          "label": "executeCommand",
+          "score": 29921.447465443074
         },
         {
-          "id" : "scala/meta/internal/metals/MetalsLanguageServer#autoConnectToBuildServer().",
-          "label" : "autoConnectToBuildServer",
-          "score" : 34148.14365079365
+          "id": "scala/meta/internal/metals/MetalsLanguageServer#autoConnectToBuildServer().",
+          "label": "autoConnectToBuildServer",
+          "score": 25103.37042509434
         },
         {
-          "id" : "scala/meta/internal/metals/MetalsLanguageServer#profiledIndexWorkspace().",
-          "label" : "profiledIndexWorkspace",
-          "score" : 30037.422222222212
+          "id": "scala/meta/internal/metals/MetalsLanguageServer#profiledIndexWorkspace().",
+          "label": "profiledIndexWorkspace",
+          "score": 21443.678540100253
         },
         {
-          "id" : "scala/meta/internal/metals/Compilers#withPCAndAdjustLsp().",
-          "label" : "withPCAndAdjustLsp",
-          "score" : 26077.4
+          "id": "scala/meta/internal/metals/BuildTargets#inverseSources().",
+          "label": "inverseSources",
+          "score": 19309.088126566417
         },
         {
-          "id" : "scala/meta/internal/metals/BuildTargets#inverseSources().",
-          "label" : "inverseSources",
-          "score" : 25360.1492063492
+          "id": "scala/meta/internal/metals/MetalsLanguageServer#indexWorkspace().",
+          "label": "indexWorkspace",
+          "score": 17608.26305909003
         },
         {
-          "id" : "scala/meta/internal/metals/MetalsLanguageServer#indexWorkspace().",
-          "label" : "indexWorkspace",
-          "score" : 24953.520634920635
+          "id": "scala/meta/internal/metals/Compilers#withPCAndAdjustLsp().",
+          "label": "withPCAndAdjustLsp",
+          "score": 16915.893650793652
         },
         {
-          "id" : "scala/meta/internal/metals/MetalsLanguageServer#indexSourceFile().",
-          "label" : "indexSourceFile",
-          "score" : 23783.333333333325
+          "id": "scala/meta/internal/metals/MetalsLanguageServer#connectToNewBuildServer().",
+          "label": "connectToNewBuildServer",
+          "score": 16671.69133612775
         },
         {
-          "id" : "scala/meta/internal/metals/Compilers#fallbackCompiler().",
-          "label" : "fallbackCompiler",
-          "score" : 22593.533333333336
+          "id": "scala/meta/internal/metals/MetalsLanguageServer#indexSourceFile().",
+          "label": "indexSourceFile",
+          "score": 16430.126190476192
         },
         {
-          "id" : "scala/meta/internal/metals/MetalsLanguageServer#connectToNewBuildServer().",
-          "label" : "connectToNewBuildServer",
-          "score" : 22373.430952380946
+          "id": "tests/TestingServer#initialize().",
+          "label": "initialize",
+          "score": 16338.04157346881
         }
       ]
     },
     {
-      "id" : "harmonic",
-      "description" : "Top harmonic centrality",
-      "nodes" : [
+      "id": "harmonic",
+      "description": "Harmonic centrality",
+      "nodes": [
         {
-          "id" : "scala/meta/internal/metals/MetalsLanguageServer#executeCommand().",
-          "label" : "executeCommand",
-          "score" : 0.05861275194091017
+          "id": "scala/meta/internal/metals/MetalsLanguageServer#executeCommand().",
+          "label": "executeCommand",
+          "score": 0.06265613000966729
         },
         {
-          "id" : "tests/codeactions/BaseCodeActionLspSuite#check().",
-          "label" : "check",
-          "score" : 0.04997317646707639
+          "id": "tests/codeactions/BaseCodeActionLspSuite#check().",
+          "label": "check",
+          "score": 0.05179172155020167
         },
         {
-          "id" : "tests/BaseRenameLspSuite#check().",
-          "label" : "check",
-          "score" : 0.0460010116326505
+          "id": "tests/BaseRenameLspSuite#check().",
+          "label": "check",
+          "score": 0.04719858951512113
         },
         {
-          "id" : "tests/TestingServer#executeCommand().",
-          "label" : "executeCommand",
-          "score" : 0.04398915109815584
+          "id": "tests/TestingServer#executeCommand().",
+          "label": "executeCommand",
+          "score": 0.04606541899117453
         },
         {
-          "id" : "local15:metals/src/main/scala/scala/meta/internal/metals/MetalsHttpServer.scala",
-          "label" : "handleRequest",
-          "score" : 0.043871121645267755
+          "id": "local15:metals/src/main/scala/scala/meta/internal/metals/MetalsHttpServer.scala",
+          "label": "handleRequest",
+          "score": 0.0458187170071712
         },
         {
-          "id" : "tests/BaseDapSuite#assertBreakpoints().",
-          "label" : "assertBreakpoints",
-          "score" : 0.043303872179697535
+          "id": "scala/meta/internal/metals/MetalsLanguageServer#updateWorkspaceDirectory().",
+          "label": "updateWorkspaceDirectory",
+          "score": 0.04555700566529481
         },
         {
-          "id" : "tests/codeactions/BaseCodeActionLspSuite#checkNoAction().",
-          "label" : "checkNoAction",
-          "score" : 0.0417690098919242
+          "id": "tests/BaseDapSuite#assertBreakpoints().",
+          "label": "assertBreakpoints",
+          "score": 0.04498780388620318
         },
         {
-          "id" : "scala/meta/internal/metals/MetalsLanguageServer#updateWorkspaceDirectory().",
-          "label" : "updateWorkspaceDirectory",
-          "score" : 0.041272005097793545
+          "id": "tests/codeactions/BaseCodeActionLspSuite#checkNoAction().",
+          "label": "checkNoAction",
+          "score": 0.04302216951080214
         },
         {
-          "id" : "tests/BaseRenameLspSuite#renamed().",
-          "label" : "renamed",
-          "score" : 0.03874200905169972
+          "id": "tests/BaseRenameLspSuite#renamed().",
+          "label": "renamed",
+          "score": 0.03910706883400866
         },
         {
-          "id" : "tests/BaseRenameLspSuite#same().",
-          "label" : "same",
-          "score" : 0.03838792069303544
+          "id": "tests/BaseRenameLspSuite#same().",
+          "label": "same",
+          "score": 0.03910706883400866
         }
       ]
     },
     {
-      "id" : "combined",
-      "description" : "Crucial code elements, combined",
-      "nodes" : [
+      "id": "combined",
+      "description": "Combined importance",
+      "nodes": [
         {
-          "id" : "scala/meta/internal/metals/MetalsLanguageServer#executeCommand().",
-          "label" : "executeCommand",
-          "score" : 4.0
+          "id": "scala/meta/internal/metals/MetalsLanguageServer#executeCommand().",
+          "label": "executeCommand",
+          "score": 4
         },
         {
-          "id" : "scala/meta/internal/tvp/ScalacpCopyPaste#XtensionSymbol#sym.",
-          "label" : "sym",
-          "score" : 3.0
+          "id": "scala/meta/internal/pc/MetalsGlobal#XtensionSymbolMetals#sym.",
+          "label": "sym",
+          "score": 3
         },
         {
-          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionAbsolutePath#filename().",
-          "label" : "filename",
-          "score" : 3.0
+          "id": "scala/meta/internal/tvp/ScalacpCopyPaste#XtensionSymbol#sym.",
+          "label": "sym",
+          "score": 3
         },
         {
-          "id" : "scala/meta/internal/mtags/Symbol#value.",
-          "label" : "value",
-          "score" : 3.0
+          "id": "scala/meta/internal/metals/MetalsEnrichments.XtensionJavaFuture#asScala().",
+          "label": "asScala",
+          "score": 3
         },
         {
-          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionJavaFuture#asScala().",
-          "label" : "asScala",
-          "score" : 3.0
+          "id": "scala/meta/internal/metals/MetalsLanguageServer#updateWorkspaceDirectory().",
+          "label": "updateWorkspaceDirectory",
+          "score": 3
         },
         {
-          "id" : "scala/meta/internal/metals/MetalsLanguageServer#updateWorkspaceDirectory().",
-          "label" : "updateWorkspaceDirectory",
-          "score" : 3.0
+          "id": "tests/TestingServer#executeCommand().",
+          "label": "executeCommand",
+          "score": 2
         },
         {
-          "id" : "scala/meta/internal/metals/Command#id.",
-          "label" : "id",
-          "score" : 2.0
+          "id": "scala/meta/internal/metals/MetalsEnrichments.XtensionString#toAbsolutePath().",
+          "label": "toAbsolutePath",
+          "score": 2
         },
         {
-          "id" : "scala/meta/internal/pc/CompletionProvider#completions().",
-          "label" : "completions",
-          "score" : 2.0
+          "id": "tests/TestingServer#server.",
+          "label": "server",
+          "score": 2
         },
         {
-          "id" : "tests/TestingServer#executeCommand().",
-          "label" : "executeCommand",
-          "score" : 2.0
+          "id": "local313:mtags/src/main/scala-2/scala/meta/internal/docstrings/ScaladocParser.scala",
+          "label": "parse0",
+          "score": 2
         },
         {
-          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionString#toAbsolutePath().",
-          "label" : "toAbsolutePath",
-          "score" : 2.0
-        },
-        {
-          "id" : "tests/TestingServer#server.",
-          "label" : "server",
-          "score" : 2.0
-        },
-        {
-          "id" : "local313:mtags/src/main/scala-2/scala/meta/internal/docstrings/ScaladocParser.scala",
-          "label" : "parse0",
-          "score" : 2.0
-        },
-        {
-          "id" : "scala/meta/internal/mtags/ScalaMtags#apply().",
-          "label" : "apply",
-          "score" : 2.0
-        },
-        {
-          "id" : "scala/meta/internal/metals/MetalsLanguageServer#indexWorkspace().",
-          "label" : "indexWorkspace",
-          "score" : 2.0
-        },
-        {
-          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionAbsolutePathBuffers#toInputFromBuffers().",
-          "label" : "toInputFromBuffers",
-          "score" : 2.0
-        },
-        {
-          "id" : "scala/meta/internal/metals/DelegatingLanguageClient#underlying().",
-          "label" : "underlying",
-          "score" : 2.0
-        },
-        {
-          "id" : "tests/BaseRenameLspSuite#renamed().",
-          "label" : "renamed",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/pc/MetalsGlobal#shortType().",
-          "label" : "shortType",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/metals/UserConfiguration.fromJson().",
-          "label" : "fromJson",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#`offset_=`().",
-          "label" : "offset_=",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionScalaFuture#future.",
-          "label" : "future",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/metals/MetalsLanguageServer#connectToNewBuildServer().",
-          "label" : "connectToNewBuildServer",
-          "score" : 1.0
-        },
-        {
-          "id" : "tests/codeactions/BaseCodeActionLspSuite#check().",
-          "label" : "check",
-          "score" : 1.0
-        },
-        {
-          "id" : "tests/BaseDapSuite#assertBreakpoints().",
-          "label" : "assertBreakpoints",
-          "score" : 1.0
-        },
-        {
-          "id" : "tests/BaseRenameLspSuite#check().",
-          "label" : "check",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#offset().",
-          "label" : "offset",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.WikiParser#inline().",
-          "label" : "inline",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionJavaFuture#future.",
-          "label" : "future",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/pc/completions/Completions#completionPositionUnsafe().",
-          "label" : "completionPositionUnsafe",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionPathMetals#file.",
-          "label" : "file",
-          "score" : 1.0
-        },
-        {
-          "id" : "tests/codeactions/BaseCodeActionLspSuite#checkNoAction().",
-          "label" : "checkNoAction",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/metals/Compilers#withPCAndAdjustLsp().",
-          "label" : "withPCAndAdjustLsp",
-          "score" : 1.0
-        },
-        {
-          "id" : "tests/BaseRenameLspSuite#same().",
-          "label" : "same",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/rename/RenameProvider#rename().",
-          "label" : "rename",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionStringDoc#doc.",
-          "label" : "doc",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.parseAtSymbol().",
-          "label" : "parseAtSymbol",
-          "score" : 1.0
-        },
-        {
-          "id" : "local15:metals/src/main/scala/scala/meta/internal/metals/MetalsHttpServer.scala",
-          "label" : "handleRequest",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/metals/MetalsLanguageServer#indexSourceFile().",
-          "label" : "indexSourceFile",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/metals/MetalsLanguageServer#autoConnectToBuildServer().",
-          "label" : "autoConnectToBuildServer",
-          "score" : 1.0
-        },
-        {
-          "id" : "tests/BaseLspSuite#server().",
-          "label" : "server",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/metals/BuildTargets#inverseSources().",
-          "label" : "inverseSources",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/metals/Compilers#fallbackCompiler().",
-          "label" : "fallbackCompiler",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#nextChar().",
-          "label" : "nextChar",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/metals/MetalsLanguageServer#profiledIndexWorkspace().",
-          "label" : "profiledIndexWorkspace",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/pc/MetalsGlobal#XtensionSymbolMetals#sym.",
-          "label" : "sym",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/pc/InferredTypeProvider#inferredTypeEdits().",
-          "label" : "inferredTypeEdits",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#jump(+1).",
-          "label" : "jump",
-          "score" : 1.0
-        },
-        {
-          "id" : "local17:mtags/src/main/scala-2/scala/meta/internal/pc/MetalsGlobal.scala",
-          "label" : "loop",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/mtags/CommonMtagsEnrichments#XtensionAbsolutePath#path.",
-          "label" : "path",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#buffer.",
-          "label" : "buffer",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/metals/MetalsEnrichments.XtensionScalaFuture#asJava().",
-          "label" : "asJava",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/parsing/DocumentSymbolProvider#SymbolTraverser#apply().",
-          "label" : "apply",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#char().",
-          "label" : "char",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.WikiParser#table().",
-          "label" : "table",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.endOfLine.",
-          "label" : "endOfLine",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.CharReader#check().",
-          "label" : "check",
-          "score" : 1.0
-        },
-        {
-          "id" : "scala/meta/internal/docstrings/ScaladocParser.endOfText.",
-          "label" : "endOfText",
-          "score" : 1.0
+          "id": "scala/meta/internal/tvp/ScalacpCopyPaste#XtensionGSymbolSSymbolInformation#sym.",
+          "label": "sym",
+          "score": 2
         }
       ]
-    }
-  ],
-  "graphStats" : [
-    {
-      "id" : "average_node_degree",
-      "label" : "Average Graph Degree",
-      "score" : 2.517423711537236
-    },
-    {
-      "id" : "clustering_coefficient",
-      "label" : "Average Clustering Coefficient",
-      "score" : 0.024065477778511195
     }
   ]
 }

@@ -3,13 +3,19 @@ package org.virtuslab.semanticgraphs.analytics.scg
 import com.virtuslab.semanticgraphs.proto.model.graphnode.{Edge, GraphNode, SemanticGraphFile}
 import org.apache.commons.compress.archivers.zip.ZipFile
 import org.jgrapht.Graph
+import org.virtuslab.semanticgraphs.analytics.scg
 import org.virtuslab.semanticgraphs.analytics.scg.ScgJGraphT.LabeledEdge
 import org.virtuslab.semanticgraphs.analytics.utils.PathHelpers.*
+
 import java.nio.file.Files
 
-class SemanticCodeGraph(
+enum NetworkType:
+  case SCG, CCN, CG
+
+case class SemanticCodeGraph(
   val projectAndVersion: ProjectAndVersion,
-  val nodesMap: Map[String, GraphNode]
+  val nodesMap: Map[String, GraphNode],
+  val networkType: NetworkType = NetworkType.SCG
 ):
   def projectName: String = projectAndVersion.projectName
   def version: String = projectAndVersion.version
@@ -56,7 +62,6 @@ object SemanticCodeGraph:
   val play = ProjectAndVersion("data/playframework.zip", "playframework", "2.8.19")
   val vertx = ProjectAndVersion("data/vert.x.zip", "vertx", "4.4.4")
 
-
   val allProjects = List(retrofit, commonsIO, play, metals, glide, vertx, rxJava, dubbo, springBoot, akka, spark)
 
   def readAllProjects(): List[SemanticCodeGraph] =
@@ -68,6 +73,9 @@ object SemanticCodeGraph:
   def readAllProjectsFullCallGraph(): List[SemanticCodeGraph] =
     allProjects.map(fetchFullCallGraph)
 
+  def readAllProjectClassCollaborationGraph(): List[SemanticCodeGraph] =
+    allProjects.map(fetchClassCollaborationGraph)
+
   def isNodeDefinedInProject(node: GraphNode): Boolean =
     node.kind.nonEmpty && node.location.isDefined && !node.kind.contains("FILE") && node.kind != "PACKAGE_OBJECT"
 
@@ -77,11 +85,6 @@ object SemanticCodeGraph:
   def isEdgeDefinedInProject(edge: Edge): Boolean =
     edge.location.isDefined
 
-  /**
-    * If we want to take into account only call graphs
-    *
-    * @param workspace
-    */
   def fetchCallGraph(projectAndVersion: ProjectAndVersion) =
     SemanticCodeGraph.read(
       projectAndVersion,
@@ -89,16 +92,64 @@ object SemanticCodeGraph:
       edge => isEdgeDefinedInProject(edge) && edge.`type` == "CALL"
     )
 
+  def fetchClassCollaborationGraph(projectAndVersion: ProjectAndVersion): SemanticCodeGraph = {
+    val scg = SemanticCodeGraph
+      .read(
+        projectAndVersion,
+        node => isNodeDefinedInProject(node),
+        edge => isEdgeDefinedInProject(edge)
+      )
+      .withoutZeroDegreeNodes()
+
+    val nodesMap = scg.nodesMap
+
+    def extractAggregationEdges(clazz: GraphNode): Seq[Edge] = (for {
+      decl <- clazz.edges.filter(_.`type` == "DECLARATION").map(_.to)
+      declNode <- nodesMap.get(decl).filter(d => d.kind == "VALUE" || d.kind == "VARIABLE").toList
+    } yield declNode.edges.filter(e => e.`type` == "TYPE").map(to => Edge(to.to, "AGGREGATION", to.location))).flatten
+
+    def extractReferenceEdges(clazz: GraphNode): Seq[Edge] = (for {
+      decl <- clazz.edges.filter(_.`type` == "DECLARATION").map(_.to)
+      methodNode <- nodesMap.get(decl).filter(d => d.kind == "METHOD" || d.kind == "CONSTRUCTOR").toList
+      pe <- methodNode.edges.filter(_.`type` == "PARAMETER").toList
+      parameterNode <- nodesMap.get(pe.to).toList
+    } yield methodNode.edges.filter(_.`type` == "RETURN_TYPE").map(e => Edge(e.to, "REFERENCE", e.location)) ++
+      parameterNode.edges.filter(_.`type` == "TYPE").map(e => Edge(e.to, "REFERENCE", e.location))).flatten
+      .filterNot(_.to == clazz.id)
+
+    val classesCollaboration = for {
+      clazz <- scg.nodes.filter(n =>
+        n.kind == "CLASS" || n.kind == "INTERFACE" || n.kind == "TRAIT" || n.kind == "OBJECT"
+      )
+    } yield {
+      val aggregated = extractAggregationEdges(clazz)
+      val referenced = extractReferenceEdges(clazz).filterNot(r => aggregated.exists(a => a.location == r.location))
+      val allEdges =
+        referenced ++ aggregated ++ clazz.edges.filter(_.`type` == "EXTEND").map(_.copy(`type` = "INHERITANCE"))
+      val newClassNode = clazz.withEdges(allEdges.toSet.toSeq)
+      newClassNode
+    }
+
+    val m = classesCollaboration.map(n => n.id -> n).toMap
+    SemanticCodeGraph(
+      projectAndVersion.copy(projectName = s"${projectAndVersion.projectName}"),
+      classesCollaboration.map(c => c.id -> c.withEdges(c.edges.filter(e => m.contains(e.to)))).toMap,
+      NetworkType.CCN
+    ).withoutZeroDegreeNodes()
+  }
+
   def fetchFullCallGraph(projectAndVersion: ProjectAndVersion) =
-    SemanticCodeGraph.read(
-      projectAndVersion,
-      node =>
-        isNodeDefinedInProject(
-          node
-        ) && (node.kind == "METHOD" || node.kind == "CONSTRUCTOR" || node.kind == "VALUE" || node.kind == "VARIABLE"),
-        //) && node.kind != "CLASS" && node.kind != "OBJECT" && node.kind != "TRAIT" && node.kind != "INTERFACE",
-      edge => isEdgeDefinedInProject(edge) && edge.`type` == "CALL"
-    )
+    SemanticCodeGraph
+      .read(
+        projectAndVersion.copy(projectName = s"${projectAndVersion.projectName}"),
+        node =>
+          isNodeDefinedInProject(
+            node
+          ) && (node.kind == "METHOD" || node.kind == "CONSTRUCTOR" || node.kind == "VALUE" || node.kind == "VARIABLE"),
+        // ) && node.kind != "CLASS" && node.kind != "OBJECT" && node.kind != "TRAIT" && node.kind != "INTERFACE",
+        edge => isEdgeDefinedInProject(edge) && edge.`type` == "CALL"
+      )
+      .copy(networkType = NetworkType.CG)
 
   def readOnlyGlobalNodes(projectAndVersion: ProjectAndVersion): SemanticCodeGraph =
     val semanticCodeGraph = SemanticCodeGraph.read(

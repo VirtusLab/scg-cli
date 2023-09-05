@@ -30,9 +30,8 @@ import java.nio.file.{Files, Path}
 class ScgCli:
 
   @Command(name = "version", description = Array("Show scg-cli version."))
-  def version() = {
+  def version() =
     println("scg-cli 0.1.4-SNAPSHOT")
-  }
 
   @Command(name = "generate", description = Array("Generate SCG metadata."))
   def generate(
@@ -62,23 +61,32 @@ class ScgCli:
     workspace: String,
     @Option(
       names = Array("-o", "--output"),
-      description = Array("Output format: html, json, txt"),
+      description = Array("Output format: html, txt, json"),
       arity = "0..1",
       defaultValue = "html"
     )
-    output: String
+    output: String,
+    @Option(
+      names = Array("-g", "--graph"),
+      description = Array("Software Network to extract: SCG, CG, CCN default: ${DEFAULT-VALUE}"),
+      arity = "0..1",
+      defaultValue = "SCG"
+    )
+    graph: String
   ): Unit =
+    val projectAndVersion = ProjectAndVersion(workspace, workspace.split("/").last, "")
+    val scg = createScg(projectAndVersion, graph)
     output match {
       case "html" =>
-        val scg = SemanticCodeGraph.read(ProjectAndVersion(workspace, workspace.split("/").last, ""))
         val summary = SCGProjectSummary.summary(scg)
         SCGProjectSummary.exportHtmlSummary(summary)
       case "txt" =>
-        val scg = SemanticCodeGraph.read(ProjectAndVersion(workspace, workspace.split("/").last, ""))
+        val summary = SCGProjectSummary.summary(scg)
+        SCGProjectSummary.exportTxt(summary)
+      case "json" =>
         val summary = SCGProjectSummary.summary(scg)
         SCGProjectSummary.exportTxt(summary)
     }
-
 
   @Command(name = "crucial", description = Array("Find crucial code entities."))
   def crucial(
@@ -108,8 +116,16 @@ class ScgCli:
       defaultValue = "10"
     )
     n: Int,
+    @Option(
+      names = Array("-g", "--graph"),
+      description = Array("Software Network to extract: SCG, CG, CCN default: ${DEFAULT-VALUE}"),
+      arity = "0..1",
+      defaultValue = "SCG"
+    )
+    graph: String
   ): Unit =
-    val scg = SemanticCodeGraph.read(ProjectAndVersion(workspace, workspace.split("/").last, ""))
+    val projectAndVersion = ProjectAndVersion(workspace, workspace.split("/").last, "")
+    val scg = createScg(projectAndVersion, graph)
     val summary = CrucialNodes.analyze(scg, mode == "quick", n)
     output match {
       case "html" =>
@@ -121,9 +137,9 @@ class ScgCli:
       case "txt" =>
         println(summary.projectName)
         println(summary.workspace)
-        summary.stats.foreach{ stat =>
+        summary.stats.foreach { stat =>
           println(s"${stat.id}, ${stat.description}")
-          stat.nodes.foreach{node =>
+          stat.nodes.foreach { node =>
             println(s"${node.id}, ${formatScore(node.score)}")
           }
         }
@@ -201,9 +217,10 @@ class ScgCli:
       case "tex" =>
         println(PartitionResultsSummary.exportTex(PartitionResultsSummary(results)))
       case "csv" =>
-        results.foreach{ result =>
+        results.foreach { result =>
           val fileName = s"${projectAndVersion.projectName}-npart-${result.nparts}-${result.method}.csv"
-          val csvContent = "id,npart\n" + result.nodeToPart.map{case (key, value) => s"\"$key\", $value"}.mkString("\n")
+          val csvContent =
+            "id,npart\n" + result.nodeToPart.map { case (key, value) => s"\"$key\", $value" }.mkString("\n")
           FileUtils.dumpFile(fileName, csvContent)
         }
     }
@@ -221,20 +238,33 @@ class ScgCli:
       arity = "0..1",
       defaultValue = "jupyter"
     )
-    output: String
+    output: String,
+    @Option(
+      names = Array("-g", "--graph"),
+      description = Array("Software Network to extract: SCG, CG, CCN default: ${DEFAULT-VALUE}"),
+      arity = "0..1",
+      defaultValue = "SCG"
+    )
+    graph: String
   ): Unit =
     val projectName = workspace.split("/").last
     val projectAndVersion = ProjectAndVersion(workspace, projectName, "")
+
     output match {
       case "jupyter" =>
         JupyterNotebook.runJupyterNotebook(projectAndVersion.workspace)
       case "gml" =>
-        ExportToGml.exportToGML(s"$projectName.gml", SemanticCodeGraph.read(projectAndVersion))
+        ExportToGml.exportToGML(s"$projectName.gml", createScg(projectAndVersion, graph))
       case "gdf" =>
-        ExportToGdf.exportToGdf(s"$projectName.gdf", SemanticCodeGraph.read(projectAndVersion))
+        ExportToGdf.exportToGdf(s"$projectName.gdf", createScg(projectAndVersion, graph))
         println(s"Exported to `$projectName.gdf` file.")
     }
 
+  private def createScg(projectAndVersion: ProjectAndVersion, graph: String) = graph match {
+    case "CCN" => SemanticCodeGraph.fetchClassCollaborationGraph(projectAndVersion)
+    case "CG"  => SemanticCodeGraph.fetchFullCallGraph(projectAndVersion)
+    case _     => SemanticCodeGraph.read(projectAndVersion)
+  }
 
 object ScgCli:
 

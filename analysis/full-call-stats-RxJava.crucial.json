@@ -1,0 +1,510 @@
+{
+  "projectName": "RxJava",
+  "workspace": "data/RxJava.zip",
+  "stats": [
+    {
+      "id": "loc",
+      "description": "Lines of code",
+      "nodes": [
+        {
+          "id": "io.reactivex.rxjava3.core.MemoryPerf.main(java.lang.String[])",
+          "label": "main",
+          "score": 378
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.XMapYPerf.setup()",
+          "label": "setup",
+          "score": 238
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.flowable.FlowableJoin.JoinSubscription.drain()",
+          "label": "drain",
+          "score": 186
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableConcatMapEager.ConcatMapEagerMainObserver.drain()",
+          "label": "drain",
+          "score": 180
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.flowable.FlowableFlatMap.MergeSubscriber.drainLoop()",
+          "label": "drainLoop",
+          "score": 170
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.flowable.FlowableGroupJoin.GroupJoinSubscription.drain()",
+          "label": "drain",
+          "score": 157
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableJoin.JoinDisposable.drain()",
+          "label": "drain",
+          "score": 151
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.flowable.FlowableFlattenIterable.FlattenIterableSubscriber.drain()",
+          "label": "drain",
+          "score": 150
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableGroupJoin.GroupJoinDisposable.drain()",
+          "label": "drain",
+          "score": 150
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.flowable.FlowableZip.ZipCoordinator.drain()",
+          "label": "drain",
+          "score": 149
+        }
+      ]
+    },
+    {
+      "id": "out-degree",
+      "description": "Node out-degree",
+      "nodes": [
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableConcatMapEager.ConcatMapEagerMainObserver.drain()",
+          "label": "drain",
+          "score": 134
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.flowable.FlowableJoin.JoinSubscription.drain()",
+          "label": "drain",
+          "score": 134
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.flowable.FlowableFlatMap.MergeSubscriber.drainLoop()",
+          "label": "drainLoop",
+          "score": 133
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.MemoryPerf.main(java.lang.String[])",
+          "label": "main",
+          "score": 126
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.flowable.FlowableGroupJoin.GroupJoinSubscription.drain()",
+          "label": "drain",
+          "score": 115
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableGroupJoin.GroupJoinDisposable.drain()",
+          "label": "drain",
+          "score": 111
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableJoin.JoinDisposable.drain()",
+          "label": "drain",
+          "score": 110
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.flowable.FlowableZip.ZipCoordinator.drain()",
+          "label": "drain",
+          "score": 106
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.flowable.FlowableFlattenIterable.FlattenIterableSubscriber.drain()",
+          "label": "drain",
+          "score": 106
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.flowable.FlowableSequenceEqualSingle.EqualCoordinator.drain()",
+          "label": "drain",
+          "score": 104
+        }
+      ]
+    },
+    {
+      "id": "in-degree",
+      "description": "Node in-degree",
+      "nodes": [
+        {
+          "id": "io.reactivex.rxjava3.exceptions.Exceptions.throwIfFatal(java.lang.Throwable)",
+          "label": "throwIfFatal",
+          "score": 347
+        },
+        {
+          "id": "io.reactivex.rxjava3.disposables.Disposable.dispose()",
+          "label": "dispose",
+          "score": 247
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.disposables.DisposableHelper.dispose(java.util.concurrent.atomic.AtomicReference<io.reactivex.rxjava3.disposables.Disposable>)",
+          "label": "dispose",
+          "score": 198
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.disposables.DisposableHelper.validate(io.reactivex.rxjava3.disposables.Disposable, io.reactivex.rxjava3.disposables.Disposable)",
+          "label": "validate",
+          "score": 138
+        },
+        {
+          "id": "io.reactivex.rxjava3.disposables.Disposable.isDisposed()",
+          "label": "isDisposed",
+          "score": 119
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Observer.onError(java.lang.Throwable)",
+          "label": "onError",
+          "score": 115
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Flowable.bufferSize()",
+          "label": "bufferSize",
+          "score": 108
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Observer.onNext(T)",
+          "label": "onNext",
+          "score": 106
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Observer.onComplete()",
+          "label": "onComplete",
+          "score": 104
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.disposables.DisposableHelper.setOnce(java.util.concurrent.atomic.AtomicReference<io.reactivex.rxjava3.disposables.Disposable>, io.reactivex.rxjava3.disposables.Disposable)",
+          "label": "setOnce",
+          "score": 103
+        }
+      ]
+    },
+    {
+      "id": "pagerank",
+      "description": "PageRank",
+      "nodes": [
+        {
+          "id": "io.reactivex.rxjava3.internal.disposables.DisposableHelper?DISPOSED",
+          "label": "DISPOSED",
+          "score": 0.004029436146766236
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Flowable.bufferSize()",
+          "label": "bufferSize",
+          "score": 0.003757203908056631
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Flowable?BUFFER_SIZE@157.21:157.32",
+          "label": "BUFFER_SIZE",
+          "score": 0.003746963278225019
+        },
+        {
+          "id": "io.reactivex.rxjava3.disposables.Disposable.dispose()",
+          "label": "dispose",
+          "score": 0.003457178912326742
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.disposables.DisposableHelper.dispose(java.util.concurrent.atomic.AtomicReference<io.reactivex.rxjava3.disposables.Disposable>)",
+          "label": "dispose",
+          "score": 0.003289693475538823
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.disposables.DisposableHelper.setOnce(java.util.concurrent.atomic.AtomicReference<io.reactivex.rxjava3.disposables.Disposable>, io.reactivex.rxjava3.disposables.Disposable)",
+          "label": "setOnce",
+          "score": 0.00198175538052392
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Observable.bufferSize()",
+          "label": "bufferSize",
+          "score": 0.0018125882423187137
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.disposables.DisposableHelper.isDisposed(io.reactivex.rxjava3.disposables.Disposable)",
+          "label": "isDisposed",
+          "score": 0.0017298055315657142
+        },
+        {
+          "id": "io.reactivex.rxjava3.exceptions.ProtocolViolationException.ProtocolViolationException(java.lang.String)",
+          "label": "ProtocolViolationException",
+          "score": 0.0016897313796872232
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.disposables.DisposableHelper.dispose(java.util.concurrent.atomic.AtomicReference<io.reactivex.rxjava3.disposables.Disposable>)?current@117.19:117.26",
+          "label": "current",
+          "score": 0.0016559751384896194
+        }
+      ]
+    },
+    {
+      "id": "eigenvector",
+      "description": "Eigenvector centrality",
+      "nodes": [
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableFlatMap.MergeObserver?observers@72.53:72.62",
+          "label": "observers",
+          "score": 0.574062953615317
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableFlatMap.MergeObserver.drainLoop()?inner@349.38:349.43",
+          "label": "inner",
+          "score": 0.3356354176574429
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableFlatMap.MergeObserver.drainLoop()?n@350.20:350.21",
+          "label": "n",
+          "score": 0.2824453881970612
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableFlatMap.MergeObserver.drainLoop()?j@365.24:365.25",
+          "label": "j",
+          "score": 0.2608181155013775
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableFlatMap.MergeObserver?errors@68.30:68.36",
+          "label": "errors",
+          "score": 0.2090150343102475
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableFlatMap.MergeObserver?lastIndex@81.12:81.21",
+          "label": "lastIndex",
+          "score": 0.2084681964574749
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableFlatMap.MergeObserver.removeInner(io.reactivex.rxjava3.internal.operators.observable.ObservableFlatMap.InnerObserver<T, U>)?a@186.38:186.39",
+          "label": "a",
+          "score": 0.18544560792616205
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableFlatMap.MergeObserver.drainLoop()?is@374.44:374.46",
+          "label": "is",
+          "score": 0.1717612462423075
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableFlatMap.MergeObserver?queue@64.37:64.42",
+          "label": "queue",
+          "score": 0.16959006661142054
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableFlatMap.MergeObserver.drainLoop()?innerCompleted@319.20:319.34",
+          "label": "innerCompleted",
+          "score": 0.16644868141406916
+        }
+      ]
+    },
+    {
+      "id": "Katz",
+      "description": "Katz centrality",
+      "nodes": [
+        {
+          "id": "io.reactivex.rxjava3.exceptions.Exceptions.throwIfFatal(java.lang.Throwable)",
+          "label": "throwIfFatal",
+          "score": 4.485438999999977
+        },
+        {
+          "id": "io.reactivex.rxjava3.disposables.Disposable.dispose()",
+          "label": "dispose",
+          "score": 3.5292435699999913
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.disposables.DisposableHelper.dispose(java.util.concurrent.atomic.AtomicReference<io.reactivex.rxjava3.disposables.Disposable>)",
+          "label": "dispose",
+          "score": 2.985852320000001
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.disposables.DisposableHelper.validate(io.reactivex.rxjava3.disposables.Disposable, io.reactivex.rxjava3.disposables.Disposable)",
+          "label": "validate",
+          "score": 2.380200000000001
+        },
+        {
+          "id": "io.reactivex.rxjava3.disposables.Disposable.isDisposed()",
+          "label": "isDisposed",
+          "score": 2.190000000000001
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Observer.onError(java.lang.Throwable)",
+          "label": "onError",
+          "score": 2.1604792300000004
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Flowable.bufferSize()",
+          "label": "bufferSize",
+          "score": 2.0956765800000006
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Observer.onNext(T)",
+          "label": "onNext",
+          "score": 2.065505000000001
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Observer.onComplete()",
+          "label": "onComplete",
+          "score": 2.0483752300000004
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.disposables.DisposableHelper.setOnce(java.util.concurrent.atomic.AtomicReference<io.reactivex.rxjava3.disposables.Disposable>, io.reactivex.rxjava3.disposables.Disposable)",
+          "label": "setOnce",
+          "score": 2.0306000000000006
+        }
+      ]
+    },
+    {
+      "id": "betweenness",
+      "description": "Betweenness centrality",
+      "nodes": [
+        {
+          "id": "io.reactivex.rxjava3.operators.SpscLinkedArrayQueue.SpscLinkedArrayQueue(int)",
+          "label": "SpscLinkedArrayQueue",
+          "score": 1690
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.disposables.DisposableHelper.dispose(java.util.concurrent.atomic.AtomicReference<io.reactivex.rxjava3.disposables.Disposable>)",
+          "label": "dispose",
+          "score": 1037
+        },
+        {
+          "id": "io.reactivex.rxjava3.operators.SpscLinkedArrayQueue.poll()",
+          "label": "poll",
+          "score": 561.4777777777776
+        },
+        {
+          "id": "io.reactivex.rxjava3.processors.UnicastProcessor.UnicastProcessor(int, java.util.concurrent.atomic.Runnable, boolean)",
+          "label": "UnicastProcessor",
+          "score": 476
+        },
+        {
+          "id": "io.reactivex.rxjava3.subjects.UnicastSubject.UnicastSubject(int, java.util.concurrent.atomic.Runnable, boolean)",
+          "label": "UnicastSubject",
+          "score": 473
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.disposables.DisposableHelper.setOnce(java.util.concurrent.atomic.AtomicReference<io.reactivex.rxjava3.disposables.Disposable>, io.reactivex.rxjava3.disposables.Disposable)",
+          "label": "setOnce",
+          "score": 427
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableConcatMapEager.ConcatMapEagerMainObserver.drain()",
+          "label": "drain",
+          "score": 426.5000000000001
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.disposables.DisposableHelper.validate(io.reactivex.rxjava3.disposables.Disposable, io.reactivex.rxjava3.disposables.Disposable)",
+          "label": "validate",
+          "score": 408.99999999999994
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.flowable.FlowableWindowBoundarySelector.WindowBoundaryMainSubscriber.drain()",
+          "label": "drain",
+          "score": 406.4999999999999
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableFlatMap.MergeObserver.drainLoop()",
+          "label": "drainLoop",
+          "score": 390.9999999999999
+        }
+      ]
+    },
+    {
+      "id": "harmonic",
+      "description": "Harmonic centrality",
+      "nodes": [
+        {
+          "id": "io.reactivex.rxjava3.core.MemoryPerf.main(java.lang.String[])",
+          "label": "main",
+          "score": 0.002829865170290704
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.flowable.FlowableGroupJoin.GroupJoinSubscription.drain()",
+          "label": "drain",
+          "score": 0.0027402384849193368
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableGroupJoin.GroupJoinDisposable.drain()",
+          "label": "drain",
+          "score": 0.002689579923622477
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableConcatMapEager.ConcatMapEagerMainObserver.drain()",
+          "label": "drain",
+          "score": 0.0026225547502143247
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.flowable.FlowableJoin.JoinSubscription.drain()",
+          "label": "drain",
+          "score": 0.0023614683189151276
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.XMapYPerf.setup()",
+          "label": "setup",
+          "score": 0.0022445639466916064
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableConcatMapEager.ConcatMapEagerMainObserver.onSubscribe(io.reactivex.rxjava3.disposables.Disposable)",
+          "label": "onSubscribe",
+          "score": 0.002175200685838984
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableSkipLastTimed.SkipLastTimedObserver.drain()",
+          "label": "drain",
+          "score": 0.0021315563868755357
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableJoin.JoinDisposable.drain()",
+          "label": "drain",
+          "score": 0.002127659574468085
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.flowable.FlowableFlatMap.MergeSubscriber.drainLoop()",
+          "label": "drainLoop",
+          "score": 0.002002961577429663
+        }
+      ]
+    },
+    {
+      "id": "combined",
+      "description": "Combined importance",
+      "nodes": [
+        {
+          "id": "io.reactivex.rxjava3.internal.disposables.DisposableHelper.dispose(java.util.concurrent.atomic.AtomicReference<io.reactivex.rxjava3.disposables.Disposable>)",
+          "label": "dispose",
+          "score": 4
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableConcatMapEager.ConcatMapEagerMainObserver.drain()",
+          "label": "drain",
+          "score": 4
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.disposables.DisposableHelper.setOnce(java.util.concurrent.atomic.AtomicReference<io.reactivex.rxjava3.disposables.Disposable>, io.reactivex.rxjava3.disposables.Disposable)",
+          "label": "setOnce",
+          "score": 4
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.MemoryPerf.main(java.lang.String[])",
+          "label": "main",
+          "score": 3
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.flowable.FlowableFlatMap.MergeSubscriber.drainLoop()",
+          "label": "drainLoop",
+          "score": 3
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableJoin.JoinDisposable.drain()",
+          "label": "drain",
+          "score": 3
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.flowable.FlowableJoin.JoinSubscription.drain()",
+          "label": "drain",
+          "score": 3
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Flowable.bufferSize()",
+          "label": "bufferSize",
+          "score": 3
+        },
+        {
+          "id": "io.reactivex.rxjava3.disposables.Disposable.dispose()",
+          "label": "dispose",
+          "score": 3
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableGroupJoin.GroupJoinDisposable.drain()",
+          "label": "drain",
+          "score": 3
+        }
+      ]
+    }
+  ]
+}

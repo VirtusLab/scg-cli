@@ -1,0 +1,510 @@
+{
+  "projectName": "commons-io",
+  "workspace": "data/commons-io.zip",
+  "stats": [
+    {
+      "id": "loc",
+      "description": "Lines of code",
+      "nodes": [
+        {
+          "id": "org.apache.commons.io.IOUtils",
+          "label": "IOUtils",
+          "score": 3608
+        },
+        {
+          "id": "org.apache.commons.io.FileUtils",
+          "label": "FileUtils",
+          "score": 3434
+        },
+        {
+          "id": "org.apache.commons.io.file.PathUtils",
+          "label": "PathUtils",
+          "score": 1682
+        },
+        {
+          "id": "org.apache.commons.io.input.Tailer",
+          "label": "Tailer",
+          "score": 829
+        },
+        {
+          "id": "org.apache.commons.io.input.XmlStreamReader",
+          "label": "XmlStreamReader",
+          "score": 788
+        },
+        {
+          "id": "org.apache.commons.io.filefilter.FileFilterUtils",
+          "label": "FileFilterUtils",
+          "score": 700
+        },
+        {
+          "id": "org.apache.commons.io.function.IOStream",
+          "label": "IOStream",
+          "score": 545
+        },
+        {
+          "id": "org.apache.commons.io.input.ReversedLinesFileReader",
+          "label": "ReversedLinesFileReader",
+          "score": 425
+        },
+        {
+          "id": "org.apache.commons.io.DirectoryWalker",
+          "label": "DirectoryWalker",
+          "score": 413
+        },
+        {
+          "id": "org.apache.commons.io.output.AbstractByteArrayOutputStream",
+          "label": "AbstractByteArrayOutputStream",
+          "score": 351
+        }
+      ]
+    },
+    {
+      "id": "out-degree",
+      "description": "Node out-degree",
+      "nodes": [
+        {
+          "id": "org.apache.commons.io.filefilter.FileFilterUtils",
+          "label": "FileFilterUtils",
+          "score": 48
+        },
+        {
+          "id": "org.apache.commons.io.function.IOStream",
+          "label": "IOStream",
+          "score": 26
+        },
+        {
+          "id": "org.apache.commons.io.file.PathUtils",
+          "label": "PathUtils",
+          "score": 20
+        },
+        {
+          "id": "org.apache.commons.io.input.Tailer",
+          "label": "Tailer",
+          "score": 19
+        },
+        {
+          "id": "org.apache.commons.io.file.AccumulatorPathVisitor",
+          "label": "AccumulatorPathVisitor",
+          "score": 13
+        },
+        {
+          "id": "org.apache.commons.io.FileUtils",
+          "label": "FileUtils",
+          "score": 13
+        },
+        {
+          "id": "org.apache.commons.io.file.CountingPathVisitor",
+          "label": "CountingPathVisitor",
+          "score": 12
+        },
+        {
+          "id": "org.apache.commons.io.monitor.FileAlterationObserver",
+          "label": "FileAlterationObserver",
+          "score": 11
+        },
+        {
+          "id": "org.apache.commons.io.function.Uncheck",
+          "label": "Uncheck",
+          "score": 11
+        },
+        {
+          "id": "org.apache.commons.io.function.Erase",
+          "label": "Erase",
+          "score": 8
+        }
+      ]
+    },
+    {
+      "id": "in-degree",
+      "description": "Node in-degree",
+      "nodes": [
+        {
+          "id": "org.apache.commons.io.filefilter.IOFileFilter",
+          "label": "IOFileFilter",
+          "score": 102
+        },
+        {
+          "id": "org.apache.commons.io.file.Counters.PathCounters",
+          "label": "PathCounters",
+          "score": 29
+        },
+        {
+          "id": "org.apache.commons.io.filefilter.AbstractFileFilter",
+          "label": "AbstractFileFilter",
+          "score": 24
+        },
+        {
+          "id": "org.apache.commons.io.function.IOConsumer",
+          "label": "IOConsumer",
+          "score": 23
+        },
+        {
+          "id": "org.apache.commons.io.file.PathFilter",
+          "label": "PathFilter",
+          "score": 23
+        },
+        {
+          "id": "org.apache.commons.io.input.TailerListener",
+          "label": "TailerListener",
+          "score": 21
+        },
+        {
+          "id": "org.apache.commons.io.function.IOFunction",
+          "label": "IOFunction",
+          "score": 16
+        },
+        {
+          "id": "org.apache.commons.io.function.IOBiFunction",
+          "label": "IOBiFunction",
+          "score": 10
+        },
+        {
+          "id": "org.apache.commons.io.input.ProxyInputStream",
+          "label": "ProxyInputStream",
+          "score": 9
+        },
+        {
+          "id": "org.apache.commons.io.monitor.FileEntry",
+          "label": "FileEntry",
+          "score": 9
+        }
+      ]
+    },
+    {
+      "id": "pagerank",
+      "description": "PageRank",
+      "nodes": [
+        {
+          "id": "org.apache.commons.io.file.PathFilter",
+          "label": "PathFilter",
+          "score": 0.053805653341656844
+        },
+        {
+          "id": "org.apache.commons.io.input.Tailer",
+          "label": "Tailer",
+          "score": 0.048533626719977956
+        },
+        {
+          "id": "org.apache.commons.io.input.TailerListener",
+          "label": "TailerListener",
+          "score": 0.04549680487578693
+        },
+        {
+          "id": "org.apache.commons.io.filefilter.IOFileFilter",
+          "label": "IOFileFilter",
+          "score": 0.04445862479215945
+        },
+        {
+          "id": "org.apache.commons.io.function.IOConsumer",
+          "label": "IOConsumer",
+          "score": 0.04054763855671772
+        },
+        {
+          "id": "org.apache.commons.io.filefilter.AbstractFileFilter",
+          "label": "AbstractFileFilter",
+          "score": 0.03992128103509539
+        },
+        {
+          "id": "org.apache.commons.io.function.IOSupplier",
+          "label": "IOSupplier",
+          "score": 0.027137669775984044
+        },
+        {
+          "id": "org.apache.commons.io.comparator.AbstractFileComparator",
+          "label": "AbstractFileComparator",
+          "score": 0.023152590282017008
+        },
+        {
+          "id": "org.apache.commons.io.function.IOFunction",
+          "label": "IOFunction",
+          "score": 0.022167577427418608
+        },
+        {
+          "id": "org.apache.commons.io.input.ProxyInputStream",
+          "label": "ProxyInputStream",
+          "score": 0.020713614047845177
+        }
+      ]
+    },
+    {
+      "id": "eigenvector",
+      "description": "Eigenvector centrality",
+      "nodes": [
+        {
+          "id": "org.apache.commons.io.input.TailerListener",
+          "label": "TailerListener",
+          "score": 0.8255788259805975
+        },
+        {
+          "id": "org.apache.commons.io.input.Tailer",
+          "label": "Tailer",
+          "score": 0.5417861045497671
+        },
+        {
+          "id": "org.apache.commons.io.input.Tailer.RandomAccessResourceBridge",
+          "label": "RandomAccessResourceBridge",
+          "score": 0.11932193969250823
+        },
+        {
+          "id": "org.apache.commons.io.input.Tailer.Tailable",
+          "label": "Tailable",
+          "score": 0.10319735324757469
+        },
+        {
+          "id": "org.apache.commons.io.monitor.FileEntry",
+          "label": "FileEntry",
+          "score": 4.3960513049618854E-30
+        },
+        {
+          "id": "org.apache.commons.io.monitor.SerializableFileTime",
+          "label": "SerializableFileTime",
+          "score": 2.198025652480943E-30
+        },
+        {
+          "id": "org.apache.commons.io.monitor.FileAlterationListener",
+          "label": "FileAlterationListener",
+          "score": 9.769002899915303E-31
+        },
+        {
+          "id": "org.apache.commons.io.monitor.FileAlterationObserver",
+          "label": "FileAlterationObserver",
+          "score": 4.8845014499576516E-31
+        },
+        {
+          "id": "org.apache.commons.io.input.Tailer.TailablePath",
+          "label": "TailablePath",
+          "score": 0
+        },
+        {
+          "id": "org.apache.commons.io.comparator.AbstractFileComparator",
+          "label": "AbstractFileComparator",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "Katz",
+      "description": "Katz centrality",
+      "nodes": [
+        {
+          "id": "org.apache.commons.io.filefilter.IOFileFilter",
+          "label": "IOFileFilter",
+          "score": 2.0228000000000006
+        },
+        {
+          "id": "org.apache.commons.io.file.Counters.PathCounters",
+          "label": "PathCounters",
+          "score": 1.2925080000000002
+        },
+        {
+          "id": "org.apache.commons.io.file.PathFilter",
+          "label": "PathFilter",
+          "score": 1.24424
+        },
+        {
+          "id": "org.apache.commons.io.filefilter.AbstractFileFilter",
+          "label": "AbstractFileFilter",
+          "score": 1.24
+        },
+        {
+          "id": "org.apache.commons.io.function.IOConsumer",
+          "label": "IOConsumer",
+          "score": 1.23769457
+        },
+        {
+          "id": "org.apache.commons.io.input.TailerListener",
+          "label": "TailerListener",
+          "score": 1.2135411200000001
+        },
+        {
+          "id": "org.apache.commons.io.function.IOFunction",
+          "label": "IOFunction",
+          "score": 1.16311919
+        },
+        {
+          "id": "org.apache.commons.io.function.IOBiFunction",
+          "label": "IOBiFunction",
+          "score": 1.10161904
+        },
+        {
+          "id": "org.apache.commons.io.monitor.FileEntry",
+          "label": "FileEntry",
+          "score": 1.09545616
+        },
+        {
+          "id": "org.apache.commons.io.file.Counters.Counter",
+          "label": "Counter",
+          "score": 1.0918
+        }
+      ]
+    },
+    {
+      "id": "betweenness",
+      "description": "Betweenness centrality",
+      "nodes": [
+        {
+          "id": "org.apache.commons.io.filefilter.AbstractFileFilter",
+          "label": "AbstractFileFilter",
+          "score": 75
+        },
+        {
+          "id": "org.apache.commons.io.function.IOFunction",
+          "label": "IOFunction",
+          "score": 32
+        },
+        {
+          "id": "org.apache.commons.io.filefilter.IOFileFilter",
+          "label": "IOFileFilter",
+          "score": 30.555555555555557
+        },
+        {
+          "id": "org.apache.commons.io.function.IOBiFunction",
+          "label": "IOBiFunction",
+          "score": 27
+        },
+        {
+          "id": "org.apache.commons.io.file.CountingPathVisitor",
+          "label": "CountingPathVisitor",
+          "score": 26
+        },
+        {
+          "id": "org.apache.commons.io.file.AccumulatorPathVisitor",
+          "label": "AccumulatorPathVisitor",
+          "score": 12.444444444444443
+        },
+        {
+          "id": "org.apache.commons.io.function.IOStream",
+          "label": "IOStream",
+          "score": 10.499999999999996
+        },
+        {
+          "id": "org.apache.commons.io.file.SimplePathVisitor",
+          "label": "SimplePathVisitor",
+          "score": 8
+        },
+        {
+          "id": "org.apache.commons.io.monitor.FileAlterationObserver",
+          "label": "FileAlterationObserver",
+          "score": 7.000000000000002
+        },
+        {
+          "id": "org.apache.commons.io.file.Counters.AbstractPathCounters",
+          "label": "AbstractPathCounters",
+          "score": 6.000000000000002
+        }
+      ]
+    },
+    {
+      "id": "harmonic",
+      "description": "Harmonic centrality",
+      "nodes": [
+        {
+          "id": "org.apache.commons.io.function.Uncheck",
+          "label": "Uncheck",
+          "score": 0.06358381502890173
+        },
+        {
+          "id": "org.apache.commons.io.function.IOStream",
+          "label": "IOStream",
+          "score": 0.06069364161849711
+        },
+        {
+          "id": "org.apache.commons.io.function.Erase",
+          "label": "Erase",
+          "score": 0.046242774566473986
+        },
+        {
+          "id": "org.apache.commons.io.function.IOStreamAdapter",
+          "label": "IOStreamAdapter",
+          "score": 0.04238921001926783
+        },
+        {
+          "id": "org.apache.commons.io.file.PathUtils",
+          "label": "PathUtils",
+          "score": 0.038053949903660886
+        },
+        {
+          "id": "org.apache.commons.io.FileUtils",
+          "label": "FileUtils",
+          "score": 0.03709055876685935
+        },
+        {
+          "id": "org.apache.commons.io.function.Constants",
+          "label": "Constants",
+          "score": 0.03468208092485549
+        },
+        {
+          "id": "org.apache.commons.io.file.AccumulatorPathVisitor",
+          "label": "AccumulatorPathVisitor",
+          "score": 0.03468208092485549
+        },
+        {
+          "id": "org.apache.commons.io.file.CountingPathVisitor",
+          "label": "CountingPathVisitor",
+          "score": 0.03275529865125241
+        },
+        {
+          "id": "org.apache.commons.io.file.CopyDirectoryVisitor",
+          "label": "CopyDirectoryVisitor",
+          "score": 0.029865125240847785
+        }
+      ]
+    },
+    {
+      "id": "combined",
+      "description": "Combined importance",
+      "nodes": [
+        {
+          "id": "org.apache.commons.io.filefilter.IOFileFilter",
+          "label": "IOFileFilter",
+          "score": 4
+        },
+        {
+          "id": "org.apache.commons.io.function.IOStream",
+          "label": "IOStream",
+          "score": 4
+        },
+        {
+          "id": "org.apache.commons.io.filefilter.AbstractFileFilter",
+          "label": "AbstractFileFilter",
+          "score": 4
+        },
+        {
+          "id": "org.apache.commons.io.input.TailerListener",
+          "label": "TailerListener",
+          "score": 4
+        },
+        {
+          "id": "org.apache.commons.io.function.IOFunction",
+          "label": "IOFunction",
+          "score": 4
+        },
+        {
+          "id": "org.apache.commons.io.input.Tailer",
+          "label": "Tailer",
+          "score": 4
+        },
+        {
+          "id": "org.apache.commons.io.function.IOConsumer",
+          "label": "IOConsumer",
+          "score": 3
+        },
+        {
+          "id": "org.apache.commons.io.monitor.FileEntry",
+          "label": "FileEntry",
+          "score": 3
+        },
+        {
+          "id": "org.apache.commons.io.monitor.FileAlterationObserver",
+          "label": "FileAlterationObserver",
+          "score": 3
+        },
+        {
+          "id": "org.apache.commons.io.FileUtils",
+          "label": "FileUtils",
+          "score": 3
+        }
+      ]
+    }
+  ]
+}

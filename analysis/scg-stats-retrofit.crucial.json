@@ -1,0 +1,510 @@
+{
+  "projectName": "retrofit",
+  "workspace": "data/retrofit.zip",
+  "stats": [
+    {
+      "id": "loc",
+      "description": "Lines of code",
+      "nodes": [
+        {
+          "id": "retrofit2.RequestFactory",
+          "label": "RequestFactory",
+          "score": 800
+        },
+        {
+          "id": "retrofit2.RequestFactory.Builder",
+          "label": "Builder",
+          "score": 724
+        },
+        {
+          "id": "retrofit2.Retrofit",
+          "label": "Retrofit",
+          "score": 600
+        },
+        {
+          "id": "retrofit2.Utils",
+          "label": "Utils",
+          "score": 516
+        },
+        {
+          "id": "retrofit2.RequestFactory.Builder.parseParameterAnnotation(int, java.lang.reflect.Type, java.lang.annotation.Annotation[], java.lang.annotation.Annotation)",
+          "label": "parseParameterAnnotation",
+          "score": 456
+        },
+        {
+          "id": "retrofit2.ParameterHandler",
+          "label": "ParameterHandler",
+          "score": 431
+        },
+        {
+          "id": "retrofit2.Platform",
+          "label": "Platform",
+          "score": 324
+        },
+        {
+          "id": "retrofit2.OkHttpCall",
+          "label": "OkHttpCall",
+          "score": 316
+        },
+        {
+          "id": "retrofit2.RequestBuilder",
+          "label": "RequestBuilder",
+          "score": 266
+        },
+        {
+          "id": "retrofit2.Retrofit.Builder",
+          "label": "Builder",
+          "score": 232
+        }
+      ]
+    },
+    {
+      "id": "out-degree",
+      "description": "Node out-degree",
+      "nodes": [
+        {
+          "id": "retrofit2.RequestFactory.Builder.parseParameterAnnotation(int, java.lang.reflect.Type, java.lang.annotation.Annotation[], java.lang.annotation.Annotation)",
+          "label": "parseParameterAnnotation",
+          "score": 674
+        },
+        {
+          "id": "retrofit2.Utils.resolve(java.lang.reflect.Type, java.lang.Class<?>, java.lang.reflect.Type)",
+          "label": "resolve",
+          "score": 112
+        },
+        {
+          "id": "retrofit2.HttpServiceMethod.parseAnnotations(retrofit2.Retrofit, java.lang.reflect.Method, retrofit2.RequestFactory)",
+          "label": "parseAnnotations",
+          "score": 89
+        },
+        {
+          "id": "retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory.get(java.lang.reflect.Type, java.lang.annotation.Annotation[], retrofit2.Retrofit)",
+          "label": "get",
+          "score": 62
+        },
+        {
+          "id": "retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory.get(java.lang.reflect.Type, java.lang.annotation.Annotation[], retrofit2.Retrofit)",
+          "label": "get",
+          "score": 62
+        },
+        {
+          "id": "com.example.retrofit.AnnotatedConverters.main(java.lang.String...)",
+          "label": "main",
+          "score": 60
+        },
+        {
+          "id": "retrofit2.Retrofit.nextRequestBodyConverter(retrofit2.Converter.Factory, java.lang.reflect.Type, java.lang.annotation.Annotation[], java.lang.annotation.Annotation[])",
+          "label": "nextRequestBodyConverter",
+          "score": 55
+        },
+        {
+          "id": "retrofit2.adapter.rxjava.RxJavaCallAdapterFactory.get(java.lang.reflect.Type, java.lang.annotation.Annotation[], retrofit2.Retrofit)",
+          "label": "get",
+          "score": 55
+        },
+        {
+          "id": "retrofit2.RequestFactory.Builder.build()",
+          "label": "build",
+          "score": 55
+        },
+        {
+          "id": "retrofit2.Utils.equals(java.lang.reflect.Type, java.lang.reflect.Type)",
+          "label": "equals",
+          "score": 54
+        }
+      ]
+    },
+    {
+      "id": "in-degree",
+      "description": "Node in-degree",
+      "nodes": [
+        {
+          "id": "retrofit2.Call",
+          "label": "Call",
+          "score": 147
+        },
+        {
+          "id": "retrofit2.Converter",
+          "label": "Converter",
+          "score": 146
+        },
+        {
+          "id": "retrofit2.Response",
+          "label": "Response",
+          "score": 125
+        },
+        {
+          "id": "retrofit2.Retrofit",
+          "label": "Retrofit",
+          "score": 86
+        },
+        {
+          "id": "retrofit2.RequestFactory.Builder.parseParameterAnnotation(int, java.lang.reflect.Type, java.lang.annotation.Annotation[], java.lang.annotation.Annotation)!type",
+          "label": "type",
+          "score": 80
+        },
+        {
+          "id": "retrofit2.RequestFactory.Builder?method@146.17:146.23",
+          "label": "method",
+          "score": 78
+        },
+        {
+          "id": "retrofit2.RequestFactory.Builder.parseParameterAnnotation(int, java.lang.reflect.Type, java.lang.annotation.Annotation[], java.lang.annotation.Annotation)!p",
+          "label": "p",
+          "score": 73
+        },
+        {
+          "id": "retrofit2.Utils.parameterError(java.lang.reflect.Method, int, java.lang.String, java.lang.Object...)",
+          "label": "parameterError",
+          "score": 69
+        },
+        {
+          "id": "retrofit2.Call.execute()",
+          "label": "execute",
+          "score": 51
+        },
+        {
+          "id": "retrofit2.RequestFactory.Builder?retrofit@145.19:145.27",
+          "label": "retrofit",
+          "score": 44
+        }
+      ]
+    },
+    {
+      "id": "pagerank",
+      "description": "PageRank",
+      "nodes": [
+        {
+          "id": "retrofit2.Call",
+          "label": "Call",
+          "score": 0.017959910343868065
+        },
+        {
+          "id": "retrofit2.mock.MockRetrofitIOException.MockRetrofitIOException()",
+          "label": "MockRetrofitIOException",
+          "score": 0.015441283576160475
+        },
+        {
+          "id": "retrofit2.mock.MockRetrofitIOException",
+          "label": "MockRetrofitIOException",
+          "score": 0.015412978771030327
+        },
+        {
+          "id": "retrofit2.Retrofit",
+          "label": "Retrofit",
+          "score": 0.01446434316155572
+        },
+        {
+          "id": "retrofit2.Response",
+          "label": "Response",
+          "score": 0.013702620042215638
+        },
+        {
+          "id": "retrofit2.converter.scalars.ScalarResponseBodyConverters.ScalarResponseBodyConverters()",
+          "label": "ScalarResponseBodyConverters",
+          "score": 0.012641697315376453
+        },
+        {
+          "id": "retrofit2.converter.scalars.ScalarResponseBodyConverters",
+          "label": "ScalarResponseBodyConverters",
+          "score": 0.012641697315376453
+        },
+        {
+          "id": "retrofit2.Converter.Factory",
+          "label": "Factory",
+          "score": 0.012057713657978935
+        },
+        {
+          "id": "retrofit2.Converter",
+          "label": "Converter",
+          "score": 0.009545183752513153
+        },
+        {
+          "id": "retrofit2.Response?rawResponse@113.33:113.44",
+          "label": "rawResponse",
+          "score": 0.006559964012017927
+        }
+      ]
+    },
+    {
+      "id": "eigenvector",
+      "description": "Eigenvector centrality",
+      "nodes": [
+        {
+          "id": "retrofit2.Utils.resolve(java.lang.reflect.Type, java.lang.Class<?>, java.lang.reflect.Type)!toResolve",
+          "label": "toResolve",
+          "score": 0.6051358584917564
+        },
+        {
+          "id": "retrofit2.Utils.resolve(java.lang.reflect.Type, java.lang.Class<?>, java.lang.reflect.Type)!context",
+          "label": "context",
+          "score": 0.34333938080411686
+        },
+        {
+          "id": "retrofit2.Utils.resolve(java.lang.reflect.Type, java.lang.Class<?>, java.lang.reflect.Type)!contextRawType",
+          "label": "contextRawType",
+          "score": 0.34333938080411686
+        },
+        {
+          "id": "retrofit2.Utils.resolve(java.lang.reflect.Type, java.lang.Class<?>, java.lang.reflect.Type)?args@241.15:241.19",
+          "label": "args",
+          "score": 0.25444085159007707
+        },
+        {
+          "id": "retrofit2.Utils.resolve(java.lang.reflect.Type, java.lang.Class<?>, java.lang.reflect.Type)?original@236.26:236.34",
+          "label": "original",
+          "score": 0.22830767503296298
+        },
+        {
+          "id": "retrofit2.Utils.resolve(java.lang.reflect.Type, java.lang.Class<?>, java.lang.reflect.Type)?t@242.17:242.18",
+          "label": "t",
+          "score": 0.1860411574708138
+        },
+        {
+          "id": "retrofit2.Utils.resolve(java.lang.reflect.Type, java.lang.Class<?>, java.lang.reflect.Type)?original@258.21:258.29",
+          "label": "original",
+          "score": 0.17116457014354375
+        },
+        {
+          "id": "retrofit2.Utils.resolve(java.lang.reflect.Type, java.lang.Class<?>, java.lang.reflect.Type)?ownerType@237.13:237.22",
+          "label": "ownerType",
+          "score": 0.1340242957320068
+        },
+        {
+          "id": "retrofit2.Utils.resolve(java.lang.reflect.Type, java.lang.Class<?>, java.lang.reflect.Type)?originalUpperBound@260.15:260.33",
+          "label": "originalUpperBound",
+          "score": 0.13041341327620118
+        },
+        {
+          "id": "retrofit2.Utils.resolve(java.lang.reflect.Type, java.lang.Class<?>, java.lang.reflect.Type)?originalLowerBound@259.15:259.33",
+          "label": "originalLowerBound",
+          "score": 0.13041341327620118
+        }
+      ]
+    },
+    {
+      "id": "Katz",
+      "description": "Katz centrality",
+      "nodes": [
+        {
+          "id": "retrofit2.Call",
+          "label": "Call",
+          "score": 2.5065627
+        },
+        {
+          "id": "retrofit2.Converter",
+          "label": "Converter",
+          "score": 2.496245019999999
+        },
+        {
+          "id": "retrofit2.Response",
+          "label": "Response",
+          "score": 2.2817304600000003
+        },
+        {
+          "id": "retrofit2.Retrofit",
+          "label": "Retrofit",
+          "score": 1.8838203800000004
+        },
+        {
+          "id": "retrofit2.RequestFactory.Builder.parseParameterAnnotation(int, java.lang.reflect.Type, java.lang.annotation.Annotation[], java.lang.annotation.Annotation)!type",
+          "label": "type",
+          "score": 1.8278383400000011
+        },
+        {
+          "id": "retrofit2.RequestFactory.Builder?method@146.17:146.23",
+          "label": "method",
+          "score": 1.8025667500000009
+        },
+        {
+          "id": "retrofit2.RequestFactory.Builder.parseParameterAnnotation(int, java.lang.reflect.Type, java.lang.annotation.Annotation[], java.lang.annotation.Annotation)!p",
+          "label": "p",
+          "score": 1.752739720000001
+        },
+        {
+          "id": "retrofit2.Utils.parameterError(java.lang.reflect.Method, int, java.lang.String, java.lang.Object...)",
+          "label": "parameterError",
+          "score": 1.7077996900000003
+        },
+        {
+          "id": "retrofit2.Call.execute()",
+          "label": "execute",
+          "score": 1.5323158700000001
+        },
+        {
+          "id": "retrofit2.Converter.Factory",
+          "label": "Factory",
+          "score": 1.46947104
+        }
+      ]
+    },
+    {
+      "id": "betweenness",
+      "description": "Betweenness centrality",
+      "nodes": [
+        {
+          "id": "retrofit2.Retrofit",
+          "label": "Retrofit",
+          "score": 537587.377277636
+        },
+        {
+          "id": "retrofit2.ServiceMethod.parseAnnotations(retrofit2.Retrofit, java.lang.reflect.Method)",
+          "label": "parseAnnotations",
+          "score": 441413.3662048268
+        },
+        {
+          "id": "retrofit2.Retrofit.loadServiceMethod(java.lang.reflect.Method)",
+          "label": "loadServiceMethod",
+          "score": 440165.49405306287
+        },
+        {
+          "id": "retrofit2.RequestFactory.parseAnnotations(retrofit2.Retrofit, java.lang.reflect.Method)",
+          "label": "parseAnnotations",
+          "score": 255253.415889197
+        },
+        {
+          "id": "retrofit2.Converter.Factory",
+          "label": "Factory",
+          "score": 182580.4652508675
+        },
+        {
+          "id": "retrofit2.RequestFactory.Builder.parseParameterAnnotation(int, java.lang.reflect.Type, java.lang.annotation.Annotation[], java.lang.annotation.Annotation)",
+          "label": "parseParameterAnnotation",
+          "score": 178428.67827400344
+        },
+        {
+          "id": "retrofit2.Converter",
+          "label": "Converter",
+          "score": 145522.05535179106
+        },
+        {
+          "id": "retrofit2.HttpServiceMethod.parseAnnotations(retrofit2.Retrofit, java.lang.reflect.Method, retrofit2.RequestFactory)",
+          "label": "parseAnnotations",
+          "score": 134820.96772253004
+        },
+        {
+          "id": "retrofit2.RequestFactory.Builder",
+          "label": "Builder",
+          "score": 118313.39107361059
+        },
+        {
+          "id": "retrofit2.RequestFactory.Builder.Builder(retrofit2.Retrofit, java.lang.reflect.Method)",
+          "label": "Builder",
+          "score": 111182.14638565501
+        }
+      ]
+    },
+    {
+      "id": "harmonic",
+      "description": "Harmonic centrality",
+      "nodes": [
+        {
+          "id": "retrofit2.RequestFactory.Builder.parseParameterAnnotation(int, java.lang.reflect.Type, java.lang.annotation.Annotation[], java.lang.annotation.Annotation)",
+          "label": "parseParameterAnnotation",
+          "score": 0.10231091810167589
+        },
+        {
+          "id": "retrofit2.RequestFactory.Builder",
+          "label": "Builder",
+          "score": 0.08744937674322618
+        },
+        {
+          "id": "com.example.retrofit.AnnotatedConverters.main(java.lang.String...)",
+          "label": "main",
+          "score": 0.07583225701514004
+        },
+        {
+          "id": "com.example.retrofit.SimpleMockService.main(java.lang.String...)",
+          "label": "main",
+          "score": 0.07529269190512264
+        },
+        {
+          "id": "retrofit2.HttpServiceMethod.parseAnnotations(retrofit2.Retrofit, java.lang.reflect.Method, retrofit2.RequestFactory)",
+          "label": "parseAnnotations",
+          "score": 0.07398931202217857
+        },
+        {
+          "id": "retrofit2.RequestFactory.Builder.parseParameter(int, java.lang.reflect.Type, java.lang.annotation.Annotation[], boolean)",
+          "label": "parseParameter",
+          "score": 0.07341667444173125
+        },
+        {
+          "id": "retrofit2.ServiceMethod.parseAnnotations(retrofit2.Retrofit, java.lang.reflect.Method)",
+          "label": "parseAnnotations",
+          "score": 0.07140687710163734
+        },
+        {
+          "id": "retrofit2.RequestFactory.Builder.parseParameter(int, java.lang.reflect.Type, java.lang.annotation.Annotation[], boolean)?annotationAction@326.30:326.46",
+          "label": "annotationAction",
+          "score": 0.07091730719293352
+        },
+        {
+          "id": "retrofit2.RequestFactory.Builder.build()",
+          "label": "build",
+          "score": 0.07051462385826177
+        },
+        {
+          "id": "retrofit2.TestingUtils.buildRequest(java.lang.Class<T>, retrofit2.Retrofit.Builder, java.lang.Object...)",
+          "label": "buildRequest",
+          "score": 0.06985153274609777
+        }
+      ]
+    },
+    {
+      "id": "combined",
+      "description": "Combined importance",
+      "nodes": [
+        {
+          "id": "retrofit2.Retrofit",
+          "label": "Retrofit",
+          "score": 5
+        },
+        {
+          "id": "retrofit2.RequestFactory.Builder.parseParameterAnnotation(int, java.lang.reflect.Type, java.lang.annotation.Annotation[], java.lang.annotation.Annotation)",
+          "label": "parseParameterAnnotation",
+          "score": 4
+        },
+        {
+          "id": "retrofit2.Converter",
+          "label": "Converter",
+          "score": 4
+        },
+        {
+          "id": "retrofit2.Response",
+          "label": "Response",
+          "score": 3
+        },
+        {
+          "id": "retrofit2.RequestFactory.Builder",
+          "label": "Builder",
+          "score": 3
+        },
+        {
+          "id": "retrofit2.HttpServiceMethod.parseAnnotations(retrofit2.Retrofit, java.lang.reflect.Method, retrofit2.RequestFactory)",
+          "label": "parseAnnotations",
+          "score": 3
+        },
+        {
+          "id": "retrofit2.Call",
+          "label": "Call",
+          "score": 3
+        },
+        {
+          "id": "retrofit2.Converter.Factory",
+          "label": "Factory",
+          "score": 3
+        },
+        {
+          "id": "retrofit2.Call.execute()",
+          "label": "execute",
+          "score": 2
+        },
+        {
+          "id": "retrofit2.Utils.parameterError(java.lang.reflect.Method, int, java.lang.String, java.lang.Object...)",
+          "label": "parameterError",
+          "score": 2
+        }
+      ]
+    }
+  ]
+}

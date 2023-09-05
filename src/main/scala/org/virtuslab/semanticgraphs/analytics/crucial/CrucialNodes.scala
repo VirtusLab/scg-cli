@@ -81,28 +81,6 @@ object CrucialNodes:
     inputStream.close()
   }
 
-object CrucialNodesApp extends App:
-  val workspace = args(0)
-  val projectName = workspace.split("/").last
-  val scg = SemanticCodeGraph.read(ProjectAndVersion(workspace, workspace.split("/").last, ""))
-  CrucialNodes.analyze(scg, projectName, 10)
-
-object CrucialNodesAnalyzeAll extends App:
-  def analyzeAll() =
-    SemanticCodeGraph.readAllProjects().foreach { scg =>
-      CrucialNodes.analyze(scg, "all", 10); println(); Thread.sleep(100)
-    }
-
-  analyzeAll()
-
-object CrucialNodesAnalyzeAllZipped extends App:
-  def analyzeAll() =
-    SemanticCodeGraph.readAllProjects().foreach { scg =>
-      CrucialNodes.analyze(scg, "all", 10); println(); Thread.sleep(100)
-    }
-
-  analyzeAll()
-
 class JGraphTAnalyzer(semanticCodeGraph: SemanticCodeGraph):
 
   val graph = semanticCodeGraph.graph
@@ -240,7 +218,10 @@ class JGraphTAnalyzer(semanticCodeGraph: SemanticCodeGraph):
     Statistic(
       id = Statistic.combined.id,
       description = "Combined importance",
-      a.toList.sortBy { case (_, size) => -size }.map { case ((id, label), score) =>
-        NodeScore(id, label, score)
-      }.take(n)
+      a.toList
+        .sortBy { case (_, size) => -size }
+        .map { case ((id, label), score) =>
+          NodeScore(id, label, score)
+        }
+        .take(2 * n)
     )

@@ -1,0 +1,510 @@
+{
+  "projectName": "glide",
+  "workspace": "data/glide.zip",
+  "stats": [
+    {
+      "id": "loc",
+      "description": "Lines of code",
+      "nodes": [
+        {
+          "id": "com.bumptech.glide.RegistryFactory.initializeDefaults(android.content.Context, com.bumptech.glide.Registry, com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool, com.bumptech.glide.load.engine.bitmap_recycle.ArrayPool, com.bumptech.glide.GlideExperiments)",
+          "label": "initializeDefaults",
+          "score": 245
+        },
+        {
+          "id": "com.bumptech.glide.load.resource.bitmap.Downsampler.calculateScaling(com.bumptech.glide.load.ImageHeaderParser.ImageType, com.bumptech.glide.load.resource.bitmap.ImageReader, com.bumptech.glide.load.resource.bitmap.Downsampler.DecodeCallbacks, com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool, com.bumptech.glide.load.resource.bitmap.DownsampleStrategy, int, int, int, int, int, android.graphics.BitmapFactory.Options)",
+          "label": "calculateScaling",
+          "score": 191
+        },
+        {
+          "id": "com.bumptech.glide.load.resource.bitmap.Downsampler.decodeFromWrappedStreams(com.bumptech.glide.load.resource.bitmap.ImageReader, android.graphics.BitmapFactory.Options, com.bumptech.glide.load.resource.bitmap.DownsampleStrategy, com.bumptech.glide.load.DecodeFormat, com.bumptech.glide.load.PreferredColorSpace, boolean, int, int, boolean, com.bumptech.glide.load.resource.bitmap.Downsampler.DecodeCallbacks)",
+          "label": "decodeFromWrappedStreams",
+          "score": 154
+        },
+        {
+          "id": "com.bumptech.glide.gifdecoder.StandardGifDecoder.decodeBitmapData(com.bumptech.glide.gifdecoder.GifFrame)",
+          "label": "decodeBitmapData",
+          "score": 127
+        },
+        {
+          "id": "com.bumptech.glide.RequestBuilder.buildThumbnailRequestRecursive(java.lang.Object, com.bumptech.glide.request.target.Target<TranscodeType>, com.bumptech.glide.request.RequestListener<TranscodeType>, com.bumptech.glide.request.RequestCoordinator, com.bumptech.glide.TransitionOptions<?, ? super TranscodeType>, com.bumptech.glide.Priority, int, int, com.bumptech.glide.request.BaseRequestOptions<?>, java.util.concurrent.Executor)",
+          "label": "buildThumbnailRequestRecursive",
+          "score": 120
+        },
+        {
+          "id": "com.bumptech.glide.load.resource.bitmap.DownsamplerEmulatorTest.calculateScaling_withFitCenter()",
+          "label": "calculateScaling_withFitCenter",
+          "score": 111
+        },
+        {
+          "id": "com.bumptech.glide.request.BaseRequestOptions.apply(com.bumptech.glide.request.BaseRequestOptions<?>)",
+          "label": "apply",
+          "score": 96
+        },
+        {
+          "id": "com.bumptech.glide.annotation.compiler.RequestOptionsGenerator.generate(java.lang.String, java.util.Set<java.lang.String>)",
+          "label": "generate",
+          "score": 95
+        },
+        {
+          "id": "com.bumptech.glide.gifdecoder.StandardGifDecoder.copyCopyIntoScratchRobust(com.bumptech.glide.gifdecoder.GifFrame)",
+          "label": "copyCopyIntoScratchRobust",
+          "score": 93
+        },
+        {
+          "id": "com.bumptech.glide.load.resource.bitmap.DefaultImageHeaderParser.parseExifSegment(com.bumptech.glide.load.resource.bitmap.DefaultImageHeaderParser.RandomAccessReader)",
+          "label": "parseExifSegment",
+          "score": 91
+        }
+      ]
+    },
+    {
+      "id": "out-degree",
+      "description": "Node out-degree",
+      "nodes": [
+        {
+          "id": "com.bumptech.glide.RegistryFactory.initializeDefaults(android.content.Context, com.bumptech.glide.Registry, com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool, com.bumptech.glide.load.engine.bitmap_recycle.ArrayPool, com.bumptech.glide.GlideExperiments)",
+          "label": "initializeDefaults",
+          "score": 183
+        },
+        {
+          "id": "com.bumptech.glide.request.BaseRequestOptions.apply(com.bumptech.glide.request.BaseRequestOptions<?>)",
+          "label": "apply",
+          "score": 182
+        },
+        {
+          "id": "com.bumptech.glide.gifdecoder.StandardGifDecoder.decodeBitmapData(com.bumptech.glide.gifdecoder.GifFrame)",
+          "label": "decodeBitmapData",
+          "score": 162
+        },
+        {
+          "id": "com.bumptech.glide.gifencoder.NeuQuant.learn()",
+          "label": "learn",
+          "score": 125
+        },
+        {
+          "id": "com.bumptech.glide.load.resource.bitmap.Downsampler.calculateScaling(com.bumptech.glide.load.ImageHeaderParser.ImageType, com.bumptech.glide.load.resource.bitmap.ImageReader, com.bumptech.glide.load.resource.bitmap.Downsampler.DecodeCallbacks, com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool, com.bumptech.glide.load.resource.bitmap.DownsampleStrategy, int, int, int, int, int, android.graphics.BitmapFactory.Options)",
+          "label": "calculateScaling",
+          "score": 103
+        },
+        {
+          "id": "com.bumptech.glide.load.resource.bitmap.Downsampler.decodeFromWrappedStreams(com.bumptech.glide.load.resource.bitmap.ImageReader, android.graphics.BitmapFactory.Options, com.bumptech.glide.load.resource.bitmap.DownsampleStrategy, com.bumptech.glide.load.DecodeFormat, com.bumptech.glide.load.PreferredColorSpace, boolean, int, int, boolean, com.bumptech.glide.load.resource.bitmap.Downsampler.DecodeCallbacks)",
+          "label": "decodeFromWrappedStreams",
+          "score": 95
+        },
+        {
+          "id": "com.bumptech.glide.gifdecoder.StandardGifDecoder.copyCopyIntoScratchRobust(com.bumptech.glide.gifdecoder.GifFrame)",
+          "label": "copyCopyIntoScratchRobust",
+          "score": 93
+        },
+        {
+          "id": "com.bumptech.glide.gifencoder.NeuQuant.inxbuild()",
+          "label": "inxbuild",
+          "score": 85
+        },
+        {
+          "id": "com.bumptech.glide.load.engine.ResourceCacheGenerator.startNext()",
+          "label": "startNext",
+          "score": 84
+        },
+        {
+          "id": "com.bumptech.glide.request.BaseRequestOptions.hashCode()",
+          "label": "hashCode",
+          "score": 83
+        }
+      ]
+    },
+    {
+      "id": "in-degree",
+      "description": "Node in-degree",
+      "nodes": [
+        {
+          "id": "com.bumptech.glide.Glide.with(android.content.Context)",
+          "label": "with",
+          "score": 182
+        },
+        {
+          "id": "com.bumptech.glide.RequestBuilder.submit()",
+          "label": "submit",
+          "score": 126
+        },
+        {
+          "id": "com.bumptech.glide.util.Preconditions.checkNotNull(T)",
+          "label": "checkNotNull",
+          "score": 94
+        },
+        {
+          "id": "com.bumptech.glide.NonBitmapDrawableResourcesTest?context@37.24:37.31",
+          "label": "context",
+          "score": 75
+        },
+        {
+          "id": "com.bumptech.glide.testutil.ConcurrencyHelper.get(java.util.concurrent.Future<T>)",
+          "label": "get",
+          "score": 74
+        },
+        {
+          "id": "com.bumptech.glide.RequestManager.asBitmap()",
+          "label": "asBitmap",
+          "score": 74
+        },
+        {
+          "id": "com.bumptech.glide.LoadBitmapTest?context@44.18:44.25",
+          "label": "context",
+          "score": 71
+        },
+        {
+          "id": "com.bumptech.glide.request.BaseRequestOptions?fields@72.14:72.20",
+          "label": "fields",
+          "score": 61
+        },
+        {
+          "id": "com.bumptech.glide.LoadBytesTest?context@53.18:53.25",
+          "label": "context",
+          "score": 59
+        },
+        {
+          "id": "com.bumptech.glide.load.resource.bitmap.DownsamplerEmulatorTest.Api.onAllApisAndAllFormatsExpect(int, int)",
+          "label": "onAllApisAndAllFormatsExpect",
+          "score": 57
+        }
+      ]
+    },
+    {
+      "id": "pagerank",
+      "description": "PageRank",
+      "nodes": [
+        {
+          "id": "com.bumptech.glide.util.Preconditions.checkNotNull(T, java.lang.String)",
+          "label": "checkNotNull",
+          "score": 0.004043705863483014
+        },
+        {
+          "id": "com.bumptech.glide.util.Preconditions.checkNotNull(T)",
+          "label": "checkNotNull",
+          "score": 0.003544104067357074
+        },
+        {
+          "id": "com.bumptech.glide.LoadBytesTest.getCanonicalBytes()",
+          "label": "getCanonicalBytes",
+          "score": 0.0018402300782555964
+        },
+        {
+          "id": "com.bumptech.glide.LoadVideoResourceTest?context@33.18:33.25",
+          "label": "context",
+          "score": 0.0016711071486469353
+        },
+        {
+          "id": "com.bumptech.glide.LoadBytesTest?context@53.18:53.25",
+          "label": "context",
+          "score": 0.001618176480908888
+        },
+        {
+          "id": "com.bumptech.glide.load.engine.Resource.get()",
+          "label": "get",
+          "score": 0.0015463442762426967
+        },
+        {
+          "id": "com.bumptech.glide.load.Options?values@11.44:11.50",
+          "label": "values",
+          "score": 0.0015204786365879011
+        },
+        {
+          "id": "com.bumptech.glide.Glide.with(android.content.Context)",
+          "label": "with",
+          "score": 0.0014805711461333632
+        },
+        {
+          "id": "com.bumptech.glide.NonBitmapDrawableResourcesTest?context@37.24:37.31",
+          "label": "context",
+          "score": 0.0014097051495194888
+        },
+        {
+          "id": "com.bumptech.glide.request.BaseRequestOptions?isAutoCloneEnabled@96.18:96.36",
+          "label": "isAutoCloneEnabled",
+          "score": 0.001394564257575044
+        }
+      ]
+    },
+    {
+      "id": "eigenvector",
+      "description": "Eigenvector centrality",
+      "nodes": [
+        {
+          "id": "com.bumptech.glide.RequestBuilder?thumbnailBuilder@79.50:79.66",
+          "label": "thumbnailBuilder",
+          "score": 0.4773105351432059
+        },
+        {
+          "id": "com.bumptech.glide.RequestBuilder?errorBuilder@80.50:80.62",
+          "label": "errorBuilder",
+          "score": 0.3671615605820907
+        },
+        {
+          "id": "com.bumptech.glide.request.BaseRequestOptions.clone()?result@537.28:537.34",
+          "label": "result",
+          "score": 0.26986395580754824
+        },
+        {
+          "id": "com.bumptech.glide.request.ThumbnailRequestCoordinator.ThumbnailRequestCoordinator(java.lang.Object, com.bumptech.glide.request.RequestCoordinator)",
+          "label": "ThumbnailRequestCoordinator",
+          "score": 0.2056106772893978
+        },
+        {
+          "id": "com.bumptech.glide.request.BaseRequestOptions.getOverrideWidth()",
+          "label": "getOverrideWidth",
+          "score": 0.19092413022764243
+        },
+        {
+          "id": "com.bumptech.glide.request.BaseRequestOptions.getOverrideHeight()",
+          "label": "getOverrideHeight",
+          "score": 0.19092413022764243
+        },
+        {
+          "id": "com.bumptech.glide.RequestBuilder.buildRequestRecursive(java.lang.Object, com.bumptech.glide.request.target.Target<TranscodeType>, com.bumptech.glide.request.RequestListener<TranscodeType>, com.bumptech.glide.request.RequestCoordinator, com.bumptech.glide.TransitionOptions<?, ? super TranscodeType>, com.bumptech.glide.Priority, int, int, com.bumptech.glide.request.BaseRequestOptions<?>, java.util.concurrent.Executor)?errorRequestCoordinator@1099.28:1099.51",
+          "label": "errorRequestCoordinator",
+          "score": 0.190924066387703
+        },
+        {
+          "id": "com.bumptech.glide.RequestBuilder.obtainRequest(java.lang.Object, com.bumptech.glide.request.target.Target<TranscodeType>, com.bumptech.glide.request.RequestListener<TranscodeType>, com.bumptech.glide.request.BaseRequestOptions<?>, com.bumptech.glide.request.RequestCoordinator, com.bumptech.glide.TransitionOptions<?, ? super TranscodeType>, com.bumptech.glide.Priority, int, int, java.util.concurrent.Executor)",
+          "label": "obtainRequest",
+          "score": 0.16155138130199434
+        },
+        {
+          "id": "com.bumptech.glide.RequestBuilder?glideContext@69.29:69.41",
+          "label": "glideContext",
+          "score": 0.1615510756791167
+        },
+        {
+          "id": "com.bumptech.glide.RequestBuilder.buildThumbnailRequestRecursive(java.lang.Object, com.bumptech.glide.request.target.Target<TranscodeType>, com.bumptech.glide.request.RequestListener<TranscodeType>, com.bumptech.glide.request.RequestCoordinator, com.bumptech.glide.TransitionOptions<?, ? super TranscodeType>, com.bumptech.glide.Priority, int, int, com.bumptech.glide.request.BaseRequestOptions<?>, java.util.concurrent.Executor)?coordinator@1219.34:1219.45",
+          "label": "coordinator",
+          "score": 0.1468648645714319
+        }
+      ]
+    },
+    {
+      "id": "Katz",
+      "description": "Katz centrality",
+      "nodes": [
+        {
+          "id": "com.bumptech.glide.Glide.with(android.content.Context)",
+          "label": "with",
+          "score": 2.8308171200000007
+        },
+        {
+          "id": "com.bumptech.glide.RequestBuilder.submit()",
+          "label": "submit",
+          "score": 2.2684090800000005
+        },
+        {
+          "id": "com.bumptech.glide.util.Preconditions.checkNotNull(T)",
+          "label": "checkNotNull",
+          "score": 1.96372382
+        },
+        {
+          "id": "com.bumptech.glide.NonBitmapDrawableResourcesTest?context@37.24:37.31",
+          "label": "context",
+          "score": 1.7575697300000002
+        },
+        {
+          "id": "com.bumptech.glide.testutil.ConcurrencyHelper.get(java.util.concurrent.Future<T>)",
+          "label": "get",
+          "score": 1.745101
+        },
+        {
+          "id": "com.bumptech.glide.RequestManager.asBitmap()",
+          "label": "asBitmap",
+          "score": 1.7443010200000002
+        },
+        {
+          "id": "com.bumptech.glide.LoadBitmapTest?context@44.18:44.25",
+          "label": "context",
+          "score": 1.7153080000000003
+        },
+        {
+          "id": "com.bumptech.glide.request.BaseRequestOptions?fields@72.14:72.20",
+          "label": "fields",
+          "score": 1.6229134300000003
+        },
+        {
+          "id": "com.bumptech.glide.LoadBytesTest?context@53.18:53.25",
+          "label": "context",
+          "score": 1.5942861800000003
+        },
+        {
+          "id": "com.bumptech.glide.load.resource.bitmap.DownsamplerEmulatorTest.Api.onAllApisAndAllFormatsExpect(int, int)",
+          "label": "onAllApisAndAllFormatsExpect",
+          "score": 1.5700000000000003
+        }
+      ]
+    },
+    {
+      "id": "betweenness",
+      "description": "Betweenness centrality",
+      "nodes": [
+        {
+          "id": "com.bumptech.glide.Glide.initializeGlide(android.content.Context, com.bumptech.glide.GlideBuilder, com.bumptech.glide.GeneratedAppGlideModule)",
+          "label": "initializeGlide",
+          "score": 107158.1238095236
+        },
+        {
+          "id": "com.bumptech.glide.GlideBuilder.build(android.content.Context, java.util.List<com.bumptech.glide.module.GlideModule>, com.bumptech.glide.module.AppGlideModule)",
+          "label": "build",
+          "score": 98532.29047619028
+        },
+        {
+          "id": "com.bumptech.glide.Glide.get(android.content.Context)",
+          "label": "get",
+          "score": 93129.61785714272
+        },
+        {
+          "id": "com.bumptech.glide.Glide.checkAndInitializeGlide(android.content.Context, com.bumptech.glide.GeneratedAppGlideModule)",
+          "label": "checkAndInitializeGlide",
+          "score": 92839.45714285699
+        },
+        {
+          "id": "com.bumptech.glide.Glide.initializeGlide(android.content.Context, com.bumptech.glide.GeneratedAppGlideModule)",
+          "label": "initializeGlide",
+          "score": 92776.45714285699
+        },
+        {
+          "id": "com.bumptech.glide.Glide.Glide(android.content.Context, com.bumptech.glide.load.engine.Engine, com.bumptech.glide.load.engine.cache.MemoryCache, com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool, com.bumptech.glide.load.engine.bitmap_recycle.ArrayPool, com.bumptech.glide.manager.RequestManagerRetriever, com.bumptech.glide.manager.ConnectivityMonitorFactory, int, com.bumptech.glide.Glide.RequestOptionsFactory, java.util.Map<java.lang.Class<?>, com.bumptech.glide.TransitionOptions<?, ?>>, java.util.List<com.bumptech.glide.request.RequestListener<java.lang.Object>>, java.util.List<com.bumptech.glide.module.GlideModule>, com.bumptech.glide.module.AppGlideModule, com.bumptech.glide.GlideExperiments)",
+          "label": "Glide",
+          "score": 63064.790476190596
+        },
+        {
+          "id": "com.bumptech.glide.Glide.with(android.content.Context)",
+          "label": "with",
+          "score": 63001.12380952391
+        },
+        {
+          "id": "com.bumptech.glide.Glide.getRetriever(android.content.Context)",
+          "label": "getRetriever",
+          "score": 60876.12380952391
+        },
+        {
+          "id": "com.bumptech.glide.RegistryFactory.lazilyCreateAndInitializeRegistry(com.bumptech.glide.Glide, java.util.List<com.bumptech.glide.module.GlideModule>, com.bumptech.glide.module.AppGlideModule)",
+          "label": "lazilyCreateAndInitializeRegistry",
+          "score": 58258.76190476176
+        },
+        {
+          "id": "com.bumptech.glide.RegistryFactory.createAndInitRegistry(com.bumptech.glide.Glide, java.util.List<com.bumptech.glide.module.GlideModule>, com.bumptech.glide.module.AppGlideModule)",
+          "label": "createAndInitRegistry",
+          "score": 58225.76190476176
+        }
+      ]
+    },
+    {
+      "id": "harmonic",
+      "description": "Harmonic centrality",
+      "nodes": [
+        {
+          "id": "com.bumptech.glide.MultiRequestTest.thumbnail_onLoadFailed_forPrimary_isNotRunningOrComplete_whenRequestListenerIsCalled()",
+          "label": "thumbnail_onLoadFailed_forPrimary_isNotRunningOrComplete_whenRequestListenerIsCalled",
+          "score": 0.016711992968655064
+        },
+        {
+          "id": "com.bumptech.glide.annotation.compiler.AppModuleProcessor.maybeWriteAppModule()",
+          "label": "maybeWriteAppModule",
+          "score": 0.016350417270053607
+        },
+        {
+          "id": "com.bumptech.glide.MultiRequestTest.thumbnail_onResourceReady_forPrimary_isComplete_whenRequestListenerIsCalled()",
+          "label": "thumbnail_onResourceReady_forPrimary_isComplete_whenRequestListenerIsCalled",
+          "score": 0.015973745950755
+        },
+        {
+          "id": "com.bumptech.glide.WideGamutTest.loadWideGamutImage_withArgb888OfSufficientSizeInPool_usesArgb8888Bitmap()",
+          "label": "loadWideGamutImage_withArgb888OfSufficientSizeInPool_usesArgb8888Bitmap",
+          "score": 0.015717243358585188
+        },
+        {
+          "id": "com.bumptech.glide.WideGamutTest.load_withWideGamutImage_bitmapInPoolWithSizeAndConfig_usesBitmapFromPool()",
+          "label": "load_withWideGamutImage_bitmapInPoolWithSizeAndConfig_usesBitmapFromPool",
+          "score": 0.01570148479961417
+        },
+        {
+          "id": "com.bumptech.glide.annotation.compiler.GlideAnnotationProcessor.process(java.util.Set<? extends javax.lang.model.element.TypeElement>, javax.annotation.processing.RoundEnvironment)",
+          "label": "process",
+          "score": 0.01508392676748826
+        },
+        {
+          "id": "com.bumptech.glide.ErrorHandlingTest.load_whenEncoderFails_callsUncaughtThrowableStrategy()",
+          "label": "load_whenEncoderFails_callsUncaughtThrowableStrategy",
+          "score": 0.01475583931169676
+        },
+        {
+          "id": "com.bumptech.glide.ExternallyClearedDiskCacheTest.loadFromCache_afterDiskCacheDeletedAndCleared_doesNotFail()",
+          "label": "loadFromCache_afterDiskCacheDeletedAndCleared_doesNotFail",
+          "score": 0.014603610878038728
+        },
+        {
+          "id": "com.bumptech.glide.ExternallyClearedDiskCacheTest.loadFromCache_afterDiskCacheDeleted_doesNotFail()",
+          "label": "loadFromCache_afterDiskCacheDeleted_doesNotFail",
+          "score": 0.014520007575708285
+        },
+        {
+          "id": "com.bumptech.glide.ErrorHandlingTest.load_whenLoadSucceeds_butEncoderFails_doesNotCallOnLoadFailed()",
+          "label": "load_whenLoadSucceeds_butEncoderFails_doesNotCallOnLoadFailed",
+          "score": 0.014233318672131519
+        }
+      ]
+    },
+    {
+      "id": "combined",
+      "description": "Combined importance",
+      "nodes": [
+        {
+          "id": "com.bumptech.glide.Glide.with(android.content.Context)",
+          "label": "with",
+          "score": 4
+        },
+        {
+          "id": "com.bumptech.glide.NonBitmapDrawableResourcesTest?context@37.24:37.31",
+          "label": "context",
+          "score": 3
+        },
+        {
+          "id": "com.bumptech.glide.LoadBytesTest?context@53.18:53.25",
+          "label": "context",
+          "score": 3
+        },
+        {
+          "id": "com.bumptech.glide.util.Preconditions.checkNotNull(T)",
+          "label": "checkNotNull",
+          "score": 3
+        },
+        {
+          "id": "com.bumptech.glide.request.BaseRequestOptions?fields@72.14:72.20",
+          "label": "fields",
+          "score": 2
+        },
+        {
+          "id": "com.bumptech.glide.gifdecoder.StandardGifDecoder.decodeBitmapData(com.bumptech.glide.gifdecoder.GifFrame)",
+          "label": "decodeBitmapData",
+          "score": 2
+        },
+        {
+          "id": "com.bumptech.glide.request.BaseRequestOptions.apply(com.bumptech.glide.request.BaseRequestOptions<?>)",
+          "label": "apply",
+          "score": 2
+        },
+        {
+          "id": "com.bumptech.glide.LoadBitmapTest?context@44.18:44.25",
+          "label": "context",
+          "score": 2
+        },
+        {
+          "id": "com.bumptech.glide.gifdecoder.StandardGifDecoder.copyCopyIntoScratchRobust(com.bumptech.glide.gifdecoder.GifFrame)",
+          "label": "copyCopyIntoScratchRobust",
+          "score": 2
+        },
+        {
+          "id": "com.bumptech.glide.testutil.ConcurrencyHelper.get(java.util.concurrent.Future<T>)",
+          "label": "get",
+          "score": 2
+        }
+      ]
+    }
+  ]
+}

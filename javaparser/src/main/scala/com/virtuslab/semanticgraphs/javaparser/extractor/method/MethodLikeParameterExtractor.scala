@@ -36,7 +36,9 @@ object MethodLikeParameterExtractor extends GraphBuddyLogging {
     Map(
       "type" -> parameter.getType.toString,
       "isFinal" -> parameter.isFinal.toString
-    ) ++ PackageExtractor.getPackage(parameter.getQualifiedSignature.getOrElse(parameter.getNameAsString)) + ("isLocal" -> true.toString())
+    ) ++ PackageExtractor.getPackage(
+      parameter.getQualifiedSignature.getOrElse(parameter.getNameAsString)
+    ) + ("isLocal" -> true.toString())
   }
 
 }

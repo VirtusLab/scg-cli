@@ -8,7 +8,8 @@ import java.io.File
 import java.nio.file.{Files, Path}
 import scala.util.Try
 
-case class FileVersionStamp(path: String, lastModified: Long, size: Long, contentHashCode: Int) extends FileVersion derives ReadWriter
+case class FileVersionStamp(path: String, lastModified: Long, size: Long, contentHashCode: Int) extends FileVersion
+  derives ReadWriter
 
 object FileVersionStamp {
 

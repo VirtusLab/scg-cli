@@ -1,0 +1,510 @@
+{
+  "projectName": "dubbo",
+  "workspace": "data/dubbo.zip",
+  "stats": [
+    {
+      "id": "loc",
+      "description": "Lines of code",
+      "nodes": [
+        {
+          "id": "org.apache.dubbo.common.URL",
+          "label": "URL",
+          "score": 1714
+        },
+        {
+          "id": "org.apache.dubbo.common.extension.ExtensionLoader",
+          "label": "ExtensionLoader",
+          "score": 1371
+        },
+        {
+          "id": "org.apache.dubbo.common.utils.ReflectUtils",
+          "label": "ReflectUtils",
+          "score": 1333
+        },
+        {
+          "id": "org.apache.dubbo.common.utils.StringUtils",
+          "label": "StringUtils",
+          "score": 1205
+        },
+        {
+          "id": "org.apache.dubbo.config.deploy.DefaultApplicationDeployer",
+          "label": "DefaultApplicationDeployer",
+          "score": 1203
+        },
+        {
+          "id": "com.alibaba.dubbo.common.DelegateURL",
+          "label": "DelegateURL",
+          "score": 1020
+        },
+        {
+          "id": "org.apache.dubbo.config.AbstractConfig",
+          "label": "AbstractConfig",
+          "score": 994
+        },
+        {
+          "id": "org.apache.dubbo.common.url.component.URLParam",
+          "label": "URLParam",
+          "score": 979
+        },
+        {
+          "id": "org.apache.dubbo.registry.integration.RegistryProtocol",
+          "label": "RegistryProtocol",
+          "score": 938
+        },
+        {
+          "id": "org.apache.dubbo.config.ServiceConfig",
+          "label": "ServiceConfig",
+          "score": 922
+        }
+      ]
+    },
+    {
+      "id": "out-degree",
+      "description": "Node out-degree",
+      "nodes": [
+        {
+          "id": "org.apache.dubbo.common.utils.PojoUtils.realize1(java.lang.Object, java.lang.Class<?>, java.lang.reflect.Type, java.util.Map<java.lang.String, java.lang.reflect.Type>, java.util.Map<java.lang.Object, java.lang.Object>)",
+          "label": "realize1",
+          "score": 390
+        },
+        {
+          "id": "com.alibaba.dubbo.common.Constants",
+          "label": "Constants",
+          "score": 268
+        },
+        {
+          "id": "org.apache.dubbo.common.constants.CommonConstants",
+          "label": "CommonConstants",
+          "score": 266
+        },
+        {
+          "id": "org.apache.dubbo.common.bytecode.Wrapper.makeWrapper(java.lang.Class<?>)",
+          "label": "makeWrapper",
+          "score": 261
+        },
+        {
+          "id": "org.apache.dubbo.rpc.protocol.dubbo.DubboCodec.decodeBody(org.apache.dubbo.remoting.Channel, java.io.InputStream, byte[])",
+          "label": "decodeBody",
+          "score": 249
+        },
+        {
+          "id": "org.apache.dubbo.common.URL",
+          "label": "URL",
+          "score": 237
+        },
+        {
+          "id": "org.apache.dubbo.config.spring.schema.DubboBeanDefinitionParser.parse(org.w3c.dom.Element, org.springframework.beans.factory.xml.ParserContext, java.lang.Class<?>, boolean)",
+          "label": "parse",
+          "score": 235
+        },
+        {
+          "id": "com.alibaba.dubbo.common.DelegateURL",
+          "label": "DelegateURL",
+          "score": 204
+        },
+        {
+          "id": "org.apache.dubbo.remoting.telnet.codec.TelnetCodec.decode(org.apache.dubbo.remoting.Channel, org.apache.dubbo.remoting.buffer.ChannelBuffer, int, byte[])",
+          "label": "decode",
+          "score": 201
+        },
+        {
+          "id": "org.apache.dubbo.metrics.aggregate.DubboMergingDigest.merge(double[], double[], int, java.util.List<java.util.List<java.lang.Double>>, int[], double, boolean, double)",
+          "label": "merge",
+          "score": 197
+        }
+      ]
+    },
+    {
+      "id": "in-degree",
+      "description": "Node in-degree",
+      "nodes": [
+        {
+          "id": "org.apache.dubbo.common.URL",
+          "label": "URL",
+          "score": 1891
+        },
+        {
+          "id": "org.apache.dubbo.rpc.Invoker",
+          "label": "Invoker",
+          "score": 774
+        },
+        {
+          "id": "org.apache.dubbo.common.utils.StringUtils.isEmpty(java.lang.String)",
+          "label": "isEmpty",
+          "score": 421
+        },
+        {
+          "id": "org.apache.dubbo.common.Node.getUrl()",
+          "label": "getUrl",
+          "score": 404
+        },
+        {
+          "id": "org.apache.dubbo.rpc.Invocation",
+          "label": "Invocation",
+          "score": 390
+        },
+        {
+          "id": "org.apache.dubbo.rpc.model.ApplicationModel",
+          "label": "ApplicationModel",
+          "score": 389
+        },
+        {
+          "id": "org.apache.dubbo.common.extension.ExtensionAccessor.getExtensionLoader(java.lang.Class<T>)",
+          "label": "getExtensionLoader",
+          "score": 315
+        },
+        {
+          "id": "org.apache.dubbo.common.logger.Logger.info(java.lang.String)",
+          "label": "info",
+          "score": 308
+        },
+        {
+          "id": "org.apache.dubbo.common.logger.ErrorTypeAwareLogger",
+          "label": "ErrorTypeAwareLogger",
+          "score": 304
+        },
+        {
+          "id": "org.apache.dubbo.remoting.Channel",
+          "label": "Channel",
+          "score": 301
+        }
+      ]
+    },
+    {
+      "id": "pagerank",
+      "description": "PageRank",
+      "nodes": [
+        {
+          "id": "org.apache.dubbo.common.URL",
+          "label": "URL",
+          "score": 0.020061049934721364
+        },
+        {
+          "id": "org.apache.dubbo.rpc.model.ApplicationModel",
+          "label": "ApplicationModel",
+          "score": 0.006455019871548411
+        },
+        {
+          "id": "org.apache.dubbo.rpc.Invocation",
+          "label": "Invocation",
+          "score": 0.004711679042903038
+        },
+        {
+          "id": "org.apache.dubbo.rpc.Invoker",
+          "label": "Invoker",
+          "score": 0.004698703092303219
+        },
+        {
+          "id": "org.apache.dubbo.remoting.Channel",
+          "label": "Channel",
+          "score": 0.0039874765555275105
+        },
+        {
+          "id": "org.apache.dubbo.rpc.model.ModuleModel",
+          "label": "ModuleModel",
+          "score": 0.0036793274244579163
+        },
+        {
+          "id": "org.apache.dubbo.rpc.model.ScopeModel",
+          "label": "ScopeModel",
+          "score": 0.003141294038378147
+        },
+        {
+          "id": "org.apache.dubbo.rpc.model.FrameworkModel",
+          "label": "FrameworkModel",
+          "score": 0.0030530496096510306
+        },
+        {
+          "id": "org.apache.dubbo.common.url.component.URLParam",
+          "label": "URLParam",
+          "score": 0.0028312465794934037
+        },
+        {
+          "id": "org.apache.dubbo.common.URL.getParameter(java.lang.String)",
+          "label": "getParameter",
+          "score": 0.0027357231182085886
+        }
+      ]
+    },
+    {
+      "id": "eigenvector",
+      "description": "Eigenvector centrality",
+      "nodes": [
+        {
+          "id": "org.apache.dubbo.common.URL?urlAddress@120.29:120.39",
+          "label": "urlAddress",
+          "score": 0.3398529311913633
+        },
+        {
+          "id": "org.apache.dubbo.common.URL",
+          "label": "URL",
+          "score": 0.29746251191424056
+        },
+        {
+          "id": "org.apache.dubbo.common.utils.StringUtils.isEmpty(java.lang.String)",
+          "label": "isEmpty",
+          "score": 0.26840622948710224
+        },
+        {
+          "id": "org.apache.dubbo.common.URL?urlParam@121.27:121.35",
+          "label": "urlParam",
+          "score": 0.19422396069446266
+        },
+        {
+          "id": "org.apache.dubbo.common.URL.getParameter(java.lang.String)",
+          "label": "getParameter",
+          "score": 0.1856348514346279
+        },
+        {
+          "id": "org.apache.dubbo.common.URL?attributes@127.43:127.53",
+          "label": "attributes",
+          "score": 0.12827408745368327
+        },
+        {
+          "id": "org.apache.dubbo.common.URL.getParameters()",
+          "label": "getParameters",
+          "score": 0.12442561977692078
+        },
+        {
+          "id": "org.apache.dubbo.common.URL.getPort()",
+          "label": "getPort",
+          "score": 0.1128564520697691
+        },
+        {
+          "id": "org.apache.dubbo.common.URL.getPath()",
+          "label": "getPath",
+          "score": 0.11196261606025915
+        },
+        {
+          "id": "org.apache.dubbo.common.URL.getMethodParameter(java.lang.String, java.lang.String)",
+          "label": "getMethodParameter",
+          "score": 0.11055415737000879
+        }
+      ]
+    },
+    {
+      "id": "Katz",
+      "description": "Katz centrality",
+      "nodes": [
+        {
+          "id": "org.apache.dubbo.common.URL",
+          "label": "URL",
+          "score": 20.927915726453985
+        },
+        {
+          "id": "org.apache.dubbo.rpc.Invoker",
+          "label": "Invoker",
+          "score": 9.057969848700994
+        },
+        {
+          "id": "org.apache.dubbo.common.utils.StringUtils.isEmpty(java.lang.String)",
+          "label": "isEmpty",
+          "score": 5.570589172073997
+        },
+        {
+          "id": "org.apache.dubbo.common.Node.getUrl()",
+          "label": "getUrl",
+          "score": 5.1763933874270025
+        },
+        {
+          "id": "org.apache.dubbo.rpc.Invocation",
+          "label": "Invocation",
+          "score": 5.084080664720999
+        },
+        {
+          "id": "org.apache.dubbo.rpc.model.ApplicationModel",
+          "label": "ApplicationModel",
+          "score": 5.063436229271002
+        },
+        {
+          "id": "org.apache.dubbo.common.URL.getParameter(java.lang.String)",
+          "label": "getParameter",
+          "score": 4.319345227529999
+        },
+        {
+          "id": "org.apache.dubbo.common.extension.ExtensionAccessor.getExtensionLoader(java.lang.Class<T>)",
+          "label": "getExtensionLoader",
+          "score": 4.2657351205430025
+        },
+        {
+          "id": "org.apache.dubbo.common.logger.ErrorTypeAwareLogger",
+          "label": "ErrorTypeAwareLogger",
+          "score": 4.233415985990996
+        },
+        {
+          "id": "org.apache.dubbo.common.logger.Logger.info(java.lang.String)",
+          "label": "info",
+          "score": 4.166987125222998
+        }
+      ]
+    },
+    {
+      "id": "betweenness",
+      "description": "Betweenness centrality",
+      "nodes": [
+        {
+          "id": "org.apache.dubbo.common.URL",
+          "label": "URL",
+          "score": 7.942449403449444E7
+        },
+        {
+          "id": "org.apache.dubbo.rpc.model.ApplicationModel",
+          "label": "ApplicationModel",
+          "score": 4.164965955086852E7
+        },
+        {
+          "id": "org.apache.dubbo.rpc.model.ModuleModel",
+          "label": "ModuleModel",
+          "score": 2.4579707483553205E7
+        },
+        {
+          "id": "org.apache.dubbo.rpc.model.ServiceModel",
+          "label": "ServiceModel",
+          "score": 2.0525655421947896E7
+        },
+        {
+          "id": "org.apache.dubbo.config.context.ConfigManager",
+          "label": "ConfigManager",
+          "score": 1.407606106686544E7
+        },
+        {
+          "id": "org.apache.dubbo.common.extension.ExtensionLoader",
+          "label": "ExtensionLoader",
+          "score": 1.3856881873112412E7
+        },
+        {
+          "id": "org.apache.dubbo.config.AbstractInterfaceConfig",
+          "label": "AbstractInterfaceConfig",
+          "score": 1.2767082546272853E7
+        },
+        {
+          "id": "org.apache.dubbo.config.AbstractConfig",
+          "label": "AbstractConfig",
+          "score": 1.1945149585879305E7
+        },
+        {
+          "id": "org.apache.dubbo.common.URL.getServiceModel()",
+          "label": "getServiceModel",
+          "score": 1.1914770160298942E7
+        },
+        {
+          "id": "org.apache.dubbo.common.URL.getOrDefaultApplicationModel()",
+          "label": "getOrDefaultApplicationModel",
+          "score": 1.1830566580426132E7
+        }
+      ]
+    },
+    {
+      "id": "harmonic",
+      "description": "Harmonic centrality",
+      "nodes": [
+        {
+          "id": "org.apache.dubbo.config.bootstrap.DubboBootstrap",
+          "label": "DubboBootstrap",
+          "score": 0.04498988869942191
+        },
+        {
+          "id": "org.apache.dubbo.registry.integration.RegistryProtocol",
+          "label": "RegistryProtocol",
+          "score": 0.043817552031856694
+        },
+        {
+          "id": "org.apache.dubbo.config.deploy.DefaultApplicationDeployer",
+          "label": "DefaultApplicationDeployer",
+          "score": 0.04174156485653269
+        },
+        {
+          "id": "org.apache.dubbo.config.ServiceConfig",
+          "label": "ServiceConfig",
+          "score": 0.04129807683048719
+        },
+        {
+          "id": "org.apache.dubbo.registry.client.migration.MigrationInvoker",
+          "label": "MigrationInvoker",
+          "score": 0.040075708086020616
+        },
+        {
+          "id": "org.apache.dubbo.config.ReferenceConfig",
+          "label": "ReferenceConfig",
+          "score": 0.04004665301578411
+        },
+        {
+          "id": "org.apache.dubbo.registry.client.ServiceDiscoveryRegistryDirectory",
+          "label": "ServiceDiscoveryRegistryDirectory",
+          "score": 0.03986333654298674
+        },
+        {
+          "id": "org.apache.dubbo.config.bootstrap.DubboBootstrap.service(org.apache.dubbo.config.ServiceConfig<?>, org.apache.dubbo.rpc.model.ModuleModel)",
+          "label": "service",
+          "score": 0.03974606229365869
+        },
+        {
+          "id": "org.apache.dubbo.config.utils.ConfigValidationUtils",
+          "label": "ConfigValidationUtils",
+          "score": 0.03961553435247387
+        },
+        {
+          "id": "org.apache.dubbo.config.metadata.ConfigurableMetadataServiceExporter.export()",
+          "label": "export",
+          "score": 0.03948867517775403
+        }
+      ]
+    },
+    {
+      "id": "combined",
+      "description": "Combined importance",
+      "nodes": [
+        {
+          "id": "org.apache.dubbo.common.URL",
+          "label": "URL",
+          "score": 7
+        },
+        {
+          "id": "org.apache.dubbo.rpc.model.ApplicationModel",
+          "label": "ApplicationModel",
+          "score": 4
+        },
+        {
+          "id": "org.apache.dubbo.rpc.Invoker",
+          "label": "Invoker",
+          "score": 3
+        },
+        {
+          "id": "org.apache.dubbo.rpc.Invocation",
+          "label": "Invocation",
+          "score": 3
+        },
+        {
+          "id": "org.apache.dubbo.common.utils.StringUtils.isEmpty(java.lang.String)",
+          "label": "isEmpty",
+          "score": 3
+        },
+        {
+          "id": "org.apache.dubbo.common.URL.getParameter(java.lang.String)",
+          "label": "getParameter",
+          "score": 3
+        },
+        {
+          "id": "org.apache.dubbo.common.url.component.URLParam",
+          "label": "URLParam",
+          "score": 2
+        },
+        {
+          "id": "org.apache.dubbo.common.Node.getUrl()",
+          "label": "getUrl",
+          "score": 2
+        },
+        {
+          "id": "org.apache.dubbo.registry.integration.RegistryProtocol",
+          "label": "RegistryProtocol",
+          "score": 2
+        },
+        {
+          "id": "org.apache.dubbo.config.AbstractConfig",
+          "label": "AbstractConfig",
+          "score": 2
+        }
+      ]
+    }
+  ]
+}

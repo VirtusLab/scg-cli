@@ -1,0 +1,510 @@
+{
+  "projectName": "playframework",
+  "workspace": "data/playframework.zip",
+  "stats": [
+    {
+      "id": "loc",
+      "description": "Lines of code",
+      "nodes": [
+        {
+          "id": "play/core/server/common/WebSocketFlowHandler.webSocketProtocol(+1).",
+          "label": "webSocketProtocol",
+          "score": 349
+        },
+        {
+          "id": "local11:transport/server/play-server/src/main/scala/play/core/server/common/WebSocketFlowHandler.scala",
+          "label": "createLogic",
+          "score": 302
+        },
+        {
+          "id": "play/core/parsers/Multipart.BodyPartParser#createLogic().",
+          "label": "createLogic",
+          "score": 301
+        },
+        {
+          "id": "play/core/server/DevServerStart#mainDev().",
+          "label": "mainDev",
+          "score": 235
+        },
+        {
+          "id": "views/html/defaultpages/devError.apply().",
+          "label": "apply",
+          "score": 189
+        },
+        {
+          "id": "play/runsupport/Reloader.startDevMode().",
+          "label": "startDevMode",
+          "score": 180
+        },
+        {
+          "id": "com/typesafe/play/docs/sbtplugin/html/translationReport.apply().",
+          "label": "apply",
+          "score": 158
+        },
+        {
+          "id": "views/html/defaultpages/devNotFound.apply().",
+          "label": "apply",
+          "score": 132
+        },
+        {
+          "id": "play/filters/cors/AbstractCORSPolicy#handlePreFlightCORSRequest().",
+          "label": "handlePreFlightCORSRequest",
+          "score": 123
+        },
+        {
+          "id": "play/api/db/evolutions/DefaultEvolutionsConfigParser#parse().",
+          "label": "parse",
+          "score": 118
+        }
+      ]
+    },
+    {
+      "id": "out-degree",
+      "description": "Node out-degree",
+      "nodes": [
+        {
+          "id": "play/routes/compiler/inject/twirl/forwardsRouter.apply().",
+          "label": "apply",
+          "score": 120
+        },
+        {
+          "id": "play/api/data/ObjectMapping22#unbindAndValidate().",
+          "label": "unbindAndValidate",
+          "score": 112
+        },
+        {
+          "id": "play/api/data/ObjectMapping21#unbindAndValidate().",
+          "label": "unbindAndValidate",
+          "score": 107
+        },
+        {
+          "id": "play/core/server/netty/PlayRequestHandler#handle().",
+          "label": "handle",
+          "score": 103
+        },
+        {
+          "id": "play/api/data/ObjectMapping20#unbindAndValidate().",
+          "label": "unbindAndValidate",
+          "score": 102
+        },
+        {
+          "id": "play/api/data/ObjectMapping19#unbindAndValidate().",
+          "label": "unbindAndValidate",
+          "score": 97
+        },
+        {
+          "id": "play/api/db/evolutions/DefaultEvolutionsConfigParser#parse().",
+          "label": "parse",
+          "score": 93
+        },
+        {
+          "id": "play/api/db/HikariCPConfig#toHikariConfig().",
+          "label": "toHikariConfig",
+          "score": 92
+        },
+        {
+          "id": "play/api/data/ObjectMapping18#unbindAndValidate().",
+          "label": "unbindAndValidate",
+          "score": 92
+        },
+        {
+          "id": "play/core/server/netty/NettyModelConversion#convertResult().",
+          "label": "convertResult",
+          "score": 88
+        }
+      ]
+    },
+    {
+      "id": "in-degree",
+      "description": "Node in-degree",
+      "nodes": [
+        {
+          "id": "play/api/data/Mapping#unbindAndValidate().",
+          "label": "unbindAndValidate",
+          "score": 257
+        },
+        {
+          "id": "play/api/data/Mapping#bind().",
+          "label": "bind",
+          "score": 257
+        },
+        {
+          "id": "play/api/data/Mapping#unbind().",
+          "label": "unbind",
+          "score": 257
+        },
+        {
+          "id": "play/core/routing/Param#value.",
+          "label": "value",
+          "score": 232
+        },
+        {
+          "id": "play/api/Configuration#get().",
+          "label": "get",
+          "score": 163
+        },
+        {
+          "id": "play/api/mvc/Result#header.",
+          "label": "header",
+          "score": 50
+        },
+        {
+          "id": "play/api/mvc/RequestHeader#headers().",
+          "label": "headers",
+          "score": 46
+        },
+        {
+          "id": "play/routes/compiler/Route#call.",
+          "label": "call",
+          "score": 46
+        },
+        {
+          "id": "play/api/LoggerLike#warn().",
+          "label": "warn",
+          "score": 43
+        },
+        {
+          "id": "play/api/mvc/RequestHeader#attrs().",
+          "label": "attrs",
+          "score": 40
+        }
+      ]
+    },
+    {
+      "id": "pagerank",
+      "description": "PageRank",
+      "nodes": [
+        {
+          "id": "play/api/Configuration#underlying.",
+          "label": "underlying",
+          "score": 0.0017813044494958386
+        },
+        {
+          "id": "play/api/libs/ws/ahc/AhcWSRequest#underlying.",
+          "label": "underlying",
+          "score": 0.0016552403003704866
+        },
+        {
+          "id": "play/api/mvc/RequestHeader#attrs().",
+          "label": "attrs",
+          "score": 0.00159397437338278
+        },
+        {
+          "id": "play/api/templates/PlayMagic.toHtmlArgs().",
+          "label": "toHtmlArgs",
+          "score": 0.001431221107303371
+        },
+        {
+          "id": "play/api/Configuration#get().",
+          "label": "get",
+          "score": 0.001231858781102746
+        },
+        {
+          "id": "play/runsupport/Colors.isANSISupported.",
+          "label": "isANSISupported",
+          "score": 0.0011697479742115255
+        },
+        {
+          "id": "play/api/libs/streams/StrictAccumulator#`<init>`().",
+          "label": "<init>",
+          "score": 0.0011285201305235683
+        },
+        {
+          "id": "play/api/LoggerLike#logger().",
+          "label": "logger",
+          "score": 0.001098881200370893
+        },
+        {
+          "id": "play/core/j/RequestHeaderImpl#header.",
+          "label": "header",
+          "score": 0.001044604216409275
+        },
+        {
+          "id": "play/api/inject/SourceLocator.provider.",
+          "label": "provider",
+          "score": 9.564704190237332E-4
+        }
+      ]
+    },
+    {
+      "id": "eigenvector",
+      "description": "Eigenvector centrality",
+      "nodes": [
+        {
+          "id": "local215:core/play/src/main/scala/play/core/parsers/Multipart.scala",
+          "label": "partStart",
+          "score": 0.33887052622546127
+        },
+        {
+          "id": "local175:core/play/src/main/scala/play/core/parsers/Multipart.scala",
+          "label": "emit",
+          "score": 0.2809098693773636
+        },
+        {
+          "id": "local219:core/play/src/main/scala/play/core/parsers/Multipart.scala",
+          "label": "totalMemoryBufferSize",
+          "score": 0.2773795927814504
+        },
+        {
+          "id": "local210:core/play/src/main/scala/play/core/parsers/Multipart.scala",
+          "label": "headers",
+          "score": 0.26167166327874697
+        },
+        {
+          "id": "play/core/parsers/Multipart.BodyPartParser#maxHeaderSize.",
+          "label": "maxHeaderSize",
+          "score": 0.24596373377604355
+        },
+        {
+          "id": "play/core/parsers/Multipart.byteChar().",
+          "label": "byteChar",
+          "score": 0.24596373377604355
+        },
+        {
+          "id": "local181:core/play/src/main/scala/play/core/parsers/Multipart.scala",
+          "label": "done",
+          "score": 0.21722944390424237
+        },
+        {
+          "id": "local180:core/play/src/main/scala/play/core/parsers/Multipart.scala",
+          "label": "terminate",
+          "score": 0.1974991607011304
+        },
+        {
+          "id": "local156:core/play/src/main/scala/play/core/parsers/Multipart.scala",
+          "label": "output_=",
+          "score": 0.19287413809066198
+        },
+        {
+          "id": "local155:core/play/src/main/scala/play/core/parsers/Multipart.scala",
+          "label": "output",
+          "score": 0.19287413809066198
+        }
+      ]
+    },
+    {
+      "id": "Katz",
+      "description": "Katz centrality",
+      "nodes": [
+        {
+          "id": "play/api/data/Mapping#bind().",
+          "label": "bind",
+          "score": 3.570401009999989
+        },
+        {
+          "id": "play/api/data/Mapping#unbindAndValidate().",
+          "label": "unbindAndValidate",
+          "score": 3.569999999999989
+        },
+        {
+          "id": "play/api/data/Mapping#unbind().",
+          "label": "unbind",
+          "score": 3.569999999999989
+        },
+        {
+          "id": "play/core/routing/Param#value.",
+          "label": "value",
+          "score": 3.3199999999999945
+        },
+        {
+          "id": "play/api/Configuration#get().",
+          "label": "get",
+          "score": 2.6489994899999996
+        },
+        {
+          "id": "play/api/mvc/Result#header.",
+          "label": "header",
+          "score": 1.5089033300000003
+        },
+        {
+          "id": "play/api/mvc/RequestHeader#headers().",
+          "label": "headers",
+          "score": 1.4700180999999999
+        },
+        {
+          "id": "play/routes/compiler/Route#call.",
+          "label": "call",
+          "score": 1.4669945299999998
+        },
+        {
+          "id": "play/api/LoggerLike#warn().",
+          "label": "warn",
+          "score": 1.4357755500000002
+        },
+        {
+          "id": "play/api/mvc/RequestHeader#attrs().",
+          "label": "attrs",
+          "score": 1.4087948000000001
+        }
+      ]
+    },
+    {
+      "id": "betweenness",
+      "description": "Betweenness centrality",
+      "nodes": [
+        {
+          "id": "play/api/mvc/RangeResult.ofSource(+2).",
+          "label": "ofSource",
+          "score": 1064
+        },
+        {
+          "id": "play/api/mvc/PlayBodyParsers#anyContent(+1).",
+          "label": "anyContent",
+          "score": 1015.8333333333331
+        },
+        {
+          "id": "play/api/Play.start().",
+          "label": "start",
+          "score": 735.5
+        },
+        {
+          "id": "play/routes/compiler/RoutesFileParser#parser().",
+          "label": "parser",
+          "score": 721
+        },
+        {
+          "id": "play/routes/compiler/RoutesFileParser#sentence().",
+          "label": "sentence",
+          "score": 709.0000000000001
+        },
+        {
+          "id": "play/api/test/TestServer#start().",
+          "label": "start",
+          "score": 698.3000000000001
+        },
+        {
+          "id": "controllers/AssetsBuilder#assetAt().",
+          "label": "assetAt",
+          "score": 679.9999999999999
+        },
+        {
+          "id": "play/api/db/evolutions/DatabaseEvolutions#checkEvolutionsState().",
+          "label": "checkEvolutionsState",
+          "score": 652.4
+        },
+        {
+          "id": "play/api/mvc/PlayBodyParsers#default(+1).",
+          "label": "default",
+          "score": 631.9999999999999
+        },
+        {
+          "id": "play/routes/compiler/RoutesFileParser#route().",
+          "label": "route",
+          "score": 623
+        }
+      ]
+    },
+    {
+      "id": "harmonic",
+      "description": "Harmonic centrality",
+      "nodes": [
+        {
+          "id": "play/core/server/netty/PlayRequestHandler#handle().",
+          "label": "handle",
+          "score": 0.012708092930225403
+        },
+        {
+          "id": "play/core/server/AkkaHttpServer#handleRequest().",
+          "label": "handleRequest",
+          "score": 0.009648434494961155
+        },
+        {
+          "id": "play/core/server/netty/PlayRequestHandler#channelRead().",
+          "label": "channelRead",
+          "score": 0.00921330486960536
+        },
+        {
+          "id": "play/core/server/AkkaHttpServer#executeHandler().",
+          "label": "executeHandler",
+          "score": 0.008675282714054933
+        },
+        {
+          "id": "play/core/server/netty/PlayRequestHandler#handleAction().",
+          "label": "handleAction",
+          "score": 0.0076467420570813065
+        },
+        {
+          "id": "controllers/AssetsBuilder#assetAt().",
+          "label": "assetAt",
+          "score": 0.006199515347334411
+        },
+        {
+          "id": "sbt/PlayRun.playRunTask().",
+          "label": "playRunTask",
+          "score": 0.006192976382798681
+        },
+        {
+          "id": "play/core/server/AkkaHttpServer#runAction().",
+          "label": "runAction",
+          "score": 0.006171243941841678
+        },
+        {
+          "id": "play/core/server/netty/NettyModelConversion#convertResult().",
+          "label": "convertResult",
+          "score": 0.005650242326332793
+        },
+        {
+          "id": "play/api/data/ObjectMapping22#unbindAndValidate().",
+          "label": "unbindAndValidate",
+          "score": 0.005573505654281098
+        }
+      ]
+    },
+    {
+      "id": "combined",
+      "description": "Combined importance",
+      "nodes": [
+        {
+          "id": "play/api/Configuration#get().",
+          "label": "get",
+          "score": 3
+        },
+        {
+          "id": "play/api/mvc/RequestHeader#attrs().",
+          "label": "attrs",
+          "score": 3
+        },
+        {
+          "id": "play/api/data/Mapping#bind().",
+          "label": "bind",
+          "score": 2
+        },
+        {
+          "id": "play/routes/compiler/Route#call.",
+          "label": "call",
+          "score": 2
+        },
+        {
+          "id": "play/api/data/ObjectMapping22#unbindAndValidate().",
+          "label": "unbindAndValidate",
+          "score": 2
+        },
+        {
+          "id": "play/core/server/netty/NettyModelConversion#convertResult().",
+          "label": "convertResult",
+          "score": 2
+        },
+        {
+          "id": "controllers/AssetsBuilder#assetAt().",
+          "label": "assetAt",
+          "score": 2
+        },
+        {
+          "id": "play/core/server/netty/PlayRequestHandler#handle().",
+          "label": "handle",
+          "score": 2
+        },
+        {
+          "id": "play/api/LoggerLike#warn().",
+          "label": "warn",
+          "score": 2
+        },
+        {
+          "id": "play/api/db/evolutions/DefaultEvolutionsConfigParser#parse().",
+          "label": "parse",
+          "score": 2
+        }
+      ]
+    }
+  ]
+}

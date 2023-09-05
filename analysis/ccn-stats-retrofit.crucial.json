@@ -1,0 +1,510 @@
+{
+  "projectName": "retrofit",
+  "workspace": "data/retrofit.zip",
+  "stats": [
+    {
+      "id": "loc",
+      "description": "Lines of code",
+      "nodes": [
+        {
+          "id": "retrofit2.RequestFactory",
+          "label": "RequestFactory",
+          "score": 800
+        },
+        {
+          "id": "retrofit2.RequestFactory.Builder",
+          "label": "Builder",
+          "score": 724
+        },
+        {
+          "id": "retrofit2.Retrofit",
+          "label": "Retrofit",
+          "score": 600
+        },
+        {
+          "id": "retrofit2.ParameterHandler",
+          "label": "ParameterHandler",
+          "score": 431
+        },
+        {
+          "id": "retrofit2.Platform",
+          "label": "Platform",
+          "score": 324
+        },
+        {
+          "id": "retrofit2.OkHttpCall",
+          "label": "OkHttpCall",
+          "score": 316
+        },
+        {
+          "id": "retrofit2.RequestBuilder",
+          "label": "RequestBuilder",
+          "score": 266
+        },
+        {
+          "id": "retrofit2.Retrofit.Builder",
+          "label": "Builder",
+          "score": 232
+        },
+        {
+          "id": "retrofit2.HttpServiceMethod",
+          "label": "HttpServiceMethod",
+          "score": 220
+        },
+        {
+          "id": "retrofit2.mock.Calls",
+          "label": "Calls",
+          "score": 185
+        }
+      ]
+    },
+    {
+      "id": "out-degree",
+      "description": "Node out-degree",
+      "nodes": [
+        {
+          "id": "retrofit2.HttpServiceMethod",
+          "label": "HttpServiceMethod",
+          "score": 12
+        },
+        {
+          "id": "retrofit2.Retrofit",
+          "label": "Retrofit",
+          "score": 11
+        },
+        {
+          "id": "com.example.retrofit.JsonAndXmlConverters.QualifiedTypeConverterFactory",
+          "label": "QualifiedTypeConverterFactory",
+          "score": 9
+        },
+        {
+          "id": "retrofit2.helpers.NonMatchingConverterFactory",
+          "label": "NonMatchingConverterFactory",
+          "score": 7
+        },
+        {
+          "id": "retrofit2.OkHttpCall",
+          "label": "OkHttpCall",
+          "score": 7
+        },
+        {
+          "id": "retrofit2.adapter.rxjava2.CallEnqueueObservable.CallCallback",
+          "label": "CallCallback",
+          "score": 6
+        },
+        {
+          "id": "retrofit2.HttpServiceMethod.CallAdapted",
+          "label": "CallAdapted",
+          "score": 6
+        },
+        {
+          "id": "retrofit2.adapter.rxjava3.CallEnqueueObservable.CallCallback",
+          "label": "CallCallback",
+          "score": 6
+        },
+        {
+          "id": "retrofit2.Converter.Factory",
+          "label": "Factory",
+          "score": 6
+        },
+        {
+          "id": "retrofit2.HttpServiceMethod.SuspendForBody",
+          "label": "SuspendForBody",
+          "score": 6
+        }
+      ]
+    },
+    {
+      "id": "in-degree",
+      "description": "Node in-degree",
+      "nodes": [
+        {
+          "id": "retrofit2.Converter",
+          "label": "Converter",
+          "score": 115
+        },
+        {
+          "id": "retrofit2.Call",
+          "label": "Call",
+          "score": 80
+        },
+        {
+          "id": "retrofit2.Retrofit",
+          "label": "Retrofit",
+          "score": 64
+        },
+        {
+          "id": "retrofit2.Response",
+          "label": "Response",
+          "score": 39
+        },
+        {
+          "id": "retrofit2.CallAdapter",
+          "label": "CallAdapter",
+          "score": 34
+        },
+        {
+          "id": "retrofit2.Converter.Factory",
+          "label": "Factory",
+          "score": 31
+        },
+        {
+          "id": "retrofit2.ParameterHandler",
+          "label": "ParameterHandler",
+          "score": 17
+        },
+        {
+          "id": "retrofit2.RequestBuilder",
+          "label": "RequestBuilder",
+          "score": 16
+        },
+        {
+          "id": "retrofit2.CallAdapter.Factory",
+          "label": "Factory",
+          "score": 14
+        },
+        {
+          "id": "retrofit2.Callback",
+          "label": "Callback",
+          "score": 10
+        }
+      ]
+    },
+    {
+      "id": "pagerank",
+      "description": "PageRank",
+      "nodes": [
+        {
+          "id": "retrofit2.Callback",
+          "label": "Callback",
+          "score": 0.214592663099801
+        },
+        {
+          "id": "retrofit2.Call",
+          "label": "Call",
+          "score": 0.2128784705744383
+        },
+        {
+          "id": "retrofit2.Response",
+          "label": "Response",
+          "score": 0.09788235792127523
+        },
+        {
+          "id": "retrofit2.Converter",
+          "label": "Converter",
+          "score": 0.09110673787171897
+        },
+        {
+          "id": "retrofit2.Retrofit",
+          "label": "Retrofit",
+          "score": 0.04139992622733861
+        },
+        {
+          "id": "retrofit2.CallAdapter",
+          "label": "CallAdapter",
+          "score": 0.028308071197326454
+        },
+        {
+          "id": "retrofit2.Converter.Factory",
+          "label": "Factory",
+          "score": 0.01839500825478947
+        },
+        {
+          "id": "retrofit2.RequestBuilder",
+          "label": "RequestBuilder",
+          "score": 0.01606214679405316
+        },
+        {
+          "id": "retrofit2.CallAdapter.Factory",
+          "label": "Factory",
+          "score": 0.011025605323469918
+        },
+        {
+          "id": "retrofit2.Platform",
+          "label": "Platform",
+          "score": 0.009019400131282954
+        }
+      ]
+    },
+    {
+      "id": "eigenvector",
+      "description": "Eigenvector centrality",
+      "nodes": [
+        {
+          "id": "retrofit2.Converter",
+          "label": "Converter",
+          "score": 0.8521290688164774
+        },
+        {
+          "id": "retrofit2.CallAdapter",
+          "label": "CallAdapter",
+          "score": 0.294644036000392
+        },
+        {
+          "id": "retrofit2.Retrofit",
+          "label": "Retrofit",
+          "score": 0.26404338014970846
+        },
+        {
+          "id": "retrofit2.Converter.Factory",
+          "label": "Factory",
+          "score": 0.2616386134816785
+        },
+        {
+          "id": "retrofit2.ServiceMethod",
+          "label": "ServiceMethod",
+          "score": 0.13081930674083925
+        },
+        {
+          "id": "retrofit2.CallAdapter.Factory",
+          "label": "Factory",
+          "score": 0.13081930674083925
+        },
+        {
+          "id": "retrofit2.Call",
+          "label": "Call",
+          "score": 0.10981767784004272
+        },
+        {
+          "id": "retrofit2.Callback",
+          "label": "Callback",
+          "score": 0.04910733933339867
+        },
+        {
+          "id": "retrofit2.Response",
+          "label": "Response",
+          "score": 0.01372720973000534
+        },
+        {
+          "id": "retrofit2.adapter.rxjava3.CallEnqueueObservable.CallCallback",
+          "label": "CallCallback",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "Katz",
+      "description": "Katz centrality",
+      "nodes": [
+        {
+          "id": "retrofit2.Converter",
+          "label": "Converter",
+          "score": 2.1932973000000002
+        },
+        {
+          "id": "retrofit2.Call",
+          "label": "Call",
+          "score": 1.8068096500000004
+        },
+        {
+          "id": "retrofit2.Retrofit",
+          "label": "Retrofit",
+          "score": 1.6540549800000002
+        },
+        {
+          "id": "retrofit2.Response",
+          "label": "Response",
+          "score": 1.3933886500000003
+        },
+        {
+          "id": "retrofit2.CallAdapter",
+          "label": "CallAdapter",
+          "score": 1.3548472300000003
+        },
+        {
+          "id": "retrofit2.Converter.Factory",
+          "label": "Factory",
+          "score": 1.3231808800000002
+        },
+        {
+          "id": "retrofit2.ParameterHandler",
+          "label": "ParameterHandler",
+          "score": 1.17021618
+        },
+        {
+          "id": "retrofit2.RequestBuilder",
+          "label": "RequestBuilder",
+          "score": 1.16170216
+        },
+        {
+          "id": "retrofit2.CallAdapter.Factory",
+          "label": "Factory",
+          "score": 1.14664044
+        },
+        {
+          "id": "retrofit2.Callback",
+          "label": "Callback",
+          "score": 1.10806805
+        }
+      ]
+    },
+    {
+      "id": "betweenness",
+      "description": "Betweenness centrality",
+      "nodes": [
+        {
+          "id": "retrofit2.Retrofit",
+          "label": "Retrofit",
+          "score": 243.58333333333331
+        },
+        {
+          "id": "retrofit2.Call",
+          "label": "Call",
+          "score": 168.2
+        },
+        {
+          "id": "retrofit2.CallAdapter",
+          "label": "CallAdapter",
+          "score": 129
+        },
+        {
+          "id": "retrofit2.Callback",
+          "label": "Callback",
+          "score": 86.2
+        },
+        {
+          "id": "retrofit2.RequestFactory",
+          "label": "RequestFactory",
+          "score": 22.25
+        },
+        {
+          "id": "retrofit2.Converter.Factory",
+          "label": "Factory",
+          "score": 15.75
+        },
+        {
+          "id": "retrofit2.RequestFactory.Builder",
+          "label": "Builder",
+          "score": 12
+        },
+        {
+          "id": "retrofit2.mock.BehaviorDelegate",
+          "label": "BehaviorDelegate",
+          "score": 12
+        },
+        {
+          "id": "retrofit2.HttpServiceMethod",
+          "label": "HttpServiceMethod",
+          "score": 9.75
+        },
+        {
+          "id": "retrofit2.Retrofit.Builder",
+          "label": "Builder",
+          "score": 9
+        }
+      ]
+    },
+    {
+      "id": "harmonic",
+      "description": "Harmonic centrality",
+      "nodes": [
+        {
+          "id": "retrofit2.HttpServiceMethod",
+          "label": "HttpServiceMethod",
+          "score": 0.048992673992674
+        },
+        {
+          "id": "retrofit2.HttpServiceMethod.SuspendForBody",
+          "label": "SuspendForBody",
+          "score": 0.04716117216117215
+        },
+        {
+          "id": "retrofit2.HttpServiceMethod.CallAdapted",
+          "label": "CallAdapted",
+          "score": 0.04716117216117215
+        },
+        {
+          "id": "retrofit2.HttpServiceMethod.SuspendForResponse",
+          "label": "SuspendForResponse",
+          "score": 0.04716117216117215
+        },
+        {
+          "id": "retrofit2.OkHttpCall",
+          "label": "OkHttpCall",
+          "score": 0.04349816849816849
+        },
+        {
+          "id": "retrofit2.mock.BehaviorDelegate",
+          "label": "BehaviorDelegate",
+          "score": 0.040293040293040296
+        },
+        {
+          "id": "retrofit2.mock.MockRetrofit",
+          "label": "MockRetrofit",
+          "score": 0.03891941391941392
+        },
+        {
+          "id": "com.example.retrofit.SimpleMockService.MockGitHub",
+          "label": "MockGitHub",
+          "score": 0.038461538461538464
+        },
+        {
+          "id": "retrofit2.RequestFactory",
+          "label": "RequestFactory",
+          "score": 0.033608058608058614
+        },
+        {
+          "id": "retrofit2.Retrofit",
+          "label": "Retrofit",
+          "score": 0.033424908424908424
+        }
+      ]
+    },
+    {
+      "id": "combined",
+      "description": "Combined importance",
+      "nodes": [
+        {
+          "id": "retrofit2.Retrofit",
+          "label": "Retrofit",
+          "score": 8
+        },
+        {
+          "id": "retrofit2.Converter.Factory",
+          "label": "Factory",
+          "score": 6
+        },
+        {
+          "id": "retrofit2.Call",
+          "label": "Call",
+          "score": 5
+        },
+        {
+          "id": "retrofit2.CallAdapter",
+          "label": "CallAdapter",
+          "score": 5
+        },
+        {
+          "id": "retrofit2.Callback",
+          "label": "Callback",
+          "score": 5
+        },
+        {
+          "id": "retrofit2.Response",
+          "label": "Response",
+          "score": 4
+        },
+        {
+          "id": "retrofit2.Converter",
+          "label": "Converter",
+          "score": 4
+        },
+        {
+          "id": "retrofit2.HttpServiceMethod",
+          "label": "HttpServiceMethod",
+          "score": 4
+        },
+        {
+          "id": "retrofit2.CallAdapter.Factory",
+          "label": "Factory",
+          "score": 4
+        },
+        {
+          "id": "retrofit2.RequestBuilder",
+          "label": "RequestBuilder",
+          "score": 4
+        }
+      ]
+    }
+  ]
+}

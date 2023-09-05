@@ -82,14 +82,9 @@
             <td>Density of the graph -- a value between 0 (low density) and 1 (high density). High SCG density can indicate higher code dependency complexity.</td>
         </tr>
         <tr>
-            <td>Average Input Degree</td>
-            <td id="averageInDegree" class="align-right"></td>
-            <td>Average number of edges coming to a node. High average input degree of nodes, especially when combined with high density, suggests high project coupling.</td>
-        </tr>
-        <tr>
-            <td>Average Output Degree</td>
-            <td id="averageOutDegree" class="align-right"></td>
-            <td>Average number of edges going from a node. High average node output degree with low density implies a significant number of hubs.</td>
+            <td>Average Degree</td>
+            <td id="averageDegree" class="align-right"></td>
+            <td>Average number of edges. High average degree of nodes, especially when combined with high density, suggests high project coupling.</td>
         </tr>
 
         <tr>
@@ -166,9 +161,8 @@
     document.getElementById("nodes").innerText = summary.nodes;
     document.getElementById("edges").innerText = summary.edges;
     document.getElementById("totalLoc").innerText = summary.totalLoc;
-    document.getElementById("averageInDegree").innerText = summary.averageInDegree.toFixed(3);
+    document.getElementById("averageDegree").innerText = summary.averageDegree.toFixed(3);
     document.getElementById("density").innerText = summary.density.toFixed(8);
-    document.getElementById("averageOutDegree").innerText = summary.averageOutDegree.toFixed(3);
     document.getElementById("globalClusteringCoefficient").innerText = summary.globalClusteringCoefficient.toFixed(8);
     document.getElementById("assortativityCoefficient").innerText = summary.assortativityCoefficient.toFixed(8);
 </script>

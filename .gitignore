@@ -5,7 +5,14 @@
 .vscode
 target
 .semanticgraphs
-*.json
+/*.json
+/*.gdf
+/*.xml
+/*.bin
+/*.txt
+/*.html
+/*.gml
+/*.js
 .scala-build
 .java-version
 .DS_Store

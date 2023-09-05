@@ -1,767 +1,510 @@
 {
-  "projectName" : "akka",
-  "workspace" : "data/akka",
-  "stats" : [
+  "projectName": "akka",
+  "workspace": "data/akka.zip",
+  "stats": [
     {
-      "id" : "loc",
-      "description" : "Top by node LOC size",
-      "nodes" : [
+      "id": "loc",
+      "description": "Lines of code",
+      "nodes": [
         {
-          "id" : "akka/stream/scaladsl/UnzipWith22#createLogic().",
-          "label" : "createLogic",
-          "score" : 476.0
+          "id": "akka/stream/scaladsl/UnzipWith22#createLogic().",
+          "label": "createLogic",
+          "score": 476
         },
         {
-          "id" : "akka/stream/scaladsl/UnzipWith21#createLogic().",
-          "label" : "createLogic",
-          "score" : 455.0
+          "id": "akka/stream/scaladsl/UnzipWith21#createLogic().",
+          "label": "createLogic",
+          "score": 455
         },
         {
-          "id" : "akka/actor/typed/delivery/internal/ProducerControllerImpl#active().",
-          "label" : "active",
-          "score" : 439.0
+          "id": "akka/actor/typed/delivery/internal/ProducerControllerImpl#active().",
+          "label": "active",
+          "score": 439
         },
         {
-          "id" : "akka/stream/scaladsl/UnzipWith20#createLogic().",
-          "label" : "createLogic",
-          "score" : 434.0
+          "id": "akka/stream/scaladsl/UnzipWith20#createLogic().",
+          "label": "createLogic",
+          "score": 434
         },
         {
-          "id" : "akka/stream/impl/streamref/SourceRefStageImpl#createLogicAndMaterializedValue(+1).",
-          "label" : "createLogicAndMaterializedValue",
-          "score" : 432.0
+          "id": "akka/stream/impl/streamref/SourceRefStageImpl#createLogicAndMaterializedValue(+1).",
+          "label": "createLogicAndMaterializedValue",
+          "score": 432
         },
         {
-          "id" : "akka/stream/scaladsl/UnzipWith19#createLogic().",
-          "label" : "createLogic",
-          "score" : 413.0
+          "id": "akka/stream/scaladsl/UnzipWith19#createLogic().",
+          "label": "createLogic",
+          "score": 413
         },
         {
-          "id" : "akka/stream/scaladsl/UnzipWith18#createLogic().",
-          "label" : "createLogic",
-          "score" : 392.0
+          "id": "akka/stream/scaladsl/UnzipWith18#createLogic().",
+          "label": "createLogic",
+          "score": 392
         },
         {
-          "id" : "akka/stream/scaladsl/ZipWith22#createLogic().",
-          "label" : "createLogic",
-          "score" : 377.0
+          "id": "akka/stream/scaladsl/ZipWith22#createLogic().",
+          "label": "createLogic",
+          "score": 377
         },
         {
-          "id" : "akka/actor/typed/delivery/internal/WorkPullingProducerControllerImpl#active().",
-          "label" : "active",
-          "score" : 376.0
+          "id": "akka/actor/typed/delivery/internal/WorkPullingProducerControllerImpl#active().",
+          "label": "active",
+          "score": 376
         },
         {
-          "id" : "akka/stream/scaladsl/UnzipWith17#createLogic().",
-          "label" : "createLogic",
-          "score" : 371.0
+          "id": "akka/stream/scaladsl/UnzipWith17#createLogic().",
+          "label": "createLogic",
+          "score": 371
         }
       ]
     },
     {
-      "id" : "out-degree",
-      "description" : "Top by node degree outgoing",
-      "nodes" : [
+      "id": "out-degree",
+      "description": "Node out-degree",
+      "nodes": [
         {
-          "id" : "akka/cluster/pubsub/DistributedPubSubMediator#receive().",
-          "label" : "receive",
-          "score" : 114.0
+          "id": "akka/cluster/pubsub/DistributedPubSubMediator#receive().",
+          "label": "receive",
+          "score": 256
         },
         {
-          "id" : "akka/cluster/sharding/ShardCoordinator#active().",
-          "label" : "active",
-          "score" : 103.0
+          "id": "akka/cluster/sharding/ShardCoordinator#active().",
+          "label": "active",
+          "score": 242
         },
         {
-          "id" : "local5:akka-cluster-typed/src/main/scala/akka/cluster/ddata/typed/internal/ReplicatorBehavior.scala",
-          "label" : "withState",
-          "score" : 99.0
+          "id": "local167:akka-cluster-typed/src/main/scala/akka/cluster/typed/internal/receptionist/ClusterReceptionist.scala",
+          "label": "onInternalCommand",
+          "score": 210
         },
         {
-          "id" : "akka/stream/scaladsl/GraphApply#create(+22).",
-          "label" : "create",
-          "score" : 96.0
+          "id": "akka/stream/FusedGraphsBenchmark#setup().",
+          "label": "setup",
+          "score": 189
         },
         {
-          "id" : "akka/stream/scaladsl/GraphApply#createGraph(+21).",
-          "label" : "createGraph",
-          "score" : 96.0
+          "id": "local220:akka-cluster/src/test/scala/akka/cluster/sbr/SplitBrainResolverSpec.scala",
+          "label": "testCollectAndFilter",
+          "score": 181
         },
         {
-          "id" : "akka/stream/scaladsl/GraphApply#createGraph(+20).",
-          "label" : "createGraph",
-          "score" : 92.0
+          "id": "local5:akka-cluster-typed/src/main/scala/akka/cluster/ddata/typed/internal/ReplicatorBehavior.scala",
+          "label": "withState",
+          "score": 178
         },
         {
-          "id" : "akka/stream/scaladsl/GraphApply#create(+21).",
-          "label" : "create",
-          "score" : 92.0
+          "id": "local68:akka-remote/src/main/scala/akka/remote/artery/Codecs.scala",
+          "label": "onPush",
+          "score": 164
         },
         {
-          "id" : "akka/stream/scaladsl/GraphApply#createGraph(+19).",
-          "label" : "createGraph",
-          "score" : 88.0
+          "id": "akka/remote/artery/CodecBenchmark#setupTrial().",
+          "label": "setupTrial",
+          "score": 155
         },
         {
-          "id" : "akka/stream/scaladsl/GraphApply#create(+20).",
-          "label" : "create",
-          "score" : 88.0
+          "id": "local12:akka-stream/src/main/scala/akka/stream/impl/streamref/SourceRefImpl.scala",
+          "label": "receiveRemoteMessage",
+          "score": 151
         },
         {
-          "id" : "akka/cluster/sharding/ClusterShardingGuardian#receive().",
-          "label" : "receive",
-          "score" : 87.0
+          "id": "akka/io/dns/internal/DnsClient#ready().",
+          "label": "ready",
+          "score": 136
         }
       ]
     },
     {
-      "id" : "in-degree",
-      "description" : "Top by node degree incoming",
-      "nodes" : [
+      "id": "in-degree",
+      "description": "Node in-degree",
+      "nodes": [
         {
-          "id" : "akka/stream/stage/GraphStageLogic#pull().",
-          "label" : "pull",
-          "score" : 786.0
+          "id": "akka/stream/stage/GraphStageLogic#pull().",
+          "label": "pull",
+          "score": 1501
         },
         {
-          "id" : "akka/actor/ActorRef#`!`().",
-          "label" : "!",
-          "score" : 779.0
+          "id": "akka/actor/ActorRef#`!`().",
+          "label": "!",
+          "score": 1141
         },
         {
-          "id" : "akka/stream/stage/GraphStageLogic#completeStage().",
-          "label" : "completeStage",
-          "score" : 478.0
+          "id": "akka/actor/Actor#context.",
+          "label": "context",
+          "score": 753
         },
         {
-          "id" : "akka/actor/Actor#context.",
-          "label" : "context",
-          "score" : 457.0
+          "id": "akka/stream/stage/GraphStageLogic#completeStage().",
+          "label": "completeStage",
+          "score": 521
         },
         {
-          "id" : "akka/actor/Actor#self.",
-          "label" : "self",
-          "score" : 338.0
+          "id": "akka/actor/Actor#sender().",
+          "label": "sender",
+          "score": 508
         },
         {
-          "id" : "akka/actor/Actor#sender().",
-          "label" : "sender",
-          "score" : 298.0
+          "id": "akka/stream/stage/GraphStageLogic#push().",
+          "label": "push",
+          "score": 503
         },
         {
-          "id" : "akka/util/JavaDurationConverters.JavaDurationOps#asScala().",
-          "label" : "asScala",
-          "score" : 290.0
+          "id": "akka/stream/scaladsl/GraphDSL.Builder#add(+2).",
+          "label": "add",
+          "score": 467
         },
         {
-          "id" : "akka/stream/impl/ContextPropagation#suspendContext().",
-          "label" : "suspendContext",
-          "score" : 281.0
+          "id": "akka/actor/Actor#self.",
+          "label": "self",
+          "score": 447
         },
         {
-          "id" : "akka/stream/stage/GraphStageLogic#cancelStage().",
-          "label" : "cancelStage",
-          "score" : 273.0
+          "id": "akka/stream/stage/GraphStageLogic#grab().",
+          "label": "grab",
+          "score": 445
         },
         {
-          "id" : "akka/stream/stage/GraphStageLogic#push().",
-          "label" : "push",
-          "score" : 251.0
+          "id": "akka/actor/ActorLogging#log().",
+          "label": "log",
+          "score": 408
         }
       ]
     },
     {
-      "id" : "pagerank",
-      "description" : "PageRank - how influential the node is",
-      "nodes" : [
+      "id": "pagerank",
+      "description": "PageRank",
+      "nodes": [
         {
-          "id" : "akka/stream/stage/GraphStageLogic#completeStage().",
-          "label" : "completeStage",
-          "score" : 0.001308374412941171
+          "id": "akka/actor/ActorRef#`!`().",
+          "label": "!",
+          "score": 0.002091713226247348
         },
         {
-          "id" : "akka/actor/ActorRef#`!`().",
-          "label" : "!",
-          "score" : 0.0011629194571729448
+          "id": "akka/stream/stage/GraphStageLogic#pull().",
+          "label": "pull",
+          "score": 0.0020467467703156827
         },
         {
-          "id" : "akka/stream/stage/GraphStageLogic#pull().",
-          "label" : "pull",
-          "score" : 0.0010817789834415275
+          "id": "akka/stream/stage/GraphStageLogic#completeStage().",
+          "label": "completeStage",
+          "score": 0.0018889859888100069
         },
         {
-          "id" : "akka/util/OptionVal.None.",
-          "label" : "None",
-          "score" : 8.043277767625442E-4
+          "id": "akka/stream/scaladsl/FlowOps#via().",
+          "label": "via",
+          "score": 0.0016491261028456616
         },
         {
-          "id" : "akka/actor/Actor#context.",
-          "label" : "context",
-          "score" : 7.449151838110798E-4
+          "id": "akka/util/JavaDurationConverters.JavaDurationOps#asScala().",
+          "label": "asScala",
+          "score": 0.0015756098092178626
         },
         {
-          "id" : "akka/stream/stage/GraphStageLogic#internalCompleteStage().",
-          "label" : "internalCompleteStage",
-          "score" : 7.430339823362781E-4
+          "id": "akka/util/JavaDurationConverters.JavaDurationOps#self.",
+          "label": "self",
+          "score": 0.0015703112130219371
         },
         {
-          "id" : "akka/stream/Attributes.name().",
-          "label" : "name",
-          "score" : 5.356857081906763E-4
+          "id": "akka/util/OptionVal.None.",
+          "label": "None",
+          "score": 0.0013344785204986761
         },
         {
-          "id" : "akka/util/JavaDurationConverters.JavaDurationOps#self.",
-          "label" : "self",
-          "score" : 4.998893441187758E-4
+          "id": "akka/actor/Actor#context.",
+          "label": "context",
+          "score": 0.0013142077754031418
         },
         {
-          "id" : "akka/util/JavaDurationConverters.JavaDurationOps#asScala().",
-          "label" : "asScala",
-          "score" : 4.976037977814491E-4
+          "id": "akka/stream/stage/GraphStageLogic#internalCompleteStage().",
+          "label": "internalCompleteStage",
+          "score": 0.0012770980284476567
         },
         {
-          "id" : "akka/actor/Actor#sender().",
-          "label" : "sender",
-          "score" : 4.0793530521627137E-4
+          "id": "akka/stream/Attributes.none.",
+          "label": "none",
+          "score": 9.21836081239726E-4
         }
       ]
     },
     {
-      "id" : "eigenvector",
-      "description" : "eigenvector Centrality",
-      "nodes" : [
+      "id": "eigenvector",
+      "description": "Eigenvector centrality",
+      "nodes": [
         {
-          "id" : "akka/actor/typed/delivery/internal/ProducerControllerImpl#active().(s)",
-          "label" : "s",
-          "score" : 0.35860840052800325
+          "id": "akka/actor/typed/delivery/internal/WorkPullingProducerControllerImpl#context.",
+          "label": "context",
+          "score": 0.35964090805723486
         },
         {
-          "id" : "akka/actor/typed/delivery/internal/ProducerControllerImpl#context.",
-          "label" : "context",
-          "score" : 0.2857787882548078
+          "id": "akka/actor/typed/delivery/internal/WorkPullingProducerControllerImpl#durableQueue.",
+          "label": "durableQueue",
+          "score": 0.2797335057865637
         },
         {
-          "id" : "akka/actor/typed/scaladsl/ActorContext#log().",
-          "label" : "log",
-          "score" : 0.2539203576004126
+          "id": "akka/actor/typed/delivery/internal/WorkPullingProducerControllerImpl.State#currentSeqNr.",
+          "label": "currentSeqNr",
+          "score": 0.2775447878964012
         },
         {
-          "id" : "akka/actor/typed/delivery/internal/ProducerControllerImpl.State#currentSeqNr.",
-          "label" : "currentSeqNr",
-          "score" : 0.23148080630022247
+          "id": "akka/actor/typed/scaladsl/ActorContext#log().",
+          "label": "log",
+          "score": 0.2633957080252159
         },
         {
-          "id" : "akka/actor/typed/delivery/internal/ProducerControllerImpl#producerId.",
-          "label" : "producerId",
-          "score" : 0.22100811652457866
+          "id": "akka/actor/typed/scaladsl/Behaviors.same().",
+          "label": "same",
+          "score": 0.24412065944791145
         },
         {
-          "id" : "akka/actor/typed/delivery/internal/ProducerControllerImpl.State#copy().",
-          "label" : "copy",
-          "score" : 0.21456563722729
+          "id": "akka/actor/typed/ActorRef.ActorRefOps#`!`().",
+          "label": "!",
+          "score": 0.2095175395919297
         },
         {
-          "id" : "akka/actor/typed/delivery/internal/ProducerControllerImpl#flightRecorder.",
-          "label" : "flightRecorder",
-          "score" : 0.20202507697631114
+          "id": "akka/actor/typed/delivery/internal/WorkPullingProducerControllerImpl#stashBuffer.",
+          "label": "stashBuffer",
+          "score": 0.17260152484702873
         },
         {
-          "id" : "akka/actor/typed/delivery/internal/ProducerControllerImpl.State#unconfirmed.",
-          "label" : "unconfirmed",
-          "score" : 0.17763423357529454
+          "id": "local58:akka-actor-typed/src/main/scala/akka/actor/typed/delivery/internal/WorkPullingProducerControllerImpl.scala",
+          "label": "onMessage",
+          "score": 0.16522900142753383
         },
         {
-          "id" : "akka/actor/typed/delivery/internal/ProducerControllerImpl#active().",
-          "label" : "active",
-          "score" : 0.16474927498071723
+          "id": "local277:akka-actor-typed/src/main/scala/akka/actor/typed/delivery/internal/WorkPullingProducerControllerImpl.scala",
+          "label": "msg",
+          "score": 0.15774128232960932
         },
         {
-          "id" : "akka/actor/typed/delivery/ConsumerController.SequencedMessage#message.",
-          "label" : "message",
-          "score" : 0.13656560856798886
+          "id": "local281:akka-actor-typed/src/main/scala/akka/actor/typed/delivery/internal/WorkPullingProducerControllerImpl.scala",
+          "label": "replyTo",
+          "score": 0.15774128232960932
         }
       ]
     },
     {
-      "id" : "Katz",
-      "description" : "Katz Centrality - how influential the node is",
-      "nodes" : [
+      "id": "Katz",
+      "description": "Katz centrality",
+      "nodes": [
         {
-          "id" : "akka/stream/stage/GraphStageLogic#pull().",
-          "label" : "pull",
-          "score" : 8.896971139999888
+          "id": "akka/stream/stage/GraphStageLogic#pull().",
+          "label": "pull",
+          "score": 16.449354311099786
         },
         {
-          "id" : "akka/actor/ActorRef#`!`().",
-          "label" : "!",
-          "score" : 8.83707764999993
+          "id": "akka/actor/ActorRef#`!`().",
+          "label": "!",
+          "score": 12.483060668499851
         },
         {
-          "id" : "akka/stream/stage/GraphStageLogic#completeStage().",
-          "label" : "completeStage",
-          "score" : 5.821633189999958
+          "id": "akka/actor/Actor#context.",
+          "label": "context",
+          "score": 8.701743857799965
         },
         {
-          "id" : "akka/actor/Actor#context.",
-          "label" : "context",
-          "score" : 5.661884029999979
+          "id": "akka/stream/stage/GraphStageLogic#completeStage().",
+          "label": "completeStage",
+          "score": 6.255672302899951
         },
         {
-          "id" : "akka/actor/Actor#self.",
-          "label" : "self",
-          "score" : 4.406352369999985
+          "id": "akka/actor/Actor#sender().",
+          "label": "sender",
+          "score": 6.101088611399955
         },
         {
-          "id" : "akka/actor/Actor#sender().",
-          "label" : "sender",
-          "score" : 3.9915713599999862
+          "id": "akka/stream/stage/GraphStageLogic#push().",
+          "label": "push",
+          "score": 6.071759270799956
         },
         {
-          "id" : "akka/util/JavaDurationConverters.JavaDurationOps#asScala().",
-          "label" : "asScala",
-          "score" : 3.906714019999984
+          "id": "akka/stream/stage/GraphStageLogic#grab().",
+          "label": "grab",
+          "score": 5.855604040299977
         },
         {
-          "id" : "akka/stream/impl/ContextPropagation#suspendContext().",
-          "label" : "suspendContext",
-          "score" : 3.810199999999984
+          "id": "akka/stream/scaladsl/GraphDSL.Builder#add(+2).",
+          "label": "add",
+          "score": 5.6939551046999854
         },
         {
-          "id" : "akka/stream/stage/GraphStageLogic#cancelStage().",
-          "label" : "cancelStage",
-          "score" : 3.730211009999986
+          "id": "akka/actor/Actor#self.",
+          "label": "self",
+          "score": 5.511330917799975
         },
         {
-          "id" : "akka/stream/stage/GraphStageLogic#push().",
-          "label" : "push",
-          "score" : 3.5502431499999942
+          "id": "akka/actor/ActorLogging#log().",
+          "label": "log",
+          "score": 5.131343932399987
         }
       ]
     },
     {
-      "id" : "betweenness",
-      "description" : "Betweenness Centrality",
-      "nodes" : [
+      "id": "betweenness",
+      "description": "Betweenness centrality",
+      "nodes": [
         {
-          "id" : "akka/stream/stage/GraphStageLogic#internalCompleteStage().",
-          "label" : "internalCompleteStage",
-          "score" : 175368.24999999997
+          "id": "akka/stream/stage/GraphStageLogic#internalCompleteStage().",
+          "label": "internalCompleteStage",
+          "score": 137377.61025458624
         },
         {
-          "id" : "akka/stream/stage/GraphStageLogic#completeStage().",
-          "label" : "completeStage",
-          "score" : 119058.8666666666
+          "id": "akka/stream/stage/GraphStageLogic#completeStage().",
+          "label": "completeStage",
+          "score": 93594.42858054134
         },
         {
-          "id" : "akka/stream/stage/GraphStageLogic#cancel(+2).",
-          "label" : "cancel",
-          "score" : 66785.66666666669
+          "id": "akka/stream/stage/GraphStageLogic#cancel(+2).",
+          "label": "cancel",
+          "score": 48075.893650793645
         },
         {
-          "id" : "akka/stream/impl/LinearTraversalBuilder.fromBuilder().",
-          "label" : "fromBuilder",
-          "score" : 58635.445238095264
+          "id": "akka/stream/impl/LinearTraversalBuilder.fromBuilder().",
+          "label": "fromBuilder",
+          "score": 39870.720390639195
         },
         {
-          "id" : "akka/stream/scaladsl/Source.fromGraph().",
-          "label" : "fromGraph",
-          "score" : 43834.03863636366
+          "id": "akka/stream/stage/GraphStageLogic#cleanUpSubstreams().",
+          "label": "cleanUpSubstreams",
+          "score": 35752.428571428565
         },
         {
-          "id" : "akka/stream/stage/GraphStageLogic#cleanUpSubstreams().",
-          "label" : "cleanUpSubstreams",
-          "score" : 41055.0
+          "id": "akka/stream/stage/GraphStageLogic#pull().",
+          "label": "pull",
+          "score": 32781.734764212655
         },
         {
-          "id" : "akka/stream/stage/GraphStageLogic#cancelStage().",
-          "label" : "cancelStage",
-          "score" : 39219.7
+          "id": "akka/stream/scaladsl/Source.fromGraph().",
+          "label": "fromGraph",
+          "score": 30731.284490770024
         },
         {
-          "id" : "akka/stream/stage/GraphStageLogic#pull().",
-          "label" : "pull",
-          "score" : 38157.816666666666
+          "id": "akka/stream/stage/GraphStageLogic#cancelStage().",
+          "label": "cancelStage",
+          "score": 30047.670282658517
         },
         {
-          "id" : "akka/stream/stage/GraphStageLogic#internalCancelStage().",
-          "label" : "internalCancelStage",
-          "score" : 34603.36666666667
+          "id": "akka/stream/stage/GraphStageLogic#internalCancelStage().",
+          "label": "internalCancelStage",
+          "score": 26943.870282658514
         },
         {
-          "id" : "akka/stream/impl/LinearTraversalBuilder#append(+1).",
-          "label" : "append",
-          "score" : 28453.601515151604
+          "id": "akka/stream/impl/LinearTraversalBuilder#append(+1).",
+          "label": "append",
+          "score": 21802.762894845357
         }
       ]
     },
     {
-      "id" : "harmonic",
-      "description" : "Top harmonic centrality",
-      "nodes" : [
+      "id": "harmonic",
+      "description": "Harmonic centrality",
+      "nodes": [
         {
-          "id" : "akka/cluster/ClusterCoreDaemon#initialized().",
-          "label" : "initialized",
-          "score" : 0.0028710246228374316
+          "id": "akka/cluster/ClusterCoreDaemon#initialized().",
+          "label": "initialized",
+          "score": 0.0034452594528025593
         },
         {
-          "id" : "akka/remote/artery/tcp/ArteryTcpTransport#runInboundStreams().",
-          "label" : "runInboundStreams",
-          "score" : 0.0025788323070429463
+          "id": "akka/remote/artery/tcp/ArteryTcpTransport#runInboundStreams().",
+          "label": "runInboundStreams",
+          "score": 0.003129028789050339
         },
         {
-          "id" : "akka/cluster/ClusterCoreDaemon#join().",
-          "label" : "join",
-          "score" : 0.0024175663049494397
+          "id": "akka/remote/artery/Association#runOutboundOrdinaryMessagesStream().",
+          "label": "runOutboundOrdinaryMessagesStream",
+          "score": 0.0028981856702761824
         },
         {
-          "id" : "akka/remote/artery/Association#runOutboundOrdinaryMessagesStream().",
-          "label" : "runOutboundOrdinaryMessagesStream",
-          "score" : 0.0024175345679451135
+          "id": "akka/cluster/ClusterCoreDaemon#join().",
+          "label": "join",
+          "score": 0.00288373348718176
         },
         {
-          "id" : "akka/remote/artery/aeron/ArteryAeronUdpTransport#runInboundOrdinaryMessagesStream().",
-          "label" : "runInboundOrdinaryMessagesStream",
-          "score" : 0.002318837589027396
+          "id": "akka/remote/artery/aeron/ArteryAeronUdpTransport#runInboundOrdinaryMessagesStream().",
+          "label": "runInboundOrdinaryMessagesStream",
+          "score": 0.002799487996147475
         },
         {
-          "id" : "akka/remote/artery/Association#runOutboundControlStream().",
-          "label" : "runOutboundControlStream",
-          "score" : 0.0022741362033741053
+          "id": "akka/remote/artery/Association#runOutboundControlStream().",
+          "label": "runOutboundControlStream",
+          "score": 0.0027428926001124227
         },
         {
-          "id" : "akka/cluster/ClusterCoreDaemon#becomeInitialized().",
-          "label" : "becomeInitialized",
-          "score" : 0.0022227927830334214
+          "id": "akka/remote/artery/tcp/ArteryTcpTransport#runInboundOrdinaryMessagesStream().",
+          "label": "runInboundOrdinaryMessagesStream",
+          "score": 0.0026961494499209994
         },
         {
-          "id" : "akka/remote/artery/tcp/ArteryTcpTransport#runInboundOrdinaryMessagesStream().",
-          "label" : "runInboundOrdinaryMessagesStream",
-          "score" : 0.0022214287083390932
+          "id": "akka/cluster/ClusterCoreDaemon#becomeInitialized().",
+          "label": "becomeInitialized",
+          "score": 0.002619716776505564
         },
         {
-          "id" : "akka/cluster/ClusterCoreDaemon#tryingToJoin().",
-          "label" : "tryingToJoin",
-          "score" : 0.002126074422621166
+          "id": "akka/remote/artery/CodecBenchmark#setupTrial().",
+          "label": "setupTrial",
+          "score": 0.00260824633130668
         },
         {
-          "id" : "akka/cluster/ClusterCoreDaemon#uninitialized().",
-          "label" : "uninitialized",
-          "score" : 0.0021083017001955447
+          "id": "local19:akka-actor/src/main/scala/akka/actor/ActorCell.scala",
+          "label": "invokeAll",
+          "score": 0.0025822428031479746
         }
       ]
     },
     {
-      "id" : "combined",
-      "description" : "Crucial code elements, combined",
-      "nodes" : [
+      "id": "combined",
+      "description": "Combined importance",
+      "nodes": [
         {
-          "id" : "akka/stream/stage/GraphStageLogic#pull().",
-          "label" : "pull",
-          "score" : 4.0
+          "id": "akka/stream/stage/GraphStageLogic#pull().",
+          "label": "pull",
+          "score": 4
         },
         {
-          "id" : "akka/stream/stage/GraphStageLogic#completeStage().",
-          "label" : "completeStage",
-          "score" : 4.0
+          "id": "akka/stream/stage/GraphStageLogic#completeStage().",
+          "label": "completeStage",
+          "score": 4
         },
         {
-          "id" : "akka/actor/ActorRef#`!`().",
-          "label" : "!",
-          "score" : 3.0
+          "id": "akka/actor/Actor#context.",
+          "label": "context",
+          "score": 3
         },
         {
-          "id" : "akka/util/JavaDurationConverters.JavaDurationOps#asScala().",
-          "label" : "asScala",
-          "score" : 3.0
+          "id": "akka/actor/ActorRef#`!`().",
+          "label": "!",
+          "score": 3
         },
         {
-          "id" : "akka/stream/stage/GraphStageLogic#cancelStage().",
-          "label" : "cancelStage",
-          "score" : 3.0
+          "id": "akka/stream/stage/GraphStageLogic#grab().",
+          "label": "grab",
+          "score": 2
         },
         {
-          "id" : "akka/actor/Actor#context.",
-          "label" : "context",
-          "score" : 3.0
+          "id": "akka/stream/scaladsl/GraphDSL.Builder#add(+2).",
+          "label": "add",
+          "score": 2
         },
         {
-          "id" : "akka/actor/Actor#sender().",
-          "label" : "sender",
-          "score" : 3.0
+          "id": "akka/remote/artery/CodecBenchmark#setupTrial().",
+          "label": "setupTrial",
+          "score": 2
         },
         {
-          "id" : "akka/actor/typed/delivery/internal/ProducerControllerImpl#active().",
-          "label" : "active",
-          "score" : 2.0
+          "id": "akka/stream/stage/GraphStageLogic#internalCompleteStage().",
+          "label": "internalCompleteStage",
+          "score": 2
         },
         {
-          "id" : "akka/stream/stage/GraphStageLogic#internalCompleteStage().",
-          "label" : "internalCompleteStage",
-          "score" : 2.0
+          "id": "akka/stream/stage/GraphStageLogic#push().",
+          "label": "push",
+          "score": 2
         },
         {
-          "id" : "akka/stream/impl/ContextPropagation#suspendContext().",
-          "label" : "suspendContext",
-          "score" : 2.0
-        },
-        {
-          "id" : "akka/stream/stage/GraphStageLogic#push().",
-          "label" : "push",
-          "score" : 2.0
-        },
-        {
-          "id" : "akka/actor/Actor#self.",
-          "label" : "self",
-          "score" : 2.0
-        },
-        {
-          "id" : "akka/remote/artery/Association#runOutboundOrdinaryMessagesStream().",
-          "label" : "runOutboundOrdinaryMessagesStream",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/cluster/ClusterCoreDaemon#join().",
-          "label" : "join",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/stream/scaladsl/GraphApply#createGraph(+21).",
-          "label" : "createGraph",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/actor/typed/delivery/internal/WorkPullingProducerControllerImpl#active().",
-          "label" : "active",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/stream/scaladsl/UnzipWith19#createLogic().",
-          "label" : "createLogic",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/stream/stage/GraphStageLogic#internalCancelStage().",
-          "label" : "internalCancelStage",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/cluster/ClusterCoreDaemon#tryingToJoin().",
-          "label" : "tryingToJoin",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/remote/artery/tcp/ArteryTcpTransport#runInboundStreams().",
-          "label" : "runInboundStreams",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/remote/artery/aeron/ArteryAeronUdpTransport#runInboundOrdinaryMessagesStream().",
-          "label" : "runInboundOrdinaryMessagesStream",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/cluster/sharding/ClusterShardingGuardian#receive().",
-          "label" : "receive",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/util/JavaDurationConverters.JavaDurationOps#self.",
-          "label" : "self",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/stream/stage/GraphStageLogic#cleanUpSubstreams().",
-          "label" : "cleanUpSubstreams",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/cluster/ClusterCoreDaemon#uninitialized().",
-          "label" : "uninitialized",
-          "score" : 1.0
-        },
-        {
-          "id" : "local5:akka-cluster-typed/src/main/scala/akka/cluster/ddata/typed/internal/ReplicatorBehavior.scala",
-          "label" : "withState",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/stream/scaladsl/GraphApply#create(+22).",
-          "label" : "create",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/actor/typed/delivery/internal/ProducerControllerImpl#context.",
-          "label" : "context",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/stream/scaladsl/UnzipWith18#createLogic().",
-          "label" : "createLogic",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/actor/typed/delivery/internal/ProducerControllerImpl.State#unconfirmed.",
-          "label" : "unconfirmed",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/stream/scaladsl/UnzipWith20#createLogic().",
-          "label" : "createLogic",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/stream/scaladsl/ZipWith22#createLogic().",
-          "label" : "createLogic",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/cluster/sharding/ShardCoordinator#active().",
-          "label" : "active",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/stream/scaladsl/GraphApply#createGraph(+19).",
-          "label" : "createGraph",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/stream/impl/LinearTraversalBuilder#append(+1).",
-          "label" : "append",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/cluster/ClusterCoreDaemon#initialized().",
-          "label" : "initialized",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/actor/typed/delivery/internal/ProducerControllerImpl.State#copy().",
-          "label" : "copy",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/stream/scaladsl/UnzipWith21#createLogic().",
-          "label" : "createLogic",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/stream/scaladsl/GraphApply#createGraph(+20).",
-          "label" : "createGraph",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/actor/typed/delivery/internal/ProducerControllerImpl.State#currentSeqNr.",
-          "label" : "currentSeqNr",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/remote/artery/Association#runOutboundControlStream().",
-          "label" : "runOutboundControlStream",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/actor/typed/scaladsl/ActorContext#log().",
-          "label" : "log",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/stream/Attributes.name().",
-          "label" : "name",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/remote/artery/tcp/ArteryTcpTransport#runInboundOrdinaryMessagesStream().",
-          "label" : "runInboundOrdinaryMessagesStream",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/stream/impl/LinearTraversalBuilder.fromBuilder().",
-          "label" : "fromBuilder",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/cluster/pubsub/DistributedPubSubMediator#receive().",
-          "label" : "receive",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/stream/scaladsl/GraphApply#create(+21).",
-          "label" : "create",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/stream/stage/GraphStageLogic#cancel(+2).",
-          "label" : "cancel",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/util/OptionVal.None.",
-          "label" : "None",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/actor/typed/delivery/internal/ProducerControllerImpl#flightRecorder.",
-          "label" : "flightRecorder",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/actor/typed/delivery/ConsumerController.SequencedMessage#message.",
-          "label" : "message",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/stream/scaladsl/GraphApply#create(+20).",
-          "label" : "create",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/stream/scaladsl/UnzipWith22#createLogic().",
-          "label" : "createLogic",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/actor/typed/delivery/internal/ProducerControllerImpl#producerId.",
-          "label" : "producerId",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/stream/scaladsl/UnzipWith17#createLogic().",
-          "label" : "createLogic",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/actor/typed/delivery/internal/ProducerControllerImpl#active().(s)",
-          "label" : "s",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/stream/impl/streamref/SourceRefStageImpl#createLogicAndMaterializedValue(+1).",
-          "label" : "createLogicAndMaterializedValue",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/stream/scaladsl/Source.fromGraph().",
-          "label" : "fromGraph",
-          "score" : 1.0
-        },
-        {
-          "id" : "akka/cluster/ClusterCoreDaemon#becomeInitialized().",
-          "label" : "becomeInitialized",
-          "score" : 1.0
+          "id": "akka/actor/Actor#self.",
+          "label": "self",
+          "score": 2
         }
       ]
-    }
-  ],
-  "graphStats" : [
-    {
-      "id" : "average_node_degree",
-      "label" : "Average Graph Degree",
-      "score" : 2.9082986941819593
-    },
-    {
-      "id" : "clustering_coefficient",
-      "label" : "Average Clustering Coefficient",
-      "score" : 0.01949848556725153
     }
   ]
 }

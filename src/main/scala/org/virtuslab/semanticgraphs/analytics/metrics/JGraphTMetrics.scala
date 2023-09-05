@@ -2,9 +2,13 @@ package org.virtuslab.semanticgraphs.analytics.metrics
 
 import com.virtuslab.semanticgraphs.proto.model.graphnode.GraphNode
 import org.jgrapht.alg.clustering.{GirvanNewmanClustering, KSpanningTreeClustering, LabelPropagationClustering}
-import org.jgrapht.alg.connectivity.{BiconnectivityInspector, ConnectivityInspector, KosarajuStrongConnectivityInspector}
+import org.jgrapht.alg.connectivity.{
+  BiconnectivityInspector,
+  ConnectivityInspector,
+  KosarajuStrongConnectivityInspector
+}
 import org.jgrapht.alg.scoring.{BetweennessCentrality, ClusteringCoefficient}
-import org.jgrapht.alg.shortestpath.{BFSShortestPath, GraphMeasurer}
+import org.jgrapht.alg.shortestpath.{BFSShortestPath, DijkstraShortestPath, GraphMeasurer, JohnsonShortestPaths}
 import org.jgrapht.graph.{AsUndirectedGraph, DefaultEdge}
 import org.jgrapht.graph.builder.GraphTypeBuilder
 import org.jgrapht.{Graph, GraphMetrics}
@@ -88,6 +92,11 @@ object JGraphTMetrics:
     val V = graph.vertexSet().size().toDouble
     E / (V * (V - 1))
 
+  def averageDegree(graph: Graph[String, LabeledEdge]): Double =
+    val E = graph.edgeSet().size().toDouble
+    val V = graph.vertexSet().size().toDouble
+    E / V
+
   def assortativityCoefficient(graph: Graph[String, LabeledEdge]): Double =
     val edgeCount = graph.edgeSet.size
     var n1, n2, dn = 0.0
@@ -127,16 +136,12 @@ object JGraphTMetrics:
       new AsUndirectedGraph(undirectedGraph)
     ).getGlobalClusteringCoefficient
 
-  def averageDegree(graph: Graph[String, LabeledEdge]): Double =
-    val nodes = graph.vertexSet().asScala.toList.map(v => graph.degreeOf(v)).filter(_ > 0)
-    nodes.sum / nodes.size.toDouble
-
   def averageOutDegree(graph: Graph[String, LabeledEdge]): Double =
-    val nodes = graph.vertexSet().asScala.toList.map(v => graph.outDegreeOf(v)).filter(_ > 0)
+    val nodes = graph.vertexSet().asScala.toList.map(v => graph.outDegreeOf(v))
     nodes.sum / nodes.size.toDouble
 
   def averageInDegree(graph: Graph[String, LabeledEdge]): Double =
-    val nodes = graph.vertexSet().asScala.toList.map(v => graph.inDegreeOf(v)).filter(_ > 0)
+    val nodes = graph.vertexSet().asScala.toList.map(v => graph.inDegreeOf(v))
     nodes.sum / nodes.size.toDouble
 
   def median(graph: Graph[String, LabeledEdge]): Double =
@@ -152,3 +157,14 @@ object JGraphTMetrics:
 
   def radius(graph: Graph[String, LabeledEdge]): Double =
     new GraphMeasurer[String, LabeledEdge](graph, new BFSShortestPath[String, LabeledEdge](graph)).getRadius
+
+  case class DistanceBasedMetrics(radius: Double, diameter: Double)
+
+  def distanceBasedMetrics(graph: Graph[String, LabeledEdge]): DistanceBasedMetrics = {
+    val undirected = new AsUndirectedGraph(graph)
+    val graphMeasurer =
+      new GraphMeasurer[String, LabeledEdge](undirected, new DijkstraShortestPath[String, LabeledEdge](undirected))
+    val radius = graphMeasurer.getRadius
+    val diameter = graphMeasurer.getDiameter
+    DistanceBasedMetrics(radius, diameter)
+  }

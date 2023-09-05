@@ -1,767 +1,510 @@
 {
-  "projectName" : "spring-boot",
-  "workspace" : "data/spring-boot",
-  "stats" : [
+  "projectName": "spring-boot",
+  "workspace": "data/spring-boot.zip",
+  "stats": [
     {
-      "id" : "loc",
-      "description" : "Top by node LOC size",
-      "nodes" : [
+      "id": "loc",
+      "description": "Lines of code",
+      "nodes": [
         {
-          "id" : "org.springframework.boot.autoconfigure.web.ServerProperties",
-          "label" : "ServerProperties",
-          "score" : 1757.0
+          "id": "org.springframework.boot.autoconfigure.web.ServerProperties",
+          "label": "ServerProperties",
+          "score": 1757
         },
         {
-          "id" : "org.springframework.boot.autoconfigure.kafka.KafkaProperties",
-          "label" : "KafkaProperties",
-          "score" : 1485.0
+          "id": "org.springframework.boot.autoconfigure.kafka.KafkaProperties",
+          "label": "KafkaProperties",
+          "score": 1485
         },
         {
-          "id" : "org.springframework.boot.SpringApplication",
-          "label" : "SpringApplication",
-          "score" : 1306.0
+          "id": "org.springframework.boot.SpringApplication",
+          "label": "SpringApplication",
+          "score": 1306
         },
         {
-          "id" : "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
-          "label" : "RabbitProperties",
-          "score" : 1197.0
+          "id": "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
+          "label": "RabbitProperties",
+          "score": 1197
         },
         {
-          "id" : "org.springframework.boot.test.json.JsonContentAssert",
-          "label" : "JsonContentAssert",
-          "score" : 1104.0
+          "id": "org.springframework.boot.test.json.JsonContentAssert",
+          "label": "JsonContentAssert",
+          "score": 1104
         },
         {
-          "id" : "org.springframework.boot.context.properties.source.ConfigurationPropertyName",
-          "label" : "ConfigurationPropertyName",
-          "score" : 1042.0
+          "id": "org.springframework.boot.context.properties.source.ConfigurationPropertyName",
+          "label": "ConfigurationPropertyName",
+          "score": 1042
         },
         {
-          "id" : "org.springframework.boot.test.web.client.TestRestTemplate",
-          "label" : "TestRestTemplate",
-          "score" : 991.0
+          "id": "org.springframework.boot.test.web.client.TestRestTemplate",
+          "label": "TestRestTemplate",
+          "score": 991
         },
         {
-          "id" : "org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory",
-          "label" : "TomcatServletWebServerFactory",
-          "score" : 846.0
+          "id": "org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory",
+          "label": "TomcatServletWebServerFactory",
+          "score": 846
         },
         {
-          "id" : "org.springframework.boot.autoconfigure.flyway.FlywayProperties",
-          "label" : "FlywayProperties",
-          "score" : 803.0
+          "id": "org.springframework.boot.autoconfigure.flyway.FlywayProperties",
+          "label": "FlywayProperties",
+          "score": 803
         },
         {
-          "id" : "org.springframework.boot.configurationprocessor.json.JSONObject",
-          "label" : "JSONObject",
-          "score" : 761.0
+          "id": "org.springframework.boot.configurationprocessor.json.JSONObject",
+          "label": "JSONObject",
+          "score": 761
         }
       ]
     },
     {
-      "id" : "out-degree",
-      "description" : "Top by node degree outgoing",
-      "nodes" : [
+      "id": "out-degree",
+      "description": "Node out-degree",
+      "nodes": [
         {
-          "id" : "org.springframework.boot.autoconfigure.flyway.FlywayProperties",
-          "label" : "FlywayProperties",
-          "score" : 180.0
+          "id": "org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayConfiguration.configureProperties(org.flywaydb.core.api.configuration.FluentConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayProperties)",
+          "label": "configureProperties",
+          "score": 300
         },
         {
-          "id" : "org.springframework.boot.SpringApplication",
-          "label" : "SpringApplication",
-          "score" : 126.0
+          "id": "org.springframework.boot.autoconfigure.flyway.FlywayProperties",
+          "label": "FlywayProperties",
+          "score": 180
         },
         {
-          "id" : "org.springframework.boot.autoconfigure.web.embedded.TomcatWebServerFactoryCustomizer.customize(org.springframework.boot.web.embedded.tomcat.ConfigurableTomcatWebServerFactory)",
-          "label" : "customize",
-          "score" : 82.0
+          "id": "org.springframework.boot.autoconfigure.web.embedded.TomcatWebServerFactoryCustomizer.customize(org.springframework.boot.web.embedded.tomcat.ConfigurableTomcatWebServerFactory)",
+          "label": "customize",
+          "score": 155
         },
         {
-          "id" : "org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayConfiguration.configureProperties(org.flywaydb.core.api.configuration.FluentConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayProperties)",
-          "label" : "configureProperties",
-          "score" : 81.0
+          "id": "org.springframework.boot.web.embedded.tomcat.TldPatterns",
+          "label": "TldPatterns",
+          "score": 153
         },
         {
-          "id" : "org.springframework.boot.test.json.JsonContentAssert",
-          "label" : "JsonContentAssert",
-          "score" : 79.0
+          "id": "org.springframework.boot.SpringApplication",
+          "label": "SpringApplication",
+          "score": 126
         },
         {
-          "id" : "org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory",
-          "label" : "TomcatServletWebServerFactory",
-          "score" : 78.0
+          "id": "org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(org.springframework.context.annotation.ConditionContext, org.springframework.core.type.AnnotatedTypeMetadata)",
+          "label": "getMatchOutcome",
+          "score": 119
         },
         {
-          "id" : "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
-          "label" : "RabbitProperties",
-          "score" : 62.0
+          "id": "org.springframework.boot.autoconfigure.amqp.RabbitConnectionFactoryBeanConfigurer.configure(org.springframework.amqp.rabbit.connection.RabbitConnectionFactoryBean)",
+          "label": "configure",
+          "score": 116
         },
         {
-          "id" : "org.springframework.boot.autoconfigure.web.ServerProperties.Tomcat",
-          "label" : "Tomcat",
-          "score" : 61.0
+          "id": "org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryCustomizer.customize(org.springframework.boot.web.servlet.server.ConfigurableServletWebServerFactory)",
+          "label": "customize",
+          "score": 97
         },
         {
-          "id" : "org.springframework.boot.devtools.restart.Restarter",
-          "label" : "Restarter",
-          "score" : 61.0
+          "id": "org.springframework.boot.cli.command.init.InitCommand.InitOptionHandler.createProjectGenerationRequest(joptsimple.OptionSet)",
+          "label": "createProjectGenerationRequest",
+          "score": 94
         },
         {
-          "id" : "org.springframework.boot.loader.jar.JarFile",
-          "label" : "JarFile",
-          "score" : 61.0
+          "id": "org.springframework.boot.autoconfigure.web.embedded.TomcatWebServerFactoryCustomizer.customizeAccessLog(org.springframework.boot.web.embedded.tomcat.ConfigurableTomcatWebServerFactory)",
+          "label": "customizeAccessLog",
+          "score": 94
         }
       ]
     },
     {
-      "id" : "in-degree",
-      "description" : "Top by node degree incoming",
-      "nodes" : [
+      "id": "in-degree",
+      "description": "Node in-degree",
+      "nodes": [
         {
-          "id" : "org.springframework.boot.context.properties.source.ConfigurationPropertyName",
-          "label" : "ConfigurationPropertyName",
-          "score" : 259.0
+          "id": "org.springframework.boot.context.properties.PropertyMapper.from(java.util.function.Supplier<T>)",
+          "label": "from",
+          "score": 330
         },
         {
-          "id" : "T",
-          "label" : "T",
-          "score" : 179.0
+          "id": "org.springframework.boot.context.properties.source.ConfigurationPropertyName",
+          "label": "ConfigurationPropertyName",
+          "score": 272
         },
         {
-          "id" : "org.springframework.boot.context.properties.PropertyMapper.get()",
-          "label" : "get",
-          "score" : 162.0
+          "id": "org.springframework.boot.context.properties.PropertyMapper.Source.to(java.util.function.Consumer<T>)",
+          "label": "to",
+          "score": 237
         },
         {
-          "id" : "org.springframework.boot.autoconfigure.condition.ConditionOutcome",
-          "label" : "ConditionOutcome",
-          "score" : 135.0
+          "id": "org.springframework.boot.context.properties.PropertyMapper.from(T)",
+          "label": "from",
+          "score": 183
         },
         {
-          "id" : "org.springframework.boot.context.properties.bind.Bindable",
-          "label" : "Bindable",
-          "score" : 121.0
+          "id": "T",
+          "label": "T",
+          "score": 179
         },
         {
-          "id" : "org.springframework.boot.context.properties.PropertyMapper.alwaysApplyingWhenNonNull()",
-          "label" : "alwaysApplyingWhenNonNull",
-          "score" : 117.0
+          "id": "org.springframework.boot.context.properties.PropertyMapper.get()",
+          "label": "get",
+          "score": 163
         },
         {
-          "id" : "org.springframework.boot.actuate.autoconfigure.metrics.export.properties.PropertiesConfigAdapter.get(java.util.function.Function<T, V>, java.util.function.Supplier<V>)",
-          "label" : "get",
-          "score" : 116.0
+          "id": "org.springframework.boot.autoconfigure.condition.ConditionOutcome",
+          "label": "ConditionOutcome",
+          "score": 135
         },
         {
-          "id" : "org.springframework.boot.maven.MavenBuild",
-          "label" : "MavenBuild",
-          "score" : 106.0
+          "id": "org.springframework.boot.context.properties.bind.Bindable",
+          "label": "Bindable",
+          "score": 121
         },
         {
-          "id" : "org.springframework.boot.context.properties.source.ConfigurationPropertySource",
-          "label" : "ConfigurationPropertySource",
-          "score" : 104.0
+          "id": "org.springframework.boot.context.properties.PropertyMapper.alwaysApplyingWhenNonNull()",
+          "label": "alwaysApplyingWhenNonNull",
+          "score": 118
         },
         {
-          "id" : "org.springframework.boot.maven.MavenBuild.project(java.lang.String)",
-          "label" : "project",
-          "score" : 100.0
+          "id": "org.springframework.boot.actuate.autoconfigure.metrics.export.properties.PropertiesConfigAdapter.get(java.util.function.Function<T, V>, java.util.function.Supplier<V>)",
+          "label": "get",
+          "score": 116
         }
       ]
     },
     {
-      "id" : "pagerank",
-      "description" : "PageRank - how influential the node is",
-      "nodes" : [
+      "id": "pagerank",
+      "description": "PageRank",
+      "nodes": [
         {
-          "id" : "org.springframework.boot.build.bom.bomr.version.DependencyVersion",
-          "label" : "DependencyVersion",
-          "score" : 0.0059164069017740555
+          "id": "org.springframework.boot.build.bom.bomr.version.DependencyVersion",
+          "label": "DependencyVersion",
+          "score": 0.005028502938984884
         },
         {
-          "id" : "org.springframework.boot.origin.Origin",
-          "label" : "Origin",
-          "score" : 0.0038017810489215835
+          "id": "org.springframework.boot.origin.Origin",
+          "label": "Origin",
+          "score": 0.0034774319745743093
         },
         {
-          "id" : "org.springframework.boot.context.properties.source.ConfigurationPropertyName",
-          "label" : "ConfigurationPropertyName",
-          "score" : 0.0030037552799542433
+          "id": "org.springframework.boot.context.properties.source.ConfigurationPropertyName",
+          "label": "ConfigurationPropertyName",
+          "score": 0.0029887979188014035
         },
         {
-          "id" : "org.springframework.boot.origin.Origin.from(java.lang.Object)",
-          "label" : "from",
-          "score" : 0.0015255198457655348
+          "id": "org.springframework.boot.origin.Origin.from(java.lang.Object)",
+          "label": "from",
+          "score": 0.0014253330922214136
         },
         {
-          "id" : "org.springframework.boot.build.bom.bomr.version.DependencyVersion.isNewerThan(org.springframework.boot.build.bom.bomr.version.DependencyVersion)",
-          "label" : "isNewerThan",
-          "score" : 0.0014816005374264074
+          "id": "org.springframework.boot.docs.data.sql.jooq.dslcontext.Tables.TAuthorRecord",
+          "label": "TAuthorRecord",
+          "score": 0.0014192626383722734
         },
         {
-          "id" : "org.springframework.boot.build.bom.bomr.version.DependencyVersion.isSameMajorAndNewerThan(org.springframework.boot.build.bom.bomr.version.DependencyVersion)",
-          "label" : "isSameMajorAndNewerThan",
-          "score" : 0.0014757158533755745
+          "id": "org.springframework.boot.docs.data.sql.jooq.dslcontext.Tables.TAuthorRecord.TAuthorRecord(org.jooq.Table<org.springframework.boot.docs.data.sql.jooq.dslcontext.Tables.TAuthorRecord>)",
+          "label": "TAuthorRecord",
+          "score": 0.0014106234594871644
         },
         {
-          "id" : "org.springframework.boot.build.bom.bomr.version.DependencyVersion.isSameMinorAndNewerThan(org.springframework.boot.build.bom.bomr.version.DependencyVersion)",
-          "label" : "isSameMinorAndNewerThan",
-          "score" : 0.0014753851072163108
+          "id": "org.springframework.boot.origin.Origin.getParent()",
+          "label": "getParent",
+          "score": 0.0012761820124970464
         },
         {
-          "id" : "org.springframework.boot.build.bom.bomr.version.DependencyVersion.parse(java.lang.String)",
-          "label" : "parse",
-          "score" : 0.0014748016903359897
+          "id": "org.springframework.boot.context.properties.source.ConfigurationPropertySource",
+          "label": "ConfigurationPropertySource",
+          "score": 0.0012725525281807855
         },
         {
-          "id" : "org.springframework.boot.build.bom.bomr.version.DependencyVersion.isNewerThan(org.springframework.boot.build.bom.bomr.version.DependencyVersion)!other",
-          "label" : "other",
-          "score" : 0.0014727070210275956
+          "id": "org.springframework.boot.build.bom.bomr.version.DependencyVersion.isNewerThan(org.springframework.boot.build.bom.bomr.version.DependencyVersion)",
+          "label": "isNewerThan",
+          "score": 0.001260028481259642
         },
         {
-          "id" : "org.springframework.boot.build.bom.bomr.version.DependencyVersion.isSameMajorAndNewerThan(org.springframework.boot.build.bom.bomr.version.DependencyVersion)!other",
-          "label" : "other",
-          "score" : 0.0014668811514335419
+          "id": "org.springframework.boot.build.bom.bomr.version.DependencyVersion.isSameMajorAndNewerThan(org.springframework.boot.build.bom.bomr.version.DependencyVersion)",
+          "label": "isSameMajorAndNewerThan",
+          "score": 0.0012566308222113083
         }
       ]
     },
     {
-      "id" : "eigenvector",
-      "description" : "eigenvector Centrality",
-      "nodes" : [
+      "id": "eigenvector",
+      "description": "Eigenvector centrality",
+      "nodes": [
         {
-          "id" : "org.springframework.boot.test.json.JsonContentAssert",
-          "label" : "JsonContentAssert",
-          "score" : 0.500504126457295
+          "id": "org.springframework.boot.buildpack.platform.docker.type.Regex.group(java.lang.CharSequence...)",
+          "label": "group",
+          "score": 0.5066198511716068
         },
         {
-          "id" : "org.springframework.boot.test.json.JsonContentAssert?loader@55.26:55.32",
-          "label" : "loader",
-          "score" : 0.4973470774248469
+          "id": "org.springframework.boot.buildpack.platform.docker.type.Regex",
+          "label": "Regex",
+          "score": 0.3571143251322794
         },
         {
-          "id" : "org.springframework.boot.test.json.JsonContentAssert.compare(java.lang.CharSequence, org.skyscreamer.jsonassert.comparator.JSONComparator)",
-          "label" : "compare",
-          "score" : 0.14565872094986115
+          "id": "org.springframework.boot.buildpack.platform.docker.type.Regex?component@40.8:40.17",
+          "label": "component",
+          "score": 0.2557633211171359
         },
         {
-          "id" : "org.springframework.boot.test.json.JsonContentAssert.assertNotPassed(org.skyscreamer.jsonassert.JSONCompareResult)",
-          "label" : "assertNotPassed",
-          "score" : 0.14565872094986115
+          "id": "org.springframework.boot.buildpack.platform.docker.type.Regex.of(java.lang.CharSequence...)",
+          "label": "of",
+          "score": 0.25200686075315537
         },
         {
-          "id" : "org.springframework.boot.test.json.JsonContentAssert.compare(java.lang.CharSequence, org.skyscreamer.jsonassert.JSONCompareMode)",
-          "label" : "compare",
-          "score" : 0.14565872094986115
+          "id": "org.springframework.boot.buildpack.platform.docker.type.Regex.oneOrMoreTimes()",
+          "label": "oneOrMoreTimes",
+          "score": 0.24855586865710225
         },
         {
-          "id" : "org.springframework.boot.test.json.JsonContentAssert.assertNotFailed(org.skyscreamer.jsonassert.JSONCompareResult)",
-          "label" : "assertNotFailed",
-          "score" : 0.14565872094986115
+          "id": "org.springframework.boot.buildpack.platform.docker.type.Regex.Regex(java.lang.CharSequence)",
+          "label": "Regex",
+          "score": 0.1928754271088123
         },
         {
-          "id" : "org.springframework.boot.test.json.JsonContentAssert.JsonPathValue.JsonPathValue(java.lang.CharSequence, java.lang.Object...)",
-          "label" : "JsonPathValue",
-          "score" : 0.10888516058418822
+          "id": "org.springframework.boot.test.json.JsonContentAssert",
+          "label": "JsonContentAssert",
+          "score": 0.16423250362941727
         },
         {
-          "id" : "org.springframework.boot.test.json.JsonLoader.getJson(java.io.InputStream)",
-          "label" : "getJson",
-          "score" : 0.09754880853226065
+          "id": "org.springframework.boot.test.json.JsonContentAssert?loader@55.26:55.32",
+          "label": "loader",
+          "score": 0.16319645998163848
         },
         {
-          "id" : "org.springframework.boot.test.json.JsonContentAssert.extractingJsonPathValue(java.lang.CharSequence, java.lang.Object[], java.lang.Class<T>, java.lang.String)",
-          "label" : "extractingJsonPathValue",
-          "score" : 0.09566102121017755
+          "id": "org.springframework.boot.buildpack.platform.docker.type.Regex.oneOf(java.lang.CharSequence...)",
+          "label": "oneOf",
+          "score": 0.15556104699896228
         },
         {
-          "id" : "org.springframework.boot.test.json.JsonContentAssert.compareForNull(java.lang.CharSequence)",
-          "label" : "compareForNull",
-          "score" : 0.09477266609975335
+          "id": "org.springframework.boot.buildpack.platform.docker.type.Regex?dotComponent@41.8:41.20",
+          "label": "dotComponent",
+          "score": 0.14520808834412946
         }
       ]
     },
     {
-      "id" : "Katz",
-      "description" : "Katz Centrality - how influential the node is",
-      "nodes" : [
+      "id": "Katz",
+      "description": "Katz centrality",
+      "nodes": [
         {
-          "id" : "org.springframework.boot.context.properties.source.ConfigurationPropertyName",
-          "label" : "ConfigurationPropertyName",
-          "score" : 3.6660773313
+          "id": "org.springframework.boot.context.properties.PropertyMapper.from(java.util.function.Supplier<T>)",
+          "label": "from",
+          "score": 4.390409208800003
         },
         {
-          "id" : "T",
-          "label" : "T",
-          "score" : 2.850462263299999
+          "id": "org.springframework.boot.context.properties.source.ConfigurationPropertyName",
+          "label": "ConfigurationPropertyName",
+          "score": 3.8194563038999996
         },
         {
-          "id" : "org.springframework.boot.context.properties.PropertyMapper.get()",
-          "label" : "get",
-          "score" : 2.6603813552999993
+          "id": "org.springframework.boot.context.properties.PropertyMapper.Source.to(java.util.function.Consumer<T>)",
+          "label": "to",
+          "score": 3.4168422863999983
         },
         {
-          "id" : "org.springframework.boot.autoconfigure.condition.ConditionOutcome",
-          "label" : "ConditionOutcome",
-          "score" : 2.3943488437999996
+          "id": "org.springframework.boot.context.properties.PropertyMapper.from(T)",
+          "label": "from",
+          "score": 2.871894987899999
         },
         {
-          "id" : "org.springframework.boot.context.properties.bind.Bindable",
-          "label" : "Bindable",
-          "score" : 2.2453965184999998
+          "id": "T",
+          "label": "T",
+          "score": 2.8557759168999994
         },
         {
-          "id" : "org.springframework.boot.context.properties.PropertyMapper.alwaysApplyingWhenNonNull()",
-          "label" : "alwaysApplyingWhenNonNull",
-          "score" : 2.2005848162
+          "id": "org.springframework.boot.context.properties.PropertyMapper.get()",
+          "label": "get",
+          "score": 2.7151615119
         },
         {
-          "id" : "org.springframework.boot.actuate.autoconfigure.metrics.export.properties.PropertiesConfigAdapter.get(java.util.function.Function<T, V>, java.util.function.Supplier<V>)",
-          "label" : "get",
-          "score" : 2.1727463560000015
+          "id": "org.springframework.boot.autoconfigure.condition.ConditionOutcome",
+          "label": "ConditionOutcome",
+          "score": 2.4049062022
         },
         {
-          "id" : "org.springframework.boot.maven.MavenBuild",
-          "label" : "MavenBuild",
-          "score" : 2.101675219600002
+          "id": "org.springframework.boot.context.properties.bind.Bindable",
+          "label": "Bindable",
+          "score": 2.2522662641999998
         },
         {
-          "id" : "org.springframework.boot.context.properties.source.ConfigurationPropertySource",
-          "label" : "ConfigurationPropertySource",
-          "score" : 2.0705811132999994
+          "id": "org.springframework.boot.context.properties.PropertyMapper.alwaysApplyingWhenNonNull()",
+          "label": "alwaysApplyingWhenNonNull",
+          "score": 2.2437023066000004
         },
         {
-          "id" : "org.springframework.boot.maven.MavenBuild.project(java.lang.String)",
-          "label" : "project",
-          "score" : 2.0215268274
+          "id": "org.springframework.boot.actuate.autoconfigure.metrics.export.properties.PropertiesConfigAdapter.get(java.util.function.Function<T, V>, java.util.function.Supplier<V>)",
+          "label": "get",
+          "score": 2.1727463560000015
         }
       ]
     },
     {
-      "id" : "betweenness",
-      "description" : "Betweenness Centrality",
-      "nodes" : [
+      "id": "betweenness",
+      "description": "Betweenness centrality",
+      "nodes": [
         {
-          "id" : "org.springframework.boot.context.properties.bind.Binder",
-          "label" : "Binder",
-          "score" : 1106274.8676790833
+          "id": "org.springframework.boot.context.properties.bind.Binder",
+          "label": "Binder",
+          "score": 1107362.7138406534
         },
         {
-          "id" : "org.springframework.boot.SpringApplication",
-          "label" : "SpringApplication",
-          "score" : 636641.9763361756
+          "id": "org.springframework.boot.SpringApplication",
+          "label": "SpringApplication",
+          "score": 635172.202087707
         },
         {
-          "id" : "org.springframework.boot.context.properties.source.ConfigurationPropertyName",
-          "label" : "ConfigurationPropertyName",
-          "score" : 527112.8926194343
+          "id": "org.springframework.boot.context.properties.source.ConfigurationPropertyName",
+          "label": "ConfigurationPropertyName",
+          "score": 527285.5182784729
         },
         {
-          "id" : "org.springframework.boot.context.properties.source.ConfigurationPropertySource",
-          "label" : "ConfigurationPropertySource",
-          "score" : 503514.1623842219
+          "id": "org.springframework.boot.context.properties.source.ConfigurationPropertySource",
+          "label": "ConfigurationPropertySource",
+          "score": 503191.93047385017
         },
         {
-          "id" : "org.springframework.boot.context.properties.bind.Binder.Binder(java.lang.Iterable<org.springframework.boot.context.properties.source.ConfigurationPropertySource>, org.springframework.boot.context.properties.bind.PlaceholdersResolver, java.util.List<org.springframework.core.convert.ConversionService>, java.util.function.Consumer<org.springframework.beans.PropertyEditorRegistry>, org.springframework.boot.context.properties.bind.BindHandler, org.springframework.boot.context.properties.bind.BindConstructorProvider)",
-          "label" : "Binder",
-          "score" : 397195.3230503795
+          "id": "org.springframework.boot.context.properties.bind.Binder.Binder(java.lang.Iterable<org.springframework.boot.context.properties.source.ConfigurationPropertySource>, org.springframework.boot.context.properties.bind.PlaceholdersResolver, java.util.List<org.springframework.core.convert.ConversionService>, java.util.function.Consumer<org.springframework.beans.PropertyEditorRegistry>, org.springframework.boot.context.properties.bind.BindHandler, org.springframework.boot.context.properties.bind.BindConstructorProvider)",
+          "label": "Binder",
+          "score": 398984.7458021245
         },
         {
-          "id" : "org.springframework.boot.context.properties.source.ConfigurationPropertySource.from(org.springframework.core.env.PropertySource<?>)",
-          "label" : "from",
-          "score" : 367196.54554090044
+          "id": "org.springframework.boot.context.properties.source.ConfigurationPropertySource.from(org.springframework.core.env.PropertySource<?>)",
+          "label": "from",
+          "score": 367137.06956157763
         },
         {
-          "id" : "org.springframework.boot.context.properties.source.SpringConfigurationPropertySource.from(org.springframework.core.env.PropertySource<?>)",
-          "label" : "from",
-          "score" : 365883.2621594486
+          "id": "org.springframework.boot.context.properties.source.SpringConfigurationPropertySource.from(org.springframework.core.env.PropertySource<?>)",
+          "label": "from",
+          "score": 365920.8405548385
         },
         {
-          "id" : "org.springframework.boot.context.config.ConfigDataEnvironmentContributor",
-          "label" : "ConfigDataEnvironmentContributor",
-          "score" : 284945.72905260685
+          "id": "org.springframework.boot.context.config.ConfigDataEnvironmentContributor",
+          "label": "ConfigDataEnvironmentContributor",
+          "score": 284792.15323700453
         },
         {
-          "id" : "org.springframework.boot.context.properties.source.SpringIterableConfigurationPropertySource.SpringIterableConfigurationPropertySource(org.springframework.core.env.EnumerablePropertySource<?>, org.springframework.boot.context.properties.source.PropertyMapper...)",
-          "label" : "SpringIterableConfigurationPropertySource",
-          "score" : 283794.66774550267
+          "id": "org.springframework.boot.context.properties.source.SpringIterableConfigurationPropertySource.SpringIterableConfigurationPropertySource(org.springframework.core.env.EnumerablePropertySource<?>, org.springframework.boot.context.properties.source.PropertyMapper...)",
+          "label": "SpringIterableConfigurationPropertySource",
+          "score": 283950.0703624122
         },
         {
-          "id" : "org.springframework.boot.convert.ApplicationConversionService",
-          "label" : "ApplicationConversionService",
-          "score" : 273348.0285714286
+          "id": "org.springframework.boot.convert.ApplicationConversionService",
+          "label": "ApplicationConversionService",
+          "score": 273348.37745098036
         }
       ]
     },
     {
-      "id" : "harmonic",
-      "description" : "Top harmonic centrality",
-      "nodes" : [
+      "id": "harmonic",
+      "description": "Harmonic centrality",
+      "nodes": [
         {
-          "id" : "org.springframework.boot.maven.BuildImageMojo.buildImage()",
-          "label" : "buildImage",
-          "score" : 0.010571562928808264
+          "id": "org.springframework.boot.maven.BuildImageMojo.buildImage()",
+          "label": "buildImage",
+          "score": 0.010571562928808264
         },
         {
-          "id" : "org.springframework.boot.maven.BuildImageMojo",
-          "label" : "BuildImageMojo",
-          "score" : 0.010218008534229476
+          "id": "org.springframework.boot.maven.BuildImageMojo",
+          "label": "BuildImageMojo",
+          "score": 0.010218008534229476
         },
         {
-          "id" : "org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor",
-          "label" : "ConfigDataEnvironmentPostProcessor",
-          "score" : 0.01020196884762705
+          "id": "org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor",
+          "label": "ConfigDataEnvironmentPostProcessor",
+          "score": 0.01020196884762705
         },
         {
-          "id" : "org.springframework.boot.context.config.ConfigDataEnvironment",
-          "label" : "ConfigDataEnvironment",
-          "score" : 0.010120616682753734
+          "id": "org.springframework.boot.context.config.ConfigDataEnvironment",
+          "label": "ConfigDataEnvironment",
+          "score": 0.010120616682753734
         },
         {
-          "id" : "org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(org.springframework.core.env.ConfigurableEnvironment, org.springframework.boot.SpringApplication)",
-          "label" : "postProcessEnvironment",
-          "score" : 0.009963629270761819
+          "id": "org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(org.springframework.core.env.ConfigurableEnvironment, org.springframework.boot.SpringApplication)",
+          "label": "postProcessEnvironment",
+          "score": 0.009963629270761819
         },
         {
-          "id" : "org.springframework.boot.context.logging.LoggingApplicationListener",
-          "label" : "LoggingApplicationListener",
-          "score" : 0.009779962433170041
+          "id": "org.springframework.boot.context.logging.LoggingApplicationListener",
+          "label": "LoggingApplicationListener",
+          "score": 0.009779962433170041
         },
         {
-          "id" : "org.springframework.boot.context.config.ConfigDataEnvironment.ConfigDataEnvironment(org.springframework.boot.logging.DeferredLogFactory, org.springframework.boot.ConfigurableBootstrapContext, org.springframework.core.env.ConfigurableEnvironment, org.springframework.core.io.ResourceLoader, java.util.Collection<java.lang.String>, org.springframework.boot.context.config.ConfigDataEnvironmentUpdateListener)",
-          "label" : "ConfigDataEnvironment",
-          "score" : 0.009373392985471947
+          "id": "org.springframework.boot.context.config.ConfigDataEnvironment.ConfigDataEnvironment(org.springframework.boot.logging.DeferredLogFactory, org.springframework.boot.ConfigurableBootstrapContext, org.springframework.core.env.ConfigurableEnvironment, org.springframework.core.io.ResourceLoader, java.util.Collection<java.lang.String>, org.springframework.boot.context.config.ConfigDataEnvironmentUpdateListener)",
+          "label": "ConfigDataEnvironment",
+          "score": 0.009373392985471947
         },
         {
-          "id" : "org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply()",
-          "label" : "processAndApply",
-          "score" : 0.009157851225214734
+          "id": "org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply()",
+          "label": "processAndApply",
+          "score": 0.009157851225214734
         },
         {
-          "id" : "org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.applyTo(org.springframework.core.env.ConfigurableEnvironment, org.springframework.core.io.ResourceLoader, org.springframework.boot.ConfigurableBootstrapContext, java.util.Collection<java.lang.String>, org.springframework.boot.context.config.ConfigDataEnvironmentUpdateListener)",
-          "label" : "applyTo",
-          "score" : 0.008926421147253037
+          "id": "org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.applyTo(org.springframework.core.env.ConfigurableEnvironment, org.springframework.core.io.ResourceLoader, org.springframework.boot.ConfigurableBootstrapContext, java.util.Collection<java.lang.String>, org.springframework.boot.context.config.ConfigDataEnvironmentUpdateListener)",
+          "label": "applyTo",
+          "score": 0.008926421147253037
         },
         {
-          "id" : "org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.applyTo(org.springframework.core.env.ConfigurableEnvironment, org.springframework.core.io.ResourceLoader, org.springframework.boot.ConfigurableBootstrapContext, java.util.Collection<java.lang.String>)",
-          "label" : "applyTo",
-          "score" : 0.008883484731494324
+          "id": "org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.applyTo(org.springframework.core.env.ConfigurableEnvironment, org.springframework.core.io.ResourceLoader, org.springframework.boot.ConfigurableBootstrapContext, java.util.Collection<java.lang.String>)",
+          "label": "applyTo",
+          "score": 0.008883484731494324
         }
       ]
     },
     {
-      "id" : "combined",
-      "description" : "Crucial code elements, combined",
-      "nodes" : [
+      "id": "combined",
+      "description": "Combined importance",
+      "nodes": [
         {
-          "id" : "org.springframework.boot.context.properties.source.ConfigurationPropertyName",
-          "label" : "ConfigurationPropertyName",
-          "score" : 5.0
+          "id": "org.springframework.boot.context.properties.source.ConfigurationPropertyName",
+          "label": "ConfigurationPropertyName",
+          "score": 5
         },
         {
-          "id" : "org.springframework.boot.test.json.JsonContentAssert",
-          "label" : "JsonContentAssert",
-          "score" : 3.0
+          "id": "org.springframework.boot.SpringApplication",
+          "label": "SpringApplication",
+          "score": 3
         },
         {
-          "id" : "org.springframework.boot.SpringApplication",
-          "label" : "SpringApplication",
-          "score" : 3.0
+          "id": "org.springframework.boot.actuate.autoconfigure.metrics.export.properties.PropertiesConfigAdapter.get(java.util.function.Function<T, V>, java.util.function.Supplier<V>)",
+          "label": "get",
+          "score": 2
         },
         {
-          "id" : "org.springframework.boot.context.properties.source.ConfigurationPropertySource",
-          "label" : "ConfigurationPropertySource",
-          "score" : 3.0
+          "id": "org.springframework.boot.context.properties.PropertyMapper.alwaysApplyingWhenNonNull()",
+          "label": "alwaysApplyingWhenNonNull",
+          "score": 2
         },
         {
-          "id" : "org.springframework.boot.actuate.autoconfigure.metrics.export.properties.PropertiesConfigAdapter.get(java.util.function.Function<T, V>, java.util.function.Supplier<V>)",
-          "label" : "get",
-          "score" : 2.0
+          "id": "org.springframework.boot.context.properties.PropertyMapper.Source.to(java.util.function.Consumer<T>)",
+          "label": "to",
+          "score": 2
         },
         {
-          "id" : "org.springframework.boot.context.properties.PropertyMapper.alwaysApplyingWhenNonNull()",
-          "label" : "alwaysApplyingWhenNonNull",
-          "score" : 2.0
+          "id": "T",
+          "label": "T",
+          "score": 2
         },
         {
-          "id" : "T",
-          "label" : "T",
-          "score" : 2.0
+          "id": "org.springframework.boot.context.properties.PropertyMapper.from(T)",
+          "label": "from",
+          "score": 2
         },
         {
-          "id" : "org.springframework.boot.maven.MavenBuild.project(java.lang.String)",
-          "label" : "project",
-          "score" : 2.0
+          "id": "org.springframework.boot.context.properties.bind.Bindable",
+          "label": "Bindable",
+          "score": 2
         },
         {
-          "id" : "org.springframework.boot.autoconfigure.amqp.RabbitProperties",
-          "label" : "RabbitProperties",
-          "score" : 2.0
+          "id": "org.springframework.boot.autoconfigure.condition.ConditionOutcome",
+          "label": "ConditionOutcome",
+          "score": 2
         },
         {
-          "id" : "org.springframework.boot.context.properties.bind.Bindable",
-          "label" : "Bindable",
-          "score" : 2.0
-        },
-        {
-          "id" : "org.springframework.boot.maven.MavenBuild",
-          "label" : "MavenBuild",
-          "score" : 2.0
-        },
-        {
-          "id" : "org.springframework.boot.autoconfigure.condition.ConditionOutcome",
-          "label" : "ConditionOutcome",
-          "score" : 2.0
-        },
-        {
-          "id" : "org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory",
-          "label" : "TomcatServletWebServerFactory",
-          "score" : 2.0
-        },
-        {
-          "id" : "org.springframework.boot.autoconfigure.flyway.FlywayProperties",
-          "label" : "FlywayProperties",
-          "score" : 2.0
-        },
-        {
-          "id" : "org.springframework.boot.context.properties.PropertyMapper.get()",
-          "label" : "get",
-          "score" : 2.0
-        },
-        {
-          "id" : "org.springframework.boot.context.logging.LoggingApplicationListener",
-          "label" : "LoggingApplicationListener",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.autoconfigure.web.embedded.TomcatWebServerFactoryCustomizer.customize(org.springframework.boot.web.embedded.tomcat.ConfigurableTomcatWebServerFactory)",
-          "label" : "customize",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.test.json.JsonContentAssert.extractingJsonPathValue(java.lang.CharSequence, java.lang.Object[], java.lang.Class<T>, java.lang.String)",
-          "label" : "extractingJsonPathValue",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.test.json.JsonContentAssert.compare(java.lang.CharSequence, org.skyscreamer.jsonassert.JSONCompareMode)",
-          "label" : "compare",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.test.json.JsonContentAssert.assertNotPassed(org.skyscreamer.jsonassert.JSONCompareResult)",
-          "label" : "assertNotPassed",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.test.json.JsonContentAssert.assertNotFailed(org.skyscreamer.jsonassert.JSONCompareResult)",
-          "label" : "assertNotFailed",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.test.json.JsonContentAssert?loader@55.26:55.32",
-          "label" : "loader",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.origin.Origin.from(java.lang.Object)",
-          "label" : "from",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.context.properties.bind.Binder.Binder(java.lang.Iterable<org.springframework.boot.context.properties.source.ConfigurationPropertySource>, org.springframework.boot.context.properties.bind.PlaceholdersResolver, java.util.List<org.springframework.core.convert.ConversionService>, java.util.function.Consumer<org.springframework.beans.PropertyEditorRegistry>, org.springframework.boot.context.properties.bind.BindHandler, org.springframework.boot.context.properties.bind.BindConstructorProvider)",
-          "label" : "Binder",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.maven.BuildImageMojo.buildImage()",
-          "label" : "buildImage",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.context.properties.bind.Binder",
-          "label" : "Binder",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.test.web.client.TestRestTemplate",
-          "label" : "TestRestTemplate",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.devtools.restart.Restarter",
-          "label" : "Restarter",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.test.json.JsonContentAssert.compareForNull(java.lang.CharSequence)",
-          "label" : "compareForNull",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.test.json.JsonContentAssert.compare(java.lang.CharSequence, org.skyscreamer.jsonassert.comparator.JSONComparator)",
-          "label" : "compare",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.autoconfigure.web.ServerProperties.Tomcat",
-          "label" : "Tomcat",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.configurationprocessor.json.JSONObject",
-          "label" : "JSONObject",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.test.json.JsonContentAssert.JsonPathValue.JsonPathValue(java.lang.CharSequence, java.lang.Object...)",
-          "label" : "JsonPathValue",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.build.bom.bomr.version.DependencyVersion.isSameMajorAndNewerThan(org.springframework.boot.build.bom.bomr.version.DependencyVersion)",
-          "label" : "isSameMajorAndNewerThan",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.autoconfigure.web.ServerProperties",
-          "label" : "ServerProperties",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.loader.jar.JarFile",
-          "label" : "JarFile",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.build.bom.bomr.version.DependencyVersion.isNewerThan(org.springframework.boot.build.bom.bomr.version.DependencyVersion)!other",
-          "label" : "other",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.convert.ApplicationConversionService",
-          "label" : "ApplicationConversionService",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(org.springframework.core.env.ConfigurableEnvironment, org.springframework.boot.SpringApplication)",
-          "label" : "postProcessEnvironment",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.applyTo(org.springframework.core.env.ConfigurableEnvironment, org.springframework.core.io.ResourceLoader, org.springframework.boot.ConfigurableBootstrapContext, java.util.Collection<java.lang.String>)",
-          "label" : "applyTo",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.maven.BuildImageMojo",
-          "label" : "BuildImageMojo",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.build.bom.bomr.version.DependencyVersion.parse(java.lang.String)",
-          "label" : "parse",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor",
-          "label" : "ConfigDataEnvironmentPostProcessor",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.context.properties.source.SpringConfigurationPropertySource.from(org.springframework.core.env.PropertySource<?>)",
-          "label" : "from",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.build.bom.bomr.version.DependencyVersion.isSameMajorAndNewerThan(org.springframework.boot.build.bom.bomr.version.DependencyVersion)!other",
-          "label" : "other",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.build.bom.bomr.version.DependencyVersion.isSameMinorAndNewerThan(org.springframework.boot.build.bom.bomr.version.DependencyVersion)",
-          "label" : "isSameMinorAndNewerThan",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.origin.Origin",
-          "label" : "Origin",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.applyTo(org.springframework.core.env.ConfigurableEnvironment, org.springframework.core.io.ResourceLoader, org.springframework.boot.ConfigurableBootstrapContext, java.util.Collection<java.lang.String>, org.springframework.boot.context.config.ConfigDataEnvironmentUpdateListener)",
-          "label" : "applyTo",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply()",
-          "label" : "processAndApply",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.build.bom.bomr.version.DependencyVersion",
-          "label" : "DependencyVersion",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.autoconfigure.kafka.KafkaProperties",
-          "label" : "KafkaProperties",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayConfiguration.configureProperties(org.flywaydb.core.api.configuration.FluentConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayProperties)",
-          "label" : "configureProperties",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.context.config.ConfigDataEnvironment.ConfigDataEnvironment(org.springframework.boot.logging.DeferredLogFactory, org.springframework.boot.ConfigurableBootstrapContext, org.springframework.core.env.ConfigurableEnvironment, org.springframework.core.io.ResourceLoader, java.util.Collection<java.lang.String>, org.springframework.boot.context.config.ConfigDataEnvironmentUpdateListener)",
-          "label" : "ConfigDataEnvironment",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.test.json.JsonLoader.getJson(java.io.InputStream)",
-          "label" : "getJson",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.context.properties.source.SpringIterableConfigurationPropertySource.SpringIterableConfigurationPropertySource(org.springframework.core.env.EnumerablePropertySource<?>, org.springframework.boot.context.properties.source.PropertyMapper...)",
-          "label" : "SpringIterableConfigurationPropertySource",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.build.bom.bomr.version.DependencyVersion.isNewerThan(org.springframework.boot.build.bom.bomr.version.DependencyVersion)",
-          "label" : "isNewerThan",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.context.config.ConfigDataEnvironmentContributor",
-          "label" : "ConfigDataEnvironmentContributor",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.context.properties.source.ConfigurationPropertySource.from(org.springframework.core.env.PropertySource<?>)",
-          "label" : "from",
-          "score" : 1.0
-        },
-        {
-          "id" : "org.springframework.boot.context.config.ConfigDataEnvironment",
-          "label" : "ConfigDataEnvironment",
-          "score" : 1.0
+          "id": "org.springframework.boot.autoconfigure.flyway.FlywayProperties",
+          "label": "FlywayProperties",
+          "score": 2
         }
       ]
-    }
-  ],
-  "graphStats" : [
-    {
-      "id" : "average_node_degree",
-      "label" : "Average Graph Degree",
-      "score" : 4.878735005452563
-    },
-    {
-      "id" : "clustering_coefficient",
-      "label" : "Average Clustering Coefficient",
-      "score" : 0.29542959143965625
     }
   ]
 }

@@ -1,0 +1,510 @@
+{
+  "projectName": "akka",
+  "workspace": "data/akka.zip",
+  "stats": [
+    {
+      "id": "loc",
+      "description": "Lines of code",
+      "nodes": [
+        {
+          "id": "akka/stream/javadsl/Source#",
+          "label": "Source",
+          "score": 3896
+        },
+        {
+          "id": "akka/stream/javadsl/Flow#",
+          "label": "Flow",
+          "score": 3877
+        },
+        {
+          "id": "akka/stream/javadsl/SubFlow#",
+          "label": "SubFlow",
+          "score": 2793
+        },
+        {
+          "id": "akka/stream/javadsl/SubSource#",
+          "label": "SubSource",
+          "score": 2770
+        },
+        {
+          "id": "akka/stream/scaladsl/FlowOps#",
+          "label": "FlowOps",
+          "score": 2748
+        },
+        {
+          "id": "akka/cluster/sbr/SplitBrainResolverSpec#",
+          "label": "SplitBrainResolverSpec",
+          "score": 1635
+        },
+        {
+          "id": "akka/util/ByteStringSpec#",
+          "label": "ByteStringSpec",
+          "score": 1387
+        },
+        {
+          "id": "akka/cluster/ClusterCoreDaemon#",
+          "label": "ClusterCoreDaemon",
+          "score": 1308
+        },
+        {
+          "id": "akka/stream/stage/GraphStageLogic#",
+          "label": "GraphStageLogic",
+          "score": 1285
+        },
+        {
+          "id": "akka/cluster/ddata/Replicator#",
+          "label": "Replicator",
+          "score": 1145
+        }
+      ]
+    },
+    {
+      "id": "out-degree",
+      "description": "Node out-degree",
+      "nodes": [
+        {
+          "id": "akka/stream/scaladsl/GraphApply#",
+          "label": "GraphApply",
+          "score": 853
+        },
+        {
+          "id": "akka/stream/javadsl/GraphCreate#",
+          "label": "GraphCreate",
+          "score": 319
+        },
+        {
+          "id": "akka/stream/javadsl/Flow#",
+          "label": "Flow",
+          "score": 297
+        },
+        {
+          "id": "akka/stream/javadsl/Source#",
+          "label": "Source",
+          "score": 296
+        },
+        {
+          "id": "akka/stream/scaladsl/FlowOps#",
+          "label": "FlowOps",
+          "score": 170
+        },
+        {
+          "id": "akka/stream/javadsl/SubFlow#",
+          "label": "SubFlow",
+          "score": 150
+        },
+        {
+          "id": "akka/stream/javadsl/SubSource#",
+          "label": "SubSource",
+          "score": 148
+        },
+        {
+          "id": "akka/stream/javadsl/Source.",
+          "label": "Source",
+          "score": 148
+        },
+        {
+          "id": "akka/stream/scaladsl/Source.",
+          "label": "Source",
+          "score": 118
+        },
+        {
+          "id": "akka/remote/artery/ArteryTransport#",
+          "label": "ArteryTransport",
+          "score": 107
+        }
+      ]
+    },
+    {
+      "id": "in-degree",
+      "description": "Node in-degree",
+      "nodes": [
+        {
+          "id": "akka/actor/ActorRef#",
+          "label": "ActorRef",
+          "score": 1441
+        },
+        {
+          "id": "akka/stream/Graph#",
+          "label": "Graph",
+          "score": 1326
+        },
+        {
+          "id": "akka/actor/typed/Behavior#",
+          "label": "Behavior",
+          "score": 632
+        },
+        {
+          "id": "akka/actor/typed/ActorRef#",
+          "label": "ActorRef",
+          "score": 584
+        },
+        {
+          "id": "akka/actor/Actor#",
+          "label": "Actor",
+          "score": 506
+        },
+        {
+          "id": "akka/stream/stage/OutHandler#",
+          "label": "OutHandler",
+          "score": 475
+        },
+        {
+          "id": "akka/actor/Address#",
+          "label": "Address",
+          "score": 470
+        },
+        {
+          "id": "akka/stream/stage/InHandler#",
+          "label": "InHandler",
+          "score": 463
+        },
+        {
+          "id": "akka/NotUsed#",
+          "label": "NotUsed",
+          "score": 453
+        },
+        {
+          "id": "akka/stream/stage/GraphStageLogic#",
+          "label": "GraphStageLogic",
+          "score": 430
+        }
+      ]
+    },
+    {
+      "id": "pagerank",
+      "description": "PageRank",
+      "nodes": [
+        {
+          "id": "akka/actor/ActorRef#",
+          "label": "ActorRef",
+          "score": 0.13713167908783072
+        },
+        {
+          "id": "akka/actor/ActorContext#",
+          "label": "ActorContext",
+          "score": 0.13681767065600717
+        },
+        {
+          "id": "akka/actor/Address#",
+          "label": "Address",
+          "score": 0.017219076753165828
+        },
+        {
+          "id": "akka/actor/ActorRefFactory#",
+          "label": "ActorRefFactory",
+          "score": 0.01621777674170461
+        },
+        {
+          "id": "akka/actor/ClassicActorContextProvider#",
+          "label": "ClassicActorContextProvider",
+          "score": 0.015103951478778042
+        },
+        {
+          "id": "akka/stream/stage/OutHandler#",
+          "label": "OutHandler",
+          "score": 0.013072587964696182
+        },
+        {
+          "id": "akka/stream/stage/InHandler#",
+          "label": "InHandler",
+          "score": 0.012685227964836534
+        },
+        {
+          "id": "akka/actor/Actor#",
+          "label": "Actor",
+          "score": 0.012578981650288883
+        },
+        {
+          "id": "akka/actor/ActorSystem#",
+          "label": "ActorSystem",
+          "score": 0.011186569285056949
+        },
+        {
+          "id": "akka/actor/NoSerializationVerificationNeeded#",
+          "label": "NoSerializationVerificationNeeded",
+          "score": 0.009862762720787911
+        }
+      ]
+    },
+    {
+      "id": "eigenvector",
+      "description": "Eigenvector centrality",
+      "nodes": [
+        {
+          "id": "akka/stream/javadsl/GraphDSL.Builder#ForwardOps#",
+          "label": "ForwardOps",
+          "score": 0.4814626007947204
+        },
+        {
+          "id": "akka/stream/javadsl/GraphDSL.Builder#ReverseOps#",
+          "label": "ReverseOps",
+          "score": 0.4814626007947204
+        },
+        {
+          "id": "akka/stream/Outlet#",
+          "label": "Outlet",
+          "score": 0.2947238963073818
+        },
+        {
+          "id": "akka/stream/Inlet#",
+          "label": "Inlet",
+          "score": 0.2904595107646418
+        },
+        {
+          "id": "akka/stream/UniformFanInShape#",
+          "label": "UniformFanInShape",
+          "score": 0.2778727010865502
+        },
+        {
+          "id": "akka/stream/UniformFanOutShape#",
+          "label": "UniformFanOutShape",
+          "score": 0.27787270103009604
+        },
+        {
+          "id": "akka/stream/FlowShape#",
+          "label": "FlowShape",
+          "score": 0.23522887316289678
+        },
+        {
+          "id": "akka/stream/javadsl/GraphDSL.Builder#",
+          "label": "Builder",
+          "score": 0.17057532142441562
+        },
+        {
+          "id": "akka/stream/FanInShape.Init#",
+          "label": "Init",
+          "score": 0.1272436873794332
+        },
+        {
+          "id": "akka/stream/FanOutShape.Init#",
+          "label": "Init",
+          "score": 0.12724368735289043
+        }
+      ]
+    },
+    {
+      "id": "Katz",
+      "description": "Katz centrality",
+      "nodes": [
+        {
+          "id": "akka/stream/Graph#",
+          "label": "Graph",
+          "score": 16.181784851543767
+        },
+        {
+          "id": "akka/actor/ActorRef#",
+          "label": "ActorRef",
+          "score": 16.11256177369581
+        },
+        {
+          "id": "akka/actor/typed/Behavior#",
+          "label": "Behavior",
+          "score": 7.437492636019936
+        },
+        {
+          "id": "akka/actor/typed/ActorRef#",
+          "label": "ActorRef",
+          "score": 7.08255080211596
+        },
+        {
+          "id": "akka/actor/Actor#",
+          "label": "Actor",
+          "score": 6.078963719678946
+        },
+        {
+          "id": "akka/stream/stage/OutHandler#",
+          "label": "OutHandler",
+          "score": 6.020887582681943
+        },
+        {
+          "id": "akka/actor/Address#",
+          "label": "Address",
+          "score": 5.954752469531971
+        },
+        {
+          "id": "akka/stream/stage/InHandler#",
+          "label": "InHandler",
+          "score": 5.855838807106946
+        },
+        {
+          "id": "akka/NotUsed#",
+          "label": "NotUsed",
+          "score": 5.792810759635955
+        },
+        {
+          "id": "akka/stream/Attributes#",
+          "label": "Attributes",
+          "score": 5.702316928426964
+        }
+      ]
+    },
+    {
+      "id": "betweenness",
+      "description": "Betweenness centrality",
+      "nodes": [
+        {
+          "id": "akka/actor/Props#",
+          "label": "Props",
+          "score": 27781.724370362528
+        },
+        {
+          "id": "akka/stream/stage/GraphStageLogic#",
+          "label": "GraphStageLogic",
+          "score": 26028.85215027782
+        },
+        {
+          "id": "akka/actor/ActorRef#",
+          "label": "ActorRef",
+          "score": 22998.08991020529
+        },
+        {
+          "id": "akka/actor/ActorRefFactory#",
+          "label": "ActorRefFactory",
+          "score": 22567.836680408353
+        },
+        {
+          "id": "akka/actor/ActorContext#",
+          "label": "ActorContext",
+          "score": 22004.808057910614
+        },
+        {
+          "id": "akka/routing/RouterConfig#",
+          "label": "RouterConfig",
+          "score": 19849.18786748389
+        },
+        {
+          "id": "akka/actor/ActorSystem#",
+          "label": "ActorSystem",
+          "score": 18131.6452303449
+        },
+        {
+          "id": "akka/stream/Materializer#",
+          "label": "Materializer",
+          "score": 13261.808417630647
+        },
+        {
+          "id": "akka/testkit/AkkaSpec#",
+          "label": "AkkaSpec",
+          "score": 9718.989127272396
+        },
+        {
+          "id": "akka/testkit/TestKit#",
+          "label": "TestKit",
+          "score": 6324.73424802429
+        }
+      ]
+    },
+    {
+      "id": "harmonic",
+      "description": "Harmonic centrality",
+      "nodes": [
+        {
+          "id": "akka/stream/scaladsl/UnzipWithApply#",
+          "label": "UnzipWithApply",
+          "score": 0.008418661074101488
+        },
+        {
+          "id": "akka/remote/artery/ArteryTransport#",
+          "label": "ArteryTransport",
+          "score": 0.008125668229295176
+        },
+        {
+          "id": "akka/remote/artery/Association#",
+          "label": "Association",
+          "score": 0.007359040334613988
+        },
+        {
+          "id": "akka/remote/artery/aeron/ArteryAeronUdpTransport#",
+          "label": "ArteryAeronUdpTransport",
+          "score": 0.006887901965622181
+        },
+        {
+          "id": "akka/stream/javadsl/Flow#",
+          "label": "Flow",
+          "score": 0.006704909943251916
+        },
+        {
+          "id": "akka/stream/javadsl/Source#",
+          "label": "Source",
+          "score": 0.006602105436302331
+        },
+        {
+          "id": "akka/remote/artery/tcp/ArteryTcpTransport#",
+          "label": "ArteryTcpTransport",
+          "score": 0.006370060977758984
+        },
+        {
+          "id": "akka/stream/javadsl/SubSource#",
+          "label": "SubSource",
+          "score": 0.006106587712805331
+        },
+        {
+          "id": "akka/stream/javadsl/SubFlow#",
+          "label": "SubFlow",
+          "score": 0.0060449050086355816
+        },
+        {
+          "id": "akka/stream/javadsl/Source.",
+          "label": "Source",
+          "score": 0.0060099514762727265
+        }
+      ]
+    },
+    {
+      "id": "combined",
+      "description": "Combined importance",
+      "nodes": [
+        {
+          "id": "akka/actor/ActorRef#",
+          "label": "ActorRef",
+          "score": 4
+        },
+        {
+          "id": "akka/stream/javadsl/SubFlow#",
+          "label": "SubFlow",
+          "score": 3
+        },
+        {
+          "id": "akka/stream/stage/GraphStageLogic#",
+          "label": "GraphStageLogic",
+          "score": 3
+        },
+        {
+          "id": "akka/stream/javadsl/SubSource#",
+          "label": "SubSource",
+          "score": 3
+        },
+        {
+          "id": "akka/stream/stage/OutHandler#",
+          "label": "OutHandler",
+          "score": 3
+        },
+        {
+          "id": "akka/stream/stage/InHandler#",
+          "label": "InHandler",
+          "score": 3
+        },
+        {
+          "id": "akka/stream/javadsl/Flow#",
+          "label": "Flow",
+          "score": 3
+        },
+        {
+          "id": "akka/actor/Address#",
+          "label": "Address",
+          "score": 3
+        },
+        {
+          "id": "akka/actor/Actor#",
+          "label": "Actor",
+          "score": 3
+        },
+        {
+          "id": "akka/stream/javadsl/Source#",
+          "label": "Source",
+          "score": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,510 @@
+{
+  "projectName": "RxJava",
+  "workspace": "data/RxJava.zip",
+  "stats": [
+    {
+      "id": "loc",
+      "description": "Lines of code",
+      "nodes": [
+        {
+          "id": "io.reactivex.rxjava3.core.Flowable",
+          "label": "Flowable",
+          "score": 20738
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Observable",
+          "label": "Observable",
+          "score": 17235
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Maybe",
+          "label": "Maybe",
+          "score": 6240
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Single",
+          "label": "Single",
+          "score": 5648
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Completable",
+          "label": "Completable",
+          "score": 3365
+        },
+        {
+          "id": "io.reactivex.rxjava3.parallel.ParallelFlowable",
+          "label": "ParallelFlowable",
+          "score": 1652
+        },
+        {
+          "id": "io.reactivex.rxjava3.plugins.RxJavaPlugins",
+          "label": "RxJavaPlugins",
+          "score": 1364
+        },
+        {
+          "id": "io.reactivex.rxjava3.processors.ReplayProcessor",
+          "label": "ReplayProcessor",
+          "score": 1216
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.flowable.FlowableReplay",
+          "label": "FlowableReplay",
+          "score": 1215
+        },
+        {
+          "id": "io.reactivex.rxjava3.subjects.ReplaySubject",
+          "label": "ReplaySubject",
+          "score": 1210
+        }
+      ]
+    },
+    {
+      "id": "out-degree",
+      "description": "Node out-degree",
+      "nodes": [
+        {
+          "id": "io.reactivex.rxjava3.core.Observable",
+          "label": "Observable",
+          "score": 317
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Single",
+          "label": "Single",
+          "score": 183
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Maybe",
+          "label": "Maybe",
+          "score": 182
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Flowable",
+          "label": "Flowable",
+          "score": 125
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Completable",
+          "label": "Completable",
+          "score": 56
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.XMapYPerf",
+          "label": "XMapYPerf",
+          "score": 28
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableInternalHelper",
+          "label": "ObservableInternalHelper",
+          "score": 27
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.completable.CompletablePeek",
+          "label": "CompletablePeek",
+          "score": 16
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.BinaryFlatMapPerf",
+          "label": "BinaryFlatMapPerf",
+          "score": 16
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.JustAsyncPerf",
+          "label": "JustAsyncPerf",
+          "score": 15
+        }
+      ]
+    },
+    {
+      "id": "in-degree",
+      "description": "Node in-degree",
+      "nodes": [
+        {
+          "id": "io.reactivex.rxjava3.disposables.Disposable",
+          "label": "Disposable",
+          "score": 927
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Observer",
+          "label": "Observer",
+          "score": 497
+        },
+        {
+          "id": "io.reactivex.rxjava3.functions.Function",
+          "label": "Function",
+          "score": 486
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.ObservableSource",
+          "label": "ObservableSource",
+          "score": 365
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Scheduler",
+          "label": "Scheduler",
+          "score": 294
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.SingleObserver",
+          "label": "SingleObserver",
+          "score": 269
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.MaybeObserver",
+          "label": "MaybeObserver",
+          "score": 252
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Flowable",
+          "label": "Flowable",
+          "score": 239
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.SingleSource",
+          "label": "SingleSource",
+          "score": 205
+        },
+        {
+          "id": "io.reactivex.rxjava3.functions.Consumer",
+          "label": "Consumer",
+          "score": 200
+        }
+      ]
+    },
+    {
+      "id": "pagerank",
+      "description": "PageRank",
+      "nodes": [
+        {
+          "id": "io.reactivex.rxjava3.parallel.ParallelFlowable",
+          "label": "ParallelFlowable",
+          "score": 0.1242192034129663
+        },
+        {
+          "id": "io.reactivex.rxjava3.functions.Action",
+          "label": "Action",
+          "score": 0.10664498670674064
+        },
+        {
+          "id": "io.reactivex.rxjava3.disposables.Disposable",
+          "label": "Disposable",
+          "score": 0.10556801638529807
+        },
+        {
+          "id": "io.reactivex.rxjava3.parallel.ParallelFlowableConverter",
+          "label": "ParallelFlowableConverter",
+          "score": 0.06161537334981885
+        },
+        {
+          "id": "io.reactivex.rxjava3.parallel.ParallelTransformer",
+          "label": "ParallelTransformer",
+          "score": 0.06161537334981885
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Observer",
+          "label": "Observer",
+          "score": 0.023805018625203882
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.flowable.FlowableGroupJoin.JoinSupport",
+          "label": "JoinSupport",
+          "score": 0.022671766539925822
+        },
+        {
+          "id": "io.reactivex.rxjava3.functions.Function",
+          "label": "Function",
+          "score": 0.02038118832624103
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Flowable",
+          "label": "Flowable",
+          "score": 0.015475658229563649
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Scheduler",
+          "label": "Scheduler",
+          "score": 0.01457884068565879
+        }
+      ]
+    },
+    {
+      "id": "eigenvector",
+      "description": "Eigenvector centrality",
+      "nodes": [
+        {
+          "id": "io.reactivex.rxjava3.core.Scheduler",
+          "label": "Scheduler",
+          "score": 0.6570551952957687
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.SingleSource",
+          "label": "SingleSource",
+          "score": 0.537103852109499
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Flowable",
+          "label": "Flowable",
+          "score": 0.3444589248320442
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Single",
+          "label": "Single",
+          "score": 0.25673410927083823
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.ObservableSource",
+          "label": "ObservableSource",
+          "score": 0.1945516626190817
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.MaybeSource",
+          "label": "MaybeSource",
+          "score": 0.18176855487550156
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Completable",
+          "label": "Completable",
+          "score": 0.08909486327437376
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.CompletableSource",
+          "label": "CompletableSource",
+          "score": 0.08215238549423749
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Maybe",
+          "label": "Maybe",
+          "score": 0.06185835622735501
+        },
+        {
+          "id": "io.reactivex.rxjava3.disposables.Disposable",
+          "label": "Disposable",
+          "score": 0.04485428884594844
+        }
+      ]
+    },
+    {
+      "id": "Katz",
+      "description": "Katz centrality",
+      "nodes": [
+        {
+          "id": "io.reactivex.rxjava3.disposables.Disposable",
+          "label": "Disposable",
+          "score": 10.726478861485518
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Scheduler",
+          "label": "Scheduler",
+          "score": 8.993097796646268
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.ObservableSource",
+          "label": "ObservableSource",
+          "score": 8.311112437436673
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.SingleSource",
+          "label": "SingleSource",
+          "score": 6.601166930810713
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Observer",
+          "label": "Observer",
+          "score": 6.169277940855407
+        },
+        {
+          "id": "io.reactivex.rxjava3.functions.Function",
+          "label": "Function",
+          "score": 5.952573362967287
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Flowable",
+          "label": "Flowable",
+          "score": 5.788495764172657
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Single",
+          "label": "Single",
+          "score": 4.647849467387744
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.MaybeSource",
+          "label": "MaybeSource",
+          "score": 4.363179365112998
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.SingleObserver",
+          "label": "SingleObserver",
+          "score": 3.898516549544147
+        }
+      ]
+    },
+    {
+      "id": "betweenness",
+      "description": "Betweenness centrality",
+      "nodes": [
+        {
+          "id": "io.reactivex.rxjava3.core.Flowable",
+          "label": "Flowable",
+          "score": 12541.45756238078
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Observable",
+          "label": "Observable",
+          "score": 10459.858546141284
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Single",
+          "label": "Single",
+          "score": 7733.833239203445
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Maybe",
+          "label": "Maybe",
+          "score": 6086.065635709201
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Completable",
+          "label": "Completable",
+          "score": 5393.58092567059
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.flowable.AbstractFlowableWithUpstream",
+          "label": "AbstractFlowableWithUpstream",
+          "score": 4209.0000000000055
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.AbstractObservableWithUpstream",
+          "label": "AbstractObservableWithUpstream",
+          "score": 3894.1036269430033
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.maybe.AbstractMaybeWithUpstream",
+          "label": "AbstractMaybeWithUpstream",
+          "score": 1441.0421052631623
+        },
+        {
+          "id": "io.reactivex.rxjava3.processors.FlowableProcessor",
+          "label": "FlowableProcessor",
+          "score": 1316.8505688798698
+        },
+        {
+          "id": "io.reactivex.rxjava3.parallel.ParallelFlowable",
+          "label": "ParallelFlowable",
+          "score": 1162
+        }
+      ]
+    },
+    {
+      "id": "harmonic",
+      "description": "Harmonic centrality",
+      "nodes": [
+        {
+          "id": "io.reactivex.rxjava3.core.Single",
+          "label": "Single",
+          "score": 0.019673704414587326
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Completable",
+          "label": "Completable",
+          "score": 0.019673704414587326
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Maybe",
+          "label": "Maybe",
+          "score": 0.019673704414587326
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Observable",
+          "label": "Observable",
+          "score": 0.019247174237577304
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Flowable",
+          "label": "Flowable",
+          "score": 0.018980592876946038
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableInternalHelper",
+          "label": "ObservableInternalHelper",
+          "score": 0.01638942205161014
+        },
+        {
+          "id": "io.reactivex.rxjava3.internal.operators.observable.ObservableWindowBoundarySelector.WindowBoundaryMainObserver.WindowEndObserverIntercept",
+          "label": "WindowEndObserverIntercept",
+          "score": 0.01633610577948389
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.JustAsyncPerf",
+          "label": "JustAsyncPerf",
+          "score": 0.01620814672638089
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.CallableAsyncPerf",
+          "label": "CallableAsyncPerf",
+          "score": 0.01620814672638089
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.BlockingGetPerf",
+          "label": "BlockingGetPerf",
+          "score": 0.01620814672638089
+        }
+      ]
+    },
+    {
+      "id": "combined",
+      "description": "Combined importance",
+      "nodes": [
+        {
+          "id": "io.reactivex.rxjava3.core.Flowable",
+          "label": "Flowable",
+          "score": 8
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Single",
+          "label": "Single",
+          "score": 6
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Maybe",
+          "label": "Maybe",
+          "score": 5
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Completable",
+          "label": "Completable",
+          "score": 5
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Scheduler",
+          "label": "Scheduler",
+          "score": 4
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Observable",
+          "label": "Observable",
+          "score": 4
+        },
+        {
+          "id": "io.reactivex.rxjava3.disposables.Disposable",
+          "label": "Disposable",
+          "score": 4
+        },
+        {
+          "id": "io.reactivex.rxjava3.parallel.ParallelFlowable",
+          "label": "ParallelFlowable",
+          "score": 3
+        },
+        {
+          "id": "io.reactivex.rxjava3.core.Observer",
+          "label": "Observer",
+          "score": 3
+        },
+        {
+          "id": "io.reactivex.rxjava3.functions.Function",
+          "label": "Function",
+          "score": 3
+        }
+      ]
+    }
+  ]
+}

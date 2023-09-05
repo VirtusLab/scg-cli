@@ -1,6 +1,7 @@
 package org.virtuslab.semanticgraphs.analytics.print
 
 import org.virtuslab.semanticgraphs.analytics.crucial.{CrucialNodesSummary, MetricIdAndDescription, Statistic}
+import org.virtuslab.semanticgraphs.analytics.print.LatexCrucialNodesPrinterApp.readScores
 import org.virtuslab.semanticgraphs.analytics.scg.SemanticCodeGraph
 
 import java.nio.file.{Files, Path}
@@ -16,8 +17,9 @@ object LatexPrinter:
     scores.foreach { stats =>
       val topStats = metrics.map(id => stats.stats.find(_.id == id.id).head).map { s =>
         val topNode = s.nodes.head
-        if topNode.score == topNode.score.toLong then f"${topNode.label} & ${topNode.score}%.0f"
-        else f"${topNode.label} & ${topNode.score}%.4f"
+        val label = if topNode.label.headOption.exists(_.isLower) then topNode.id else topNode.label
+        if topNode.score == topNode.score.toLong then f"${label} & ${topNode.score}%.0f"
+        else f"${label} & ${topNode.score}%.4f"
       }
       stringBuilder.addAll(s"${stats.projectName} & ${topStats.mkString("", " & ", " \\\\")} \n")
     }
@@ -29,8 +31,9 @@ object LatexPrinter:
     scores.foreach { stats =>
       val topStats = stats.stats.find(_.id == metric.id).toList.flatMap { s =>
         s.nodes.take(n).map { topNode =>
-          if topNode.score == topNode.score.toLong then f"${topNode.label} & ${topNode.score}%.0f"
-          else f"${topNode.label} & ${topNode.score}"
+          val label = if topNode.label.headOption.exists(_.isLower) then topNode.id else topNode.label
+          if topNode.score == topNode.score.toLong then f"${label} & ${topNode.score}%.0f"
+          else f"${label} & ${topNode.score}"
         }
       }
       stringBuilder.addAll(s"${stats.projectName} & ${topStats.mkString("", " & ", " \\\\")} \n")
@@ -57,8 +60,8 @@ object LatexCrucialNodesPrinterApp extends App:
 
   def printWholeTable(
     scgScores: List[CrucialNodesSummary],
-    callScores: List[CrucialNodesSummary],
     fullCallScores: List[CrucialNodesSummary],
+    classGraphScores: List[CrucialNodesSummary],
     metrics: List[MetricIdAndDescription]
   ) =
     // println(s"\\begin{tabular}{${"r|".repeat(metrics.size * 2 + 1)}}")
@@ -67,28 +70,30 @@ object LatexCrucialNodesPrinterApp extends App:
     println("\\hline")
     println(s"\\multicolumn{${metrics.size * 2 + 1}}{l|}{Semantic Code Graph} \\\\")
     println(LatexPrinter.toTexTable(scgScores, metrics))
-//    println("\\hline")
-//    println(s"\\multicolumn{${metrics.size * 2 + 1}}{l|}{Call Graph}\\\\")
-//    println(LatexPrinter.toTexTable(callScores, metrics))
+
+    println("\\hline")
+    println(s"\\multicolumn{${metrics.size * 2 + 1}}{l|}{SCG based Class Collaboration Network}\\\\")
+    println(LatexPrinter.toTexTable(classGraphScores, metrics))
+
     println("\\hline")
     println(s"\\multicolumn{${metrics.size * 2 + 1}}{l|}{SCG based Call Graph}\\\\")
     println(LatexPrinter.toTexTable(fullCallScores, metrics))
-    // println(s"\\end{tabular}")
+
     println()
 
   println(Path.of("analysis").toAbsolutePath.toString)
   val scgScores = readScores("scg")
-  val callScores = readScores("call")
   val fullCallScores = readScores("full-call")
+  val classGraphScores = readScores("ccn")
 
   val general = List(Statistic.loc, Statistic.outDegree, Statistic.inDegree)
-  printWholeTable(scgScores, callScores, fullCallScores, general)
+  printWholeTable(scgScores, fullCallScores, classGraphScores, general)
 
   val influenceBased = List(Statistic.eigenvector, Statistic.katz, Statistic.pageRank)
-  printWholeTable(scgScores, callScores, fullCallScores, influenceBased)
+  printWholeTable(scgScores, fullCallScores, classGraphScores, influenceBased)
 
   val distanceBased = List(Statistic.betweenness, Statistic.harmonic, Statistic.combined)
-  printWholeTable(scgScores, callScores, fullCallScores, distanceBased)
+  printWholeTable(scgScores, fullCallScores, classGraphScores, distanceBased)
 
 object LatexCrucialNodesCombinedPrinterApp extends App:
 
@@ -107,8 +112,8 @@ object LatexCrucialNodesCombinedPrinterApp extends App:
 
   def printWholeTable(
     scgScores: List[CrucialNodesSummary],
-    callScores: List[CrucialNodesSummary],
     fullCallScore: List[CrucialNodesSummary],
+    classGraphScores: List[CrucialNodesSummary],
     n: Int
   ) =
     // println(s"\\begin{tabular}{${"r|".repeat(metrics.size * 2 + 1)}}")
@@ -117,18 +122,17 @@ object LatexCrucialNodesCombinedPrinterApp extends App:
     println("\\hline")
     println(s"\\multicolumn{${n * 2 + 1}}{l|}{Semantic Code Graph} \\\\")
     println(LatexPrinter.topN(scgScores, Statistic.combined, n))
-//    println("\\hline")
-//    println(s"\\multicolumn{${n * 2 + 1}}{l|}{Call Graph}\\\\")
-//    println(LatexPrinter.topN(callScores, "combined", n))
+    println("\\hline")
+    println(s"\\multicolumn{${n * 2 + 1}}{l|}{SCG based Class Collaboration Network}\\\\")
+    println(LatexPrinter.topN(classGraphScores, Statistic.combined, n))
     println("\\hline")
     println(s"\\multicolumn{${n * 2 + 1}}{l|}{SCG based Call Graph}\\\\")
     println(LatexPrinter.topN(fullCallScore, Statistic.combined, n))
-    // println(s"\\end{tabular}")
     println()
 
   println(Path.of("analysis").toAbsolutePath.toString)
   val scgScores = readScores("scg")
-  val callScores = readScores("call")
   val fullCallScores = readScores("full-call")
+  val classGraphScores = readScores("ccn")
 
-  printWholeTable(scgScores, callScores, fullCallScores, 3)
+  printWholeTable(scgScores, fullCallScores, classGraphScores, 3)

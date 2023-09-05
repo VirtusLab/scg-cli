@@ -1,0 +1,510 @@
+{
+  "projectName": "vertx",
+  "workspace": "data/vert.x.zip",
+  "stats": [
+    {
+      "id": "loc",
+      "description": "Lines of code",
+      "nodes": [
+        {
+          "id": "io.vertx.core.http.HttpClientOptions",
+          "label": "HttpClientOptions",
+          "score": 1448
+        },
+        {
+          "id": "io.vertx.core.json.JsonObject",
+          "label": "JsonObject",
+          "score": 1276
+        },
+        {
+          "id": "io.vertx.core.http.impl.Http1xClientConnection",
+          "label": "Http1xClientConnection",
+          "score": 1244
+        },
+        {
+          "id": "examples.HTTPExamples",
+          "label": "HTTPExamples",
+          "score": 1210
+        },
+        {
+          "id": "io.vertx.core.impl.VertxImpl",
+          "label": "VertxImpl",
+          "score": 1054
+        },
+        {
+          "id": "io.vertx.core.http.HttpServerOptions",
+          "label": "HttpServerOptions",
+          "score": 1051
+        },
+        {
+          "id": "io.vertx.core.http.impl.MimeMapping",
+          "label": "MimeMapping",
+          "score": 1004
+        },
+        {
+          "id": "io.vertx.core.file.impl.FileSystemImpl",
+          "label": "FileSystemImpl",
+          "score": 940
+        },
+        {
+          "id": "io.vertx.core.net.impl.pool.SimpleConnectionPool",
+          "label": "SimpleConnectionPool",
+          "score": 919
+        },
+        {
+          "id": "io.vertx.core.http.impl.HttpUtils",
+          "label": "HttpUtils",
+          "score": 900
+        }
+      ]
+    },
+    {
+      "id": "out-degree",
+      "description": "Node out-degree",
+      "nodes": [
+        {
+          "id": "io.vertx.core.http.impl.MimeMapping",
+          "label": "MimeMapping",
+          "score": 990
+        },
+        {
+          "id": "io.vertx.core.eventbus.EventBusOptionsConverter.fromJson(java.lang.Iterable<java.util.Map.Entry<java.lang.String, java.lang.Object>>, io.vertx.core.eventbus.EventBusOptions)",
+          "label": "fromJson",
+          "score": 215
+        },
+        {
+          "id": "io.vertx.core.eventbus.EventBusOptionsConverter.toJson(io.vertx.core.eventbus.EventBusOptions, java.util.Map<java.lang.String, java.lang.Object>)",
+          "label": "toJson",
+          "score": 215
+        },
+        {
+          "id": "io.vertx.core.http.HttpClientOptions",
+          "label": "HttpClientOptions",
+          "score": 212
+        },
+        {
+          "id": "io.vertx.core.net.impl.TCPServerBase.listen(io.vertx.core.net.SocketAddress, io.vertx.core.impl.ContextInternal)",
+          "label": "listen",
+          "score": 204
+        },
+        {
+          "id": "io.vertx.core.http.HttpClientOptionsConverter.fromJson(java.lang.Iterable<java.util.Map.Entry<java.lang.String, java.lang.Object>>, io.vertx.core.http.HttpClientOptions)",
+          "label": "fromJson",
+          "score": 170
+        },
+        {
+          "id": "io.vertx.core.http.HttpServerOptions",
+          "label": "HttpServerOptions",
+          "score": 157
+        },
+        {
+          "id": "io.vertx.core.net.TCPSSLOptionsConverter.toJson(io.vertx.core.net.TCPSSLOptions, java.util.Map<java.lang.String, java.lang.Object>)",
+          "label": "toJson",
+          "score": 145
+        },
+        {
+          "id": "io.vertx.core.impl.VertxImpl.VertxImpl(io.vertx.core.VertxOptions, io.vertx.core.spi.cluster.ClusterManager, io.vertx.core.spi.cluster.NodeSelector, io.vertx.core.spi.metrics.VertxMetrics, io.vertx.core.spi.tracing.VertxTracer<?, ?>, io.vertx.core.spi.transport.Transport, io.vertx.core.spi.file.FileResolver, io.vertx.core.spi.VertxThreadFactory, io.vertx.core.spi.ExecutorServiceFactory)",
+          "label": "VertxImpl",
+          "score": 142
+        },
+        {
+          "id": "io.vertx.core.impl.VertxImpl",
+          "label": "VertxImpl",
+          "score": 141
+        }
+      ]
+    },
+    {
+      "id": "in-degree",
+      "description": "Node in-degree",
+      "nodes": [
+        {
+          "id": "io.vertx.core.http.impl.MimeMapping?m@23.43:23.44",
+          "label": "m",
+          "score": 989
+        },
+        {
+          "id": "io.vertx.core.Future",
+          "label": "Future",
+          "score": 896
+        },
+        {
+          "id": "io.vertx.core.Handler",
+          "label": "Handler",
+          "score": 759
+        },
+        {
+          "id": "io.vertx.core.buffer.Buffer",
+          "label": "Buffer",
+          "score": 642
+        },
+        {
+          "id": "io.vertx.core.impl.ContextInternal",
+          "label": "ContextInternal",
+          "score": 305
+        },
+        {
+          "id": "io.vertx.core.Vertx",
+          "label": "Vertx",
+          "score": 258
+        },
+        {
+          "id": "io.vertx.core.json.JsonObject",
+          "label": "JsonObject",
+          "score": 258
+        },
+        {
+          "id": "io.vertx.core.Promise",
+          "label": "Promise",
+          "score": 254
+        },
+        {
+          "id": "io.vertx.core.MultiMap",
+          "label": "MultiMap",
+          "score": 204
+        },
+        {
+          "id": "io.vertx.core.Future.onComplete(io.vertx.core.Handler<io.vertx.core.AsyncResult<T>>)",
+          "label": "onComplete",
+          "score": 175
+        }
+      ]
+    },
+    {
+      "id": "pagerank",
+      "description": "PageRank",
+      "nodes": [
+        {
+          "id": "io.vertx.core.http.HttpMethod",
+          "label": "HttpMethod",
+          "score": 0.014316604983160742
+        },
+        {
+          "id": "io.vertx.core.shareddata.Shareable",
+          "label": "Shareable",
+          "score": 0.014153808496552199
+        },
+        {
+          "id": "io.vertx.core.shareddata.Shareable.copy()",
+          "label": "copy",
+          "score": 0.014024926502875802
+        },
+        {
+          "id": "io.vertx.core.buffer.Buffer",
+          "label": "Buffer",
+          "score": 0.013632182489015283
+        },
+        {
+          "id": "io.vertx.core.Handler.E",
+          "label": "E",
+          "score": 0.013430794003954822
+        },
+        {
+          "id": "io.vertx.core.Handler",
+          "label": "Handler",
+          "score": 0.01339557157795956
+        },
+        {
+          "id": "io.vertx.core.Future",
+          "label": "Future",
+          "score": 0.013166865664624116
+        },
+        {
+          "id": "io.vertx.core.Handler.handle(E)",
+          "label": "handle",
+          "score": 0.006912683115033664
+        },
+        {
+          "id": "io.vertx.core.Handler.handle(E)!event",
+          "label": "event",
+          "score": 0.006856048033565313
+        },
+        {
+          "id": "io.vertx.core.impl.ContextInternal",
+          "label": "ContextInternal",
+          "score": 0.006720378273045264
+        }
+      ]
+    },
+    {
+      "id": "eigenvector",
+      "description": "Eigenvector centrality",
+      "nodes": [
+        {
+          "id": "io.vertx.core.http.HttpMethod",
+          "label": "HttpMethod",
+          "score": 0.4860388057062537
+        },
+        {
+          "id": "io.vertx.core.http.HttpMethod?POST@48.33:48.37",
+          "label": "POST",
+          "score": 0.15621301348295447
+        },
+        {
+          "id": "io.vertx.core.http.HttpMethod?GET@38.33:38.36",
+          "label": "GET",
+          "score": 0.15621301348295447
+        },
+        {
+          "id": "io.vertx.core.http.HttpMethod?HEAD@43.33:43.37",
+          "label": "HEAD",
+          "score": 0.15157244782976614
+        },
+        {
+          "id": "io.vertx.core.http.HttpMethod?COPY@93.33:93.37",
+          "label": "COPY",
+          "score": 0.15157244782976614
+        },
+        {
+          "id": "io.vertx.core.http.HttpMethod?UNLOCK@108.33:108.39",
+          "label": "UNLOCK",
+          "score": 0.15157244782976614
+        },
+        {
+          "id": "io.vertx.core.http.HttpMethod?SEARCH@183.33:183.39",
+          "label": "SEARCH",
+          "score": 0.15157244782976614
+        },
+        {
+          "id": "io.vertx.core.http.HttpMethod?PROPPATCH@83.33:83.42",
+          "label": "PROPPATCH",
+          "score": 0.15157244782976614
+        },
+        {
+          "id": "io.vertx.core.http.HttpMethod?PATCH@73.33:73.38",
+          "label": "PATCH",
+          "score": 0.15157244782976614
+        },
+        {
+          "id": "io.vertx.core.http.HttpMethod?OPTIONS@33.33:33.40",
+          "label": "OPTIONS",
+          "score": 0.15157244782976614
+        }
+      ]
+    },
+    {
+      "id": "Katz",
+      "description": "Katz centrality",
+      "nodes": [
+        {
+          "id": "io.vertx.core.http.impl.MimeMapping?m@23.43:23.44",
+          "label": "m",
+          "score": 10.890205082415834
+        },
+        {
+          "id": "io.vertx.core.Future",
+          "label": "Future",
+          "score": 10.27439104708598
+        },
+        {
+          "id": "io.vertx.core.Handler",
+          "label": "Handler",
+          "score": 8.823119644993994
+        },
+        {
+          "id": "io.vertx.core.buffer.Buffer",
+          "label": "Buffer",
+          "score": 7.747935074082994
+        },
+        {
+          "id": "io.vertx.core.impl.ContextInternal",
+          "label": "ContextInternal",
+          "score": 4.178712168123001
+        },
+        {
+          "id": "io.vertx.core.json.JsonObject",
+          "label": "JsonObject",
+          "score": 3.67829795987
+        },
+        {
+          "id": "io.vertx.core.Vertx",
+          "label": "Vertx",
+          "score": 3.663199502344997
+        },
+        {
+          "id": "io.vertx.core.Promise",
+          "label": "Promise",
+          "score": 3.6315963004290004
+        },
+        {
+          "id": "io.vertx.core.MultiMap",
+          "label": "MultiMap",
+          "score": 3.1084409280050003
+        },
+        {
+          "id": "io.vertx.core.Future.onComplete(io.vertx.core.Handler<io.vertx.core.AsyncResult<T>>)",
+          "label": "onComplete",
+          "score": 2.872945801235
+        }
+      ]
+    },
+    {
+      "id": "betweenness",
+      "description": "Betweenness centrality",
+      "nodes": [
+        {
+          "id": "io.vertx.core.impl.VertxImpl",
+          "label": "VertxImpl",
+          "score": 4.595381865523178E7
+        },
+        {
+          "id": "io.vertx.core.Vertx",
+          "label": "Vertx",
+          "score": 4.316725581417804E7
+        },
+        {
+          "id": "io.vertx.core.Future",
+          "label": "Future",
+          "score": 2.9940236785641894E7
+        },
+        {
+          "id": "io.vertx.core.impl.ContextInternal",
+          "label": "ContextInternal",
+          "score": 2.9651595424956266E7
+        },
+        {
+          "id": "io.vertx.core.impl.VertxInternal",
+          "label": "VertxInternal",
+          "score": 2.5408931503260598E7
+        },
+        {
+          "id": "io.vertx.core.impl.VertxImpl.createHttpClient(io.vertx.core.http.HttpClientOptions)",
+          "label": "createHttpClient",
+          "score": 1.894604028587777E7
+        },
+        {
+          "id": "io.vertx.core.Context",
+          "label": "Context",
+          "score": 1.546026670571445E7
+        },
+        {
+          "id": "io.vertx.core.impl.VertxImpl.VertxImpl(io.vertx.core.VertxOptions, io.vertx.core.spi.cluster.ClusterManager, io.vertx.core.spi.cluster.NodeSelector, io.vertx.core.spi.metrics.VertxMetrics, io.vertx.core.spi.tracing.VertxTracer<?, ?>, io.vertx.core.spi.transport.Transport, io.vertx.core.spi.file.FileResolver, io.vertx.core.spi.VertxThreadFactory, io.vertx.core.spi.ExecutorServiceFactory)",
+          "label": "VertxImpl",
+          "score": 1.5269557731319528E7
+        },
+        {
+          "id": "io.vertx.core.impl.future.FutureBase.emitFailure(java.lang.Throwable, io.vertx.core.impl.future.Listener<T>)",
+          "label": "emitFailure",
+          "score": 1.4803041201316068E7
+        },
+        {
+          "id": "io.vertx.core.impl.future.FutureImpl.tryFail(java.lang.Throwable)",
+          "label": "tryFail",
+          "score": 1.4270549710644435E7
+        }
+      ]
+    },
+    {
+      "id": "harmonic",
+      "description": "Harmonic centrality",
+      "nodes": [
+        {
+          "id": "io.vertx.core.impl.VertxImpl",
+          "label": "VertxImpl",
+          "score": 0.12083070490629763
+        },
+        {
+          "id": "io.vertx.core.impl.VertxImpl.VertxImpl(io.vertx.core.VertxOptions, io.vertx.core.spi.cluster.ClusterManager, io.vertx.core.spi.cluster.NodeSelector, io.vertx.core.spi.metrics.VertxMetrics, io.vertx.core.spi.tracing.VertxTracer<?, ?>, io.vertx.core.spi.transport.Transport, io.vertx.core.spi.file.FileResolver, io.vertx.core.spi.VertxThreadFactory, io.vertx.core.spi.ExecutorServiceFactory)",
+          "label": "VertxImpl",
+          "score": 0.1096877736495529
+        },
+        {
+          "id": "io.vertx.core.impl.VertxBuilder.clusteredVertx()?vertx@250.14:250.19",
+          "label": "vertx",
+          "score": 0.10229901427726061
+        },
+        {
+          "id": "io.vertx.core.impl.VertxBuilder.vertx()?vertx@228.14:228.19",
+          "label": "vertx",
+          "score": 0.10197803461496378
+        },
+        {
+          "id": "io.vertx.core.http.impl.HttpClientImpl",
+          "label": "HttpClientImpl",
+          "score": 0.10195722080350683
+        },
+        {
+          "id": "io.vertx.core.impl.VertxWrapper",
+          "label": "VertxWrapper",
+          "score": 0.10106002551561866
+        },
+        {
+          "id": "io.vertx.core.impl.VertxBuilder.clusteredVertx()",
+          "label": "clusteredVertx",
+          "score": 0.09933114573885123
+        },
+        {
+          "id": "io.vertx.core.http.impl.Http1xServerConnection",
+          "label": "Http1xServerConnection",
+          "score": 0.0989994190575583
+        },
+        {
+          "id": "io.vertx.core.http.impl.Http1xServerResponse",
+          "label": "Http1xServerResponse",
+          "score": 0.09839199154144886
+        },
+        {
+          "id": "io.vertx.core.http.impl.HttpServerWorker",
+          "label": "HttpServerWorker",
+          "score": 0.09789096387480475
+        }
+      ]
+    },
+    {
+      "id": "combined",
+      "description": "Combined importance",
+      "nodes": [
+        {
+          "id": "io.vertx.core.impl.VertxImpl",
+          "label": "VertxImpl",
+          "score": 4
+        },
+        {
+          "id": "io.vertx.core.impl.ContextInternal",
+          "label": "ContextInternal",
+          "score": 4
+        },
+        {
+          "id": "io.vertx.core.Future",
+          "label": "Future",
+          "score": 4
+        },
+        {
+          "id": "io.vertx.core.impl.VertxImpl.VertxImpl(io.vertx.core.VertxOptions, io.vertx.core.spi.cluster.ClusterManager, io.vertx.core.spi.cluster.NodeSelector, io.vertx.core.spi.metrics.VertxMetrics, io.vertx.core.spi.tracing.VertxTracer<?, ?>, io.vertx.core.spi.transport.Transport, io.vertx.core.spi.file.FileResolver, io.vertx.core.spi.VertxThreadFactory, io.vertx.core.spi.ExecutorServiceFactory)",
+          "label": "VertxImpl",
+          "score": 3
+        },
+        {
+          "id": "io.vertx.core.buffer.Buffer",
+          "label": "Buffer",
+          "score": 3
+        },
+        {
+          "id": "io.vertx.core.json.JsonObject",
+          "label": "JsonObject",
+          "score": 3
+        },
+        {
+          "id": "io.vertx.core.Vertx",
+          "label": "Vertx",
+          "score": 3
+        },
+        {
+          "id": "io.vertx.core.Handler",
+          "label": "Handler",
+          "score": 3
+        },
+        {
+          "id": "io.vertx.core.http.HttpMethod",
+          "label": "HttpMethod",
+          "score": 2
+        },
+        {
+          "id": "io.vertx.core.Future.onComplete(io.vertx.core.Handler<io.vertx.core.AsyncResult<T>>)",
+          "label": "onComplete",
+          "score": 2
+        }
+      ]
+    }
+  ]
+}

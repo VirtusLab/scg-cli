@@ -2,6 +2,13 @@ val scala3Version = "3.3.0"
 
 maintainer := "kborowski@virtuslab.com"
 
+def protocExecutable() = {
+  if (protocbridge.SystemDetector.detectedClassifier() == "osx-aarch_64") {
+    PB.protocExecutable := file("/opt/homebrew/bin/protoc") // location of protobuf manual instalation
+  } else
+    PB.protocExecutable := PB.protocExecutable.value
+}
+
 lazy val root = project
   .in(file("."))
   .enablePlugins(JavaAppPackaging)
@@ -10,9 +17,7 @@ lazy val root = project
     organization := "com.virtuslab.semanticgraphs",
     version := "0.1.6",
     scalaVersion := scala3Version,
-    Compile / PB.targets := Seq(
-      scalapb.gen() -> (Compile / sourceManaged).value
-    ),
+    protocExecutable(),
     dockerBaseImage := "openjdk:11",
     packageName := "scg-cli",
     Compile / discoveredMainClasses := Seq("org.virtuslab.semanticgraphs.analytics.cli.ScgCli"),
@@ -25,6 +30,7 @@ lazy val root = project
 
 lazy val javaparser = project.in(file("javaparser")).settings(
   scalaVersion := scala3Version,
+  protocExecutable(),
   Compile / PB.targets := Seq(
     scalapb.gen() -> (Compile / sourceManaged).value
   ),
@@ -34,6 +40,7 @@ lazy val javaparser = project.in(file("javaparser")).settings(
 
 lazy val parsercommons = project.in(file("parsercommons")).settings(
   scalaVersion := scala3Version,
+  protocExecutable(),
   Compile / PB.targets := Seq(
     scalapb.gen() -> (Compile / sourceManaged).value
   ),
@@ -53,12 +60,13 @@ lazy val spark = project.in(file("spark")).settings(
 
 lazy val commons = project.in(file("commons")).settings(
   scalaVersion := scala3Version,
+  protocExecutable(),
   Compile / PB.targets := Seq(
     scalapb.gen() -> (Compile / sourceManaged).value
   ),
   libraryDependencies += "org.jgrapht" % "jgrapht-core" % "1.5.1",
   libraryDependencies += "org.jgrapht" % "jgrapht-io" % "1.5.1",
-  libraryDependencies += "com.thesamet.scalapb" %% "scalapb-runtime" % "0.11.12",
+  libraryDependencies += "com.thesamet.scalapb" %% "scalapb-runtime" % "0.11.13",
   libraryDependencies += "com.lihaoyi" %% "upickle" % "3.1.2",
   libraryDependencies += "org.apache.commons" % "commons-compress" % "1.23.0"
 )

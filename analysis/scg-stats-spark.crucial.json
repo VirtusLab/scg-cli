@@ -1,717 +1,510 @@
 {
-  "projectName" : "spark",
-  "workspace" : "data/spark",
-  "stats" : [
+  "projectName": "spark",
+  "workspace": "data/spark.zip",
+  "stats": [
     {
-      "id" : "loc",
-      "description" : "Top by node LOC size",
-      "nodes" : [
+      "id": "loc",
+      "description": "Lines of code",
+      "nodes": [
         {
-          "id" : "org/apache/spark/sql/functions.",
-          "label" : "functions",
-          "score" : 5380.0
+          "id": "org/apache/spark/sql/functions.",
+          "label": "functions",
+          "score": 5380
         },
         {
-          "id" : "org/apache/spark/sql/catalyst/parser/AstBuilder#",
-          "label" : "AstBuilder",
-          "score" : 4408.0
+          "id": "org/apache/spark/sql/catalyst/parser/AstBuilder#",
+          "label": "AstBuilder",
+          "score": 4408
         },
         {
-          "id" : "org/apache/spark/sql/Dataset#",
-          "label" : "Dataset",
-          "score" : 3683.0
+          "id": "org/apache/spark/sql/Dataset#",
+          "label": "Dataset",
+          "score": 3683
         },
         {
-          "id" : "org/apache/spark/sql/internal/SQLConf.",
-          "label" : "SQLConf",
-          "score" : 3514.0
+          "id": "org/apache/spark/sql/internal/SQLConf.",
+          "label": "SQLConf",
+          "score": 3514
         },
         {
-          "id" : "org/apache/spark/sql/catalyst/analysis/Analyzer#",
-          "label" : "Analyzer",
-          "score" : 3483.0
+          "id": "org/apache/spark/sql/catalyst/analysis/Analyzer#",
+          "label": "Analyzer",
+          "score": 3483
         },
         {
-          "id" : "org/apache/spark/util/Utils.",
-          "label" : "Utils",
-          "score" : 3114.0
+          "id": "org/apache/spark/util/Utils.",
+          "label": "Utils",
+          "score": 3114
         },
         {
-          "id" : "org/apache/spark/SparkContext#",
-          "label" : "SparkContext",
-          "score" : 2534.0
+          "id": "org/apache/spark/SparkContext#",
+          "label": "SparkContext",
+          "score": 2534
         },
         {
-          "id" : "org/apache/spark/scheduler/DAGScheduler#",
-          "label" : "DAGScheduler",
-          "score" : 2448.0
+          "id": "org/apache/spark/scheduler/DAGScheduler#",
+          "label": "DAGScheduler",
+          "score": 2448
         },
         {
-          "id" : "org/apache/spark/sql/errors/QueryCompilationErrors.",
-          "label" : "QueryCompilationErrors",
-          "score" : 2321.0
+          "id": "org/apache/spark/sql/errors/QueryCompilationErrors.",
+          "label": "QueryCompilationErrors",
+          "score": 2321
         },
         {
-          "id" : "org/apache/spark/rdd/RDD#",
-          "label" : "RDD",
-          "score" : 2011.0
+          "id": "org/apache/spark/rdd/RDD#",
+          "label": "RDD",
+          "score": 2011
         }
       ]
     },
     {
-      "id" : "out-degree",
-      "description" : "Top by node degree outgoing",
-      "nodes" : [
+      "id": "out-degree",
+      "description": "Node out-degree",
+      "nodes": [
         {
-          "id" : "org/apache/spark/sql/catalyst/expressions/ScalaUDF#",
-          "label" : "ScalaUDF",
-          "score" : 1157.0
+          "id": "org/apache/spark/sql/catalyst/expressions/ScalaUDF#",
+          "label": "ScalaUDF",
+          "score": 2677
         },
         {
-          "id" : "org/apache/spark/sql/catalyst/analysis/ResolveSessionCatalog#apply().",
-          "label" : "apply",
-          "score" : 610.0
+          "id": "org/apache/spark/sql/internal/SQLConf.",
+          "label": "SQLConf",
+          "score": 2659
         },
         {
-          "id" : "org/apache/spark/sql/execution/datasources/v2/DataSourceV2Strategy#apply().",
-          "label" : "apply",
-          "score" : 588.0
+          "id": "org/apache/spark/deploy/SparkSubmit#prepareSubmitEnvironment().",
+          "label": "prepareSubmitEnvironment",
+          "score": 1058
         },
         {
-          "id" : "org/apache/spark/sql/internal/SQLConf.",
-          "label" : "SQLConf",
-          "score" : 525.0
+          "id": "org/apache/spark/sql/catalyst/analysis/ResolveSessionCatalog#apply().",
+          "label": "apply",
+          "score": 864
         },
         {
-          "id" : "org/apache/spark/SparkContext#",
-          "label" : "SparkContext",
-          "score" : 510.0
+          "id": "org/apache/spark/sql/execution/datasources/v2/DataSourceV2Strategy#apply().",
+          "label": "apply",
+          "score": 788
         },
         {
-          "id" : "org/apache/spark/sql/execution/datasources/parquet/ParquetFilters#",
-          "label" : "ParquetFilters",
-          "score" : 482.0
+          "id": "org/apache/spark/sql/catalyst/analysis/FunctionRegistry.",
+          "label": "FunctionRegistry",
+          "score": 761
         },
         {
-          "id" : "org/apache/spark/sql/functions.",
-          "label" : "functions",
-          "score" : 441.0
+          "id": "org/apache/spark/SparkContext#",
+          "label": "SparkContext",
+          "score": 678
         },
         {
-          "id" : "org/apache/spark/sql/execution/SparkStrategies#BasicOperators.apply().",
-          "label" : "apply",
-          "score" : 433.0
+          "id": "org/apache/spark/sql/execution/datasources/parquet/ParquetFilters#",
+          "label": "ParquetFilters",
+          "score": 632
         },
         {
-          "id" : "org/apache/spark/sql/errors/QueryCompilationErrors.",
-          "label" : "QueryCompilationErrors",
-          "score" : 413.0
+          "id": "org/apache/spark/executor/Executor#TaskRunner#run().",
+          "label": "run",
+          "score": 584
         },
         {
-          "id" : "org/apache/spark/sql/catalyst/analysis/FunctionRegistry.",
-          "label" : "FunctionRegistry",
-          "score" : 362.0
+          "id": "org/apache/spark/sql/catalyst/analysis/CheckAnalysis#checkAnalysis().",
+          "label": "checkAnalysis",
+          "score": 519
         }
       ]
     },
     {
-      "id" : "in-degree",
-      "description" : "Top by node degree incoming",
-      "nodes" : [
+      "id": "in-degree",
+      "description": "Node in-degree",
+      "nodes": [
         {
-          "id" : "org/apache/spark/sql/catalyst/expressions/Expression#",
-          "label" : "Expression",
-          "score" : 3445.0
+          "id": "org/apache/spark/sql/catalyst/expressions/Expression#",
+          "label": "Expression",
+          "score": 3561
         },
         {
-          "id" : "org/apache/spark/sql/catalyst/plans/logical/LogicalPlan#",
-          "label" : "LogicalPlan",
-          "score" : 1892.0
+          "id": "org/apache/spark/sql/catalyst/plans/logical/LogicalPlan#",
+          "label": "LogicalPlan",
+          "score": 1920
         },
         {
-          "id" : "org/apache/spark/sql/catalyst/InternalRow#",
-          "label" : "InternalRow",
-          "score" : 1438.0
+          "id": "org/apache/spark/sql/catalyst/InternalRow#",
+          "label": "InternalRow",
+          "score": 1507
         },
         {
-          "id" : "org/apache/spark/sql/types/StructType#",
-          "label" : "StructType",
-          "score" : 1229.0
+          "id": "org/apache/spark/ml/param/Params#$().",
+          "label": "$",
+          "score": 1397
         },
         {
-          "id" : "org/apache/spark/sql/types/DataType#",
-          "label" : "DataType",
-          "score" : 1226.0
+          "id": "org/apache/spark/sql/types/StructType#",
+          "label": "StructType",
+          "score": 1280
         },
         {
-          "id" : "org/apache/spark/rdd/RDD#",
-          "label" : "RDD",
-          "score" : 1187.0
+          "id": "org/apache/spark/sql/types/DataType#",
+          "label": "DataType",
+          "score": 1237
         },
         {
-          "id" : "org/apache/spark/sql/Column#",
-          "label" : "Column",
-          "score" : 1066.0
+          "id": "org/apache/spark/rdd/RDD#",
+          "label": "RDD",
+          "score": 1215
         },
         {
-          "id" : "org/apache/spark/sql/catalyst/expressions/Attribute#",
-          "label" : "Attribute",
-          "score" : 796.0
+          "id": "org/apache/spark/sql/catalyst/expressions/Expression#dataType().",
+          "label": "dataType",
+          "score": 1201
         },
         {
-          "id" : "org/apache/spark/util/Utils.",
-          "label" : "Utils",
-          "score" : 687.0
+          "id": "org/apache/spark/sql/Column#",
+          "label": "Column",
+          "score": 1096
         },
         {
-          "id" : "org/apache/spark/internal/Logging#",
-          "label" : "Logging",
-          "score" : 647.0
+          "id": "org/apache/spark/util/Utils.",
+          "label": "Utils",
+          "score": 977
         }
       ]
     },
     {
-      "id" : "pagerank",
-      "description" : "PageRank - how influential the node is",
-      "nodes" : [
+      "id": "pagerank",
+      "description": "PageRank",
+      "nodes": [
         {
-          "id" : "org/apache/spark/sql/catalyst/expressions/Expression#",
-          "label" : "Expression",
-          "score" : 0.015623011249734866
+          "id": "org/apache/spark/sql/catalyst/expressions/Expression#",
+          "label": "Expression",
+          "score": 0.01583643427739943
         },
         {
-          "id" : "org/apache/spark/sql/types/DataType#",
-          "label" : "DataType",
-          "score" : 0.007776250303488066
+          "id": "org/apache/spark/sql/types/DataType#",
+          "label": "DataType",
+          "score": 0.007668939952068218
         },
         {
-          "id" : "org/apache/spark/sql/catalyst/expressions/Attribute#",
-          "label" : "Attribute",
-          "score" : 0.005623875611360984
+          "id": "org/apache/spark/sql/catalyst/expressions/Attribute#",
+          "label": "Attribute",
+          "score": 0.005615654978081052
         },
         {
-          "id" : "org/apache/spark/sql/catalyst/plans/logical/LogicalPlan#",
-          "label" : "LogicalPlan",
-          "score" : 0.004973777850117377
+          "id": "org/apache/spark/sql/catalyst/plans/logical/LogicalPlan#",
+          "label": "LogicalPlan",
+          "score": 0.004971902704466688
         },
         {
-          "id" : "org/apache/spark/sql/catalyst/InternalRow#",
-          "label" : "InternalRow",
-          "score" : 0.004334447365324048
+          "id": "org/apache/spark/sql/catalyst/InternalRow#",
+          "label": "InternalRow",
+          "score": 0.004308528015739974
         },
         {
-          "id" : "org/apache/spark/sql/types/DataType#typeName().",
-          "label" : "typeName",
-          "score" : 0.003628783011271116
+          "id": "org/apache/spark/sql/catalyst/trees/TreeNode#[BaseType]",
+          "label": "BaseType",
+          "score": 0.004100985432261199
         },
         {
-          "id" : "org/apache/spark/sql/types/StructType#",
-          "label" : "StructType",
-          "score" : 0.003544847874351084
+          "id": "org/apache/spark/sql/catalyst/trees/TreeNode#children().",
+          "label": "children",
+          "score": 0.00371464759268793
         },
         {
-          "id" : "org/apache/spark/sql/catalyst/trees/TreeNode#[BaseType]",
-          "label" : "BaseType",
-          "score" : 0.0032664136245195907
+          "id": "org/apache/spark/sql/types/DataType#typeName().",
+          "label": "typeName",
+          "score": 0.0035789975818727835
         },
         {
-          "id" : "org/apache/spark/sql/Column#",
-          "label" : "Column",
-          "score" : 0.003162108366900129
+          "id": "org/apache/spark/sql/types/StructType#",
+          "label": "StructType",
+          "score": 0.003509641742298623
         },
         {
-          "id" : "org/apache/spark/sql/catalyst/trees/TreeNode#children().",
-          "label" : "children",
-          "score" : 0.0028191557796189235
+          "id": "org/apache/spark/sql/Column#",
+          "label": "Column",
+          "score": 0.0030660101176436133
         }
       ]
     },
     {
-      "id" : "eigenvector",
-      "description" : "eigenvector Centrality",
-      "nodes" : [
+      "id": "eigenvector",
+      "description": "Eigenvector centrality",
+      "nodes": [
         {
-          "id" : "org/apache/spark/api/java/JavaPairRDD#[K]",
-          "label" : "K",
-          "score" : 0.4761609215749102
+          "id": "org/apache/spark/internal/config/ConfigBuilder#version().",
+          "label": "version",
+          "score": 0.3444092486009675
         },
         {
-          "id" : "org/apache/spark/api/java/JavaPairRDD#[V]",
-          "label" : "V",
-          "score" : 0.3922433720528021
+          "id": "org/apache/spark/internal/config/ConfigBuilder#doc().",
+          "label": "doc",
+          "score": 0.33882073367011695
         },
         {
-          "id" : "org/apache/spark/api/java/JavaPairRDD#",
-          "label" : "JavaPairRDD",
-          "score" : 0.3480893743737997
+          "id": "org/apache/spark/sql/internal/SQLConf.buildConf().",
+          "label": "buildConf",
+          "score": 0.32949366419000437
         },
         {
-          "id" : "org/apache/spark/api/java/JavaPairRDD#rdd.",
-          "label" : "rdd",
-          "score" : 0.3330292078893767
+          "id": "org/apache/spark/internal/config/TypedConfigBuilder#parent.",
+          "label": "parent",
+          "score": 0.32050319859875454
         },
         {
-          "id" : "org/apache/spark/rdd/RDD#",
-          "label" : "RDD",
-          "score" : 0.18241436110556522
+          "id": "org/apache/spark/internal/config/TypedConfigBuilder#createWithDefault().",
+          "label": "createWithDefault",
+          "score": 0.30778661993180007
         },
         {
-          "id" : "org/apache/spark/api/java/JavaPairRDD.fromRDD().",
-          "label" : "fromRDD",
-          "score" : 0.1772719400304685
+          "id": "org/apache/spark/internal/config/ConfigBuilder#internal().",
+          "label": "internal",
+          "score": 0.2034600310821015
         },
         {
-          "id" : "org/apache/spark/rdd/RDD#[T]",
-          "label" : "T",
-          "score" : 0.17335430575702762
+          "id": "org/apache/spark/internal/config/ConfigBuilder#booleanConf().",
+          "label": "booleanConf",
+          "score": 0.1956884017526514
         },
         {
-          "id" : "org/apache/spark/rdd/RDD#withScope().",
-          "label" : "withScope",
-          "score" : 0.16666875150876478
+          "id": "org/apache/spark/api/java/JavaPairRDD#[K]",
+          "label": "K",
+          "score": 0.17649629270715986
         },
         {
-          "id" : "org/apache/spark/rdd/RDD#sc().",
-          "label" : "sc",
-          "score" : 0.11650496759394548
+          "id": "org/apache/spark/internal/config/ConfigBuilder#",
+          "label": "ConfigBuilder",
+          "score": 0.1538641046633527
         },
         {
-          "id" : "org/apache/spark/api/java/JavaPairRDD#`<init>`().",
-          "label" : "<init>",
-          "score" : 0.07968815201998124
+          "id": "org/apache/spark/api/java/JavaPairRDD#[V]",
+          "label": "V",
+          "score": 0.15081855245288484
         }
       ]
     },
     {
-      "id" : "Katz",
-      "description" : "Katz Centrality - how influential the node is",
-      "nodes" : [
+      "id": "Katz",
+      "description": "Katz centrality",
+      "nodes": [
         {
-          "id" : "org/apache/spark/sql/catalyst/expressions/Expression#",
-          "label" : "Expression",
-          "score" : 36.505858267768076
+          "id": "org/apache/spark/sql/catalyst/expressions/Expression#",
+          "label": "Expression",
+          "score": 37.97000281961833
         },
         {
-          "id" : "org/apache/spark/sql/catalyst/plans/logical/LogicalPlan#",
-          "label" : "LogicalPlan",
-          "score" : 20.35595980832393
+          "id": "org/apache/spark/internal/config/ConfigBuilder#version().",
+          "label": "version",
+          "score": 23.820872960207677
         },
         {
-          "id" : "org/apache/spark/sql/catalyst/InternalRow#",
-          "label" : "InternalRow",
-          "score" : 15.690057876710984
+          "id": "org/apache/spark/internal/config/ConfigBuilder#doc().",
+          "label": "doc",
+          "score": 22.034027942479717
         },
         {
-          "id" : "org/apache/spark/sql/types/DataType#",
-          "label" : "DataType",
-          "score" : 13.807138388631014
+          "id": "org/apache/spark/sql/internal/SQLConf.buildConf().",
+          "label": "buildConf",
+          "score": 21.688701671932197
         },
         {
-          "id" : "org/apache/spark/sql/types/StructType#",
-          "label" : "StructType",
-          "score" : 13.683240071495973
+          "id": "org/apache/spark/internal/config/TypedConfigBuilder#createWithDefault().",
+          "label": "createWithDefault",
+          "score": 21.259525533028903
         },
         {
-          "id" : "org/apache/spark/rdd/RDD#",
-          "label" : "RDD",
-          "score" : 13.464285516260993
+          "id": "org/apache/spark/sql/catalyst/plans/logical/LogicalPlan#",
+          "label": "LogicalPlan",
+          "score": 20.726063718097464
         },
         {
-          "id" : "org/apache/spark/sql/Column#",
-          "label" : "Column",
-          "score" : 12.025481339699908
+          "id": "org/apache/spark/sql/catalyst/InternalRow#",
+          "label": "InternalRow",
+          "score": 16.470761050442057
         },
         {
-          "id" : "org/apache/spark/sql/catalyst/expressions/Attribute#",
-          "label" : "Attribute",
-          "score" : 9.239760766533006
+          "id": "org/apache/spark/ml/param/Params#$().",
+          "label": "$",
+          "score": 15.376644301245747
         },
         {
-          "id" : "org/apache/spark/internal/Logging#",
-          "label" : "Logging",
-          "score" : 8.674007092025994
+          "id": "org/apache/spark/sql/types/StructType#",
+          "label": "StructType",
+          "score": 14.282424789671426
         },
         {
-          "id" : "org/apache/spark/util/Utils.",
-          "label" : "Utils",
-          "score" : 8.229861818561009
+          "id": "org/apache/spark/sql/types/DataType#",
+          "label": "DataType",
+          "score": 14.087899954192443
         }
       ]
     },
     {
-      "id" : "betweenness",
-      "description" : "Betweenness Centrality",
-      "nodes" : [
+      "id": "betweenness",
+      "description": "Betweenness centrality",
+      "nodes": [
         {
-          "id" : "org/apache/spark/SparkContext#",
-          "label" : "SparkContext",
-          "score" : 7.067927981762396E8
+          "id": "org/apache/spark/SparkContext#",
+          "label": "SparkContext",
+          "score": 7.145041518471547E8
         },
         {
-          "id" : "org/apache/spark/sql/catalyst/expressions/Expression#",
-          "label" : "Expression",
-          "score" : 6.822258658912432E8
+          "id": "org/apache/spark/sql/catalyst/expressions/Expression#",
+          "label": "Expression",
+          "score": 6.761072632012322E8
         },
         {
-          "id" : "org/apache/spark/sql/internal/SQLConf.get().",
-          "label" : "get",
-          "score" : 6.24692616430011E8
+          "id": "org/apache/spark/sql/internal/SQLConf.get().",
+          "label": "get",
+          "score": 6.21458468413427E8
         },
         {
-          "id" : "org/apache/spark/sql/catalyst/analysis/FunctionRegistry.",
-          "label" : "FunctionRegistry",
-          "score" : 4.743593531232685E8
+          "id": "org/apache/spark/sql/catalyst/analysis/FunctionRegistry.",
+          "label": "FunctionRegistry",
+          "score": 4.7479914873952E8
         },
         {
-          "id" : "org/apache/spark/sql/catalyst/expressions/Expression#prettyName().",
-          "label" : "prettyName",
-          "score" : 4.3003907211460537E8
+          "id": "org/apache/spark/sql/catalyst/expressions/Expression#prettyName().",
+          "label": "prettyName",
+          "score": 4.300442502281304E8
         },
         {
-          "id" : "org/apache/spark/SparkContext.",
-          "label" : "SparkContext",
-          "score" : 3.911047347260343E8
+          "id": "org/apache/spark/SparkContext.",
+          "label": "SparkContext",
+          "score": 3.936112522730125E8
         },
         {
-          "id" : "org/apache/spark/util/Utils.",
-          "label" : "Utils",
-          "score" : 2.817328631436802E8
+          "id": "org/apache/spark/util/Utils.",
+          "label": "Utils",
+          "score": 2.881320322642013E8
         },
         {
-          "id" : "org/apache/spark/rdd/RDD#",
-          "label" : "RDD",
-          "score" : 2.5256727798551437E8
+          "id": "org/apache/spark/rdd/RDD#",
+          "label": "RDD",
+          "score": 2.5144020635348532E8
         },
         {
-          "id" : "org/apache/spark/SparkContext.createTaskScheduler().",
-          "label" : "createTaskScheduler",
-          "score" : 2.2821740151675707E8
+          "id": "org/apache/spark/SparkContext.createTaskScheduler().",
+          "label": "createTaskScheduler",
+          "score": 2.338133719165473E8
         },
         {
-          "id" : "org/apache/spark/sql/SparkSession#",
-          "label" : "SparkSession",
-          "score" : 2.260529647404903E8
+          "id": "org/apache/spark/sql/SparkSession#",
+          "label": "SparkSession",
+          "score": 2.2843934490948963E8
         }
       ]
     },
     {
-      "id" : "harmonic",
-      "description" : "Top harmonic centrality",
-      "nodes" : [
+      "id": "harmonic",
+      "description": "Harmonic centrality",
+      "nodes": [
         {
-          "id" : "org/apache/spark/sql/internal/BaseSessionStateBuilder#",
-          "label" : "BaseSessionStateBuilder",
-          "score" : 0.10343765490605246
+          "id": "org/apache/spark/sql/internal/BaseSessionStateBuilder#",
+          "label": "BaseSessionStateBuilder",
+          "score": 0.10343765490605246
         },
         {
-          "id" : "org/apache/spark/sql/SparkSession#",
-          "label" : "SparkSession",
-          "score" : 0.0977556130643337
+          "id": "org/apache/spark/sql/SparkSession#",
+          "label": "SparkSession",
+          "score": 0.0977556130643337
         },
         {
-          "id" : "org/apache/spark/sql/hive/HiveSessionStateBuilder#",
-          "label" : "HiveSessionStateBuilder",
-          "score" : 0.09765636126335955
+          "id": "org/apache/spark/sql/hive/HiveSessionStateBuilder#",
+          "label": "HiveSessionStateBuilder",
+          "score": 0.09765636126335955
         },
         {
-          "id" : "org/apache/spark/sql/Dataset#",
-          "label" : "Dataset",
-          "score" : 0.09725996427556347
+          "id": "org/apache/spark/sql/Dataset#",
+          "label": "Dataset",
+          "score": 0.09725996427556347
         },
         {
-          "id" : "org/apache/spark/mllib/api/python/PythonMLLibAPI#",
-          "label" : "PythonMLLibAPI",
-          "score" : 0.0964578523499921
+          "id": "org/apache/spark/mllib/api/python/PythonMLLibAPI#",
+          "label": "PythonMLLibAPI",
+          "score": 0.0964578523499921
         },
         {
-          "id" : "org/apache/spark/examples/ml/RandomForestExample.run().",
-          "label" : "run",
-          "score" : 0.09472466043632123
+          "id": "org/apache/spark/examples/ml/RandomForestExample.run().",
+          "label": "run",
+          "score": 0.09472466043632123
         },
         {
-          "id" : "org/apache/spark/examples/ml/GBTExample.run().",
-          "label" : "run",
-          "score" : 0.09464494811642352
+          "id": "org/apache/spark/examples/ml/GBTExample.run().",
+          "label": "run",
+          "score": 0.09464494811642352
         },
         {
-          "id" : "org/apache/spark/examples/ml/DecisionTreeExample.run().",
-          "label" : "run",
-          "score" : 0.0937220201061128
+          "id": "org/apache/spark/examples/ml/DecisionTreeExample.run().",
+          "label": "run",
+          "score": 0.0937220201061128
         },
         {
-          "id" : "org/apache/spark/sql/execution/streaming/MicroBatchExecution#runBatch().",
-          "label" : "runBatch",
-          "score" : 0.09320718071094342
+          "id": "org/apache/spark/sql/execution/streaming/MicroBatchExecution#runBatch().",
+          "label": "runBatch",
+          "score": 0.09320718071094342
         },
         {
-          "id" : "org/apache/spark/ml/r/RWrappers.load().",
-          "label" : "load",
-          "score" : 0.0928384621944164
+          "id": "org/apache/spark/ml/r/RWrappers.load().",
+          "label": "load",
+          "score": 0.0928384621944164
         }
       ]
     },
     {
-      "id" : "combined",
-      "description" : "Crucial code elements, combined",
-      "nodes" : [
+      "id": "combined",
+      "description": "Combined importance",
+      "nodes": [
         {
-          "id" : "org/apache/spark/rdd/RDD#",
-          "label" : "RDD",
-          "score" : 5.0
+          "id": "org/apache/spark/sql/catalyst/expressions/Expression#",
+          "label": "Expression",
+          "score": 4
         },
         {
-          "id" : "org/apache/spark/sql/catalyst/expressions/Expression#",
-          "label" : "Expression",
-          "score" : 4.0
+          "id": "org/apache/spark/sql/types/DataType#",
+          "label": "DataType",
+          "score": 3
         },
         {
-          "id" : "org/apache/spark/util/Utils.",
-          "label" : "Utils",
-          "score" : 4.0
+          "id": "org/apache/spark/util/Utils.",
+          "label": "Utils",
+          "score": 3
         },
         {
-          "id" : "org/apache/spark/sql/types/DataType#",
-          "label" : "DataType",
-          "score" : 3.0
+          "id": "org/apache/spark/SparkContext#",
+          "label": "SparkContext",
+          "score": 3
         },
         {
-          "id" : "org/apache/spark/sql/catalyst/plans/logical/LogicalPlan#",
-          "label" : "LogicalPlan",
-          "score" : 3.0
+          "id": "org/apache/spark/sql/catalyst/InternalRow#",
+          "label": "InternalRow",
+          "score": 3
         },
         {
-          "id" : "org/apache/spark/SparkContext#",
-          "label" : "SparkContext",
-          "score" : 3.0
+          "id": "org/apache/spark/sql/types/StructType#",
+          "label": "StructType",
+          "score": 3
         },
         {
-          "id" : "org/apache/spark/sql/catalyst/InternalRow#",
-          "label" : "InternalRow",
-          "score" : 3.0
+          "id": "org/apache/spark/sql/catalyst/plans/logical/LogicalPlan#",
+          "label": "LogicalPlan",
+          "score": 3
         },
         {
-          "id" : "org/apache/spark/sql/catalyst/expressions/Attribute#",
-          "label" : "Attribute",
-          "score" : 3.0
+          "id": "org/apache/spark/rdd/RDD#",
+          "label": "RDD",
+          "score": 3
         },
         {
-          "id" : "org/apache/spark/sql/types/StructType#",
-          "label" : "StructType",
-          "score" : 3.0
+          "id": "org/apache/spark/sql/SparkSession#",
+          "label": "SparkSession",
+          "score": 2
         },
         {
-          "id" : "org/apache/spark/sql/Column#",
-          "label" : "Column",
-          "score" : 3.0
-        },
-        {
-          "id" : "org/apache/spark/sql/functions.",
-          "label" : "functions",
-          "score" : 2.0
-        },
-        {
-          "id" : "org/apache/spark/sql/SparkSession#",
-          "label" : "SparkSession",
-          "score" : 2.0
-        },
-        {
-          "id" : "org/apache/spark/sql/errors/QueryCompilationErrors.",
-          "label" : "QueryCompilationErrors",
-          "score" : 2.0
-        },
-        {
-          "id" : "org/apache/spark/sql/internal/SQLConf.",
-          "label" : "SQLConf",
-          "score" : 2.0
-        },
-        {
-          "id" : "org/apache/spark/internal/Logging#",
-          "label" : "Logging",
-          "score" : 2.0
-        },
-        {
-          "id" : "org/apache/spark/sql/Dataset#",
-          "label" : "Dataset",
-          "score" : 2.0
-        },
-        {
-          "id" : "org/apache/spark/sql/catalyst/analysis/FunctionRegistry.",
-          "label" : "FunctionRegistry",
-          "score" : 2.0
-        },
-        {
-          "id" : "org/apache/spark/scheduler/DAGScheduler#",
-          "label" : "DAGScheduler",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/sql/types/DataType#typeName().",
-          "label" : "typeName",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/sql/execution/datasources/v2/DataSourceV2Strategy#apply().",
-          "label" : "apply",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/examples/ml/RandomForestExample.run().",
-          "label" : "run",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/mllib/api/python/PythonMLLibAPI#",
-          "label" : "PythonMLLibAPI",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/sql/hive/HiveSessionStateBuilder#",
-          "label" : "HiveSessionStateBuilder",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/rdd/RDD#sc().",
-          "label" : "sc",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/sql/catalyst/expressions/ScalaUDF#",
-          "label" : "ScalaUDF",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/sql/catalyst/analysis/Analyzer#",
-          "label" : "Analyzer",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/api/java/JavaPairRDD#`<init>`().",
-          "label" : "<init>",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/api/java/JavaPairRDD#[V]",
-          "label" : "V",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/sql/execution/streaming/MicroBatchExecution#runBatch().",
-          "label" : "runBatch",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/sql/internal/SQLConf.get().",
-          "label" : "get",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/sql/execution/SparkStrategies#BasicOperators.apply().",
-          "label" : "apply",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/api/java/JavaPairRDD#rdd.",
-          "label" : "rdd",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/sql/execution/datasources/parquet/ParquetFilters#",
-          "label" : "ParquetFilters",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/sql/catalyst/trees/TreeNode#[BaseType]",
-          "label" : "BaseType",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/sql/catalyst/expressions/Expression#prettyName().",
-          "label" : "prettyName",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/sql/internal/BaseSessionStateBuilder#",
-          "label" : "BaseSessionStateBuilder",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/api/java/JavaPairRDD#[K]",
-          "label" : "K",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/SparkContext.",
-          "label" : "SparkContext",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/examples/ml/DecisionTreeExample.run().",
-          "label" : "run",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/sql/catalyst/analysis/ResolveSessionCatalog#apply().",
-          "label" : "apply",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/api/java/JavaPairRDD.fromRDD().",
-          "label" : "fromRDD",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/rdd/RDD#[T]",
-          "label" : "T",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/api/java/JavaPairRDD#",
-          "label" : "JavaPairRDD",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/ml/r/RWrappers.load().",
-          "label" : "load",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/examples/ml/GBTExample.run().",
-          "label" : "run",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/sql/catalyst/parser/AstBuilder#",
-          "label" : "AstBuilder",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/SparkContext.createTaskScheduler().",
-          "label" : "createTaskScheduler",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/sql/catalyst/trees/TreeNode#children().",
-          "label" : "children",
-          "score" : 1.0
-        },
-        {
-          "id" : "org/apache/spark/rdd/RDD#withScope().",
-          "label" : "withScope",
-          "score" : 1.0
+          "id": "org/apache/spark/internal/config/ConfigBuilder#doc().",
+          "label": "doc",
+          "score": 2
         }
       ]
-    }
-  ],
-  "graphStats" : [
-    {
-      "id" : "average_node_degree",
-      "label" : "Average Graph Degree",
-      "score" : 5.360971524288107
-    },
-    {
-      "id" : "clustering_coefficient",
-      "label" : "Average Clustering Coefficient",
-      "score" : 0.18049723105394466
     }
   ]
 }

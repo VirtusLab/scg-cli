@@ -63,6 +63,7 @@ case class PartitionResults(
     val part = nodeToPart(s.id)
     result.updated(part, result(part) + 1)
   }
+
   lazy val distributionVariance = (globalNodesDistribution
     .map(x1 => Math.pow(x1 - distributionArithmeticAverage, 2) / nparts)
     .sum) / (distributionArithmeticAverage * distributionArithmeticAverage)
@@ -162,7 +163,7 @@ object PartitionResults:
 
   def exportGML(scg: SemanticCodeGraph, results: List[PartitionResults]): Unit = {
     val attributes = scg.nodes.map { node =>
-      val attributes: Map[String, DefaultAttribute[Int]] = results.map{ r =>
+      val attributes: Map[String, DefaultAttribute[Int]] = results.map { r =>
         s"npart-${r.nparts}-${r.method}" -> new DefaultAttribute(r.nodeToPart.getOrElse(node.id, -1), AttributeType.INT)
       }.toMap
       node.id -> attributes
@@ -174,7 +175,6 @@ object PartitionResults:
       nodeAttributes = attributes
     )
   }
-  
 
 case class GroupPartitionStats(partitionName: String, distribution: List[Int]) extends Comparable[GroupPartitionStats]:
 

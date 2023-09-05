@@ -25,7 +25,7 @@ object ScgJGraphT:
       .edgeClass(classOf[LabeledEdge])
       .buildGraph()
 
-  case class LabeledEdge(parentId: String, childId: String, role: String) extends DefaultEdge
+  class LabeledEdge(val parentId: String, val childId: String, val role: String) extends DefaultEdge
 
   def addEdge(graph: Graph[String, LabeledEdge], parentId: String, childId: String, role: String): Unit =
     if parentId != childId then
