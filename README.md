@@ -69,6 +69,17 @@ If you don't want to generate metadata for new project and still play with `scg-
 $ scg-cli summary data/metals.zip 
 ```
 
+### Class Collaboration Network and Call Graph
+
+The `scg-cli` tool is built upon the Semantic Code Graph model (SCG). It allows you to generate two key components: the Class Collaboration Network (CCN) and the Call Graph (CG) from the SCG data.
+As a result, most of the `scg-cli` commands include a `-g` switch with `SCG`, `CCN` or `CG` options, which enables you to analyze a specific subgraph instead of the entire `SCG`. For example:
+```bash
+$ scg-cli summary -g CCN data/metals.zip
+```
+This command will generate a summary for the Class Collaboration Network of the `metals` project.
+
+
+
 ## Building `scg-cli` manually
 
 Download the `scg-cli` sources (clone the GitHub repo). Install [sbt](https://www.scala-sbt.org/download.html) Build the `scg-cli` with:
