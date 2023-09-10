@@ -43,7 +43,7 @@ object LoggerFactory {
     val logConsoleAppender = ConsoleAppender()
     logConsoleAppender.setContext(logCtx)
     logConsoleAppender.setName("console")
-    logConsoleAppender.setEncoder(logEncoder.asInstanceOf[Encoder[Nothing]])
+    logConsoleAppender.setEncoder(logEncoder.asInstanceOf[Encoder[Object]])
     logConsoleAppender.setTarget("System.err")
     logConsoleAppender.start()
 
@@ -65,7 +65,7 @@ object LoggerFactory {
     logFileAppender.setContext(logCtx)
     logFileAppender.setFile(s"${System.getProperty("user.home")}/.graphbuddy/$filename")
     logFileAppender.setName(filename)
-    logFileAppender.setEncoder(logEncoder.asInstanceOf[Encoder[Nothing]])
+    logFileAppender.setEncoder(logEncoder.asInstanceOf[Encoder[Object]])
     logFileAppender.setAppend(true)
     logFileAppender.setImmediateFlush(true)
 

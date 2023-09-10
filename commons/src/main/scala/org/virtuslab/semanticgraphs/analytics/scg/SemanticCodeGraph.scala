@@ -45,22 +45,22 @@ case class SemanticCodeGraph(
   def withoutZeroDegreeNodes() =
     new SemanticCodeGraph(projectAndVersion, nodesMap.filter { case (id, _) => graph.degreeOf(id) > 0 })
 
-case class ProjectAndVersion(workspace: String, projectName: String, version: String)
+case class ProjectAndVersion(workspace: String, projectName: String, version: String, language: String = "Java", stars: Int = 0)
 
 object SemanticCodeGraph:
 
-  val commonsIO = ProjectAndVersion("data/commons-io.zip", "commons-io", "2.12.0")
-  val metals = ProjectAndVersion("data/metals.zip", "metals", "0.10.3")
-  val springBoot = ProjectAndVersion("data/spring-boot.zip", "spring-boot", "2.7.5")
-  val akka = ProjectAndVersion("data/akka.zip", "akka", "2.7.0")
-  val spark = ProjectAndVersion("data/spark.zip", "spark", "3.3.0")
+  val retrofit = ProjectAndVersion("data/retrofit-2.9.0.zip", "retrofit", "2.9.0", "Java", 42000)
+  val commonsIO = ProjectAndVersion("data/commons-io-2.12.10.zip", "commons-io", "2.12.0", "Java", 941)
+  val play = ProjectAndVersion("data/playframework-2.8.19.zip", "playframework", "2.8.19", "Scala", 12400)
+  val metals = ProjectAndVersion("data/metals-0.10.3.zip", "metals", "0.10.3", "Scala", 1900)
+  val glide = ProjectAndVersion("data/glide-4.5.11.zip", "glide", "4.5.11", "Java", 33900)
+  val vertx = ProjectAndVersion("data/vert.x-4.4.4.zip", "vertx", "4.4.4", "Java", 13800)
+  val rxJava = ProjectAndVersion("data/RxJava-3.1.6.zip", "RxJava", "3.1.6", "Java", 47200)
+  val dubbo = ProjectAndVersion("data/dubbo-3.2.4.zip", "dubbo", "3.2.4", "Java", 39300)
+  val springBoot = ProjectAndVersion("data/spring-boot-2.7.5.zip", "spring-boot", "2.7.5", "Java", 39400)
+  val akka = ProjectAndVersion("data/akka-2.7.0.zip", "akka", "2.7.0", "Scala", 12800)
+  val spark = ProjectAndVersion("data/spark-3.3.0.zip", "spark", "3.3.0", "Scala", 36700)
 
-  val rxJava = ProjectAndVersion("data/RxJava.zip", "RxJava", "3.1.6")
-  val retrofit = ProjectAndVersion("data/retrofit.zip", "retrofit", "2.9.0")
-  val glide = ProjectAndVersion("data/glide.zip", "glide", "4.5.11")
-  val dubbo = ProjectAndVersion("data/dubbo.zip", "dubbo", "3.2.4")
-  val play = ProjectAndVersion("data/playframework.zip", "playframework", "2.8.19")
-  val vertx = ProjectAndVersion("data/vert.x.zip", "vertx", "4.4.4")
 
   val allProjects = List(retrofit, commonsIO, play, metals, glide, vertx, rxJava, dubbo, springBoot, akka, spark)
 

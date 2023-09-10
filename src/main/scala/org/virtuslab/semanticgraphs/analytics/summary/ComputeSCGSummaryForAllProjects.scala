@@ -23,6 +23,7 @@ case class SCGProjectSummary(
   edgesDistribution: List[EdgeTypeAndNumber],
   density: Double,
   averageDegree: Double,
+  averageClusteringCoefficient: Double,
   globalClusteringCoefficient: Double,
   assortativityCoefficient: Double,
   totalLoc: Long,
@@ -57,6 +58,7 @@ object SCGProjectSummary:
     val averageDegree = JGraphTMetrics.averageDegree(semanticCodeGraph.graph)
     // val averageOutDegree = JGraphTMetrics.averageOutDegree(semanticCodeGraph.graph)
     val globalClusteringCoefficient = JGraphTMetrics.globalClusteringCoefficient(semanticCodeGraph.graph)
+    val averageClusteringCoefficient = JGraphTMetrics.averageClusteringCoefficient(semanticCodeGraph.graph)
     val assortativityCoefficient = JGraphTMetrics.assortativityCoefficient2(semanticCodeGraph.graph)
     val totalLoc = SemanticCodeGraph.readLOC(semanticCodeGraph.projectAndVersion)
     val biggestComponent = SemanticCodeGraph(
@@ -75,6 +77,7 @@ object SCGProjectSummary:
       edgesDistribution = edgeDistribution,
       density = density,
       averageDegree = averageDegree,
+      averageClusteringCoefficient = averageClusteringCoefficient,
       globalClusteringCoefficient = globalClusteringCoefficient,
       assortativityCoefficient = assortativityCoefficient,
       totalLoc = totalLoc,
@@ -117,7 +120,7 @@ object ComputeSCGSummaryForAllProjects extends App:
   def printSummaryLatexTable(): Seq[SCGProjectSummary] =
     println()
     println(
-      """Name & Version & \#LOC & $|V|$ & $\frac{\#LOC}{|V|}$ & $|E|$ & $D$ & $A_{D}$ & $\sigma_{ID}$ & $COD_{ID} $ & $\sigma_{OD}$ & $COD_{OD}$ & $\sigma_{ID+OD}$ & GCC & DAC \\\\"""
+      """Name & Version & \#LOC & $|V|$ & $\frac{\#LOC}{|V|}$ & $|E|$ & $D$ & $A_{D}$ & $\sigma_{ID}$ & $IoD_{ID} $ & $\sigma_{OD}$ & $IoD_{OD}$ & ACC & GCC & DAC \\\\"""
     )
     println("\\hline")
     projects.map(_.withoutZeroDegreeNodes()).map { semanticCodeGraph =>
@@ -128,6 +131,7 @@ object ComputeSCGSummaryForAllProjects extends App:
       val density = summary.density
 
       val averageDegree = summary.averageDegree
+      val averageClusteringCoefficient = summary.averageClusteringCoefficient
       val globalClusteringCoefficient = summary.globalClusteringCoefficient
       val assortativityCoefficient = summary.assortativityCoefficient
       val totalLoc = summary.totalLoc
@@ -143,7 +147,7 @@ object ComputeSCGSummaryForAllProjects extends App:
       val COD_OD = MathHelper.calculateCOD(distribution.out)
 
       println(
-        f"${semanticCodeGraph.projectName} & ${semanticCodeGraph.version} & $totalLoc & $nodesTotal & ${totalLoc.toDouble / nodesTotal}%1.2f  & $edgesTotal & $density%1.5f & $averageDegree%1.1f & ${distribution.deviationID}%1.1f & $COD_ID%1.1f & ${distribution.deviationOD}%1.1f & $COD_OD%1.1f & $sumSigma%1.1f & $globalClusteringCoefficient%1.2f & $assortativityCoefficient%1.2f \\\\"
+        f"${semanticCodeGraph.projectName} & ${semanticCodeGraph.version} & $totalLoc & $nodesTotal & ${totalLoc.toDouble / nodesTotal}%1.2f  & $edgesTotal & $density%1.5f & $averageDegree%1.1f & ${distribution.deviationID}%1.1f & $COD_ID%1.1f & ${distribution.deviationOD}%1.1f & $COD_OD%1.1f & $averageClusteringCoefficient%1.2f & $globalClusteringCoefficient%1.2f & $assortativityCoefficient%1.2f \\\\"
         // f"${semanticCodeGraph.projectName} & ${semanticCodeGraph.version} & $totalLoc & $nodesTotal & ${totalLoc.toDouble / nodesTotal}%1.2f  & $edgesTotal & $density%1.5f & $averageOutDegree%1.2f & $averageInDegree%1.2f & $globalClusteringCoefficient%1.2f & $assortativityCoefficient%1.2f & $diameter%1.0f & $radius%1.0f \\\\"
       )
       summary
@@ -205,7 +209,7 @@ object CrucialNodesTest extends App:
 
 object ExportDistribution extends App:
 
-  case class Distribution(in: List[Int], varianceIn: Double, out: List[Int], varianceOut: Double) derives ReadWriter
+  case class Distribution(in: List[Int], varianceIn: Double, out: List[Int], varianceOut: Double, cc: List[Double]) derives ReadWriter
 
   case class ProjectDistribution(name: String, scg: Distribution, ccn: Distribution, cg: Distribution)
     derives ReadWriter
@@ -214,13 +218,15 @@ object ExportDistribution extends App:
     val g = scg.graph
     val in = g.vertexSet().asScala.toList.map(v => g.inDegreeOf(v))
     val out = g.vertexSet().asScala.toList.map(v => g.outDegreeOf(v))
+    val ccScores = JGraphTMetrics.getClusteringCoefficientScores(g)
     println(scg.projectAndVersion.projectName)
-    println(in.sorted(Ordering[Int].reverse).take(10))
+
     Distribution(
       in,
       MathHelper.calculateVariance(in),
       out,
-      MathHelper.calculateVariance(out)
+      MathHelper.calculateVariance(out),
+      ccScores.values.toList.sorted.map(_.toDouble)
     )
   }
 

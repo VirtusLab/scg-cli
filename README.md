@@ -33,7 +33,7 @@ addSbtPlugin("org.virtuslab.semanticgraphs" % "sbt-plugin" % "0.2.19")
 ```
 or use Scala Compiler Plugin directly
 ```
-addCompilerPlugin("org.virtuslab.semanticgraphs" % "scalac-plugin" % "0.2.16" cross CrossVersion.full)
+addCompilerPlugin("org.virtuslab.semanticgraphs" % "scalac-plugin" % "0.2.19" cross CrossVersion.full)
 scalacOptions += "-Yrangepos"
 ```
 And then recompile the project.
@@ -66,7 +66,7 @@ $ scg-cli summary -o html path/to/project
 If you don't want to generate metadata for new project and still play with `scg-cli` features, there is `data` folder where you can find extracted and zipped `*.semanticgraphs` files for some popular Java and Scala projects. You can try to analyse them with:
 
 ```bash
-$ scg-cli summary data/metals.zip 
+$ scg-cli summary data/metals-0.10.3.zip 
 ```
 
 ### Class Collaboration Network and Call Graph
@@ -74,7 +74,7 @@ $ scg-cli summary data/metals.zip
 The `scg-cli` tool is built upon the Semantic Code Graph model (SCG). It allows you to generate two key components: the Class Collaboration Network (CCN) and the Call Graph (CG) from the SCG data.
 As a result, most of the `scg-cli` commands include a `-g` switch with `SCG`, `CCN` or `CG` options, which enables you to analyze a specific subgraph instead of the entire `SCG`. For example:
 ```bash
-$ scg-cli summary -g CCN data/metals.zip
+$ scg-cli summary -g CCN data/metals-0.10.3.zip
 ```
 This command will generate a summary for the Class Collaboration Network of the `metals` project.
 

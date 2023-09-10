@@ -16,6 +16,7 @@ import org.virtuslab.semanticgraphs.analytics.dto.GraphNodeDTO
 import org.virtuslab.semanticgraphs.analytics.partitions.PartitionResults
 import org.virtuslab.semanticgraphs.analytics.scg.ScgJGraphT
 import org.virtuslab.semanticgraphs.analytics.scg.ScgJGraphT.LabeledEdge
+import scala.jdk.CollectionConverters.MapHasAsScala
 
 object JGraphTMetrics:
 
@@ -134,7 +135,14 @@ object JGraphTMetrics:
   def globalClusteringCoefficient(undirectedGraph: Graph[String, LabeledEdge]): Double =
     new ClusteringCoefficient[String, LabeledEdge](
       new AsUndirectedGraph(undirectedGraph)
+      //undirectedGraph
     ).getGlobalClusteringCoefficient
+
+  def getClusteringCoefficientScores(graph: Graph[String, LabeledEdge]): scala.collection.mutable.Map[String, java.lang.Double] = {
+    new ClusteringCoefficient[String, LabeledEdge](
+      new AsUndirectedGraph(graph)
+    ).getScores.asScala
+  }
 
   def averageOutDegree(graph: Graph[String, LabeledEdge]): Double =
     val nodes = graph.vertexSet().asScala.toList.map(v => graph.outDegreeOf(v))
