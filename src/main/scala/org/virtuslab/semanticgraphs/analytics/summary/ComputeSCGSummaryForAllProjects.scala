@@ -187,16 +187,16 @@ object ComputeCrucialNodesForAllProjects extends App:
     println("Finished")
 
   val scg = analyze(SemanticCodeGraph.readAllProjects(), "scg")
-  // val callGraph = analyze(SemanticCodeGraph.readAllProjectsFullCallGraph(), "full-call")
-  // val classCollaborationGraph = analyze(SemanticCodeGraph.readAllProjectClassCollaborationGraph(), "ccn")
+  val callGraph = analyze(SemanticCodeGraph.readAllProjectsFullCallGraph(), "full-call")
+   val classCollaborationGraph = analyze(SemanticCodeGraph.readAllProjectClassCollaborationGraph(), "ccn")
   val whole =
     for scgR <- scg
-      // callR <- callGraph
-      // callGraphR <- callGraph
-      // classR <- classCollaborationGraph
-    yield printStats(scgR)
-    // printStats(callGraphR)
-    // printStats(classR)
+      callGraphR <- callGraph
+      classR <- classCollaborationGraph
+    yield 
+      printStats(scgR)
+      printStats(callGraphR)
+      printStats(classR)
 
   Await.result(whole, Duration.Inf)
 end ComputeCrucialNodesForAllProjects

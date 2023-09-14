@@ -2,18 +2,18 @@ package org.virtuslab.semanticgraphs.analytics.partitions
 
 import org.virtuslab.semanticgraphs.analytics.crucial.CrucialNodes.getClass
 import org.virtuslab.semanticgraphs.analytics.crucial.CrucialNodesSummary
-import org.virtuslab.semanticgraphs.analytics.exporters.ExportToGml
+import org.virtuslab.semanticgraphs.analytics.exporters.ExportToGraphML
 import org.virtuslab.semanticgraphs.analytics.scg.{ProjectAndVersion, SemanticCodeGraph}
 import upickle.default.*
 
 import java.nio.file.{Files, Path, StandardCopyOption}
 
-//|Method |NPart|Modularity|Coefficient|Weighted|Accuracy|Weighted|Accuracy|Variance|Distribution
 case class AverageAccuracy(weighted: Int, standard: Int) derives ReadWriter
 case class ShortSummary(
   method: String,
   npart: Int,
   modularity: Double,
+  edgeCutSize: Int,
   coefficient: Double,
   file: AverageAccuracy,
   `package`: AverageAccuracy,
@@ -64,6 +64,7 @@ object PartitionResultsSummary:
         result.method,
         result.nparts,
         result.modularityRatio,
+        result.edgeCutSize,
         result.clusteringCoefficient,
         AverageAccuracy(
           result.fileDistribution.weightedAverageAccuracy,
@@ -74,7 +75,7 @@ object PartitionResultsSummary:
           result.packageDistribution.arithmeticAverageAccuracy
         ),
         result.distributionVariance,
-        result.globalNodesDistribution.map(i => i * 100 / result.nodes.size).mkString("[", ",", "]%")
+        result.globalNodesDistribution.map(i => ((i * 100).toDouble / result.nodes.size).toInt).mkString("[", ",", "]%")
       )
     }
   )
@@ -100,7 +101,9 @@ object PartitionResultsSummary:
 
   def exportTex(summary: PartitionResultsWrapper): String = {
 
-    extension (number: Double) def to3: String = String.format("%.3f", number)
+    extension (number: Double)
+      def to3: String = String.format("%.3f", number)
+      def to1: String = String.format("%.1f", number)
 
     val builder = new StringBuilder()
     builder.append(
@@ -108,14 +111,14 @@ object PartitionResultsSummary:
     )
     builder.append("\\hline \n")
     builder.append(
-      "Method &  NPart & Modularity & ACC & File W. & File A. & Package W. & Package A. & Variance & Distribution \\\\ \n"
+      "Method & N & Modularity & Cut Size & FWA \\% & FA \\% & PWA \\% & PA \\%& CV & Distribution \\%\\\\ \n"
     )
     builder.append("\\hline \n")
     summary.summary.foreach { shortSummary =>
       import shortSummary._
       builder.append(
-        s"$method & $npart & ${modularity.to3} & ${coefficient.to3} & ${file.weighted}\\% & ${file.standard}\\% & ${`package`.weighted}\\% & ${`package`.standard}\\% & ${variance.to3} & ${distribution
-            .replace("%", "\\%")} \\\\ \n"
+        s"$method & $npart & ${modularity.to1} & $edgeCutSize & ${file.weighted} & ${file.standard} & ${`package`.weighted} & ${`package`.standard} & ${variance.to3} & ${distribution
+            .replace("%", "")} \\\\ \n"
       )
     }
     builder.append("\\hline \n")

@@ -12,6 +12,13 @@ import java.nio.file.Files
 enum NetworkType:
   case SCG, CCN, CG
 
+object NetworkType:
+  def fromString(g: String): NetworkType =
+    g match
+      case "CCN" => CCN
+      case "CG" => CG
+      case _ => SCG
+
 case class SemanticCodeGraph(
   val projectAndVersion: ProjectAndVersion,
   val nodesMap: Map[String, GraphNode],
@@ -54,15 +61,16 @@ object SemanticCodeGraph:
   val play = ProjectAndVersion("data/playframework-2.8.19.zip", "playframework", "2.8.19", "Scala", 12400)
   val metals = ProjectAndVersion("data/metals-0.10.3.zip", "metals", "0.10.3", "Scala", 1900)
   val glide = ProjectAndVersion("data/glide-4.5.11.zip", "glide", "4.5.11", "Java", 33900)
-  val vertx = ProjectAndVersion("data/vert.x-4.4.4.zip", "vertx", "4.4.4", "Java", 13800)
+  val vertx = ProjectAndVersion("data/vert.x-4.4.4.zip", "vert.x", "4.4.4", "Java", 13800)
   val rxJava = ProjectAndVersion("data/RxJava-3.1.6.zip", "RxJava", "3.1.6", "Java", 47200)
   val dubbo = ProjectAndVersion("data/dubbo-3.2.4.zip", "dubbo", "3.2.4", "Java", 39300)
   val springBoot = ProjectAndVersion("data/spring-boot-2.7.5.zip", "spring-boot", "2.7.5", "Java", 39400)
   val akka = ProjectAndVersion("data/akka-2.7.0.zip", "akka", "2.7.0", "Scala", 12800)
+  val akkaWithoutTests = ProjectAndVersion("data/akka-2.7.0-without-tests.zip", "akka (without tests)", "2.7.0", "Scala", 12800)
   val spark = ProjectAndVersion("data/spark-3.3.0.zip", "spark", "3.3.0", "Scala", 36700)
 
 
-  val allProjects = List(retrofit, commonsIO, play, metals, glide, vertx, rxJava, dubbo, springBoot, akka, spark)
+  val allProjects = List(retrofit, commonsIO, play, metals, glide, vertx, rxJava, dubbo, springBoot, akka, akkaWithoutTests, spark)
 
   def readAllProjects(): List[SemanticCodeGraph] =
     allProjects.map(SemanticCodeGraph.read(_))
@@ -71,10 +79,10 @@ object SemanticCodeGraph:
     allProjects.map(fetchCallGraph)
 
   def readAllProjectsFullCallGraph(): List[SemanticCodeGraph] =
-    allProjects.map(fetchFullCallGraph)
+    allProjects.map(fetchFullCallGraph(_))
 
   def readAllProjectClassCollaborationGraph(): List[SemanticCodeGraph] =
-    allProjects.map(fetchClassCollaborationGraph)
+    allProjects.map(fetchClassCollaborationGraph(_))
 
   def isNodeDefinedInProject(node: GraphNode): Boolean =
     node.kind.nonEmpty && node.location.isDefined && !node.kind.contains("FILE") && node.kind != "PACKAGE_OBJECT"
@@ -92,11 +100,11 @@ object SemanticCodeGraph:
       edge => isEdgeDefinedInProject(edge) && edge.`type` == "CALL"
     )
 
-  def fetchClassCollaborationGraph(projectAndVersion: ProjectAndVersion): SemanticCodeGraph = {
+  def fetchClassCollaborationGraph(projectAndVersion: ProjectAndVersion, additionalNodeFilter: GraphNode => Boolean = _ => true): SemanticCodeGraph = {
     val scg = SemanticCodeGraph
       .read(
         projectAndVersion,
-        node => isNodeDefinedInProject(node),
+        node => isNodeDefinedInProject(node) && additionalNodeFilter(node),
         edge => isEdgeDefinedInProject(edge)
       )
       .withoutZeroDegreeNodes()
@@ -138,23 +146,24 @@ object SemanticCodeGraph:
     ).withoutZeroDegreeNodes()
   }
 
-  def fetchFullCallGraph(projectAndVersion: ProjectAndVersion) =
+  def fetchFullCallGraph(projectAndVersion: ProjectAndVersion, additionalNodeFilter: GraphNode => Boolean = _ => true) =
     SemanticCodeGraph
       .read(
         projectAndVersion.copy(projectName = s"${projectAndVersion.projectName}"),
         node =>
           isNodeDefinedInProject(
             node
-          ) && (node.kind == "METHOD" || node.kind == "CONSTRUCTOR" || node.kind == "VALUE" || node.kind == "VARIABLE"),
+          ) && (node.kind == "METHOD" || node.kind == "CONSTRUCTOR" || node.kind == "VALUE" || node.kind == "VARIABLE") && additionalNodeFilter(node),
         // ) && node.kind != "CLASS" && node.kind != "OBJECT" && node.kind != "TRAIT" && node.kind != "INTERFACE",
         edge => isEdgeDefinedInProject(edge) && edge.`type` == "CALL"
       )
       .copy(networkType = NetworkType.CG)
+      .withoutZeroDegreeNodes()
 
   def readOnlyGlobalNodes(projectAndVersion: ProjectAndVersion): SemanticCodeGraph =
     val semanticCodeGraph = SemanticCodeGraph.read(
       projectAndVersion,
-      nodeFilter = node => SemanticCodeGraph.isNodeDefinedInProject(node) && SemanticCodeGraph.notLocal(node)
+      nodeFilter = node => SemanticCodeGraph.isNodeDefinedInProject(node) //&& SemanticCodeGraph.notLocal(node)
     )
     semanticCodeGraph.withoutZeroDegreeNodes()
 

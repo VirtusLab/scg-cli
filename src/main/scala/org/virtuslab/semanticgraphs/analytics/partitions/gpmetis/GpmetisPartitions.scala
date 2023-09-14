@@ -2,50 +2,32 @@ package org.virtuslab.semanticgraphs.analytics.partitions.gpmetis
 
 import com.virtuslab.semanticgraphs.proto.model.graphnode.GraphNode
 import org.virtuslab.semanticgraphs.analytics.dto.GraphNodeDTO
-import org.virtuslab.semanticgraphs.analytics.partitions.{DockerDistribution, PartitionHelpers, PartitionResults}
+import org.virtuslab.semanticgraphs.analytics.partitions.{DockerDistribution, PartitionHelpers, PartitionResults, PartitionResultsSummary}
 import org.virtuslab.semanticgraphs.analytics.scg.{ProjectAndVersion, SemanticCodeGraph}
 import org.virtuslab.semanticgraphs.analytics.utils.MultiPrinter
 import org.virtuslab.semanticgraphs.analytics.dto.GraphNodeDTO.toGraphNodeDto
+import org.virtuslab.semanticgraphs.analytics.partitions.patoh.PatohPartitions
 
-import java.io.File
+import java.io.{File, PrintWriter}
 import scala.collection.mutable
 import scala.io.Source
 
-object GpmetisPartitionsApp extends App:
-  val workspace = args(0)
-  val nparts = args(1).toInt
-  val projectName = workspace.split("/").last
+object PartitionsApp extends App:
 
-  implicit val (tmpFolder: File, multiPrinter: MultiPrinter) = PartitionHelpers.multiPrinter(projectName, "gpmetis")
+ val project = SemanticCodeGraph.metals
+  val allProjectNodes =
+    SemanticCodeGraph.readOnlyGlobalNodes(project).nodes.map(_.toGraphNodeDto).toList
 
-  val biggestComponentNodes =
-    PartitionHelpers
-      .takeBiggestComponentOnly(
-        SemanticCodeGraph.readOnlyGlobalNodes(ProjectAndVersion(workspace, projectName, ""))
-      )
-      .map(_.toGraphNodeDto)
+  val results =
+    GpmetisPartitions.partition(allProjectNodes, project.projectName, 10, false, "cut", 999, 50) :::
+      PatohPartitions.partition(allProjectNodes, project.projectName, 10, false,  PA = 13, IB = 0.9)
 
-  val results = GpmetisPartitions.partition(biggestComponentNodes, projectName, nparts, false)
-
-  results.foreach { result =>
-    PartitionHelpers.exportToGdf(
-      s"${tmpFolder.getAbsolutePath}/$projectName-${result.nparts}.gdf",
-      result.nodes,
-      result.nodeToPart,
-      Map.empty.withDefault(_ => 1)
-    )
-  }
-
+  println(PartitionResultsSummary.exportTex(PartitionResultsSummary(results.sortBy(_.nparts))))
   PartitionResults.print(
-    multiPrinter,
-    results.sortBy(_.packageDistribution.weightedAverageAccuracy)(implicitly[Ordering[Int]].reverse)
-  )
-
-  PartitionHelpers.exportAllToGDF(
-    nparts,
-    biggestComponentNodes,
-    s"${tmpFolder.getAbsolutePath}/$projectName-all.gdf",
-    results
+    new MultiPrinter(
+      new PrintWriter(System.out),
+    ),
+    results.sortBy(_.nparts)
   )
 
 object GpmetisPartitions:
@@ -54,10 +36,15 @@ object GpmetisPartitions:
     nodes: List[GraphNodeDTO],
     projectName: String,
     nparts: Int,
-    useDocker: Boolean
+    useDocker: Boolean,
+    objtype: String,
+    ufactor: Int,
+    ncuts: Int,
+    method: String = "gpmetis"
   ): List[PartitionResults] =
     val indexes = SpectralGraphUtils.exportToSpectralGraph(projectName, nodes)
-    val result = GpmetisPartitions.computePartitioning(nodes, indexes, nparts, projectName, useDocker)
+    Thread.sleep(1000)
+    val result = GpmetisPartitions.computePartitioning(nodes, indexes, nparts, projectName, useDocker, objtype, ufactor, ncuts, method)
     new File(s"$projectName.gpmetis").delete()
     result
 
@@ -66,7 +53,11 @@ object GpmetisPartitions:
     indexes: Array[String],
     nparts: Int,
     projectName: String,
-    useDocker: Boolean
+    useDocker: Boolean,
+    objtype: String,
+    ufactor: Int,
+    ncuts: Int,
+    method: String
   ): List[PartitionResults] =
     if nparts > 1 then
       val computing =
@@ -82,23 +73,30 @@ object GpmetisPartitions:
             "-ptype=kway",
             "-contig",
             "-objtype=cut",
-            "-ufactor=1000",
+            s"-ufactor=$ufactor",
+            s"-ncuts=$ncuts",
             s"$projectName.gpmetis",
             nparts
           ).call()
         else
-          os.proc("gpmetis", "-ptype=kway", "-contig", "-objtype=cut", "-ufactor=1000", s"$projectName.gpmetis", nparts)
+          os.proc(
+              "gpmetis",
+              "-ptype=kway",
+              "-contig",
+              s"-objtype=$objtype", s"-ufactor=$ufactor", s"-ncuts=$ncuts", s"$projectName.gpmetis", nparts)
             .call()
         end if
 
       if computing.exitCode != 0 then throw new RuntimeException(s"Computation failed")
 
+      println(computing.out.text())
+
       val gpMetisPartFile = s"$projectName.gpmetis.part.$nparts"
       val gpMetisResults = readGPMetisResults(gpMetisPartFile, indexes)
       new File(gpMetisPartFile).delete()
 
-      computePartitioning(nodes, indexes, nparts - 1, projectName, useDocker) :+ PartitionResults(
-        method = "gpmetis",
+      computePartitioning(nodes, indexes, nparts - 1, projectName, useDocker, objtype, ufactor, ncuts, method) :+ PartitionResults(
+        method = method,
         nodes = nodes,
         nparts = nparts,
         nodeToPart = gpMetisResults,

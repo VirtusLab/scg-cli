@@ -15,7 +15,7 @@ object FileManager:
   def dumpFile(dumpableFile: FileToBeSaved): Unit = {
     dumpFile(dumpableFile.projectPath, dumpableFile.semanticGraphFile, dumpableFile.filePath) match
       case Failure(exception) =>
-        println(s"Failure when dumping file ${dumpableFile.filePath}")
+        println(s"Failure when dumping file ${dumpableFile.filePath}; ${exception.getMessage}")
       case _ =>
   }
 
@@ -31,7 +31,7 @@ object FileManager:
     *   `src/main/scala/com/virtuslab/Option.scala`
     */
   def dumpFile(projectPath: String, semanticGraphFile: SemanticGraphFile, filePath: String): Try[Unit] = Try {
-    val packageLevelRelativeFilePath = projectPath.toPath.relativize(filePath.toPath).relativizeToPackageLevel.toString
+    val packageLevelRelativeFilePath = projectPath.toPath.toAbsolutePath.relativize(filePath.toPath).relativizeToPackageLevel.toString
     val fileUri =
       projectPath.toPath.resolve(".semanticgraphs").resolve(s"$packageLevelRelativeFilePath.semanticgraphdb")
 

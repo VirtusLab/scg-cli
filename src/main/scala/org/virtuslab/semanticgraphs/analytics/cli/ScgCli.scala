@@ -4,12 +4,12 @@ import ch.qos.logback.classic.Logger
 import com.virtuslab.semanticgraphs.javaparser.JavaParserMain
 import com.virtuslab.semanticgraphs.parsercommon.logger.LoggerFactory
 import org.virtuslab.semanticgraphs.analytics.partitions.comparison.PartitioningComparisonApp
-import org.virtuslab.semanticgraphs.analytics.scg.{ProjectAndVersion, SemanticCodeGraph}
+import org.virtuslab.semanticgraphs.analytics.scg.{NetworkType, ProjectAndVersion, SemanticCodeGraph}
 import org.virtuslab.semanticgraphs.analytics.utils.{FileUtils, MultiPrinter}
 import org.virtuslab.semanticgraphs.analytics.summary.SCGProjectSummary
 import org.virtuslab.semanticgraphs.analytics.crucial.CrucialNodes
 import org.virtuslab.semanticgraphs.analytics.dto.{EdgeDTO, GraphNodeDTO, LocationDTO}
-import org.virtuslab.semanticgraphs.analytics.exporters.{ExportToGdf, ExportToGml, JupyterNotebook}
+import org.virtuslab.semanticgraphs.analytics.exporters.{ExportToGdf, ExportToGraphML, JupyterNotebook}
 import org.virtuslab.semanticgraphs.analytics.partitions.{PartitionResults, PartitionResultsSummary}
 import picocli.CommandLine
 import picocli.CommandLine.{Command, HelpCommand, Option, Parameters}
@@ -178,7 +178,7 @@ class ScgCli:
     nparts: Int,
     @Option(
       names = Array("-o", "--output"),
-      description = Array("Output format: html, json, txt, csv, gml default: ${DEFAULT-VALUE}"),
+      description = Array("Output format: html, json, txt, csv, graphml default: ${DEFAULT-VALUE}"),
       arity = "0..1",
       defaultValue = "html"
     )
@@ -189,13 +189,61 @@ class ScgCli:
       arity = "0..1",
       defaultValue = "false"
     )
-    useDocker: Boolean
+    useDocker: Boolean,
+    @Option(
+      names = Array("-g", "--graph"),
+      description = Array("Software Network to extract: SCG, CG, CCN default: ${DEFAULT-VALUE}"),
+      arity = "0..1",
+      defaultValue = "SCG"
+    )
+    graph: String,
+    @Option(
+      names = Array("-ot", "--objtype"),
+      description = Array("Specifies the objective that the partitioning routines will optimize. Default: ${DEFAULT-VALUE}"),
+      arity = "0..1",
+      defaultValue = "cut"
+    )
+    objtype: String,
+    @Option(
+      names = Array("-uf", "--ufactor"),
+      description = Array("-ufactor param for gpmetis algorithm; A value of x indicates that the allowed load imbalance is 1+x/1000"),
+      arity = "0..1",
+      defaultValue = "999"
+    )
+    ufactor: Int,
+    @Option(
+      names = Array("-nc", "--ncuts"),
+      description = Array("-ncuts param for gpmetis algorithm; Specifies the number of different partitionings that it will compute."),
+      arity = "0..1",
+      defaultValue = "5"
+    )
+    ncuts: Int,
+    @Option(
+      names = Array("-pa", "--initp_alg"),
+      description = Array("Determines the initial partitioning algorithm for PaToH. Default = 13"),
+      arity = "0..1",
+      defaultValue = "13"
+    )
+    PA: Int,
+    @Option(
+      names = Array("-ib", "--imb_both"),
+      description = Array("IB(f) : Sets both Initial & Final Imbalance ratio. <0.1, 0.99>, Default = 0.9 "),
+      arity = "0..1",
+      defaultValue = "0.9"
+    )
+    IB: Double
   ): Unit =
     val projectAndVersion = ProjectAndVersion(workspace, workspace.split("/").last, "")
     val (scg, results) = PartitioningComparisonApp.runPartitionComparison(
       projectAndVersion,
+      NetworkType.fromString(graph),
       nparts,
-      useDocker
+      useDocker,
+      objtype,
+      ufactor,
+      ncuts,
+      PA,
+      IB
     )
     output match {
       case "html" =>
@@ -204,8 +252,8 @@ class ScgCli:
         val outputFile = s"${projectAndVersion.projectName}.partition.json"
         FileUtils.dumpFile(outputFile, write(PartitionResult(results)))
         println(s"Results exported to: $outputFile")
-      case "gml" =>
-        PartitionResults.exportGML(scg, results)
+      case "graphml" =>
+        PartitionResults.exportGraphML(scg, results)
       case "txt" =>
         PartitionResults.print(
           new MultiPrinter(
@@ -234,7 +282,7 @@ class ScgCli:
     workspace: String,
     @Option(
       names = Array("-o", "--output"),
-      description = Array("Output format: jupyter, gdf, gml default: ${DEFAULT-VALUE}"),
+      description = Array("Output format: jupyter, gdf, graphml default: ${DEFAULT-VALUE}"),
       arity = "0..1",
       defaultValue = "jupyter"
     )
@@ -253,8 +301,8 @@ class ScgCli:
     output match {
       case "jupyter" =>
         JupyterNotebook.runJupyterNotebook(projectAndVersion.workspace)
-      case "gml" =>
-        ExportToGml.exportToGML(s"$projectName.gml", createScg(projectAndVersion, graph))
+      case "graphml" =>
+        ExportToGraphML.exportToGraphML(s"$projectName.graphml", createScg(projectAndVersion, graph))
       case "gdf" =>
         ExportToGdf.exportToGdf(s"$projectName.gdf", createScg(projectAndVersion, graph))
         println(s"Exported to `$projectName.gdf` file.")

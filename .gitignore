@@ -13,6 +13,7 @@ target
 /*.html
 /*.gml
 /*.js
+/*.graphml
 .scala-build
 .java-version
 .DS_Store

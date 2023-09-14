@@ -15,7 +15,7 @@ lazy val root = project
   .settings(
     name := "scg-cli",
     organization := "com.virtuslab.semanticgraphs",
-    version := "0.1.7",
+    version := "0.1.8-SNAPSHOT",
     scalaVersion := scala3Version,
     protocExecutable(),
     dockerBaseImage := "openjdk:11",

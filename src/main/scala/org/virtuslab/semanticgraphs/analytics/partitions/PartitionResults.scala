@@ -4,10 +4,10 @@ import com.virtuslab.semanticgraphs.proto.model.graphnode
 import com.virtuslab.semanticgraphs.proto.model.graphnode.{GraphNode, Location}
 import org.jgrapht.nio.{AttributeType, DefaultAttribute}
 import org.virtuslab.semanticgraphs.analytics.dto.GraphNodeDTO
-import org.virtuslab.semanticgraphs.analytics.exporters.ExportToGml
+import org.virtuslab.semanticgraphs.analytics.exporters.ExportToGraphML
 import org.virtuslab.semanticgraphs.analytics.metrics.JGraphTMetrics
 import org.virtuslab.semanticgraphs.analytics.scg.{ScgJGraphT, SemanticCodeGraph}
-import org.virtuslab.semanticgraphs.analytics.utils.MultiPrinter
+import org.virtuslab.semanticgraphs.analytics.utils.{MathHelper, MultiPrinter}
 
 case class DistributionResults(
   nodes: List[GraphNodeDTO],
@@ -64,21 +64,20 @@ case class PartitionResults(
     result.updated(part, result(part) + 1)
   }
 
-  lazy val distributionVariance = (globalNodesDistribution
-    .map(x1 => Math.pow(x1 - distributionArithmeticAverage, 2) / nparts)
-    .sum) / (distributionArithmeticAverage * distributionArithmeticAverage)
+  lazy val distributionVariance =
+    Math.sqrt(MathHelper.calculateVariance(globalNodesDistribution.toList)) / distributionArithmeticAverage
 
-  val modularityRatio =
+  val (modularityRatio, edgeCutSize) =
     val (inner, outer) = nodes
       .map { node =>
         val nodePartNumber = nodeToPart(node.id)
-        val (inner, outer) = node.edges // .filter(_.`type` == "CALL")
+        val (inner, outer) = node.edges
           .filter(edge => nodeToPart.contains(edge.to))
           .partition(edge => nodeToPart(edge.to) == nodePartNumber)
         (inner.size, outer.size)
       }
       .reduce((a, b) => (a._1 + b._1, a._2 + b._2))
-    inner.toDouble / outer.toDouble
+    (inner.toDouble / outer.toDouble) -> outer
 
   lazy val packageDistribution = DistributionResults(
     nodes,
@@ -107,13 +106,13 @@ object PartitionResults:
   def print(multiPrinter: MultiPrinter, results: List[PartitionResults]): Unit =
 
     val longestPackageSize =
-      results.head.packageDistribution.groupPartitionStats.maxBy(_.partitionName.length).partitionName.length
+      results.head.packageDistribution.groupPartitionStats.maxByOption(_.partitionName.length).map(_.partitionName.length).getOrElse(0)
     results.foreach { result =>
       multiPrinter.println(s"NParts: ${result.nparts}")
       multiPrinter.println(s"|Method |Part|Accuracy|" + "Package".padTo(longestPackageSize, ' ') + "|Distribution")
       result.packageDistribution.groupPartitionStats.foreach { distribution =>
         multiPrinter.println(
-          f"|${result.method.padTo(7, ' ')}|${distribution.partition}%4d|${distribution.accuracy}%7d%%|${distribution.partitionName
+          f"|${result.method.padTo(11, ' ')}|${distribution.partition}%4d|${distribution.accuracy}%7d%%|${distribution.partitionName
               .padTo(longestPackageSize, ' ')}|[${distribution.distribution.mkString(",")}] "
         )
       }
@@ -161,7 +160,7 @@ object PartitionResults:
       )
   end print
 
-  def exportGML(scg: SemanticCodeGraph, results: List[PartitionResults]): Unit = {
+  def exportGraphML(scg: SemanticCodeGraph, results: List[PartitionResults]): Unit = {
     val attributes = scg.nodes.map { node =>
       val attributes: Map[String, DefaultAttribute[Int]] = results.map { r =>
         s"npart-${r.nparts}-${r.method}" -> new DefaultAttribute(r.nodeToPart.getOrElse(node.id, -1), AttributeType.INT)
@@ -169,8 +168,8 @@ object PartitionResults:
       node.id -> attributes
     }.toMap
 
-    ExportToGml.exportToGML(
-      outputFileName = s"partition-${scg.projectAndVersion.projectName}.gml",
+    ExportToGraphML.exportToGraphML(
+      outputFileName = s"partition-${scg.networkType}-${scg.projectAndVersion.projectName}.graphml",
       semanticCodeGraph = scg,
       nodeAttributes = attributes
     )
