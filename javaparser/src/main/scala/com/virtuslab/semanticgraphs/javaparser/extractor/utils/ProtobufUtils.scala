@@ -29,7 +29,7 @@ extension (file: SemanticGraphFile) {
   def getClasses: Seq[GraphNode] = file.getNodesOfKind(NodeKind.CLASS)
   def getConstructors: Seq[GraphNode] = file.getNodesOfKind(NodeKind.CONSTRUCTOR)
   def getMethods: Seq[GraphNode] = file.getNodesOfKind(NodeKind.METHOD)
-  def getTraits: Seq[GraphNode] = file.getNodesOfKind(NodeKind.TRAIT)
+  def getTraits: Seq[GraphNode] = file.getNodesOfKind(NodeKind.INTERFACE)
   def getVariables: Seq[GraphNode] = file.getNodesOfKind(NodeKind.VARIABLE)
   def getParameters: Seq[GraphNode] = file.getNodesOfKind(NodeKind.PARAMETER)
   def getValues: Seq[GraphNode] = file.getNodesOfKind(NodeKind.VALUE)

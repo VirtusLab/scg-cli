@@ -122,7 +122,7 @@
         cell.innerHTML = "<a href=\"#" + summary.method + "-" + summary.npart +"\">" + summary.method + "</a>";
         //addCell(row, 0, summary.method);
         addAllignRightCell(row, 1, summary.npart);
-        addAllignRightCell(row, 2, summary.modularity.toFixed(3));
+        addAllignRightCell(row, 2, typeof summary.modularity === 'number' ? summary.modularity.toFixed(3) : summary.modularity);
         addAllignRightCell(row, 3, summary.coefficient.toFixed(3));
         addAllignRightCell(row, 4, summary.file.weighted + "%");
         addAllignRightCell(row, 5, summary.file.standard + "%");

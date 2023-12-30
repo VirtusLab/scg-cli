@@ -137,7 +137,7 @@ extension (classLikeDeclaration: ClassLikeDeclaration)(using
 extension (coid: ClassOrInterfaceDeclaration)(using
   logger: Logger
 ) {
-  def kind: NodeKind = if (coid.isInterface) NodeKind.TRAIT else NodeKind.CLASS
+  def kind: NodeKind = if (coid.isInterface) NodeKind.INTERFACE else NodeKind.CLASS
 
   def extendedTypes: Seq[ClassOrInterfaceType] = coid.getExtendedTypes.asScala.toSeq
 

@@ -84,7 +84,7 @@ case class PartitionResults(
     nparts,
     nodeToPart,
     {
-      case node if node.`package`.isDefined => node.`package`.get
+      case node if node.`package`.isDefined && !node.`package`.exists(_.isEmpty) => node.`package`.get
     }
   )
 

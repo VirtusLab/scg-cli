@@ -22,7 +22,6 @@ object PartitionsApp extends App:
     GpmetisPartitions.partition(allProjectNodes, project.projectName, 10, false, "cut", 999, 50) :::
       PatohPartitions.partition(allProjectNodes, project.projectName, 10, false,  PA = 13, IB = 0.9)
 
-  println(PartitionResultsSummary.exportTex(PartitionResultsSummary(results.sortBy(_.nparts))))
   PartitionResults.print(
     new MultiPrinter(
       new PrintWriter(System.out),

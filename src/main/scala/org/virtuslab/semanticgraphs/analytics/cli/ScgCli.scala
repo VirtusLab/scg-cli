@@ -231,7 +231,14 @@ class ScgCli:
       arity = "0..1",
       defaultValue = "0.9"
     )
-    IB: Double
+    IB: Double,
+    @Option(
+      names = Array("--biggest-component", "-bc"),
+      description = Array("Partition only biggest weekly connected component for the project, default: ${DEFAULT-VALUE}"),
+      arity = "0..1",
+      defaultValue = "false"
+    )
+    biggestComponentOnly: Boolean
   ): Unit =
     val projectAndVersion = ProjectAndVersion(workspace, workspace.split("/").last, "")
     val (scg, results) = PartitioningComparisonApp.runPartitionComparison(
@@ -243,7 +250,8 @@ class ScgCli:
       ufactor,
       ncuts,
       PA,
-      IB
+      IB,
+      biggestComponentOnly
     )
     output match {
       case "html" =>
@@ -263,7 +271,7 @@ class ScgCli:
           results
         )
       case "tex" =>
-        println(PartitionResultsSummary.exportTex(PartitionResultsSummary(results)))
+        println(PartitionResultsSummary.exportTex(PartitionResultsSummary(results), results))
       case "csv" =>
         results.foreach { result =>
           val fileName = s"${projectAndVersion.projectName}-npart-${result.nparts}-${result.method}.csv"

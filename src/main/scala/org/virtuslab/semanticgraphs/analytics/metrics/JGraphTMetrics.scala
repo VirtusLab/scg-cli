@@ -132,10 +132,12 @@ object JGraphTMetrics:
   def averageClusteringCoefficient(directed: Graph[String, LabeledEdge]): Double =
     new ClusteringCoefficient[String, LabeledEdge](directed).getAverageClusteringCoefficient
 
-  def globalClusteringCoefficient(undirectedGraph: Graph[String, LabeledEdge]): Double =
+  def globalClusteringCoefficient(graph: Graph[String, LabeledEdge]): Double =
     new ClusteringCoefficient[String, LabeledEdge](
-      new AsUndirectedGraph(undirectedGraph)
-      //undirectedGraph
+      if graph.getType.isDirected then
+        new AsUndirectedGraph(graph)
+      else
+        graph
     ).getGlobalClusteringCoefficient
 
   def getClusteringCoefficientScores(graph: Graph[String, LabeledEdge]): scala.collection.mutable.Map[String, java.lang.Double] = {

@@ -21,15 +21,15 @@ case class ShortSummary(
   distribution: String
 ) derives ReadWriter
 
-case class PartitionPackageSummary(method: String, part: Int, accuracy: Int, `package`: String, distribution: String)
+case class PartitionPackageSummary(method: String, part: Int, accuracy: Int, `package`: String, distribution: String, size: Int)
   derives ReadWriter
-case class PartitionFileSummary(method: String, part: Int, accuracy: Int, file: String, distribution: String)
+case class PartitionFileSummary(method: String, part: Int, accuracy: Int, file: String, distribution: String, size: Int)
   derives ReadWriter
 
 case class PartitionResultsSummary(
   nparts: Int,
   byPackage: List[PartitionPackageSummary],
-  byFile: List[PartitionFileSummary]
+  byFile: List[PartitionFileSummary],
 ) derives ReadWriter
 
 case class PartitionResultsWrapper(results: List[PartitionResultsSummary], summary: List[ShortSummary])
@@ -46,7 +46,8 @@ object PartitionResultsSummary:
           partitionResults.partition,
           partitionResults.accuracy,
           partitionResults.partitionName,
-          partitionResults.distribution.mkString("[", ",", "]")
+          partitionResults.distribution.mkString("[", ",", "]"),
+          partitionResults.distribution.sum
         )
       val byFile =
         for partitionResults <- result.fileDistribution.groupPartitionStats
@@ -55,7 +56,8 @@ object PartitionResultsSummary:
           partitionResults.partition,
           partitionResults.accuracy,
           partitionResults.partitionName,
-          partitionResults.distribution.mkString("[", ",", "]")
+          partitionResults.distribution.mkString("[", ",", "]"),
+          partitionResults.distribution.sum
         )
       PartitionResultsSummary(result.nparts, byPackage, byFile)
     },
@@ -99,25 +101,27 @@ object PartitionResultsSummary:
     inputStream.close()
   }
 
-  def exportTex(summary: PartitionResultsWrapper): String = {
+  def exportTex(summary: PartitionResultsWrapper, results: List[PartitionResults]): String = {
 
     extension (number: Double)
       def to3: String = String.format("%.3f", number)
       def to1: String = String.format("%.1f", number)
 
     val builder = new StringBuilder()
+    exportTexDistribution(results, builder)
+
     builder.append(
-      "\\begin{tabular}{|r|r|r|r|r|r|r|r|r|l|}  \n"
+      "\\begin{tabular}{|r|r|r|r|r|r|r|r|r|r|l|}  \n"
     )
     builder.append("\\hline \n")
     builder.append(
-      "Method & N & Modularity & Cut Size & FWA \\% & FA \\% & PWA \\% & PA \\%& CV & Distribution \\%\\\\ \n"
+      "Method & N & Modularity & Cut Size & \\bar{C} & FWA \\% & FA \\% & PWA \\% & PA \\%& CV & Distribution \\%\\\\ \n"
     )
     builder.append("\\hline \n")
     summary.summary.foreach { shortSummary =>
       import shortSummary._
       builder.append(
-        s"$method & $npart & ${modularity.to1} & $edgeCutSize & ${file.weighted} & ${file.standard} & ${`package`.weighted} & ${`package`.standard} & ${variance.to3} & ${distribution
+        s"$method & $npart & ${modularity.to1} & $edgeCutSize & ${coefficient.to3} & ${file.weighted} & ${file.standard} & ${`package`.weighted} & ${`package`.standard} & ${variance.to3} & ${distribution
             .replace("%", "")} \\\\ \n"
       )
     }
@@ -125,4 +129,25 @@ object PartitionResultsSummary:
     builder.append("\\end{tabular} \n")
 
     builder.toString()
+  }
+
+  def exportTexDistribution(results: List[PartitionResults], builder: StringBuilder): Unit = {
+    val longestPackageSize =
+      results.head.packageDistribution.groupPartitionStats.maxByOption(_.partitionName.length).map(_.partitionName.length).getOrElse(0)
+
+    results.foreach { result =>
+      builder.append(s"NParts: ${result.nparts} \n")
+      builder.append(s"\\begin{tabular}{l|r|r|l|l} \n")
+      builder.append(s"Method & Part & Accuracy \\% &" + "Package".padTo(longestPackageSize, ' ') + "& Distribution \\\\ \n")
+      builder.append("\\hline \n")
+      result.packageDistribution.groupPartitionStats.foreach { distribution =>
+        builder.append(
+          f"${result.method.padTo(11, ' ')} & ${distribution.partition}%4d & ${distribution.accuracy}%7d & ${
+            distribution.partitionName
+              .padTo(longestPackageSize, ' ')
+          } & [${distribution.distribution.mkString(",")}] \\\\ \n"
+        )
+      }
+      builder.append(s"\\end{tabular} \n")
+    }
   }

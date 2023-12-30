@@ -19,7 +19,8 @@ object PartitioningComparisonApp:
     ufactor: Int,
     ncuts: Int,
     PA: Int,
-    IB: Double
+    IB: Double,
+    biggestComponentOnly: Boolean
   ): (SemanticCodeGraph, List[PartitionResults]) =
     val projectName = projectAndVersion.projectName
     val scg = networkType match
@@ -33,8 +34,13 @@ object PartitioningComparisonApp:
     val allNodes = scg.nodes.toList
 
     val allNodesDto =
-      allNodes
-        .map(_.toGraphNodeDto)
+      if biggestComponentOnly then
+        PartitionHelpers
+          .takeBiggestComponentOnly(scg)
+          .map(_.toGraphNodeDto)
+      else
+        allNodes
+          .map(_.toGraphNodeDto)
 
     val gpmetisResults = GpmetisPartitions.partition(allNodesDto, projectName, nparts, useDocker, objtype, ufactor, ncuts)
     val patohResults = PatohPartitions.partition(allNodesDto, projectName, nparts, useDocker, PA, IB)

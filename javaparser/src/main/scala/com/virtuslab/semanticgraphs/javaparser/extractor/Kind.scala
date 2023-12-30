@@ -1,7 +1,7 @@
 package com.virtuslab.semanticgraphs.javaparser.extractor
 
 enum NodeKind:
-  case CLASS, CONSTRUCTOR, METHOD, TRAIT, VARIABLE, PARAMETER, VALUE, TYPE_PARAMETER, ENUM
+  case CLASS, CONSTRUCTOR, METHOD, INTERFACE, VARIABLE, PARAMETER, VALUE, TYPE_PARAMETER, ENUM
 
 object NodeKind:
   given nodeKindToString: Conversion[NodeKind, String] = _.toString

@@ -54,49 +54,49 @@
 <h2 id="title">Title</h2>
 <table id="stats-table" class="styled-table">
     <thead>
-        <tr>
-            <td>Parameter</td>
-            <td>Value</td>
-            <td>Description</td>
-        </tr>
+    <tr>
+        <td>Parameter</td>
+        <td>Value</td>
+        <td>Description</td>
+    </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Nodes</td>
-            <td id="nodes" class="align-right"></td>
-            <td>Number of nodes in the graph (such as classes, methods, variables, etc.).</td>
-        </tr>
-        <tr>
-            <td>Edges</td>
-            <td id="edges" class="align-right"></td>
-            <td>Number of edges in the graph. See the chart below for distribution.</td>
-        </tr>
-        <tr>
-            <td>Total LOC</td>
-            <td id="totalLoc" class="align-right"></td>
-            <td>Total number of lines of code.</td>
-        </tr>
-        <tr>
-            <td>Density</td>
-            <td id="density" class="align-right"></td>
-            <td>Density of the graph -- a value between 0 (low density) and 1 (high density). High SCG density can indicate higher code dependency complexity.</td>
-        </tr>
-        <tr>
-            <td>Average Degree</td>
-            <td id="averageDegree" class="align-right"></td>
-            <td>Average number of edges. High average degree of nodes, especially when combined with high density, suggests high project coupling.</td>
-        </tr>
+    <tr>
+        <td>Nodes</td>
+        <td id="nodes" class="align-right"></td>
+        <td>Number of nodes in the graph (such as classes, methods, variables, etc.).</td>
+    </tr>
+    <tr>
+        <td>Edges</td>
+        <td id="edges" class="align-right"></td>
+        <td>Number of edges in the graph. See the chart below for distribution.</td>
+    </tr>
+    <tr>
+        <td>Total LOC</td>
+        <td id="totalLoc" class="align-right"></td>
+        <td>Total number of lines of code.</td>
+    </tr>
+    <tr>
+        <td>Density</td>
+        <td id="density" class="align-right"></td>
+        <td>Density of the graph -- a value between 0 (low density) and 1 (high density). High SCG density can indicate higher code dependency complexity.</td>
+    </tr>
+    <tr>
+        <td>Average Degree</td>
+        <td id="averageDegree" class="align-right"></td>
+        <td>Average number of edges. High average degree of nodes, especially when combined with high density, suggests high project coupling.</td>
+    </tr>
 
-        <tr>
-            <td>Global Clustering Coefficient</td>
-            <td id="globalClusteringCoefficient" class="align-right"></td>
-            <td>High value indicates that graph tends to create interconnected clusters, low value indicates the network being sparse or fragmented. For SCG, high GCC value can indicate well-modularized software with high module cohesion and low coupling.</td>
-        </tr>
-        <tr>
-            <td>Degree Assortativity Coefficient</td>
-            <td id="assortativityCoefficient" class="align-right"></td>
-            <td>Positive value indicates that nodes with the same degree tends to be connected, negative value suggest mostly connections between nodes of different degree, value close to zero suggest random network. For SCG, low DAC can suggest tendency of the graph towards clustering and establishing hubs (connections between nodes with different degrees).</td>
-        </tr>
+    <tr>
+        <td>Global Clustering Coefficient</td>
+        <td id="globalClusteringCoefficient" class="align-right"></td>
+        <td>High value indicates that the graph tends to create interconnected clusters, low value indicates the network being sparse or fragmented. For SCG, high GCC value can indicate well-modularized software with high module cohesion and low coupling.</td>
+    </tr>
+    <tr>
+        <td>Degree Assortativity Coefficient</td>
+        <td id="assortativityCoefficient" class="align-right"></td>
+        <td>Positive value indicates that nodes with the same degree tends to be connected, negative value suggests mostly connections between nodes of different degree, value close to zero suggests random network. For SCG, low DAC can suggest tendency of the graph towards clustering and establishing hubs (connections between nodes with different degrees).</td>
+    </tr>
     </tbody>
 </table>
 
