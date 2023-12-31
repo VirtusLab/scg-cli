@@ -1,3 +1,4 @@
+import collections
 import scg_pb2 as scg_pb
 import os
 import networkx as nx
@@ -104,28 +105,77 @@ def show_graph(G):
     nx.draw_networkx_nodes(G, pos, node_size=5, alpha=0.5, ax=ax)
     plt.show()
 
-
 def show_graph_distribution(G):
     plt.clf()
-    degree_sequence = sorted((d for n, d in G.degree()), reverse=True)[0:100]
+    #degree_sequence = sorted((d for n, d in G.degree()), reverse=True)[0:100]
 
-    fig = plt.figure("Degree of a SCG", figsize=(8, 8))
-    # Create a gridspec for adding subplots of different sizes
-    axgrid = fig.add_gridspec(1, 4)
+    in_degree = list(d for n, d in G.in_degree())
+    out_degree = list(d for n, d in G.out_degree())
 
-    ax1 = fig.add_subplot(axgrid[0:, :2])
-    ax1.plot(degree_sequence, "b-", marker="o")
-    ax1.set_title("Degree Rank Plot")
-    ax1.set_ylabel("Degree")
-    ax1.set_xlabel("Rank")
+    scg_in_degrees, scg_in_counts = zip(*sorted(collections.Counter(in_degree).items()))
+    scg_out_degrees, scg_out_counts = zip(*sorted(collections.Counter(out_degree).items()))
 
-    ax2 = fig.add_subplot(axgrid[0:, 2:])
-    ax2.bar(*np.unique(degree_sequence, return_counts=True))
-    ax2.set_title("Degree histogram")
-    ax2.set_xlabel("Degree")
-    ax2.set_ylabel("# of Nodes")
+    plt.scatter(scg_in_degrees, scg_in_counts, marker='o', color='b', label=f'In-Degree SCG', s=20)
+    plt.scatter(scg_out_degrees, scg_out_counts, marker='x', color='r', label=f'Out-Degree SCG', s=20)
 
+    avg = sum(in_degree) / len(out_degree)
+    plt.axvline(x=avg, color='green', linestyle='--', label='Average Degree')
+
+    plt.xlabel('Degree', fontsize=8)  # Changed 'set_xlabel' to 'xlabel'
+    plt.ylabel('Count', fontsize=8)  # Changed 'set_ylabel' to 'ylabel'
+    plt.title(f'SCG degree distribution')  # Removed 'graphs[network]'
+    plt.grid(True)
+    plt.yscale('log')  # Changed 'set_yscale' to 'yscale'
+    plt.xscale('log')  # Changed 'set_xscale' to 'xscale'
+    plt.legend()
+
+    plt.tight_layout()
     plt.show()
+
+def show_overview(scg_files):
+    import matplotlib.pyplot as plt
+
+    fig, axes = plt.subplots(1, 2, figsize=(10, 10), facecolor='#FFFFFF')
+    plt.subplots_adjust(wspace=0.25, hspace=-0.3, bottom=0, left=0.05, right=0.95, top=1.0)
+    nodes_df = create_nodes_df(scg_files)
+    edges_df = create_edges_df(scg_files)
+    nodes_kinds = nodes_df.groupby(['kind']).size().sort_values(ascending=False)
+    edges_types = edges_df.groupby(['type']).size().sort_values(ascending=False)
+    draw_pie(axes[0], "Nodes kinds", nodes_kinds.index, nodes_kinds.values)
+    draw_pie(axes[1], "Edges types", edges_types.index, edges_types.values)
+    plt.show()
+
+def draw_pie(ax, title, labels, values):
+    font_color = '#525252'
+    colors = ['#4874f1',
+                   '#16cfa8',
+                   '#7dd86d',
+                   '#f0cd17',
+                   '#f06917',
+                   '#c12dfc',
+                   '#e7165b',
+                   '#b67ce2']
+
+    # Filter out entries with values of 0 and their corresponding colors
+    non_zero_labels = []
+    non_zero_values = []
+    non_zero_colors = []
+    for label, value, color in zip(labels, values, colors):
+        if value/sum(values) * 100 > 0.7:
+            non_zero_labels.append(label)
+            non_zero_values.append(value)
+            non_zero_colors.append(color)
+
+    ax.pie(
+        non_zero_values,
+        labels=non_zero_labels,
+        colors= non_zero_colors,
+        startangle=30,
+        textprops={'color': font_color, 'fontsize': 10},
+        #wedgeprops=dict(width=.5),  # For donuts
+        autopct=lambda p: '{:.1f}%'.format(p)
+    )
+    ax.set_title(title, y=1)
 
 
 def create_nodes_df(scg_files):
@@ -139,9 +189,31 @@ def create_nodes_df(scg_files):
         attributes["package"] = n.properties["package"]
         attributes["file"] = n.location.uri.split("/")[-1]
         attributes["isLocal"] = n.properties["isLocal"] == "true"
+        attributes["startLine"] = n.location.startLine
+        attributes["startCharacter"] = n.location.startCharacter
+        attributes["endLine"] = n.location.endLine
+        attributes["endCharacter"] = n.location.endCharacter
         return attributes
 
     dict = [extractDict(n) for n in nodes if n]
+    return pd.DataFrame(dict)
+
+def create_edges_df(scg_files):
+    nodes = [n for file in scg_files for n in file.nodes]
+    edges = [(e, n.id) for n in nodes for e in n.edges]
+
+    def extractDict(edge, id):
+        attributes = {}
+        attributes["from"] = id
+        attributes["to"] = edge.to
+        attributes["type"] = edge.type
+        attributes["startLine"] = edge.location.startLine
+        attributes["startCharacter"] = edge.location.startCharacter
+        attributes["endLine"] = edge.location.endLine
+        attributes["endCharacter"] = edge.location.endCharacter
+        return attributes
+
+    dict = [extractDict(e, id) for (e, id) in edges if e]
     return pd.DataFrame(dict)
 
 def find_method_similarities(G, s_min = 5, s_min_p = 50):

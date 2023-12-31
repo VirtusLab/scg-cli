@@ -4,6 +4,7 @@ import com.github.javaparser.StaticJavaParser
 import com.virtuslab.semanticgraphs.parsercommon.logger.GraphBuddyLogging
 
 import java.io.File
+import java.nio.file.Path
 import scala.util.Try
 
 object JavaParserMain extends GraphBuddyLogging:
@@ -21,22 +22,22 @@ object JavaParserMain extends GraphBuddyLogging:
   // generateSemanticGraphFiles(commons_io)
 
   def generateSemanticGraphFiles(
-    rootPathString: String
+    rootPathString: String,
+    withTests: Boolean
   ): Unit =
     val files: Seq[File] = JavaParser.getSourceFiles(rootPathString)
     val compilationConfiguration = JavaParser.CompilationConfiguration(rootPathString)
     val filePaths = files.map(_.toPath)
     StaticJavaParser.setConfiguration(compilationConfiguration.parserConfiguration)
 
+    val toBeExcluded =
+      if withTests then
+        (_: Path) => false
+      else
+        (path: Path) => path.toString.contains("src/test")
+
     val results = filePaths
-      .filterNot { path =>
-        {
-          // path.endsWith("DescriptorProtos.java") ||
-          path.toString().contains("src/test") ||
-          // path.toString().contains("protobuf") ||
-          path.toString.contains(".metals")
-        }
-      }
+      .filterNot { path => toBeExcluded(path) }
       .map { path =>
         println(path)
         Try(

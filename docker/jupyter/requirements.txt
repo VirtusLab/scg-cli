@@ -1,0 +1,7 @@
+matplotlib==3.8.2
+networkx==3.2.1
+numpy==1.26.2
+pandas==2.1.4
+protobuf==4.25.1
+scipy==1.11.4
+lxml==5.0.0

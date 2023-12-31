@@ -31,7 +31,7 @@ class ScgCli:
 
   @Command(name = "version", description = Array("Show scg-cli version."))
   def version() =
-    println("scg-cli 0.1.4-SNAPSHOT")
+    println("scg-cli 0.1.9-SNAPSHOT")
 
   @Command(name = "generate", description = Array("Generate SCG metadata."))
   def generate(
@@ -46,10 +46,17 @@ class ScgCli:
       arity = "0..1",
       defaultValue = "java"
     )
-    language: String
+    language: String,
+    @Option(
+      names = Array("-wt", "--with-tests"),
+      description = Array("Generate SCG files including test files"),
+      arity = "0..1",
+      defaultValue = "false"
+    )
+    withTests: Boolean,
   ): Unit =
     println(s"Generating SCG metadata for $workspace")
-    JavaParserMain.generateSemanticGraphFiles(workspace)
+    JavaParserMain.generateSemanticGraphFiles(workspace, withTests)
     println(s"SCG was generated to $workspace/.semanticgraphs")
 
   @Command(name = "summary", description = Array("Summarize the project."))
