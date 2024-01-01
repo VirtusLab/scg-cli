@@ -31,18 +31,14 @@ object PartitioningComparisonApp:
       case NetworkType.CG =>
         SemanticCodeGraph.fetchFullCallGraph(projectAndVersion)
 
-    val allNodes = scg.nodes.toList
-
-    val allNodesDto =
+    val nodes =
       if biggestComponentOnly then
         PartitionHelpers
           .takeBiggestComponentOnly(scg)
-          .map(_.toGraphNodeDto)
       else
-        allNodes
-          .map(_.toGraphNodeDto)
+        scg.nodes.toList
 
-    val gpmetisResults = GpmetisPartitions.partition(allNodesDto, projectName, nparts, useDocker, objtype, ufactor, ncuts)
-    val patohResults = PatohPartitions.partition(allNodesDto, projectName, nparts, useDocker, PA, IB)
+    val gpmetisResults = GpmetisPartitions.partition(nodes.map(_.toGraphNodeDto), projectName, nparts, useDocker, objtype, ufactor, ncuts)
+    val patohResults = PatohPartitions.partition(nodes.map(_.toGraphNodeDto), projectName, nparts, useDocker, PA, IB)
 
-    SemanticCodeGraph(scg.projectAndVersion, allNodes.map(x => (x.id, x)).toMap, networkType) -> (gpmetisResults ::: patohResults).sortBy(x => (x.nparts, x.method))
+    SemanticCodeGraph(scg.projectAndVersion, nodes.map(x => (x.id, x)).toMap, networkType) -> (gpmetisResults ::: patohResults).sortBy(x => (x.nparts, x.method))
