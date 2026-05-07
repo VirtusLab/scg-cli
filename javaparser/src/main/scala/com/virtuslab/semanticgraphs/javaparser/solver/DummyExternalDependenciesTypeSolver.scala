@@ -14,8 +14,9 @@ import com.github.javaparser.ast.expr.Expression
 import com.github.javaparser.resolution.{MethodUsage, SymbolResolver}
 import com.github.javaparser.resolution.declarations.*
 import com.github.javaparser.resolution.types.{ResolvedReferenceType, ResolvedType}
-import com.github.javaparser.symbolsolver.logic.{AbstractTypeDeclaration, MethodResolutionCapability}
-import com.github.javaparser.symbolsolver.model.resolution.SymbolReference
+import com.github.javaparser.symbolsolver.logic.AbstractTypeDeclaration
+import com.github.javaparser.resolution.logic.MethodResolutionCapability
+import com.github.javaparser.resolution.model.SymbolReference
 import com.github.javaparser.symbolsolver.resolution.typesolvers.MemoryTypeSolver
 import com.github.javaparser.symbolsolver.JavaSymbolSolver
 

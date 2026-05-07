@@ -3,6 +3,7 @@ package com.virtuslab.semanticgraphs.javaparser.solver
 import com.github.javaparser.ast.`type`.Type
 import com.github.javaparser.ast.expr.Expression
 import com.github.javaparser.ast.Node
+import com.github.javaparser.resolution.declarations.ResolvedReferenceTypeDeclaration
 import com.github.javaparser.resolution.types.ResolvedType
 import com.github.javaparser.resolution.SymbolResolver
 import com.github.javaparser.symbolsolver.JavaSymbolSolver
@@ -36,4 +37,6 @@ class EDMTSCompatibleSymbolSolver(
     javaSymbolSolver.toResolvedType(javaparserType, resultClass)
 
   def calculateType(expression: Expression): ResolvedType = javaSymbolSolver.calculateType(expression)
+
+  def toTypeDeclaration(node: Node): ResolvedReferenceTypeDeclaration = javaSymbolSolver.toTypeDeclaration(node)
 }

@@ -2,7 +2,8 @@ package com.virtuslab.semanticgraphs.javaparser
 
 import com.github.javaparser.{JavaParser, ParserConfiguration}
 import com.github.javaparser.ast.CompilationUnit
-import com.github.javaparser.symbolsolver.cache.{Cache, GuavaCache}
+import com.github.javaparser.resolution.cache.Cache
+import com.github.javaparser.symbolsolver.cache.GuavaCache
 import com.github.javaparser.symbolsolver.resolution.typesolvers.JavaParserTypeSolver
 import com.github.javaparser.ParseStart.COMPILATION_UNIT
 import com.github.javaparser.Providers.provider

@@ -13,7 +13,7 @@ import com.github.javaparser.resolution.declarations.{
 }
 import com.github.javaparser.resolution.types.ResolvedReferenceType
 import com.github.javaparser.resolution.UnsolvedSymbolException
-import com.github.javaparser.symbolsolver.model.typesystem.ReferenceTypeImpl
+import com.github.javaparser.resolution.model.typesystem.ReferenceTypeImpl
 
 import java.util
 import java.util.{Optional, UUID}

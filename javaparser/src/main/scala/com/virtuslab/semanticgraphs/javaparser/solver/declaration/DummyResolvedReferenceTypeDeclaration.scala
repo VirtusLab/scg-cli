@@ -9,7 +9,7 @@ import com.virtuslab.semanticgraphs.javaparser.solver.declaration.{
 import com.virtuslab.semanticgraphs.javaparser.solver.TypeArgumentsResolutionCache
 
 import com.github.javaparser.resolution.declarations.ResolvedReferenceTypeDeclaration
-import com.github.javaparser.symbolsolver.logic.MethodResolutionCapability
+import com.github.javaparser.resolution.logic.MethodResolutionCapability
 
 /**
   * Dummy declaration to mock references to classes in external dependencies.
