@@ -20,3 +20,4 @@ target
 __pycache__
 trash
 docker/jupyter/test*
+.devcontainer

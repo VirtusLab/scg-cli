@@ -469,7 +469,7 @@ extension (methodLike: MethodLikeDeclaration)(using
             case _                          => None
           }).toSeq
           methodVisibleToInheritors <- resolvedReferenceType.allMethodsVisibleToInheritors
-          if methodVisibleToInheritors.toAst.toScala.exists(_.hasTheSameSignature(method))
+          if methodVisibleToInheritors.toAst.toScala.collect { case m: MethodDeclaration => m }.exists(_.hasTheSameSignature(method))
           to <- Try(methodVisibleToInheritors.getQualifiedSignature).withLogging().toOption
         } yield Edge(
           to = to,
